@@ -1,0 +1,179 @@
+name: Submit Integration
+description: Propose a new PiPhi integration, platform service, or sidecar for registry review.
+title: "[Submission]: "
+labels:
+  - submission
+  - triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to the PiPhi ecosystem.
+
+        Approved entries in this registry are curated. This form is the first step in the review pipeline.
+
+        Before submitting:
+        - Make sure your repository is publicly accessible
+        - Make sure the manifest path is correct
+        - Make sure the manifest is up to date
+        - Include a support contact and clear description
+
+  - type: input
+    id: integration_name
+    attributes:
+      label: Integration Name
+      description: Human-readable name shown to users.
+      placeholder: Atmotube Pro (BLE)
+    validations:
+      required: true
+
+  - type: input
+    id: integration_id
+    attributes:
+      label: Integration ID
+      description: Stable manifest/registry identifier.
+      placeholder: atmotube-pro-ble
+    validations:
+      required: true
+
+  - type: dropdown
+    id: entry_type
+    attributes:
+      label: Entry Type
+      description: What kind of registry entry is this?
+      options:
+        - integration
+        - platform_service
+    validations:
+      required: true
+
+  - type: dropdown
+    id: deployment_mode
+    attributes:
+      label: Deployment Mode
+      description: How should PiPhi treat this package at install/runtime level?
+      options:
+        - standalone
+        - sidecar
+    validations:
+      required: true
+
+  - type: input
+    id: repo_url
+    attributes:
+      label: Repository URL
+      description: Public GitHub repository containing the integration.
+      placeholder: https://github.com/PiPhi-io/piphi-network-atmotube
+    validations:
+      required: true
+
+  - type: input
+    id: manifest_path
+    attributes:
+      label: Manifest Path
+      description: Relative path to the manifest inside the repository.
+      placeholder: src/manifest.json
+    validations:
+      required: true
+
+  - type: textarea
+    id: short_description
+    attributes:
+      label: Short Description
+      description: One or two sentences describing what the integration does.
+      placeholder: Integration for TP-Link Kasa devices over the local network.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Supported Platforms
+      description: Select every platform you support.
+      options:
+        - label: Linux
+        - label: Windows
+        - label: macOS
+    validations:
+      required: true
+
+  - type: input
+    id: maintainer_name
+    attributes:
+      label: Maintainer Name
+      placeholder: PiPhi Network
+    validations:
+      required: true
+
+  - type: input
+    id: support_contact
+    attributes:
+      label: Support Contact
+      description: Email, docs page, or support URL.
+      placeholder: support@piphi.io
+    validations:
+      required: true
+
+  - type: input
+    id: icon_url
+    attributes:
+      label: Icon URL
+      description: Public icon URL. If left blank, the registry placeholder may be used during review.
+      placeholder: https://raw.githubusercontent.com/owner/repo/main/icon.png
+    validations:
+      required: false
+
+  - type: textarea
+    id: tags
+    attributes:
+      label: Tags
+      description: Comma-separated keywords to help discovery.
+      placeholder: air-quality, bluetooth, sensor
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: permissions
+    attributes:
+      label: Runtime Requirements
+      description: Select any elevated or noteworthy runtime requirements.
+      options:
+        - label: Requires host networking
+        - label: Requires privileged container mode
+        - label: Requires USB or device access
+        - label: Requires host filesystem mounts
+        - label: Requires secrets or API tokens
+        - label: Runs as a helper/sidecar for another integration
+        - label: Requires direct hardware access
+
+  - type: textarea
+    id: testing_notes
+    attributes:
+      label: Testing Notes
+      description: Tell reviewers how you tested it and what hardware/services were used.
+      placeholder: Tested on Linux with two local devices and manifest validation against current Core.
+    validations:
+      required: false
+
+  - type: textarea
+    id: claims
+    attributes:
+      label: Claims To Verify
+      description: List any important claims a reviewer should verify.
+      placeholder: Supports local-only operation and works on Linux/macOS.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Submission Checklist
+      options:
+        - label: I confirm this repository is public and accessible.
+          required: true
+        - label: I confirm the manifest path above is correct.
+          required: true
+        - label: I confirm the metadata in this submission matches the integration manifest.
+          required: true
+        - label: I understand submission does not guarantee approval or publication.
+          required: true

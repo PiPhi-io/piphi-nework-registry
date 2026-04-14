@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">433MHz Icon</title>
+  <desc id="desc">Catalog icon for the PiPhi 433MHz integration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="url(#bg)"/>
+  <rect x="110" y="64" width="36" height="108" rx="18" fill="#ede9fe"/>
+  <path d="M128 172v28" fill="none" stroke="#c4b5fd" stroke-linecap="round" stroke-width="12"/>
+  <path d="M72 120c12-18 25-27 38-27" fill="none" stroke="#ddd6fe" stroke-linecap="round" stroke-width="10"/>
+  <path d="M54 96c20-31 42-47 67-47" fill="none" stroke="#c4b5fd" stroke-linecap="round" stroke-width="10" opacity="0.9"/>
+  <path d="M184 120c-12-18-25-27-38-27" fill="none" stroke="#ddd6fe" stroke-linecap="round" stroke-width="10"/>
+  <path d="M202 96c-20-31-42-47-67-47" fill="none" stroke="#c4b5fd" stroke-linecap="round" stroke-width="10" opacity="0.9"/>
+</svg>

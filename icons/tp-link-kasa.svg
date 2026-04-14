@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">TP-Link Kasa Icon</title>
+  <desc id="desc">Catalog icon for the TP-Link Kasa integration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#431407"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="url(#bg)"/>
+  <path d="M128 44c31 0 56 25 56 56 0 22-12 37-28 50-13 11-20 19-20 34v6h-16v-6c0-15-7-23-20-34-16-13-28-28-28-50 0-31 25-56 56-56Z" fill="#fff7ed"/>
+  <rect x="108" y="194" width="40" height="16" rx="8" fill="#fed7aa"/>
+  <path d="M128 70v44" fill="none" stroke="#ea580c" stroke-linecap="round" stroke-width="14"/>
+  <circle cx="128" cy="132" r="16" fill="#fdba74"/>
+</svg>

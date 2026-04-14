@@ -1,0 +1,66 @@
+name: Propose Registry Entry
+
+on:
+  issues:
+    types:
+      - labeled
+      - edited
+      - reopened
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  propose-entry:
+    if: contains(join(github.event.issue.labels.*.name, ','), 'approved') && contains(join(github.event.issue.labels.*.name, ','), 'validation-passed')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate proposed registry entry
+        id: generate
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate_registry_entry.py
+
+      - name: Upsert generated entry comment
+        uses: actions/github-script@v7
+        env:
+          GENERATED_COMMENT: ${{ steps.generate.outputs.generated_comment }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const marker = "<!-- piphi-generated-registry-entry -->";
+            const body = `${marker}\n${process.env.GENERATED_COMMENT || "Unable to generate registry entry."}`;
+            const issue_number = context.issue.number;
+            const { owner, repo } = context.repo;
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number,
+              per_page: 100,
+            });
+            const existing = comments.find((comment) => comment.body && comment.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number,
+                body,
+              });
+            }

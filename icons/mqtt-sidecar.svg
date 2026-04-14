@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">PiPhi MQTT Sidecar Icon</title>
+  <desc id="desc">Catalog icon for the PiPhi MQTT sidecar service.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#052e2b"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="url(#bg)"/>
+  <g fill="none" stroke="#ecfeff" stroke-linecap="round" stroke-linejoin="round" stroke-width="18">
+    <path d="M92 84h34a26 26 0 0 1 0 52H92"/>
+    <path d="M164 120h-38"/>
+    <path d="M92 102v36"/>
+    <path d="M164 86v68"/>
+    <path d="M190 94v52"/>
+  </g>
+  <circle cx="164" cy="78" r="10" fill="#67e8f9"/>
+  <circle cx="190" cy="78" r="10" fill="#67e8f9"/>
+  <circle cx="164" cy="178" r="10" fill="#67e8f9"/>
+  <circle cx="190" cy="178" r="10" fill="#67e8f9"/>
+</svg>

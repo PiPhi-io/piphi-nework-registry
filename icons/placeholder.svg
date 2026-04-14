@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">PiPhi Integration Placeholder Icon</title>
+  <desc id="desc">Default catalog icon for PiPhi integrations.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="box" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="url(#bg)"/>
+  <g transform="translate(128 128)">
+    <path d="M0 -72 58 -39 0 -6 -58 -39Z" fill="url(#box)" opacity="0.98"/>
+    <path d="M-58 -39 0 -6V62l-58 -33Z" fill="#dbeafe" opacity="0.95"/>
+    <path d="M58 -39 0 -6V62l58 -33Z" fill="#93c5fd" opacity="0.98"/>
+    <path d="M0 -36 29 -20 0 -4 -29 -20Z" fill="#1d4ed8" opacity="0.9"/>
+  </g>
+</svg>

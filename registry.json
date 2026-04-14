@@ -1,0 +1,243 @@
+[
+  {
+    "id": "atmotube-pro-ble",
+    "name": "Atmotube Pro (BLE)",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Integration for the Atmotube Pro over Bluetooth Low Energy using tinygo.org/x/bluetooth.",
+    "rewardable": false,
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/atmotube.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-atmotube",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-atmotube",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "air-quality",
+      "bluetooth",
+      "sensor",
+      "ble"
+    ],
+    "runtime_requirements": [
+      "direct_hardware_access"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    }
+  },
+  {
+    "id": "awair-element-local-api",
+    "name": "Awair Element (Local API)",
+    "version": "0.0.1",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Integration for Awair Element devices over the local network.",
+    "rewardable": true,
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "image": "piphinetwork/awair-element",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/awair.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "com_piphi_awair_element",
+    "repo_url": "https://github.com/PiPhi-io/com_piphi_awair_element",
+    "manifest_path": "src/manifest.json",
+    "tags": [
+      "air-quality",
+      "sensor",
+      "local-api",
+      "environment"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    }
+  },
+  {
+    "id": "official-usb-gps-integration",
+    "name": "Official PiPhi Network GPS Integration",
+    "version": "1.0.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "high",
+    "description": "Integration for USB and NMEA-compatible GPS receivers connected through a serial device path.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "image": "piphinetwork/official-gps-integration",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/gps.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "Official-PiPhi-Network-GPS-Integration",
+    "repo_url": "https://github.com/PiPhi-io/Official-PiPhi-Network-GPS-Integration",
+    "manifest_path": "src/manifest.json",
+    "tags": [
+      "gps",
+      "usb",
+      "serial",
+      "location"
+    ],
+    "runtime_requirements": [
+      "usb_or_device_access",
+      "direct_hardware_access",
+      "privileged_container"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io"
+    }
+  },
+  {
+    "id": "tp-link-kasa-local-api",
+    "name": "TP-Link Kasa (Local API)",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Integration for TP-Link Kasa devices over local network using python-kasa.",
+    "rewardable": true,
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "image": "piphinetwork/tp-link-kasa",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/tp-link-kasa.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi_network_tp_link",
+    "repo_url": "https://github.com/PiPhi-io/piphi_network_tp_link",
+    "manifest_path": "src/manifest.json",
+    "tags": [
+      "tp-link",
+      "kasa",
+      "smart-home",
+      "lighting",
+      "switch"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    }
+  },
+  {
+    "id": "lg-thinq-connect-api",
+    "name": "LG ThinQ Connect",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Integration for LG ThinQ appliances using the official ThinQ Connect Python SDK.",
+    "rewardable": false,
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "image": "piphinetwork/lg-thinq-connect",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/lg-thinq.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-thinqconnect",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-thinqconnect",
+    "manifest_path": "src/manifest.json",
+    "tags": [
+      "lg",
+      "thinq",
+      "appliances",
+      "smart-home"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    }
+  },
+  {
+    "id": "piphi-network-433mhz",
+    "name": "PiPhi Network 433MHz Devices",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "high",
+    "description": "Generic rtl_433-based integration for supported 433MHz sensors and devices.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "image": "ghcr.io/piphi/piphi-network-433mhz:0.1.0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-433mhz",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-433mhz",
+    "manifest_path": "src/manifest.json",
+    "tags": [
+      "433mhz",
+      "rtl433",
+      "sensor",
+      "radio"
+    ],
+    "runtime_requirements": [
+      "usb_or_device_access",
+      "direct_hardware_access",
+      "host_networking",
+      "privileged_container"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io"
+    }
+  },
+  {
+    "id": "piphi.service.mqtt-broker",
+    "name": "MQTT Broker",
+    "version": "0.1.0",
+    "type": "platform_service",
+    "deployment_mode": "sidecar",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Shared MQTT broker for PiPhi integrations and helpers.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "image": "ghcr.io/piphi/piphi-mqtt-broker:0.1.0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/mqtt-sidecar.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-mqtt-broker",
+    "repo_url": "https://github.com/PiPhi-io/piphi-mqtt-broker",
+    "manifest_path": "src/manifest.json",
+    "tags": [
+      "mqtt",
+      "broker",
+      "platform-service",
+      "infrastructure",
+      "sidecar"
+    ],
+    "runtime_requirements": [
+      "sidecar_runtime"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io"
+    }
+  }
+]

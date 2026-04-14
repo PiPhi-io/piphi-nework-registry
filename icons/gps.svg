@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">GPS Icon</title>
+  <desc id="desc">Catalog icon for the PiPhi GPS integration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#172554"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="url(#bg)"/>
+  <circle cx="128" cy="112" r="54" fill="#dbeafe"/>
+  <circle cx="128" cy="112" r="24" fill="#2563eb"/>
+  <path d="M128 192 90 128h76Z" fill="#bfdbfe"/>
+  <path d="M128 38v24M128 162v24M54 112h24M178 112h24" fill="none" stroke="#eff6ff" stroke-linecap="round" stroke-width="12"/>
+</svg>
