@@ -1,5 +1,40 @@
 [
   {
+    "id": "airthings-ble-runtime",
+    "name": "Airthings (Bluetooth)",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Integration scaffold for Airthings Wave and View devices over Bluetooth Low Energy.",
+    "rewardable": false,
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi_network_airthings_ble",
+    "repo_url": "https://github.com/PiPhi-io/piphi_network_airthings_ble",
+    "manifest_path": "src/manifest.json",
+    "tags": [
+      "air-quality",
+      "bluetooth",
+      "sensor",
+      "ble",
+      "radon"
+    ],
+    "runtime_requirements": [
+      "direct_hardware_access"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    }
+  },
+  {
     "id": "atmotube-pro-ble",
     "name": "Atmotube Pro (BLE)",
     "version": "0.1.0",
