@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">PiPhi Matter Sidecar Icon</title>
+  <desc id="desc">Catalog icon for the PiPhi Matter sidecar service.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#172554"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="url(#bg)"/>
+  <g fill="none" stroke="#eff6ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="14">
+    <circle cx="128" cy="72" r="16"/>
+    <circle cx="80" cy="146" r="16"/>
+    <circle cx="176" cy="146" r="16"/>
+    <circle cx="128" cy="194" r="16"/>
+    <path d="M118 85 90 129"/>
+    <path d="M138 85 166 129"/>
+    <path d="M96 158 112 182"/>
+    <path d="M160 158 144 182"/>
+    <path d="M101 146h54"/>
+  </g>
+  <g fill="#93c5fd">
+    <rect x="112" y="108" width="32" height="32" rx="8"/>
+    <rect x="118" y="114" width="20" height="20" rx="5" fill="#dbeafe"/>
+  </g>
+</svg>
