@@ -274,5 +274,43 @@
       "name": "PiPhi Network",
       "website": "https://piphi.io"
     }
+  },
+  {
+    "id": "piphi.service.matter-sidecar",
+    "name": "Matter Sidecar",
+    "version": "0.1.0",
+    "type": "platform_service",
+    "deployment_mode": "sidecar",
+    "trust_level": "official",
+    "risk_level": "high",
+    "description": "Shared Matter controller sidecar for commissioning and managing supported Matter devices from PiPhi Core.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "image": "piphinetwork/matter-sidecar",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-matter",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-matter",
+    "manifest_path": "src/manifest.json",
+    "tags": [
+      "matter",
+      "platform-service",
+      "smart-home",
+      "sidecar",
+      "commissioning"
+    ],
+    "runtime_requirements": [
+      "sidecar_runtime",
+      "host_networking",
+      "direct_hardware_access",
+      "privileged_container"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    }
   }
 ]
