@@ -71,7 +71,7 @@
   {
     "id": "awair-element-local-api",
     "name": "Awair Element (Local API)",
-    "version": "0.0.1",
+    "version": "0.1.1",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "low",
@@ -86,7 +86,7 @@
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/awair.svg",
     "owner": "PiPhi-io",
     "repo_name": "com_piphi_awair_element",
-    "repo_url": "https://github.com/PiPhi-io/com_piphi_awair_element",
+    "repo_url": "https://github.com/KelvinSan/piphi-network-awair-element",
     "manifest_path": "src/manifest.json",
     "tags": [
       "air-quality",

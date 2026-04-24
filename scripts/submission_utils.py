@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import base64
 import json
 import re
 import urllib.error
@@ -103,22 +104,30 @@ def fetch_manifest_from_github(
     repo_url: str,
     manifest_path: str,
     token: str | None = None,
+    ref: str | None = None,
 ) -> tuple[dict[str, Any], str]:
     owner, repo = parse_repo_url(repo_url)
     repo_metadata = fetch_json(f"https://api.github.com/repos/{owner}/{repo}", token=token)
     default_branch = str(repo_metadata.get("default_branch") or "").strip()
     if not default_branch:
         raise ValueError("Unable to determine repository default branch")
+    resolved_ref = str(ref or "").strip() or default_branch
 
     encoded_manifest_path = urllib.parse.quote(manifest_path.strip().lstrip("/"))
     manifest_api_url = (
-        f"https://api.github.com/repos/{owner}/{repo}/contents/{encoded_manifest_path}?ref={default_branch}"
+        f"https://api.github.com/repos/{owner}/{repo}/contents/{encoded_manifest_path}"
+        f"?ref={urllib.parse.quote(resolved_ref, safe='')}"
     )
     manifest_content = fetch_json(manifest_api_url, token=token)
     if manifest_content.get("type") != "file":
         raise ValueError("Manifest path does not point to a file")
-    download_url = manifest_content.get("download_url")
-    if not download_url:
-        raise ValueError("Manifest file does not expose a downloadable URL")
-    manifest_payload = json.loads(fetch_text(download_url, token=None, accept="application/json"))
-    return manifest_payload, default_branch
+    encoded_content = str(manifest_content.get("content") or "").strip()
+    encoding = str(manifest_content.get("encoding") or "").strip().lower()
+    if encoded_content and encoding == "base64":
+        manifest_payload = json.loads(base64.b64decode(encoded_content).decode("utf-8"))
+    else:
+        download_url = manifest_content.get("download_url")
+        if not download_url:
+            raise ValueError("Manifest file does not expose downloadable content")
+        manifest_payload = json.loads(fetch_text(download_url, token=token, accept="application/json"))
+    return manifest_payload, resolved_ref

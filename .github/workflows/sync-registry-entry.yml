@@ -1,0 +1,136 @@
+name: Sync Registry Entry
+
+run-name: >-
+  Sync registry entry
+  (${{ inputs.registry_id }}
+  ${{ inputs.sync_mode }}
+  ${{ inputs.ref != '' && inputs.ref || 'default-branch' }})
+
+on:
+  workflow_dispatch:
+    inputs:
+      registry_id:
+        description: Existing registry entry id to update
+        required: true
+        type: string
+      repo_url:
+        description: Optional GitHub repository URL override. Leave blank to use the existing registry entry repo.
+        required: false
+        type: string
+      manifest_path:
+        description: Optional manifest path override. Leave blank to use the existing registry entry path.
+        required: false
+        type: string
+      ref:
+        description: Optional Git ref, tag, or branch to fetch from. Defaults to the repo default branch.
+        required: false
+        type: string
+      sync_mode:
+        description: How much metadata to sync from the manifest
+        required: true
+        default: full_manifest
+        type: choice
+        options:
+          - full_manifest
+          - version_only
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: registry-sync-${{ github.event.repository.full_name }}-${{ inputs.registry_id }}
+  cancel-in-progress: false
+
+jobs:
+  sync-entry:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref_name }}
+
+      - name: Require default branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "${GITHUB_REF_NAME}" != "${{ github.event.repository.default_branch }}" ]]; then
+            echo "Registry sync must be triggered from ${{ github.event.repository.default_branch }}." >&2
+            exit 1
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync registry entry from manifest
+        id: sync
+        env:
+          GITHUB_TOKEN: ${{ secrets.REGISTRY_SOURCE_GITHUB_TOKEN != '' && secrets.REGISTRY_SOURCE_GITHUB_TOKEN || github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=(
+            --registry-id "${{ inputs.registry_id }}"
+            --sync-mode "${{ inputs.sync_mode }}"
+            --registry-path "registry.json"
+          )
+          if [[ -n "${{ inputs.repo_url }}" ]]; then
+            args+=(--repo-url "${{ inputs.repo_url }}")
+          fi
+          if [[ -n "${{ inputs.manifest_path }}" ]]; then
+            args+=(--manifest-path "${{ inputs.manifest_path }}")
+          fi
+          if [[ -n "${{ inputs.ref }}" ]]; then
+            args+=(--ref "${{ inputs.ref }}")
+          fi
+          python scripts/sync_registry_entry.py "${args[@]}"
+
+      - name: Validate registry JSON
+        if: steps.sync.outputs.changed == 'true'
+        run: python -m json.tool registry.json >/dev/null
+
+      - name: Create pull request
+        id: cpr
+        if: steps.sync.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          add-paths: registry.json
+          branch: automation/sync-${{ inputs.registry_id }}
+          delete-branch: true
+          commit-message: ${{ steps.sync.outputs.commit_message }}
+          title: ${{ steps.sync.outputs.pr_title }}
+          body: |
+            Automated registry synchronization for `${{ steps.sync.outputs.registry_id }}`.
+
+            Source details:
+            - Repository: `${{ steps.sync.outputs.repo_url }}`
+            - Manifest path: `${{ steps.sync.outputs.manifest_path }}`
+            - Source ref: `${{ steps.sync.outputs.source_ref }}`
+            - Sync mode: `${{ steps.sync.outputs.sync_mode }}`
+
+            Resolved manifest version: `${{ steps.sync.outputs.version }}`
+
+            Updated fields:
+            - `${{ steps.sync.outputs.updated_fields || 'none' }}`
+
+      - name: Report no-op sync
+        if: steps.sync.outputs.changed != 'true'
+        shell: bash
+        run: |
+          echo "Registry entry ${{ inputs.registry_id }} is already in sync." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Report pull request
+        if: steps.sync.outputs.changed == 'true'
+        shell: bash
+        run: |
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          if [[ -n "${{ steps.cpr.outputs.pull-request-url }}" ]]; then
+            echo "Pull request: ${{ steps.cpr.outputs.pull-request-url }}" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Pull request action ran but did not return a PR URL." >> "$GITHUB_STEP_SUMMARY"
+          fi

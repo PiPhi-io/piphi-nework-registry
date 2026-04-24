@@ -10,6 +10,25 @@ Maintainer review guidance lives in [REVIEWING.md](./REVIEWING.md).
 
 Approved submissions can also generate a proposed registry entry automatically to speed up publication.
 
+Existing entries can be synchronized with their source manifests through the
+`Sync Registry Entry` GitHub Actions workflow. That workflow is intended for
+developers and maintainers who want a safer alternative to manually editing
+`registry.json` when a published integration version changes.
+
+Recommended developer flow:
+- run `Sync Registry Entry`
+- choose the existing `registry_id`
+- optionally provide a repository override, manifest path override, or release tag
+- let the workflow open or update a pull request with the registry changes
+
+If the source integration repositories are private, configure a repository
+secret named `REGISTRY_SOURCE_GITHUB_TOKEN` with read access to those
+repositories. The sync workflow falls back to the default `GITHUB_TOKEN` for
+public repositories.
+
+The repository must also allow GitHub Actions to create pull requests under
+Settings > Actions > General > Workflow permissions.
+
 Current contract:
 - `registry.json` lives at the repository root
 - it contains a JSON array of registry entries
