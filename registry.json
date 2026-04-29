@@ -71,7 +71,7 @@
   {
     "id": "awair-element-local-api",
     "name": "Awair Element (Local API)",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "low",
