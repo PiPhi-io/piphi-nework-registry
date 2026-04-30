@@ -213,12 +213,12 @@
     "type": "integration",
     "trust_level": "official",
     "risk_level": "high",
-    "description": "Generic rtl_433-based integration for supported 433MHz sensors and devices.",
+    "description": "Generic rtl_433-based integration for supported sub-GHz sensors and devices.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
-    "image": "ghcr.io/piphi/piphi-network-433mhz:0.1.0",
+    "image": "piphinetwork/piphi-network-433mhz:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-433mhz",
@@ -226,11 +226,13 @@
     "manifest_path": "src/manifest.json",
     "tags": [
       "433mhz",
+      "sub-ghz",
       "rtl433",
       "sensor",
       "radio"
     ],
     "runtime_requirements": [
+      "sidecar_runtime",
       "usb_or_device_access",
       "direct_hardware_access",
       "host_networking",
@@ -273,6 +275,45 @@
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io"
+    }
+  },
+  {
+    "id": "piphi.service.rtl433-bridge",
+    "name": "rtl_433 Radio Bridge",
+    "version": "0.1.0",
+    "type": "platform_service",
+    "deployment_mode": "sidecar",
+    "trust_level": "official",
+    "risk_level": "high",
+    "description": "Shared rtl_433 radio bridge for receiving sub-GHz sensor packets through PiPhi Core.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "image": "piphinetwork/rtl433-bridge:0.1.0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-rtl433-bridge",
+    "repo_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge",
+    "manifest_path": "src/manifest.json",
+    "tags": [
+      "rtl433",
+      "433mhz",
+      "radio",
+      "platform-service",
+      "sidecar"
+    ],
+    "runtime_requirements": [
+      "sidecar_runtime",
+      "host_networking",
+      "usb_or_device_access",
+      "direct_hardware_access",
+      "privileged_container"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
     }
   },
   {
