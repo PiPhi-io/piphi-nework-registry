@@ -222,7 +222,7 @@
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-433mhz",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-433mhz",
+    "repo_url": "https://github.com/KelvinSan/piphi-network-433mhz",
     "manifest_path": "src/manifest.json",
     "tags": [
       "433mhz",
