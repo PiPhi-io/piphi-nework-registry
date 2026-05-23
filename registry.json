@@ -353,5 +353,47 @@
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     }
+  },
+  {
+    "id": "piphi.service.zigbee2mqtt-sidecar",
+    "name": "Zigbee2MQTT Sidecar",
+    "version": "0.1.0",
+    "type": "platform_service",
+    "deployment_mode": "sidecar",
+    "trust_level": "official",
+    "risk_level": "high",
+    "description": "Shared Zigbee2MQTT bridge sidecar for detecting Zigbee coordinators, rendering bridge configuration, and supervising Zigbee2MQTT from PiPhi Core.",
+    "rewardable": false,
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "image": "piphinetwork/zigbee2mqtt-sidecar:0.1.0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi_network_zigbee2mqtt",
+    "repo_url": "https://github.com/PiPhi-io/piphi_network_zigbee2mqtt",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "zigbee",
+      "zigbee2mqtt",
+      "mqtt",
+      "platform-service",
+      "smart-home",
+      "sidecar"
+    ],
+    "runtime_requirements": [
+      "sidecar_runtime",
+      "host_filesystem_mounts",
+      "usb_or_device_access",
+      "direct_hardware_access",
+      "privileged_container"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    }
   }
 ]

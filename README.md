@@ -49,6 +49,7 @@ Starter entries have been added for:
 - LG ThinQ Connect
 - PiPhi Network 433MHz Devices
 - MQTT Broker
+- Zigbee2MQTT Sidecar
 
 Assets:
 - shared placeholder icon: `icons/placeholder.svg`
@@ -59,3 +60,4 @@ Assets:
 - LG ThinQ icon: `icons/lg-thinq.svg`
 - 433MHz icon: `icons/rtl433.svg`
 - MQTT sidecar icon: `icons/mqtt-sidecar.svg`
+- Zigbee2MQTT sidecar icon: `icons/zigbee2mqtt.svg`

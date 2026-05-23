@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Zigbee2MQTT</title>
+  <desc id="desc">Hexagonal Zigbee network mark with MQTT signal waves.</desc>
+  <rect width="128" height="128" rx="28" fill="#101828"/>
+  <path d="M64 15 106 39v50l-42 24-42-24V39z" fill="#f59e0b"/>
+  <path d="M64 26 96 44v38l-32 18-32-18V44z" fill="#111827"/>
+  <circle cx="64" cy="64" r="8" fill="#f59e0b"/>
+  <circle cx="43" cy="52" r="6" fill="#fbbf24"/>
+  <circle cx="85" cy="52" r="6" fill="#fbbf24"/>
+  <circle cx="43" cy="78" r="6" fill="#fbbf24"/>
+  <circle cx="85" cy="78" r="6" fill="#fbbf24"/>
+  <path d="M49 55 58 61M79 55 70 61M49 76l9-8M79 76l-9-8" stroke="#f59e0b" stroke-width="5" stroke-linecap="round"/>
+  <path d="M24 32c-8 10-12 20-12 32s4 22 12 32M104 32c8 10 12 20 12 32s-4 22-12 32" fill="none" stroke="#22d3ee" stroke-width="7" stroke-linecap="round"/>
+</svg>
