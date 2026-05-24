@@ -71,7 +71,7 @@
   {
     "id": "awair-element-local-api",
     "name": "Awair Element (Local API)",
-    "version": "0.1.2",
+    "version": "0.1.8",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "low",
@@ -82,7 +82,7 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/awair-element",
+    "image": "piphinetwork/awair-element:0.1.8",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/awair.svg",
     "owner": "PiPhi-io",
     "repo_name": "com_piphi_awair_element",
@@ -113,7 +113,7 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/official-gps-integration",
+    "image": "piphinetwork/official-gps-integration:1.0.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/gps.svg",
     "owner": "PiPhi-io",
     "repo_name": "Official-PiPhi-Network-GPS-Integration",
@@ -149,7 +149,7 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/tp-link-kasa",
+    "image": "piphinetwork/tp-link-kasa:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/tp-link-kasa.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_tp_link",
@@ -185,7 +185,7 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/lg-thinq-connect",
+    "image": "piphinetwork/lg-thinq-connect:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/lg-thinq.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-thinqconnect",
@@ -209,7 +209,7 @@
   {
     "id": "piphi-network-433mhz",
     "name": "PiPhi Network 433MHz Devices",
-    "version": "0.1.0",
+    "version": "0.1.4",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "high",
@@ -218,7 +218,7 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/piphi-network-433mhz:0.1.0",
+    "image": "piphinetwork/piphi-network-433mhz:0.1.4",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
     "owner": "KelvinSan",
     "repo_name": "piphi-network-433mhz",
@@ -280,7 +280,7 @@
   {
     "id": "piphi.service.rtl433-bridge",
     "name": "rtl_433 Radio Bridge",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -290,7 +290,7 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/rtl433-bridge:0.1.1",
+    "image": "piphinetwork/rtl433-bridge:0.1.2",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-rtl433-bridge",
@@ -329,7 +329,7 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/matter-sidecar",
+    "image": "piphinetwork/matter-sidecar:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/matter-sidecar.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-matter",
@@ -357,7 +357,7 @@
   {
     "id": "piphi.service.zigbee2mqtt-sidecar",
     "name": "Zigbee2MQTT Sidecar",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -369,7 +369,7 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/zigbee2mqtt-sidecar:0.1.0",
+    "image": "piphinetwork/zigbee2mqtt-sidecar:0.1.1",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_zigbee2mqtt",
@@ -394,6 +394,240 @@
       "name": "PiPhi Network",
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
+    }
+  },
+  {
+    "id": "piphi-network-zigbee",
+    "name": "PiPhi Network Zigbee",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Generic Zigbee integration runtime backed by the shared Zigbee2MQTT sidecar and MQTT broker.",
+    "rewardable": false,
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "image": "piphinetwork/zigbee-integration:0.1.0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi_network_zigbee",
+    "repo_url": "https://github.com/PiPhi-io/piphi_network_zigbee",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "zigbee",
+      "zigbee2mqtt",
+      "mqtt",
+      "smart-home",
+      "lighting",
+      "sensors"
+    ],
+    "runtime_requirements": [
+      "sidecar_runtime",
+      "mqtt_broker"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    }
+  },
+  {
+    "id": "airthings-consumer-cloud-api",
+    "name": "Airthings (Consumer Cloud)",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Cloud integration for Airthings consumer accounts using the official Airthings Consumer API.",
+    "rewardable": false,
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "image": "piphinetwork/airthings-consumer-cloud:0.1.0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-airthings",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-airthings",
+    "manifest_path": "src/manifest.json",
+    "tags": [
+      "airthings",
+      "air-quality",
+      "cloud-api",
+      "environment"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    }
+  },
+  {
+    "id": "aqara-open-api",
+    "name": "Aqara (Open API)",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Cloud integration for Aqara accounts using the Aqara Open API.",
+    "rewardable": false,
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "image": "piphinetwork/aqara-open-api:0.1.0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-aqara",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-aqara",
+    "manifest_path": "src/manifest.json",
+    "tags": [
+      "aqara",
+      "smart-home",
+      "cloud-api",
+      "sensors"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    }
+  },
+  {
+    "id": "piphi-network-tesla-ev",
+    "name": "PiPhi Network Tesla EV",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Tesla Fleet API vehicle integration for Tesla EV discovery, status refresh, and wake-up flows.",
+    "rewardable": false,
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "image": "piphinetwork/tesla-ev:0.1.0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi_network_tesla_ev",
+    "repo_url": "https://github.com/PiPhi-io/piphi_network_tesla_ev",
+    "manifest_path": "src/manifest.json",
+    "tags": [
+      "tesla",
+      "ev",
+      "vehicle",
+      "cloud-api"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io"
+    }
+  },
+  {
+    "id": "piphi-network-kaiterra-api",
+    "name": "PiPhi Network Kaiterra API",
+    "version": "0.1.1",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "PiPhi integration runtime for Kaiterra devices using the Kaiterra public API.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "image": "docker.io/piphi/piphi-network-kaiterra-api:0.1.1",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi_network_kaiterra_api",
+    "repo_url": "https://github.com/PiPhi-io/piphi_network_kaiterra_api",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "kaiterra",
+      "air-quality",
+      "cloud-api",
+      "environment"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Integrations Team",
+      "website": "https://github.com/PiPhi-io"
+    }
+  },
+  {
+    "id": "piphi-network-weatherxm",
+    "name": "PiPhi Network WeatherXM",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "PiPhi integration runtime for WeatherXM stations using the WeatherXM public API.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "image": "docker.io/piphi/piphi-network-weatherxm:0.1.0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi_network_weatherxm",
+    "repo_url": "https://github.com/PiPhi-io/piphi_network_weatherxm",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "weatherxm",
+      "weather",
+      "cloud-api",
+      "environment"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Integrations Team",
+      "website": "https://github.com/PiPhi-io"
+    }
+  },
+  {
+    "id": "piphi-network-weatherxm-api",
+    "name": "PiPhi Network WeatherXM API",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "PiPhi integration runtime for WeatherXM stations using the WeatherXM public API.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "image": "docker.io/piphi/piphi-network-weatherxm-api:0.1.0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi_network_weatherxm_api",
+    "repo_url": "https://github.com/PiPhi-io/piphi_network_weatherxm_api",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "weatherxm",
+      "weather",
+      "cloud-api",
+      "environment"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Integrations Team",
+      "website": "https://github.com/PiPhi-io"
     }
   }
 ]
