@@ -221,7 +221,7 @@
     "platforms": [
       "linux"
     ],
-    "image": "ghcr.io/piphi/piphi-mqtt-broker:0.1.0",
+    "image": "piphinetwork/mqtt-broker:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/mqtt-sidecar.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-mqtt-broker",
