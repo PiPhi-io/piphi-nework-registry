@@ -14,4 +14,7 @@ jobs:
           python-version: "3.12"
       - run: python -m json.tool registry.json >/dev/null
       - run: python scripts/validate_registry.py registry.json
+      - run: python scripts/validate_request_files.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - run: python -m py_compile scripts/*.py
