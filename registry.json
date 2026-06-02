@@ -119,7 +119,7 @@
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/tp-link-kasa.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_tp_link",
-    "repo_url": "https://github.com/PiPhi-io/piphi_network_tp_link",
+    "repo_url": "https://github.com/KelvinSan/piphi_network_tp_link",
     "manifest_path": "src/manifest.json",
     "tags": [
       "tp-link",
