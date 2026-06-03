@@ -119,7 +119,7 @@
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/tp-link-kasa.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_tp_link",
-    "repo_url": "https://github.com/KelvinSan/piphi_network_tp_link",
+    "repo_url": "https://github.com/KelvinSan/piphi_network_tp_link ",
     "manifest_path": "src/manifest.json",
     "tags": [
       "tp-link",
@@ -367,7 +367,7 @@
   {
     "id": "piphi-network-zigbee",
     "name": "PiPhi Network Zigbee",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -378,8 +378,8 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/zigbee-integration:0.1.2",
-    "ref": "v0.1.2",
+    "image": "piphinetwork/zigbee-integration:0.1.3",
+    "ref": "v0.1.3",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_zigbee",
