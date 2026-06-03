@@ -367,7 +367,7 @@
   {
     "id": "piphi-network-zigbee",
     "name": "PiPhi Network Zigbee",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -378,7 +378,7 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/zigbee-integration:0.1.4",
+    "image": "piphinetwork/zigbee-integration:0.1.5",
     "ref": "v0.1.4",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
     "owner": "PiPhi-io",
