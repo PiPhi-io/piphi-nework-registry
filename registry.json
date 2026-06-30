@@ -2,7 +2,7 @@
   {
     "id": "atmotube-pro-ble",
     "name": "Atmotube Pro (BLE)",
-    "version": "0.1.0",
+    "version": "0.1.5",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -114,8 +114,8 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/tp-link-kasa:0.1.0",
-    "ref": "v0.1.0",
+    "image": "piphinetwork/tp-link-kasa:0.1.5",
+    "ref": "v0.1.5",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/tp-link-kasa.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_tp_link",
@@ -379,7 +379,7 @@
       "macos"
     ],
     "image": "piphinetwork/zigbee-integration:0.1.5",
-    "ref": "v0.1.4",
+    "ref": "v0.1.5",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_zigbee",
