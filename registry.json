@@ -8,25 +8,14 @@
     "risk_level": "moderate",
     "description": "Integration for the Atmotube Pro over Bluetooth Low Energy using tinygo.org/x/bluetooth.",
     "rewardable": false,
-    "platforms": [
-      "linux",
-      "windows",
-      "macos"
-    ],
+    "platforms": ["linux", "windows", "macos"],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/atmotube.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-atmotube",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-atmotube",
     "manifest_path": "manifest.json",
-    "tags": [
-      "air-quality",
-      "bluetooth",
-      "sensor",
-      "ble"
-    ],
-    "runtime_requirements": [
-      "direct_hardware_access"
-    ],
+    "tags": ["air-quality", "bluetooth", "sensor", "ble"],
+    "runtime_requirements": ["direct_hardware_access"],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -42,23 +31,14 @@
     "risk_level": "low",
     "description": "Integration for Awair Element devices over the local network.",
     "rewardable": true,
-    "platforms": [
-      "linux",
-      "windows",
-      "macos"
-    ],
+    "platforms": ["linux", "windows", "macos"],
     "image": "piphinetwork/awair-element:0.1.8",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/awair.svg",
     "owner": "PiPhi-io",
     "repo_name": "com_piphi_awair_element",
     "repo_url": "https://github.com/KelvinSan/piphi-network-awair-element",
     "manifest_path": "src/manifest.json",
-    "tags": [
-      "air-quality",
-      "sensor",
-      "local-api",
-      "environment"
-    ],
+    "tags": ["air-quality", "sensor", "local-api", "environment"],
     "runtime_requirements": [],
     "maintainer": {
       "name": "PiPhi Network",
@@ -75,21 +55,14 @@
     "risk_level": "high",
     "description": "Integration for USB and NMEA-compatible GPS receivers connected through a serial device path.",
     "rewardable": false,
-    "platforms": [
-      "linux"
-    ],
+    "platforms": ["linux"],
     "image": "piphinetwork/official-gps-integration:1.0.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/gps.svg",
     "owner": "PiPhi-io",
     "repo_name": "Official-PiPhi-Network-GPS-Integration",
     "repo_url": "https://github.com/PiPhi-io/Official-PiPhi-Network-GPS-Integration",
     "manifest_path": "src/manifest.json",
-    "tags": [
-      "gps",
-      "usb",
-      "serial",
-      "location"
-    ],
+    "tags": ["gps", "usb", "serial", "location"],
     "runtime_requirements": [
       "usb_or_device_access",
       "direct_hardware_access",
@@ -103,34 +76,22 @@
   {
     "id": "tp-link-kasa-local-api",
     "name": "TP-Link Kasa (Local API)",
-    "version": "0.1.0",
+    "version": "0.1.6",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
     "description": "Integration for TP-Link Kasa devices over local network using python-kasa.",
     "rewardable": true,
-    "platforms": [
-      "linux",
-      "windows",
-      "macos"
-    ],
-    "image": "piphinetwork/tp-link-kasa:0.1.5",
-    "ref": "v0.1.5",
+    "platforms": ["linux", "windows", "macos"],
+    "image": "piphinetwork/tp-link-kasa:0.1.6",
+    "ref": "v0.1.6",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/tp-link-kasa.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_tp_link",
-    "repo_url": "https://github.com/KelvinSan/piphi_network_tp_link ",
+    "repo_url": "https://github.com/KelvinSan/piphi_network_tp_link",
     "manifest_path": "src/manifest.json",
-    "tags": [
-      "tp-link",
-      "kasa",
-      "smart-home",
-      "lighting",
-      "switch"
-    ],
-    "runtime_requirements": [
-      "secrets_or_api_tokens"
-    ],
+    "tags": ["tp-link", "kasa", "smart-home", "lighting", "switch"],
+    "runtime_requirements": ["secrets_or_api_tokens"],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -146,26 +107,15 @@
     "risk_level": "moderate",
     "description": "Integration for LG ThinQ appliances using the official ThinQ Connect Python SDK.",
     "rewardable": false,
-    "platforms": [
-      "linux",
-      "windows",
-      "macos"
-    ],
+    "platforms": ["linux", "windows", "macos"],
     "image": "piphinetwork/lg-thinq-connect:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/lg-thinq.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-thinqconnect",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-thinqconnect",
     "manifest_path": "src/manifest.json",
-    "tags": [
-      "lg",
-      "thinq",
-      "appliances",
-      "smart-home"
-    ],
-    "runtime_requirements": [
-      "secrets_or_api_tokens"
-    ],
+    "tags": ["lg", "thinq", "appliances", "smart-home"],
+    "runtime_requirements": ["secrets_or_api_tokens"],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -181,22 +131,14 @@
     "risk_level": "high",
     "description": "Generic rtl_433-based integration for supported sub-GHz sensors and devices.",
     "rewardable": false,
-    "platforms": [
-      "linux"
-    ],
+    "platforms": ["linux"],
     "image": "piphinetwork/piphi-network-433mhz:0.1.4",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
     "owner": "KelvinSan",
     "repo_name": "piphi-network-433mhz",
     "repo_url": "https://github.com/KelvinSan/piphi-network-433mhz",
     "manifest_path": "src/manifest.json",
-    "tags": [
-      "433mhz",
-      "sub-ghz",
-      "rtl433",
-      "sensor",
-      "radio"
-    ],
+    "tags": ["433mhz", "sub-ghz", "rtl433", "sensor", "radio"],
     "runtime_requirements": [
       "sidecar_runtime",
       "usb_or_device_access",
@@ -219,25 +161,15 @@
     "risk_level": "moderate",
     "description": "Shared MQTT broker for PiPhi integrations and helpers.",
     "rewardable": false,
-    "platforms": [
-      "linux"
-    ],
+    "platforms": ["linux"],
     "image": "piphinetwork/mqtt-broker:0.1.1",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/mqtt-sidecar.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-mqtt-broker",
     "repo_url": "https://github.com/PiPhi-io/piphi-mqtt-broker",
     "manifest_path": "src/manifest.json",
-    "tags": [
-      "mqtt",
-      "broker",
-      "platform-service",
-      "infrastructure",
-      "sidecar"
-    ],
-    "runtime_requirements": [
-      "sidecar_runtime"
-    ],
+    "tags": ["mqtt", "broker", "platform-service", "infrastructure", "sidecar"],
+    "runtime_requirements": ["sidecar_runtime"],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io"
@@ -253,22 +185,14 @@
     "risk_level": "high",
     "description": "Shared rtl_433 radio bridge for receiving sub-GHz sensor packets through PiPhi Core.",
     "rewardable": false,
-    "platforms": [
-      "linux"
-    ],
+    "platforms": ["linux"],
     "image": "piphinetwork/rtl433-bridge:0.1.2",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-rtl433-bridge",
     "repo_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge",
     "manifest_path": "src/manifest.json",
-    "tags": [
-      "rtl433",
-      "433mhz",
-      "radio",
-      "platform-service",
-      "sidecar"
-    ],
+    "tags": ["rtl433", "433mhz", "radio", "platform-service", "sidecar"],
     "runtime_requirements": [
       "sidecar_runtime",
       "host_networking",
@@ -292,9 +216,7 @@
     "risk_level": "high",
     "description": "Shared Matter controller sidecar for commissioning and managing supported Matter devices from PiPhi Core.",
     "rewardable": false,
-    "platforms": [
-      "linux"
-    ],
+    "platforms": ["linux"],
     "image": "piphinetwork/matter-sidecar:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/matter-sidecar.svg",
     "owner": "PiPhi-io",
@@ -330,11 +252,7 @@
     "risk_level": "high",
     "description": "Shared Zigbee2MQTT bridge sidecar for detecting Zigbee coordinators, rendering bridge configuration, and supervising Zigbee2MQTT from PiPhi Core.",
     "rewardable": false,
-    "platforms": [
-      "linux",
-      "windows",
-      "macos"
-    ],
+    "platforms": ["linux", "windows", "macos"],
     "image": "piphinetwork/zigbee2mqtt-sidecar:0.1.9",
     "ref": "v0.1.9",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
@@ -373,11 +291,7 @@
     "risk_level": "moderate",
     "description": "Generic Zigbee integration runtime backed by the shared Zigbee2MQTT sidecar and MQTT broker.",
     "rewardable": false,
-    "platforms": [
-      "linux",
-      "windows",
-      "macos"
-    ],
+    "platforms": ["linux", "windows", "macos"],
     "image": "piphinetwork/zigbee-integration:0.1.5",
     "ref": "v0.1.5",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
@@ -393,10 +307,7 @@
       "lighting",
       "sensors"
     ],
-    "runtime_requirements": [
-      "sidecar_runtime",
-      "mqtt_broker"
-    ],
+    "runtime_requirements": ["sidecar_runtime", "mqtt_broker"],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -412,26 +323,15 @@
     "risk_level": "moderate",
     "description": "Cloud integration for Airthings consumer accounts using the official Airthings Consumer API.",
     "rewardable": false,
-    "platforms": [
-      "linux",
-      "windows",
-      "macos"
-    ],
+    "platforms": ["linux", "windows", "macos"],
     "image": "piphinetwork/airthings-consumer-cloud:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-airthings",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-airthings",
     "manifest_path": "src/manifest.json",
-    "tags": [
-      "airthings",
-      "air-quality",
-      "cloud-api",
-      "environment"
-    ],
-    "runtime_requirements": [
-      "secrets_or_api_tokens"
-    ],
+    "tags": ["airthings", "air-quality", "cloud-api", "environment"],
+    "runtime_requirements": ["secrets_or_api_tokens"],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -447,26 +347,15 @@
     "risk_level": "moderate",
     "description": "Cloud integration for Aqara accounts using the Aqara Open API.",
     "rewardable": false,
-    "platforms": [
-      "linux",
-      "windows",
-      "macos"
-    ],
+    "platforms": ["linux", "windows", "macos"],
     "image": "piphinetwork/aqara-open-api:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-aqara",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-aqara",
     "manifest_path": "src/manifest.json",
-    "tags": [
-      "aqara",
-      "smart-home",
-      "cloud-api",
-      "sensors"
-    ],
-    "runtime_requirements": [
-      "secrets_or_api_tokens"
-    ],
+    "tags": ["aqara", "smart-home", "cloud-api", "sensors"],
+    "runtime_requirements": ["secrets_or_api_tokens"],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -482,26 +371,15 @@
     "risk_level": "moderate",
     "description": "Tesla Fleet API vehicle integration for Tesla EV discovery, status refresh, and wake-up flows.",
     "rewardable": false,
-    "platforms": [
-      "linux",
-      "windows",
-      "macos"
-    ],
+    "platforms": ["linux", "windows", "macos"],
     "image": "piphinetwork/tesla-ev:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_tesla_ev",
     "repo_url": "https://github.com/PiPhi-io/piphi_network_tesla_ev",
     "manifest_path": "src/manifest.json",
-    "tags": [
-      "tesla",
-      "ev",
-      "vehicle",
-      "cloud-api"
-    ],
-    "runtime_requirements": [
-      "secrets_or_api_tokens"
-    ],
+    "tags": ["tesla", "ev", "vehicle", "cloud-api"],
+    "runtime_requirements": ["secrets_or_api_tokens"],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io"
@@ -516,24 +394,15 @@
     "risk_level": "moderate",
     "description": "PiPhi integration runtime for Kaiterra devices using the Kaiterra public API.",
     "rewardable": false,
-    "platforms": [
-      "linux"
-    ],
+    "platforms": ["linux"],
     "image": "docker.io/piphi/piphi-network-kaiterra-api:0.1.1",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_kaiterra_api",
     "repo_url": "https://github.com/PiPhi-io/piphi_network_kaiterra_api",
     "manifest_path": "manifest.json",
-    "tags": [
-      "kaiterra",
-      "air-quality",
-      "cloud-api",
-      "environment"
-    ],
-    "runtime_requirements": [
-      "secrets_or_api_tokens"
-    ],
+    "tags": ["kaiterra", "air-quality", "cloud-api", "environment"],
+    "runtime_requirements": ["secrets_or_api_tokens"],
     "maintainer": {
       "name": "PiPhi Integrations Team",
       "website": "https://github.com/PiPhi-io"
@@ -548,22 +417,59 @@
     "risk_level": "low",
     "description": "PiPhi integration runtime for WeatherXM stations using the WeatherXM public API.",
     "rewardable": false,
-    "platforms": [
-      "linux"
-    ],
+    "platforms": ["linux"],
     "image": "docker.io/piphi/piphi-network-weatherxm:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_weatherxm",
     "repo_url": "https://github.com/PiPhi-io/piphi_network_weatherxm",
     "manifest_path": "manifest.json",
-    "tags": [
-      "weatherxm",
-      "weather",
-      "cloud-api",
-      "environment"
-    ],
+    "tags": ["weatherxm", "weather", "cloud-api", "environment"],
     "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Integrations Team",
+      "website": "https://github.com/PiPhi-io"
+    }
+  },
+  {
+    "id": "piphi-network-i2c",
+    "name": "PiPhi Network I2C Sensors",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Local I2C environmental sensor integration for BME680, BME280, BMP280, AHT20, and compatible devices connected directly or through MCP2221A or FT232H bridges.",
+    "rewardable": false,
+    "platforms": ["linux"],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi_network_i2c",
+    "repo_url": "https://github.com/PiPhi-io/piphi_network_i2c",
+    "manifest_path": "src/manifest.json",
+    "tags": ["i2c", "sensor", "environment", "hardware", "bme680", "aht20"],
+    "runtime_requirements": ["direct_hardware_access", "usb_or_device_access"],
+    "maintainer": {
+      "name": "PiPhi Integrations Team",
+      "website": "https://github.com/PiPhi-io"
+    }
+  },
+  {
+    "id": "piphi-network-spi",
+    "name": "PiPhi Network SPI Sensors",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Local SPI environmental sensor integration for BME680, BME280, BMP280, and compatible devices connected directly or through FT232H bridges.",
+    "rewardable": false,
+    "platforms": ["linux"],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi_network-spi",
+    "repo_url": "https://github.com/PiPhi-io/piphi_network-spi",
+    "manifest_path": "src/manifest.json",
+    "tags": ["spi", "sensor", "environment", "hardware", "bme680", "bmp280"],
+    "runtime_requirements": ["direct_hardware_access", "usb_or_device_access"],
     "maintainer": {
       "name": "PiPhi Integrations Team",
       "website": "https://github.com/PiPhi-io"

@@ -40,7 +40,7 @@ Before publishing a stable tag:
 | Matter Sidecar | sidecar | Image tag pinned; finish adapter implementation checks and commissioning smoke test. |
 | GPS | integration | CI added; confirm package changes, Docker image tag, and USB device smoke test. |
 | ThinQ Connect | integration | CI added; resolve dirty changes and verify token/error handling. |
-| TP-Link Kasa | integration | CI added; resolve dirty changes and verify local discovery/control smoke test. |
+| TP-Link Kasa | integration | Registry synced to `0.1.6`; verify local discovery/control smoke test. |
 | Airthings Consumer Cloud | integration | Added to registry; verify API credentials, rate limits, and stale-data health. |
 | Aqara Open API | integration | Added to registry; verify cloud auth, event/state mapping, and rate limits. |
 | Tesla EV | integration | Added to registry; add release workflow and verify Fleet API auth/wake-up flows. |
