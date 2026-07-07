@@ -474,5 +474,28 @@
       "name": "PiPhi Integrations Team",
       "website": "https://github.com/PiPhi-io"
     }
+  },
+  {
+    "id": "piphi-network-tuya",
+    "name": "PiPhi Network Tuya",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "PiPhi integration runtime for Tuya LAN devices using TinyTuya.",
+    "rewardable": false,
+    "platforms": ["linux"],
+    "image": "docker.io/piphi/piphi-network-tuya:0.1.0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/tuya.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi_network_tuya",
+    "repo_url": "https://github.com/PiPhi-io/piphi_network_tuya",
+    "manifest_path": "src/manifest.json",
+    "tags": ["tuya", "smart-home", "lan", "lighting", "switch"],
+    "runtime_requirements": ["secrets_or_api_tokens"],
+    "maintainer": {
+      "name": "PiPhi Integrations Team",
+      "website": "https://github.com/PiPhi-io"
+    }
   }
 ]

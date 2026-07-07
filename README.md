@@ -61,3 +61,4 @@ Assets:
 - 433MHz icon: `icons/rtl433.svg`
 - MQTT sidecar icon: `icons/mqtt-sidecar.svg`
 - Zigbee2MQTT sidecar icon: `icons/zigbee2mqtt.svg`
+- Tuya icon: `icons/tuya.svg`
