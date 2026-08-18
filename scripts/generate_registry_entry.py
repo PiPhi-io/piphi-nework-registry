@@ -8,12 +8,18 @@ import sys
 from pathlib import Path
 
 from submission_utils import fetch_manifest_from_github, parse_issue_form, parse_repo_url, split_lines
+from marketplace_metadata import validate_marketplace_v2
 
 
 def choose_default_icon_url(deployment_mode: str) -> str:
     if deployment_mode == "sidecar":
         return "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/mqtt-sidecar.svg"
     return "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg"
+
+
+def packaged_brand_path(manifest_path: str) -> str:
+    parent = Path(manifest_path).parent.as_posix()
+    return "brand" if parent == "." else f"{parent}/brand"
 
 
 def parse_tags(raw_value: str) -> list[str]:
@@ -67,12 +73,18 @@ def build_entry(fields: dict[str, str], manifest: dict[str, object]) -> dict[str
     icon_url = fields.get("icon_url", "").strip() or choose_default_icon_url(deployment_mode)
     support_contact = fields.get("support_contact", "").strip()
     maintainer_name = fields.get("maintainer_name", "").strip()
+    entry_type = fields.get("entry_type", "integration").strip() or "integration"
+    marketplace = manifest.get("marketplace")
+    marketplace_errors = validate_marketplace_v2(marketplace, entry_type=entry_type)
+    if marketplace_errors:
+        raise ValueError("Manifest marketplace metadata is invalid: " + "; ".join(marketplace_errors))
 
+    manifest_path = fields.get("manifest_path", "").strip()
     entry: dict[str, object] = {
         "id": str(manifest.get("id") or fields.get("integration_id") or "").strip(),
         "name": str(manifest.get("name") or fields.get("integration_name") or "").strip(),
         "version": str(manifest.get("version") or "").strip(),
-        "type": fields.get("entry_type", "integration").strip() or "integration",
+        "type": entry_type,
         "deployment_mode": deployment_mode,
         "trust_level": "community",
         "risk_level": infer_risk_level(deployment_mode, runtime_requirements),
@@ -83,12 +95,14 @@ def build_entry(fields: dict[str, str], manifest: dict[str, object]) -> dict[str
         "owner": owner,
         "repo_name": repo_name,
         "repo_url": repo_url,
-        "manifest_path": fields.get("manifest_path", "").strip(),
+        "manifest_path": manifest_path,
+        "brand_path": packaged_brand_path(manifest_path),
         "tags": parse_tags(fields.get("tags", "")),
         "runtime_requirements": runtime_requirements,
         "maintainer": {
             "name": maintainer_name,
         },
+        "marketplace": marketplace,
     }
 
     manifest_image = str(manifest.get("image") or "").strip()

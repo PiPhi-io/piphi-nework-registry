@@ -19,6 +19,7 @@ from submission_utils import (
     split_lines,
     url_exists,
 )
+from marketplace_metadata import validate_marketplace_v2
 
 
 def validate_submission(fields: dict[str, str], registry_path: Path, token: str | None) -> tuple[list[str], list[str]]:
@@ -101,6 +102,10 @@ def validate_submission(fields: dict[str, str], registry_path: Path, token: str 
             warnings.append(
                 "Selected supported platforms do not exactly match the manifest platforms."
             )
+        marketplace_errors = validate_marketplace_v2(
+            manifest_payload.get("marketplace"), entry_type=entry_type
+        )
+        errors.extend(f"Manifest {error}." for error in marketplace_errors)
 
     if icon_url and not url_exists(icon_url):
         errors.append("Icon URL is not reachable.")

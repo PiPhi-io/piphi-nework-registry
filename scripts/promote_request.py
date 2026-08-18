@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any
 
 from submission_utils import fetch_manifest_from_github, load_registry_entries, parse_repo_url
+from marketplace_metadata import validate_marketplace_v2
 
 
 def parse_args() -> argparse.Namespace:
@@ -72,6 +73,11 @@ def default_icon_url(deployment_mode: str) -> str:
     return f"https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/{icon_name}"
 
 
+def packaged_brand_path(manifest_path: str) -> str:
+    parent = Path(manifest_path).parent.as_posix()
+    return "brand" if parent == "." else f"{parent}/brand"
+
+
 def build_entry(request: dict[str, Any], manifest: dict[str, Any]) -> dict[str, Any]:
     proposed = request.get("proposed_registry_entry")
     if not isinstance(proposed, dict):
@@ -96,11 +102,17 @@ def build_entry(request: dict[str, Any], manifest: dict[str, Any]) -> dict[str, 
         maintainer = {**maintainer, **{key: value for key, value in manifest_maintainer.items() if value}}
     maintainer.setdefault("name", "Community")
 
+    manifest_path = str(proposed.get("manifest_path") or "src/manifest.json").strip()
+    entry_type = str(proposed.get("type") or "integration").strip()
+    marketplace = manifest.get("marketplace")
+    marketplace_errors = validate_marketplace_v2(marketplace, entry_type=entry_type)
+    if marketplace_errors:
+        raise ValueError("Manifest marketplace metadata is invalid: " + "; ".join(marketplace_errors))
     entry: dict[str, Any] = {
         "id": str(manifest.get("id") or proposed.get("id") or "").strip(),
         "name": str(manifest.get("name") or proposed.get("name") or request.get("brand") or "").strip(),
         "version": str(manifest.get("version") or proposed.get("version") or "").strip(),
-        "type": str(proposed.get("type") or "integration").strip(),
+        "type": entry_type,
         "trust_level": str(proposed.get("trust_level") or "community").strip(),
         "risk_level": str(proposed.get("risk_level") or "moderate").strip(),
         "description": str(
@@ -115,10 +127,12 @@ def build_entry(request: dict[str, Any], manifest: dict[str, Any]) -> dict[str, 
         "owner": owner,
         "repo_name": repo_name,
         "repo_url": repo_url,
-        "manifest_path": str(proposed.get("manifest_path") or "src/manifest.json").strip(),
+        "manifest_path": manifest_path,
+        "brand_path": str(proposed.get("brand_path") or packaged_brand_path(manifest_path)).strip(),
         "tags": normalize_list(proposed.get("tags")) or normalize_list([request.get("category"), request.get("brand")]),
         "runtime_requirements": normalize_list(proposed.get("runtime_requirements")),
         "maintainer": maintainer,
+        "marketplace": marketplace,
     }
     if deployment_mode != "standalone":
         entry["deployment_mode"] = deployment_mode

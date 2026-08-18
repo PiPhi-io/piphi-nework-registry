@@ -7,15 +7,76 @@
     "trust_level": "official",
     "risk_level": "moderate",
     "description": "Integration for the Atmotube Pro over Bluetooth Low Energy using tinygo.org/x/bluetooth.",
+    "marketplace": {
+      "brand_domain": "atmotube.com",
+      "metadata_version": 2,
+      "display_name": "Atmotube Air Quality",
+      "summary": "See nearby Atmotube Pro air-quality readings in your rooms.",
+      "category": "air_quality",
+      "device_types": [
+        "air_quality_monitor"
+      ],
+      "protocols": [
+        "bluetooth_le"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "bluetooth"
+      ],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-atmotube/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "direct_hardware",
+          "label": "Direct hardware access",
+          "reason": "Communicates with the selected adapter or sensor attached to this PiPhi.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Atmotube",
+          "model": "Pro",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-atmotube",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-atmotube/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-atmotube/releases"
+    },
     "rewardable": false,
-    "platforms": ["linux", "windows", "macos"],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/atmotube.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-atmotube",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-atmotube",
     "manifest_path": "manifest.json",
-    "tags": ["air-quality", "bluetooth", "sensor", "ble"],
-    "runtime_requirements": ["direct_hardware_access"],
+    "tags": [
+      "air-quality",
+      "bluetooth",
+      "sensor",
+      "ble"
+    ],
+    "runtime_requirements": [
+      "direct_hardware_access"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -30,15 +91,75 @@
     "trust_level": "official",
     "risk_level": "low",
     "description": "Integration for Awair Element devices over the local network.",
+    "marketplace": {
+      "brand_domain": "getawair.com",
+      "metadata_version": 2,
+      "display_name": "Awair Air Quality",
+      "summary": "See Awair Element air-quality readings over your home network.",
+      "category": "air_quality",
+      "device_types": [
+        "air_quality_monitor"
+      ],
+      "protocols": [
+        "http"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "mdns",
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/KelvinSan/piphi-network-awair-element/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Finds or communicates with supported devices and services on your home network.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Awair",
+          "model": "Element",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/KelvinSan/piphi-network-awair-element",
+      "support_url": "https://github.com/KelvinSan/piphi-network-awair-element/issues",
+      "changelog_url": "https://github.com/KelvinSan/piphi-network-awair-element/releases"
+    },
     "rewardable": true,
-    "platforms": ["linux", "windows", "macos"],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
     "image": "piphinetwork/awair-element:0.1.8",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/awair.svg",
     "owner": "PiPhi-io",
     "repo_name": "com_piphi_awair_element",
     "repo_url": "https://github.com/KelvinSan/piphi-network-awair-element",
     "manifest_path": "src/manifest.json",
-    "tags": ["air-quality", "sensor", "local-api", "environment"],
+    "tags": [
+      "air-quality",
+      "sensor",
+      "local-api",
+      "environment"
+    ],
     "runtime_requirements": [],
     "maintainer": {
       "name": "PiPhi Network",
@@ -55,14 +176,21 @@
     "risk_level": "high",
     "description": "Integration for USB and NMEA-compatible GPS receivers connected through a serial device path.",
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "image": "piphinetwork/official-gps-integration:1.0.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/gps.svg",
     "owner": "PiPhi-io",
     "repo_name": "Official-PiPhi-Network-GPS-Integration",
     "repo_url": "https://github.com/PiPhi-io/Official-PiPhi-Network-GPS-Integration",
     "manifest_path": "src/manifest.json",
-    "tags": ["gps", "usb", "serial", "location"],
+    "tags": [
+      "gps",
+      "usb",
+      "serial",
+      "location"
+    ],
     "runtime_requirements": [
       "usb_or_device_access",
       "direct_hardware_access",
@@ -71,6 +199,75 @@
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "GPS Receivers",
+      "summary": "Bring location readings from connected USB and NMEA GPS receivers into PiPhi.",
+      "category": "sensors",
+      "device_types": [
+        "gps_receiver"
+      ],
+      "protocols": [
+        "nmea_0183",
+        "serial"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "serial"
+      ],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/Official-PiPhi-Network-GPS-Integration/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "usb_device",
+          "label": "USB or device access",
+          "reason": "Uses the selected USB adapter or hardware device.",
+          "required": true
+        },
+        {
+          "id": "direct_hardware",
+          "label": "Direct hardware access",
+          "reason": "Communicates with the selected adapter or sensor attached to this PiPhi.",
+          "required": true
+        },
+        {
+          "id": "privileged_runtime",
+          "label": "Elevated local service",
+          "reason": "Uses elevated runtime access for the required radio or hardware connection.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Generic",
+          "model": "USB GPS receiver",
+          "regions": [
+            "WW"
+          ]
+        },
+        {
+          "brand": "Generic",
+          "model": "NMEA-compatible GPS receiver",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/Official-PiPhi-Network-GPS-Integration",
+      "support_url": "https://github.com/PiPhi-io/Official-PiPhi-Network-GPS-Integration/issues",
+      "changelog_url": "https://github.com/PiPhi-io/Official-PiPhi-Network-GPS-Integration/releases"
     }
   },
   {
@@ -81,8 +278,85 @@
     "trust_level": "official",
     "risk_level": "moderate",
     "description": "Integration for TP-Link Kasa devices over local network using python-kasa.",
+    "marketplace": {
+      "brand_domain": "tp-link.com",
+      "metadata_version": 2,
+      "display_name": "TP-Link Kasa Devices",
+      "summary": "Control compatible Kasa lights, plugs, and switches over your home network.",
+      "category": "lighting",
+      "device_types": [
+        "light",
+        "plug",
+        "switch"
+      ],
+      "protocols": [
+        "kasa_lan"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "mdns",
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/KelvinSan/piphi_network_tp_link/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Finds or communicates with supported devices and services on your home network.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Stores the credentials needed to connect the selected account or device.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "TP-Link Kasa",
+          "model": "Lights",
+          "regions": [
+            "WW"
+          ]
+        },
+        {
+          "brand": "TP-Link Kasa",
+          "model": "Plugs",
+          "regions": [
+            "WW"
+          ]
+        },
+        {
+          "brand": "TP-Link Kasa",
+          "model": "Switches",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/KelvinSan/piphi_network_tp_link",
+      "support_url": "https://github.com/KelvinSan/piphi_network_tp_link/issues",
+      "changelog_url": "https://github.com/KelvinSan/piphi_network_tp_link/releases"
+    },
     "rewardable": true,
-    "platforms": ["linux", "windows", "macos"],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
     "image": "piphinetwork/tp-link-kasa:0.1.6",
     "ref": "v0.1.6",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/tp-link-kasa.svg",
@@ -90,8 +364,16 @@
     "repo_name": "piphi_network_tp_link",
     "repo_url": "https://github.com/KelvinSan/piphi_network_tp_link",
     "manifest_path": "src/manifest.json",
-    "tags": ["tp-link", "kasa", "smart-home", "lighting", "switch"],
-    "runtime_requirements": ["secrets_or_api_tokens"],
+    "tags": [
+      "tp-link",
+      "kasa",
+      "smart-home",
+      "lighting",
+      "switch"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -106,16 +388,84 @@
     "trust_level": "official",
     "risk_level": "moderate",
     "description": "Integration for LG ThinQ appliances using the official ThinQ Connect Python SDK.",
+    "marketplace": {
+      "brand_domain": "lg.com",
+      "metadata_version": 2,
+      "display_name": "LG ThinQ Appliances",
+      "summary": "Connect compatible LG ThinQ appliances through your LG account.",
+      "category": "appliances",
+      "device_types": [
+        "appliance"
+      ],
+      "protocols": [
+        "thinq_connect_api"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "account"
+      ],
+      "connectivity": "cloud",
+      "offline_support": "none",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-thinqconnect/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "external_cloud",
+          "label": "External cloud access",
+          "reason": "Connects to the device maker's service to read or control the selected account and devices.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Stores the credentials needed to connect the selected account or device.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "LG ThinQ",
+          "model": "Compatible appliances",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-thinqconnect",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-thinqconnect/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-thinqconnect/releases",
+      "privacy_url": "https://privacy.us.lg.com/policies/en/"
+    },
     "rewardable": false,
-    "platforms": ["linux", "windows", "macos"],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
     "image": "piphinetwork/lg-thinq-connect:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/lg-thinq.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-thinqconnect",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-thinqconnect",
     "manifest_path": "src/manifest.json",
-    "tags": ["lg", "thinq", "appliances", "smart-home"],
-    "runtime_requirements": ["secrets_or_api_tokens"],
+    "tags": [
+      "lg",
+      "thinq",
+      "appliances",
+      "smart-home"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -131,14 +481,22 @@
     "risk_level": "high",
     "description": "Generic rtl_433-based integration for supported sub-GHz sensors and devices.",
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "image": "piphinetwork/piphi-network-433mhz:0.1.4",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
     "owner": "KelvinSan",
     "repo_name": "piphi-network-433mhz",
     "repo_url": "https://github.com/KelvinSan/piphi-network-433mhz",
     "manifest_path": "src/manifest.json",
-    "tags": ["433mhz", "sub-ghz", "rtl433", "sensor", "radio"],
+    "tags": [
+      "433mhz",
+      "sub-ghz",
+      "rtl433",
+      "sensor",
+      "radio"
+    ],
     "runtime_requirements": [
       "sidecar_runtime",
       "usb_or_device_access",
@@ -149,6 +507,80 @@
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "433 MHz Sensors",
+      "summary": "Receive readings from rtl_433-compatible sensors and devices.",
+      "category": "sensors",
+      "device_types": [
+        "sensor"
+      ],
+      "protocols": [
+        "rtl_433",
+        "sub_ghz"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "radio"
+      ],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/KelvinSan/piphi-network-433mhz/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "companion_service",
+          "label": "Background home service",
+          "reason": "Keeps a required local companion service running for connected devices.",
+          "required": true
+        },
+        {
+          "id": "usb_device",
+          "label": "USB or device access",
+          "reason": "Uses the selected USB adapter or hardware device.",
+          "required": true
+        },
+        {
+          "id": "direct_hardware",
+          "label": "Direct hardware access",
+          "reason": "Communicates with the selected adapter or sensor attached to this PiPhi.",
+          "required": true
+        },
+        {
+          "id": "host_network",
+          "label": "Host network access",
+          "reason": "Listens for or communicates with devices on your home network.",
+          "required": true
+        },
+        {
+          "id": "privileged_runtime",
+          "label": "Elevated local service",
+          "reason": "Uses elevated runtime access for the required radio or hardware connection.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "rtl_433",
+          "model": "Supported sensors and devices",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/KelvinSan/piphi-network-433mhz",
+      "support_url": "https://github.com/KelvinSan/piphi-network-433mhz/issues",
+      "changelog_url": "https://github.com/KelvinSan/piphi-network-433mhz/releases"
     }
   },
   {
@@ -161,18 +593,75 @@
     "risk_level": "moderate",
     "description": "Shared MQTT broker for PiPhi integrations and helpers.",
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "image": "piphinetwork/mqtt-broker:0.1.1",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/mqtt-sidecar.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-mqtt-broker",
     "repo_url": "https://github.com/PiPhi-io/piphi-mqtt-broker",
     "manifest_path": "src/manifest.json",
-    "tags": ["mqtt", "broker", "platform-service", "infrastructure", "sidecar"],
-    "runtime_requirements": ["sidecar_runtime"],
+    "tags": [
+      "mqtt",
+      "broker",
+      "platform-service",
+      "infrastructure",
+      "sidecar"
+    ],
+    "runtime_requirements": [
+      "sidecar_runtime"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "MQTT Device Support",
+      "summary": "Provide a shared local MQTT connection for PiPhi apps and devices.",
+      "category": "networking",
+      "device_types": [
+        "platform_service"
+      ],
+      "protocols": [
+        "mqtt"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-mqtt-broker/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Finds or communicates with supported devices and services on your home network.",
+          "required": true
+        },
+        {
+          "id": "companion_service",
+          "label": "Background home service",
+          "reason": "Keeps a required local companion service running for connected devices.",
+          "required": true
+        }
+      ],
+      "compatibility": [],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-mqtt-broker",
+      "support_url": "https://github.com/PiPhi-io/piphi-mqtt-broker/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-mqtt-broker/releases"
     }
   },
   {
@@ -185,14 +674,22 @@
     "risk_level": "high",
     "description": "Shared rtl_433 radio bridge for receiving sub-GHz sensor packets through PiPhi Core.",
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "image": "piphinetwork/rtl433-bridge:0.1.2",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-rtl433-bridge",
     "repo_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge",
     "manifest_path": "src/manifest.json",
-    "tags": ["rtl433", "433mhz", "radio", "platform-service", "sidecar"],
+    "tags": [
+      "rtl433",
+      "433mhz",
+      "radio",
+      "platform-service",
+      "sidecar"
+    ],
     "runtime_requirements": [
       "sidecar_runtime",
       "host_networking",
@@ -204,6 +701,72 @@
       "name": "PiPhi Network",
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "433 MHz Radio Support",
+      "summary": "Provide the local radio bridge used by 433 MHz sensors.",
+      "category": "networking",
+      "device_types": [
+        "platform_service"
+      ],
+      "protocols": [
+        "rtl_433",
+        "sub_ghz"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "radio"
+      ],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "companion_service",
+          "label": "Background home service",
+          "reason": "Keeps a required local companion service running for connected devices.",
+          "required": true
+        },
+        {
+          "id": "host_network",
+          "label": "Host network access",
+          "reason": "Listens for or communicates with devices on your home network.",
+          "required": true
+        },
+        {
+          "id": "usb_device",
+          "label": "USB or device access",
+          "reason": "Uses the selected USB adapter or hardware device.",
+          "required": true
+        },
+        {
+          "id": "direct_hardware",
+          "label": "Direct hardware access",
+          "reason": "Communicates with the selected adapter or sensor attached to this PiPhi.",
+          "required": true
+        },
+        {
+          "id": "privileged_runtime",
+          "label": "Elevated local service",
+          "reason": "Uses elevated runtime access for the required radio or hardware connection.",
+          "required": true
+        }
+      ],
+      "compatibility": [],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge",
+      "support_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge/releases"
     }
   },
   {
@@ -216,7 +779,9 @@
     "risk_level": "high",
     "description": "Shared Matter controller sidecar for commissioning and managing supported Matter devices from PiPhi Core.",
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "image": "piphinetwork/matter-sidecar:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/matter-sidecar.svg",
     "owner": "PiPhi-io",
@@ -240,6 +805,65 @@
       "name": "PiPhi Network",
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Matter Device Support",
+      "summary": "Commission and manage compatible Matter devices from your PiPhi home.",
+      "category": "networking",
+      "device_types": [
+        "platform_service"
+      ],
+      "protocols": [
+        "matter"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "matter_commissioning"
+      ],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-matter/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "companion_service",
+          "label": "Background home service",
+          "reason": "Keeps a required local companion service running for connected devices.",
+          "required": true
+        },
+        {
+          "id": "host_network",
+          "label": "Host network access",
+          "reason": "Listens for or communicates with devices on your home network.",
+          "required": true
+        },
+        {
+          "id": "direct_hardware",
+          "label": "Direct hardware access",
+          "reason": "Communicates with the selected adapter or sensor attached to this PiPhi.",
+          "required": true
+        },
+        {
+          "id": "privileged_runtime",
+          "label": "Elevated local service",
+          "reason": "Uses elevated runtime access for the required radio or hardware connection.",
+          "required": true
+        }
+      ],
+      "compatibility": [],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-matter",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-matter/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-matter/releases"
     }
   },
   {
@@ -252,7 +876,11 @@
     "risk_level": "high",
     "description": "Shared Zigbee2MQTT bridge sidecar for detecting Zigbee coordinators, rendering bridge configuration, and supervising Zigbee2MQTT from PiPhi Core.",
     "rewardable": false,
-    "platforms": ["linux", "windows", "macos"],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
     "image": "piphinetwork/zigbee2mqtt-sidecar:0.1.9",
     "ref": "v0.1.9",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
@@ -280,6 +908,85 @@
       "name": "PiPhi Network",
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Zigbee Device Support",
+      "summary": "Connect a compatible coordinator and manage Zigbee devices through PiPhi.",
+      "category": "networking",
+      "device_types": [
+        "platform_service"
+      ],
+      "protocols": [
+        "zigbee",
+        "mqtt"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "usb",
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi_network_zigbee2mqtt/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Finds or communicates with supported devices and services on your home network.",
+          "required": true
+        },
+        {
+          "id": "companion_service",
+          "label": "Background home service",
+          "reason": "Keeps a required local companion service running for connected devices.",
+          "required": true
+        },
+        {
+          "id": "host_filesystem",
+          "label": "Local storage access",
+          "reason": "Stores and updates the companion service configuration on this PiPhi.",
+          "required": true
+        },
+        {
+          "id": "docker_socket",
+          "label": "Container management access",
+          "reason": "Manages the required local companion service.",
+          "required": true
+        },
+        {
+          "id": "usb_device",
+          "label": "USB or device access",
+          "reason": "Uses the selected USB adapter or hardware device.",
+          "required": true
+        },
+        {
+          "id": "direct_hardware",
+          "label": "Direct hardware access",
+          "reason": "Communicates with the selected adapter or sensor attached to this PiPhi.",
+          "required": true
+        },
+        {
+          "id": "privileged_runtime",
+          "label": "Elevated local service",
+          "reason": "Uses elevated runtime access for the required radio or hardware connection.",
+          "required": true
+        }
+      ],
+      "compatibility": [],
+      "documentation_url": "https://github.com/PiPhi-io/piphi_network_zigbee2mqtt",
+      "support_url": "https://github.com/PiPhi-io/piphi_network_zigbee2mqtt/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network_zigbee2mqtt/releases"
     }
   },
   {
@@ -291,7 +998,11 @@
     "risk_level": "moderate",
     "description": "Generic Zigbee integration runtime backed by the shared Zigbee2MQTT sidecar and MQTT broker.",
     "rewardable": false,
-    "platforms": ["linux", "windows", "macos"],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
     "image": "piphinetwork/zigbee-integration:0.1.5",
     "ref": "v0.1.5",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
@@ -307,11 +1018,76 @@
       "lighting",
       "sensors"
     ],
-    "runtime_requirements": ["sidecar_runtime", "mqtt_broker"],
+    "runtime_requirements": [
+      "sidecar_runtime",
+      "mqtt_broker"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Zigbee Devices",
+      "summary": "Bring devices from the shared Zigbee connection into rooms and automations.",
+      "category": "networking",
+      "device_types": [
+        "zigbee_device"
+      ],
+      "protocols": [
+        "zigbee",
+        "mqtt"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "zigbee_coordinator"
+      ],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi_network_zigbee/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Finds or communicates with supported devices and services on your home network.",
+          "required": true
+        },
+        {
+          "id": "companion_service",
+          "label": "Background home service",
+          "reason": "Keeps a required local companion service running for connected devices.",
+          "required": true
+        },
+        {
+          "id": "mqtt",
+          "label": "MQTT connection",
+          "reason": "Exchanges device messages with the shared local MQTT service.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Zigbee2MQTT",
+          "model": "Supported devices",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi_network_zigbee",
+      "support_url": "https://github.com/PiPhi-io/piphi_network_zigbee/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network_zigbee/releases"
     }
   },
   {
@@ -322,16 +1098,84 @@
     "trust_level": "official",
     "risk_level": "moderate",
     "description": "Cloud integration for Airthings consumer accounts using the official Airthings Consumer API.",
+    "marketplace": {
+      "brand_domain": "airthings.com",
+      "metadata_version": 2,
+      "display_name": "Airthings Air Quality",
+      "summary": "Connect supported Airthings monitors through your Airthings account.",
+      "category": "air_quality",
+      "device_types": [
+        "air_quality_monitor"
+      ],
+      "protocols": [
+        "airthings_consumer_api"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "account"
+      ],
+      "connectivity": "cloud",
+      "offline_support": "none",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-airthings/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "external_cloud",
+          "label": "External cloud access",
+          "reason": "Connects to the device maker's service to read or control the selected account and devices.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Stores the credentials needed to connect the selected account or device.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Airthings",
+          "model": "Consumer devices",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-airthings",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-airthings/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-airthings/releases",
+      "privacy_url": "https://www.airthings.com/privacy-notice"
+    },
     "rewardable": false,
-    "platforms": ["linux", "windows", "macos"],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
     "image": "piphinetwork/airthings-consumer-cloud:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-airthings",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-airthings",
     "manifest_path": "src/manifest.json",
-    "tags": ["airthings", "air-quality", "cloud-api", "environment"],
-    "runtime_requirements": ["secrets_or_api_tokens"],
+    "tags": [
+      "airthings",
+      "air-quality",
+      "cloud-api",
+      "environment"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -346,16 +1190,86 @@
     "trust_level": "official",
     "risk_level": "moderate",
     "description": "Cloud integration for Aqara accounts using the Aqara Open API.",
+    "marketplace": {
+      "brand_domain": "aqara.com",
+      "metadata_version": 2,
+      "display_name": "Aqara Devices",
+      "summary": "Connect supported Aqara devices through your Aqara account.",
+      "category": "sensors",
+      "device_types": [
+        "sensor",
+        "switch",
+        "light"
+      ],
+      "protocols": [
+        "aqara_open_api"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "account"
+      ],
+      "connectivity": "cloud",
+      "offline_support": "none",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-aqara/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "external_cloud",
+          "label": "External cloud access",
+          "reason": "Connects to the device maker's service to read or control the selected account and devices.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Stores the credentials needed to connect the selected account or device.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Aqara",
+          "model": "Open API devices",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-aqara",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-aqara/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-aqara/releases",
+      "privacy_url": "https://www.aqara.com/en/privacy-policy/"
+    },
     "rewardable": false,
-    "platforms": ["linux", "windows", "macos"],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
     "image": "piphinetwork/aqara-open-api:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-aqara",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-aqara",
     "manifest_path": "src/manifest.json",
-    "tags": ["aqara", "smart-home", "cloud-api", "sensors"],
-    "runtime_requirements": ["secrets_or_api_tokens"],
+    "tags": [
+      "aqara",
+      "smart-home",
+      "cloud-api",
+      "sensors"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -370,16 +1284,84 @@
     "trust_level": "official",
     "risk_level": "moderate",
     "description": "Tesla Fleet API vehicle integration for Tesla EV discovery, status refresh, and wake-up flows.",
+    "marketplace": {
+      "brand_domain": "tesla.com",
+      "metadata_version": 2,
+      "display_name": "Tesla Vehicles",
+      "summary": "See and control supported Tesla vehicles through Fleet API.",
+      "category": "mobility",
+      "device_types": [
+        "vehicle"
+      ],
+      "protocols": [
+        "tesla_fleet_api"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "account"
+      ],
+      "connectivity": "cloud",
+      "offline_support": "none",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi_network_tesla_ev/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "external_cloud",
+          "label": "External cloud access",
+          "reason": "Connects to the device maker's service to read or control the selected account and devices.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Stores the credentials needed to connect the selected account or device.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Tesla",
+          "model": "Fleet API vehicles",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi_network_tesla_ev",
+      "support_url": "https://github.com/PiPhi-io/piphi_network_tesla_ev/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network_tesla_ev/releases",
+      "privacy_url": "https://www.tesla.com/legal/privacy"
+    },
     "rewardable": false,
-    "platforms": ["linux", "windows", "macos"],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
     "image": "piphinetwork/tesla-ev:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_tesla_ev",
     "repo_url": "https://github.com/PiPhi-io/piphi_network_tesla_ev",
     "manifest_path": "src/manifest.json",
-    "tags": ["tesla", "ev", "vehicle", "cloud-api"],
-    "runtime_requirements": ["secrets_or_api_tokens"],
+    "tags": [
+      "tesla",
+      "ev",
+      "vehicle",
+      "cloud-api"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io"
@@ -393,16 +1375,82 @@
     "trust_level": "official",
     "risk_level": "moderate",
     "description": "PiPhi integration runtime for Kaiterra devices using the Kaiterra public API.",
+    "marketplace": {
+      "brand_domain": "kaiterra.com",
+      "metadata_version": 2,
+      "display_name": "Kaiterra Air Quality",
+      "summary": "Connect supported Kaiterra air-quality monitors through the public API.",
+      "category": "air_quality",
+      "device_types": [
+        "air_quality_monitor"
+      ],
+      "protocols": [
+        "kaiterra_api"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "account"
+      ],
+      "connectivity": "cloud",
+      "offline_support": "none",
+      "publisher": {
+        "name": "PiPhi Integrations Team",
+        "website_url": "https://github.com/PiPhi-io",
+        "support_url": "https://github.com/PiPhi-io/piphi_network_kaiterra_api/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "external_cloud",
+          "label": "External cloud access",
+          "reason": "Connects to the device maker's service to read or control the selected account and devices.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Stores the credentials needed to connect the selected account or device.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Kaiterra",
+          "model": "Air-quality monitors",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi_network_kaiterra_api",
+      "support_url": "https://github.com/PiPhi-io/piphi_network_kaiterra_api/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network_kaiterra_api/releases",
+      "privacy_url": "https://www.kaiterra.com/privacy-policy"
+    },
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "image": "docker.io/piphi/piphi-network-kaiterra-api:0.1.1",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_kaiterra_api",
     "repo_url": "https://github.com/PiPhi-io/piphi_network_kaiterra_api",
     "manifest_path": "manifest.json",
-    "tags": ["kaiterra", "air-quality", "cloud-api", "environment"],
-    "runtime_requirements": ["secrets_or_api_tokens"],
+    "tags": [
+      "kaiterra",
+      "air-quality",
+      "cloud-api",
+      "environment"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
     "maintainer": {
       "name": "PiPhi Integrations Team",
       "website": "https://github.com/PiPhi-io"
@@ -416,15 +1464,73 @@
     "trust_level": "official",
     "risk_level": "low",
     "description": "PiPhi integration runtime for WeatherXM stations using the WeatherXM public API.",
+    "marketplace": {
+      "brand_domain": "weatherxm.com",
+      "metadata_version": 2,
+      "display_name": "WeatherXM Stations",
+      "summary": "Bring readings from supported WeatherXM stations into your home.",
+      "category": "weather",
+      "device_types": [
+        "weather_station"
+      ],
+      "protocols": [
+        "weatherxm_api"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "account"
+      ],
+      "connectivity": "cloud",
+      "offline_support": "none",
+      "publisher": {
+        "name": "PiPhi Integrations Team",
+        "website_url": "https://github.com/PiPhi-io",
+        "support_url": "https://github.com/PiPhi-io/piphi_network_weatherxm/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "external_cloud",
+          "label": "External cloud access",
+          "reason": "Connects to the device maker's service to read or control the selected account and devices.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "WeatherXM",
+          "model": "Weather stations",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi_network_weatherxm",
+      "support_url": "https://github.com/PiPhi-io/piphi_network_weatherxm/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network_weatherxm/releases",
+      "privacy_url": "https://weatherxm.com/privacy-policy"
+    },
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "image": "docker.io/piphi/piphi-network-weatherxm:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_weatherxm",
     "repo_url": "https://github.com/PiPhi-io/piphi_network_weatherxm",
     "manifest_path": "manifest.json",
-    "tags": ["weatherxm", "weather", "cloud-api", "environment"],
+    "tags": [
+      "weatherxm",
+      "weather",
+      "cloud-api",
+      "environment"
+    ],
     "runtime_requirements": [],
     "maintainer": {
       "name": "PiPhi Integrations Team",
@@ -440,17 +1546,120 @@
     "risk_level": "moderate",
     "description": "Local I2C environmental sensor integration for BME680, BME280, BMP280, AHT20, and compatible devices connected directly or through MCP2221A or FT232H bridges.",
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_i2c",
     "repo_url": "https://github.com/PiPhi-io/piphi_network_i2c",
     "manifest_path": "src/manifest.json",
-    "tags": ["i2c", "sensor", "environment", "hardware", "bme680", "aht20"],
-    "runtime_requirements": ["direct_hardware_access", "usb_or_device_access"],
+    "tags": [
+      "i2c",
+      "sensor",
+      "environment",
+      "hardware",
+      "bme680",
+      "aht20"
+    ],
+    "runtime_requirements": [
+      "direct_hardware_access",
+      "usb_or_device_access"
+    ],
     "maintainer": {
       "name": "PiPhi Integrations Team",
       "website": "https://github.com/PiPhi-io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Wired Sensors (I²C)",
+      "summary": "Read compatible environmental sensors connected through I²C or a supported USB bridge.",
+      "category": "sensors",
+      "device_types": [
+        "environmental_sensor"
+      ],
+      "protocols": [
+        "i2c"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "i2c",
+        "usb"
+      ],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi Integrations Team",
+        "website_url": "https://github.com/PiPhi-io",
+        "support_url": "https://github.com/PiPhi-io/piphi_network_i2c/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "direct_hardware",
+          "label": "Direct hardware access",
+          "reason": "Communicates with the selected adapter or sensor attached to this PiPhi.",
+          "required": true
+        },
+        {
+          "id": "usb_device",
+          "label": "USB or device access",
+          "reason": "Uses the selected USB adapter or hardware device.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Bosch",
+          "model": "BME680",
+          "regions": [
+            "WW"
+          ]
+        },
+        {
+          "brand": "Bosch",
+          "model": "BME280",
+          "regions": [
+            "WW"
+          ]
+        },
+        {
+          "brand": "Bosch",
+          "model": "BMP280",
+          "regions": [
+            "WW"
+          ]
+        },
+        {
+          "brand": "ASAIR",
+          "model": "AHT20",
+          "regions": [
+            "WW"
+          ]
+        },
+        {
+          "brand": "Microchip",
+          "model": "MCP2221A",
+          "regions": [
+            "WW"
+          ]
+        },
+        {
+          "brand": "FTDI",
+          "model": "FT232H",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi_network_i2c",
+      "support_url": "https://github.com/PiPhi-io/piphi_network_i2c/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network_i2c/releases"
     }
   },
   {
@@ -462,17 +1671,106 @@
     "risk_level": "moderate",
     "description": "Local SPI environmental sensor integration for BME680, BME280, BMP280, and compatible devices connected directly or through FT232H bridges.",
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network-spi",
     "repo_url": "https://github.com/PiPhi-io/piphi_network-spi",
     "manifest_path": "src/manifest.json",
-    "tags": ["spi", "sensor", "environment", "hardware", "bme680", "bmp280"],
-    "runtime_requirements": ["direct_hardware_access", "usb_or_device_access"],
+    "tags": [
+      "spi",
+      "sensor",
+      "environment",
+      "hardware",
+      "bme680",
+      "bmp280"
+    ],
+    "runtime_requirements": [
+      "direct_hardware_access",
+      "usb_or_device_access"
+    ],
     "maintainer": {
       "name": "PiPhi Integrations Team",
       "website": "https://github.com/PiPhi-io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Wired Sensors (SPI)",
+      "summary": "Read compatible environmental sensors connected through SPI or an FT232H bridge.",
+      "category": "sensors",
+      "device_types": [
+        "environmental_sensor"
+      ],
+      "protocols": [
+        "spi"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "spi",
+        "usb"
+      ],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi Integrations Team",
+        "website_url": "https://github.com/PiPhi-io",
+        "support_url": "https://github.com/PiPhi-io/piphi_network-spi/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "direct_hardware",
+          "label": "Direct hardware access",
+          "reason": "Communicates with the selected adapter or sensor attached to this PiPhi.",
+          "required": true
+        },
+        {
+          "id": "usb_device",
+          "label": "USB or device access",
+          "reason": "Uses the selected USB adapter or hardware device.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Bosch",
+          "model": "BME680",
+          "regions": [
+            "WW"
+          ]
+        },
+        {
+          "brand": "Bosch",
+          "model": "BME280",
+          "regions": [
+            "WW"
+          ]
+        },
+        {
+          "brand": "Bosch",
+          "model": "BMP280",
+          "regions": [
+            "WW"
+          ]
+        },
+        {
+          "brand": "FTDI",
+          "model": "FT232H",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi_network-spi",
+      "support_url": "https://github.com/PiPhi-io/piphi_network-spi/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network-spi/releases"
     }
   },
   {
@@ -483,16 +1781,85 @@
     "trust_level": "official",
     "risk_level": "moderate",
     "description": "PiPhi integration runtime for Tuya LAN devices using TinyTuya.",
+    "marketplace": {
+      "brand_domain": "tuya.com",
+      "metadata_version": 2,
+      "display_name": "Tuya Devices",
+      "summary": "Control compatible Tuya devices directly over your home network.",
+      "category": "lighting",
+      "device_types": [
+        "light",
+        "plug",
+        "switch"
+      ],
+      "protocols": [
+        "tuya_lan"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "lan_scan",
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi Integrations Team",
+        "website_url": "https://github.com/PiPhi-io",
+        "support_url": "https://github.com/PiPhi-io/piphi_network_tuya/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Finds or communicates with supported devices and services on your home network.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Stores the credentials needed to connect the selected account or device.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Tuya",
+          "model": "TinyTuya-compatible LAN devices",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi_network_tuya",
+      "support_url": "https://github.com/PiPhi-io/piphi_network_tuya/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network_tuya/releases"
+    },
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "image": "docker.io/piphi/piphi-network-tuya:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/tuya.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_tuya",
     "repo_url": "https://github.com/PiPhi-io/piphi_network_tuya",
     "manifest_path": "src/manifest.json",
-    "tags": ["tuya", "smart-home", "lan", "lighting", "switch"],
-    "runtime_requirements": ["secrets_or_api_tokens"],
+    "tags": [
+      "tuya",
+      "smart-home",
+      "lan",
+      "lighting",
+      "switch"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
     "maintainer": {
       "name": "PiPhi Integrations Team",
       "website": "https://github.com/PiPhi-io"

@@ -40,6 +40,9 @@ Current contract:
 - `icon_url` is the catalog icon artwork
 - `banner_url` can be used later for larger catalog artwork
 - `runtime_requirements` summarizes notable runtime requirements and privileges
+- `marketplace.metadata_version` is `2` for every published listing and carries
+  authoritative homeowner copy, compatibility, connectivity, access, discovery,
+  regional, language, publisher, support, privacy, and release metadata
 
 Starter entries have been added for:
 - Atmotube Pro (BLE)
@@ -62,3 +65,44 @@ Assets:
 - MQTT sidecar icon: `icons/mqtt-sidecar.svg`
 - Zigbee2MQTT sidecar icon: `icons/zigbee2mqtt.svg`
 - Tuya icon: `icons/tuya.svg`
+
+## Registry-hosted brand icons
+
+### Developer-packaged artwork
+
+New integrations should ship PNG artwork in a `brand/` directory beside their
+manifest. For the standard `src/manifest.json` layout, the registry records
+`"brand_path": "src/brand"`. PiPhi Core retrieves these files from the selected
+release, validates and caches them locally, and serves them to the App Store from
+the Core origin. Supported filenames are `icon.png`, `icon@2x.png`, `logo.png`,
+`logo@2x.png`, plus corresponding `dark_` variants.
+
+The registry `icon_url` remains a compatibility fallback for older integrations
+that have not yet packaged their own artwork.
+
+Brand artwork may be synchronized into `icons/brands/` for entries that declare
+`marketplace.brand_domain`. The App Store then consumes the registry-hosted
+`icon_url`, so globally distributed PiPhi installations do not share a browser-side
+Brandfetch quota or require Brandfetch to be available in the home.
+
+The `Refresh Brand Icons` workflow is deliberately disabled until the repository
+has both of the following configuration values:
+
+- repository variable `BRANDFETCH_CACHE_ALLOWED=true`, set only after the account's
+  Brandfetch agreement permits caching or self-hosting;
+- repository secret `BRANDFETCH_API_KEY`, used by the authenticated Brand API.
+
+The public Logo API client ID is not sufficient for registry synchronization.
+When enabled, the workflow refreshes artwork on the 1st and 15th of each month,
+records its refresh timestamp and SHA-256 digest in `registry.json`, validates the
+result, and opens or updates a reviewable pull request. A failed refresh leaves the
+currently published registry icons unchanged.
+
+Run the same process locally only after cache rights are confirmed:
+
+```bash
+BRANDFETCH_CACHE_ALLOWED=true \
+BRANDFETCH_API_KEY=... \
+GITHUB_REPOSITORY=PiPhi-io/piphi-nework-registry \
+python scripts/sync_brandfetch_icons.py
+```

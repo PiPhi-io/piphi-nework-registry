@@ -31,6 +31,9 @@ Submissions that pass automation should be labeled `ready-for-review` before a m
 - Make sure the integration ID is stable.
 - Include a clear name and short description.
 - Include a support contact.
+- Publish `marketplace.metadata_version: 2` in the integration manifest, including
+  homeowner-facing copy, supported devices, connectivity, offline behavior,
+  access reasons, regions, languages, discovery methods, and publisher contacts.
 - Provide an icon URL if available.
 - Be honest about elevated runtime requirements such as privileged mode, USB access, or host mounts.
 
@@ -53,6 +56,7 @@ Current automated checks include:
 - duplicate integration ID detection against `registry.json`
 - basic metadata consistency checks between the submission and manifest
 - icon URL reachability when provided
+- Marketplace Metadata v2 completeness, privacy disclosure, and explicit access declarations
 
 ## Registry Contract
 

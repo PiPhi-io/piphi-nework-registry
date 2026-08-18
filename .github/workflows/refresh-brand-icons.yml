@@ -1,0 +1,57 @@
+name: Refresh Brand Icons
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Keep permitted cached assets comfortably inside Brandfetch's 30-day refresh window.
+    - cron: "17 4 1,15 * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: refresh-brand-icons
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: vars.BRANDFETCH_CACHE_ALLOWED == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh registry-hosted brand artwork
+        env:
+          BRANDFETCH_API_KEY: ${{ secrets.BRANDFETCH_API_KEY }}
+          BRANDFETCH_CACHE_ALLOWED: ${{ vars.BRANDFETCH_CACHE_ALLOWED }}
+          GITHUB_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: python scripts/sync_brandfetch_icons.py
+
+      - name: Validate refreshed registry
+        run: |
+          python -m json.tool registry.json >/dev/null
+          python scripts/validate_registry.py registry.json
+          python -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Create refresh pull request
+        uses: peter-evans/create-pull-request@v8
+        with:
+          add-paths: |
+            icons/brands
+            registry.json
+          branch: automation/refresh-brand-icons
+          delete-branch: true
+          commit-message: "chore: refresh registry brand icons"
+          title: "chore: refresh registry brand icons"
+          body: |
+            Refreshes registry-hosted brand artwork through the licensed Brandfetch Brand API.
+
+            The workflow is gated by `BRANDFETCH_CACHE_ALLOWED=true` and runs twice monthly
+            so cached assets remain inside the configured refresh window.

@@ -7,6 +7,12 @@ import sys
 from pathlib import Path
 from typing import Any
 
+SCRIPT_ROOT = Path(__file__).resolve().parent
+if str(SCRIPT_ROOT) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_ROOT))
+
+from marketplace_metadata import validate_marketplace_v2
+
 VALID_ENTRY_TYPES = {"integration", "platform_service"}
 VALID_DEPLOYMENT_MODES = {"standalone", "sidecar"}
 VALID_PLATFORMS = {"linux", "windows", "macos"}
@@ -26,6 +32,19 @@ REQUIRED_FIELDS = {
     "maintainer",
 }
 IMAGE_WITH_TAG = re.compile(r"^(?:[a-z0-9.-]+(?::[0-9]+)?/)?[a-z0-9][a-z0-9._/-]*:[A-Za-z0-9._-]+$")
+BRAND_DOMAIN = re.compile(
+    r"^(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+"
+    r"[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$"
+)
+SHA256 = re.compile(r"^[a-f0-9]{64}$")
+
+
+def valid_package_path(value: object) -> bool:
+    candidate = str(value or "").strip()
+    if not candidate or candidate.startswith(("/", "\\")) or "\\" in candidate:
+        return False
+    parts = candidate.split("/")
+    return all(part not in {"", ".", ".."} for part in parts)
 
 
 def load_entries(path: Path) -> list[dict[str, Any]]:
@@ -65,9 +84,31 @@ def validate_entry(entry: dict[str, Any], index: int) -> list[str]:
     if image and not IMAGE_WITH_TAG.match(str(image)):
         errors.append(f"{prefix}: image must include an explicit tag, got {image!r}")
 
+    brand_path = entry.get("brand_path")
+    if brand_path is not None and not valid_package_path(brand_path):
+        errors.append(f"{prefix}: brand_path must be a safe relative package path")
+
     maintainer = entry.get("maintainer")
     if not isinstance(maintainer, dict) or not maintainer.get("name"):
         errors.append(f"{prefix}: maintainer.name is required")
+
+    marketplace = entry.get("marketplace")
+    for error in validate_marketplace_v2(marketplace, entry_type=str(entry_type or "")):
+        errors.append(f"{prefix}: {error}")
+    if isinstance(marketplace, dict):
+        brand_domain = str(marketplace.get("brand_domain") or "").strip()
+        if brand_domain and not BRAND_DOMAIN.fullmatch(brand_domain):
+            errors.append(f"{prefix}: marketplace.brand_domain is invalid")
+        icon_source = str(marketplace.get("icon_source") or "").strip()
+        if icon_source and icon_source != "brandfetch":
+            errors.append(f"{prefix}: marketplace.icon_source must be brandfetch when set")
+        if icon_source == "brandfetch":
+            if not brand_domain:
+                errors.append(f"{prefix}: Brandfetch icons require marketplace.brand_domain")
+            if not str(marketplace.get("icon_refreshed_at") or "").strip():
+                errors.append(f"{prefix}: Brandfetch icons require marketplace.icon_refreshed_at")
+            if not SHA256.fullmatch(str(marketplace.get("icon_sha256") or "")):
+                errors.append(f"{prefix}: Brandfetch icons require a valid marketplace.icon_sha256")
 
     return errors
 
