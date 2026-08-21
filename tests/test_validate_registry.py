@@ -44,6 +44,14 @@ def valid_marketplace() -> dict:
         "discovery_methods": ["manual"],
         "connectivity": "local",
         "offline_support": "full",
+        "quality_tier": "unrated",
+        "governance": {
+            "schema_version": 1,
+            "publication_status": "stable",
+            "rollout_percent": 100,
+            "lifecycle_status": "active",
+            "qualification": {"status": "unverified"},
+        },
         "publisher": {
             "name": "PiPhi",
             "support_url": "https://example.com/support",
@@ -92,6 +100,21 @@ class RegistryBrandMetadataValidationTests(unittest.TestCase):
         del entry["marketplace"]["access"]
         errors = VALIDATOR.validate_entry(entry, 0)
         self.assertTrue(any("access must be explicitly declared" in error for error in errors))
+
+    def test_rejects_listing_without_governance(self) -> None:
+        entry = valid_entry()
+        del entry["marketplace"]["governance"]
+        errors = VALIDATOR.validate_entry(entry, 0)
+        self.assertTrue(any("governance must be an object" in error for error in errors))
+
+    def test_allows_stable_unverified_listing_without_quality_claim(self) -> None:
+        self.assertEqual(VALIDATOR.validate_entry(valid_entry(), 0), [])
+
+    def test_verified_quality_requires_immutable_evidence(self) -> None:
+        entry = valid_entry()
+        entry["marketplace"]["quality_tier"] = "silver"
+        errors = VALIDATOR.validate_entry(entry, 0)
+        self.assertTrue(any("silver quality requires passed qualification" in error for error in errors))
 
 
 if __name__ == "__main__":
