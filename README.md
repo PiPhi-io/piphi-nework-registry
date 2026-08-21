@@ -43,6 +43,43 @@ Current contract:
 - `marketplace.metadata_version` is `2` for every published listing and carries
   authoritative homeowner copy, compatibility, connectivity, access, discovery,
   regional, language, publisher, support, privacy, and release metadata
+- `marketplace.governance` controls publication, staged rollout, lifecycle, and
+  runtime-qualification evidence. Existing listings are Bronze and explicitly
+  unverified until immutable automated qualification evidence is published.
+
+## Marketplace governance
+
+Every registry entry must declare governance schema version 1. Publication and
+qualification are deliberately separate: a Bronze app may be published as stable
+while its independent runtime qualification remains `unverified`. Silver, Gold,
+and Platinum claims require a passing report tied to an immutable runtime image
+digest and PiPhi Core source commit.
+
+```json
+{
+  "quality_tier": "bronze",
+  "governance": {
+    "schema_version": 1,
+    "publication_status": "stable",
+    "rollout_percent": 100,
+    "lifecycle_status": "active",
+    "qualification": { "status": "unverified" }
+  }
+}
+```
+
+New submissions should begin as `draft` with a zero-percent rollout. Reviewers
+promote them to `beta` or `stable` only after marketplace review. Do not populate
+qualification evidence by hand or promote a listing above Bronze without the
+runtime qualification workflow's immutable evidence.
+
+The `Promote runtime qualification` workflow downloads one immutable artifact
+from an explicitly selected PiPhi Core workflow run, verifies every runtime
+contract signal, checks that `runtime_name` matches the registry ID, computes the
+canonical report digest, and opens a reviewable Silver-promotion pull request.
+Configure the repository secret `CORE_ACTIONS_READ_TOKEN` with read-only Actions
+access to `PiPhi-io/PiPhi-Network-Core`; the workflow never accepts pasted hashes
+or a locally edited evidence object.
 
 Starter entries have been added for:
 - Atmotube Pro (BLE)

@@ -128,5 +128,9 @@ Once approved:
 3. Add or update the entry in `registry.json`.
 4. Confirm icon and artwork URLs are correct.
 5. Set `trust_level`, `risk_level`, and `runtime_requirements` intentionally.
-6. Verify the final metadata matches the approved submission.
-7. Merge the change into the public registry.
+6. Set governance deliberately: draft/paused/withdrawn entries use zero rollout;
+   beta uses 1–99%; stable uses 1–100%. Bronze may remain unverified, but Silver
+   and above require immutable passing runtime evidence.
+7. Verify the final metadata matches the approved submission. Never manufacture
+   qualification hashes, timestamps, image digests, or Core commits.
+8. Merge the change into the public registry.

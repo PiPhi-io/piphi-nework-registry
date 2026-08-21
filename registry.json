@@ -55,7 +55,17 @@
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-atmotube",
       "support_url": "https://github.com/PiPhi-io/piphi-network-atmotube/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-network-atmotube/releases"
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-atmotube/releases",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     },
     "rewardable": false,
     "platforms": [
@@ -140,7 +150,17 @@
       ],
       "documentation_url": "https://github.com/KelvinSan/piphi-network-awair-element",
       "support_url": "https://github.com/KelvinSan/piphi-network-awair-element/issues",
-      "changelog_url": "https://github.com/KelvinSan/piphi-network-awair-element/releases"
+      "changelog_url": "https://github.com/KelvinSan/piphi-network-awair-element/releases",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     },
     "rewardable": true,
     "platforms": [
@@ -267,7 +287,17 @@
       ],
       "documentation_url": "https://github.com/PiPhi-io/Official-PiPhi-Network-GPS-Integration",
       "support_url": "https://github.com/PiPhi-io/Official-PiPhi-Network-GPS-Integration/issues",
-      "changelog_url": "https://github.com/PiPhi-io/Official-PiPhi-Network-GPS-Integration/releases"
+      "changelog_url": "https://github.com/PiPhi-io/Official-PiPhi-Network-GPS-Integration/releases",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     }
   },
   {
@@ -349,7 +379,17 @@
       ],
       "documentation_url": "https://github.com/KelvinSan/piphi_network_tp_link",
       "support_url": "https://github.com/KelvinSan/piphi_network_tp_link/issues",
-      "changelog_url": "https://github.com/KelvinSan/piphi_network_tp_link/releases"
+      "changelog_url": "https://github.com/KelvinSan/piphi_network_tp_link/releases",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     },
     "rewardable": true,
     "platforms": [
@@ -443,7 +483,17 @@
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-thinqconnect",
       "support_url": "https://github.com/PiPhi-io/piphi-network-thinqconnect/issues",
       "changelog_url": "https://github.com/PiPhi-io/piphi-network-thinqconnect/releases",
-      "privacy_url": "https://privacy.us.lg.com/policies/en/"
+      "privacy_url": "https://privacy.us.lg.com/policies/en/",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     },
     "rewardable": false,
     "platforms": [
@@ -580,7 +630,17 @@
       ],
       "documentation_url": "https://github.com/KelvinSan/piphi-network-433mhz",
       "support_url": "https://github.com/KelvinSan/piphi-network-433mhz/issues",
-      "changelog_url": "https://github.com/KelvinSan/piphi-network-433mhz/releases"
+      "changelog_url": "https://github.com/KelvinSan/piphi-network-433mhz/releases",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     }
   },
   {
@@ -661,7 +721,17 @@
       "compatibility": [],
       "documentation_url": "https://github.com/PiPhi-io/piphi-mqtt-broker",
       "support_url": "https://github.com/PiPhi-io/piphi-mqtt-broker/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-mqtt-broker/releases"
+      "changelog_url": "https://github.com/PiPhi-io/piphi-mqtt-broker/releases",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     }
   },
   {
@@ -766,7 +836,17 @@
       "compatibility": [],
       "documentation_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge",
       "support_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge/releases"
+      "changelog_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge/releases",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     }
   },
   {
@@ -863,7 +943,17 @@
       "compatibility": [],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-matter",
       "support_url": "https://github.com/PiPhi-io/piphi-network-matter/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-network-matter/releases"
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-matter/releases",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     }
   },
   {
@@ -986,7 +1076,17 @@
       "compatibility": [],
       "documentation_url": "https://github.com/PiPhi-io/piphi_network_zigbee2mqtt",
       "support_url": "https://github.com/PiPhi-io/piphi_network_zigbee2mqtt/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi_network_zigbee2mqtt/releases"
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network_zigbee2mqtt/releases",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     }
   },
   {
@@ -1087,7 +1187,17 @@
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi_network_zigbee",
       "support_url": "https://github.com/PiPhi-io/piphi_network_zigbee/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi_network_zigbee/releases"
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network_zigbee/releases",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     }
   },
   {
@@ -1153,7 +1263,17 @@
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-airthings",
       "support_url": "https://github.com/PiPhi-io/piphi-network-airthings/issues",
       "changelog_url": "https://github.com/PiPhi-io/piphi-network-airthings/releases",
-      "privacy_url": "https://www.airthings.com/privacy-notice"
+      "privacy_url": "https://www.airthings.com/privacy-notice",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     },
     "rewardable": false,
     "platforms": [
@@ -1247,7 +1367,17 @@
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-aqara",
       "support_url": "https://github.com/PiPhi-io/piphi-network-aqara/issues",
       "changelog_url": "https://github.com/PiPhi-io/piphi-network-aqara/releases",
-      "privacy_url": "https://www.aqara.com/en/privacy-policy/"
+      "privacy_url": "https://www.aqara.com/en/privacy-policy/",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     },
     "rewardable": false,
     "platforms": [
@@ -1339,7 +1469,17 @@
       "documentation_url": "https://github.com/PiPhi-io/piphi_network_tesla_ev",
       "support_url": "https://github.com/PiPhi-io/piphi_network_tesla_ev/issues",
       "changelog_url": "https://github.com/PiPhi-io/piphi_network_tesla_ev/releases",
-      "privacy_url": "https://www.tesla.com/legal/privacy"
+      "privacy_url": "https://www.tesla.com/legal/privacy",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     },
     "rewardable": false,
     "platforms": [
@@ -1430,7 +1570,17 @@
       "documentation_url": "https://github.com/PiPhi-io/piphi_network_kaiterra_api",
       "support_url": "https://github.com/PiPhi-io/piphi_network_kaiterra_api/issues",
       "changelog_url": "https://github.com/PiPhi-io/piphi_network_kaiterra_api/releases",
-      "privacy_url": "https://www.kaiterra.com/privacy-policy"
+      "privacy_url": "https://www.kaiterra.com/privacy-policy",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     },
     "rewardable": false,
     "platforms": [
@@ -1513,7 +1663,17 @@
       "documentation_url": "https://github.com/PiPhi-io/piphi_network_weatherxm",
       "support_url": "https://github.com/PiPhi-io/piphi_network_weatherxm/issues",
       "changelog_url": "https://github.com/PiPhi-io/piphi_network_weatherxm/releases",
-      "privacy_url": "https://weatherxm.com/privacy-policy"
+      "privacy_url": "https://weatherxm.com/privacy-policy",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     },
     "rewardable": false,
     "platforms": [
@@ -1659,7 +1819,17 @@
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi_network_i2c",
       "support_url": "https://github.com/PiPhi-io/piphi_network_i2c/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi_network_i2c/releases"
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network_i2c/releases",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     }
   },
   {
@@ -1770,7 +1940,17 @@
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi_network-spi",
       "support_url": "https://github.com/PiPhi-io/piphi_network-spi/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi_network-spi/releases"
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network-spi/releases",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     }
   },
   {
@@ -1838,7 +2018,17 @@
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi_network_tuya",
       "support_url": "https://github.com/PiPhi-io/piphi_network_tuya/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi_network_tuya/releases"
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network_tuya/releases",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "stable",
+        "rollout_percent": 100,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
     },
     "rewardable": false,
     "platforms": [

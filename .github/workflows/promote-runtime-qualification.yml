@@ -1,0 +1,81 @@
+name: Promote runtime qualification
+
+on:
+  workflow_dispatch:
+    inputs:
+      registry_id:
+        description: Registry integration ID matching the qualification runtime name
+        required: true
+        type: string
+      core_run_id:
+        description: Successful PiPhi Core qualification workflow run ID
+        required: true
+        type: string
+      core_version:
+        description: PiPhi Core version tested by the qualification run
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: qualification-${{ inputs.registry_id }}
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download immutable Core qualification artifact
+        uses: actions/download-artifact@v4
+        with:
+          pattern: integration-qualification-${{ inputs.registry_id }}-*
+          path: qualification
+          github-token: ${{ secrets.CORE_ACTIONS_READ_TOKEN }}
+          repository: PiPhi-io/PiPhi-Network-Core
+          run-id: ${{ inputs.core_run_id }}
+      - name: Require exactly one report
+        id: report
+        shell: bash
+        run: |
+          mapfile -t reports < <(find qualification -type f -name '*.json' -print)
+          test "${#reports[@]}" -eq 1
+          echo "path=${reports[0]}" >> "$GITHUB_OUTPUT"
+      - name: Promote verified evidence
+        id: promote
+        env:
+          REGISTRY_ID: ${{ inputs.registry_id }}
+          REPORT_PATH: ${{ steps.report.outputs.path }}
+          EVIDENCE_URL: ${{ github.server_url }}/PiPhi-io/PiPhi-Network-Core/actions/runs/${{ inputs.core_run_id }}
+          CORE_VERSION: ${{ inputs.core_version }}
+        run: |
+          python scripts/promote_qualification.py \
+            --registry-id "$REGISTRY_ID" \
+            --report-path "$REPORT_PATH" \
+            --evidence-url "$EVIDENCE_URL" \
+            --core-version "$CORE_VERSION"
+      - name: Validate registry contract
+        run: |
+          python scripts/validate_registry.py registry.json
+          python -m unittest discover -s tests -p 'test_*.py'
+      - name: Open qualification promotion PR
+        uses: peter-evans/create-pull-request@v8
+        with:
+          add-paths: registry.json
+          branch: automation/qualify-${{ inputs.registry_id }}-${{ inputs.core_run_id }}
+          delete-branch: true
+          commit-message: "registry: qualify ${{ inputs.registry_id }}"
+          title: "registry: qualify ${{ inputs.registry_id }} as Silver"
+          body: |
+            Promotes `${{ inputs.registry_id }}` from immutable runtime qualification evidence.
+
+            - Core run: ${{ github.server_url }}/PiPhi-io/PiPhi-Network-Core/actions/runs/${{ inputs.core_run_id }}
+            - Core version: `${{ inputs.core_version }}`
+            - Report digest: `${{ steps.promote.outputs.report_digest }}`
+            - Quality tier: `${{ steps.promote.outputs.quality_tier }}`
