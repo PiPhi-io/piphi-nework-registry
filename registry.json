@@ -423,7 +423,7 @@
   {
     "id": "lg-thinq-connect-api",
     "name": "LG ThinQ Connect",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -501,7 +501,8 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/lg-thinq-connect:0.1.0",
+    "image": "piphinetwork/lg-thinq-connect:0.1.1",
+    "ref": "v0.1.1",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/lg-thinq.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-thinqconnect",
@@ -1409,7 +1410,7 @@
   {
     "id": "piphi-network-tesla-ev",
     "name": "PiPhi Network Tesla EV",
-    "version": "0.1.0",
+    "version": "0.2.1",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -1487,7 +1488,8 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/tesla-ev:0.1.0",
+    "image": "piphinetwork/tesla-ev:0.2.1",
+    "ref": "v0.2.1",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_tesla_ev",
