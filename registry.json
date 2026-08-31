@@ -2104,7 +2104,7 @@
     },
     "rewardable": false,
     "platforms": ["linux"],
-    "image": "ghcr.io/piphi-io/piphi-network-sonos:0.1.1",
+    "image": "docker.io/piphinetwork/piphi-network-sonos:0.1.1",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_sonos",
