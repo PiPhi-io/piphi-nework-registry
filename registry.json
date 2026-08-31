@@ -2054,5 +2054,69 @@
       "name": "PiPhi Integrations Team",
       "website": "https://github.com/PiPhi-io"
     }
+  },
+  {
+    "id": "piphi-network-sonos",
+    "name": "Sonos",
+    "version": "0.1.1",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "high",
+    "description": "Discover and control Sonos S1 and S2 speakers over the local network using SoCo.",
+    "marketplace": {
+      "brand_domain": "sonos.com",
+      "metadata_version": 2,
+      "display_name": "Sonos Speakers",
+      "summary": "Control Sonos speakers and see what is playing across your home.",
+      "category": "media",
+      "device_types": ["speaker", "soundbar", "amplifier"],
+      "protocols": ["upnp", "ssdp", "sonos_local_api"],
+      "regions": ["WW"],
+      "languages": ["en"],
+      "discovery_methods": ["ssdp", "manual"],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi_network_sonos/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {"id": "local_network", "label": "Local network access", "reason": "Discovers and controls Sonos speakers on your local network.", "required": true},
+        {"id": "host_network", "label": "Host networking", "reason": "Receives and sends SSDP multicast traffic needed for Sonos discovery.", "required": true}
+      ],
+      "compatibility": [
+        {"brand": "Sonos", "model": "S1-compatible speakers", "regions": ["WW"]},
+        {"brand": "Sonos", "model": "S2-compatible speakers", "regions": ["WW"]}
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi_network_sonos",
+      "support_url": "https://github.com/PiPhi-io/piphi_network_sonos/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network_sonos/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {"status": "unverified"}
+      }
+    },
+    "rewardable": false,
+    "platforms": ["linux"],
+    "image": "ghcr.io/piphi-io/piphi-network-sonos:0.1.1",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi_network_sonos",
+    "repo_url": "https://github.com/PiPhi-io/piphi_network_sonos",
+    "manifest_path": "manifest.json",
+    "brand_path": "brand",
+    "tags": ["sonos", "speaker", "media", "upnp", "local"],
+    "runtime_requirements": ["host_networking"],
+    "maintainer": {
+      "name": "PiPhi Integrations Team",
+      "website": "https://github.com/PiPhi-io",
+      "support_email": "support@piphi.io"
+    }
   }
 ]
