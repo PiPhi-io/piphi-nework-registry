@@ -2122,5 +2122,80 @@
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     }
+  },
+  {
+    "id": "piphi-network-sense",
+    "name": "Sense Energy",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Sense Energy Monitor integration using the unofficial sense-energy cloud API client.",
+    "marketplace": {
+      "brand_domain": "sense.com",
+      "metadata_version": 2,
+      "display_name": "Sense Energy Monitor",
+      "summary": "See live household, solar, and detected-appliance energy from your Sense account.",
+      "category": "energy",
+      "device_types": ["energy_monitor", "energy_appliance"],
+      "protocols": ["sense_cloud_api"],
+      "regions": ["US", "CA"],
+      "languages": ["en"],
+      "discovery_methods": ["account"],
+      "connectivity": "cloud",
+      "offline_support": "none",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-sense/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "external_cloud",
+          "label": "External cloud access",
+          "reason": "Connects to Sense's cloud service to read household, solar, and detected-appliance energy data.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Sense account credentials",
+          "reason": "Stores the Sense account credentials and optional MFA code needed to authenticate.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {"brand": "Sense", "model": "Home Energy Monitor", "regions": ["US", "CA"]},
+        {"brand": "Sense", "model": "Home Energy Monitor with Solar", "regions": ["US", "CA"]},
+        {"brand": "Sense", "model": "Home Energy Monitor with Flex sensors", "regions": ["US", "CA"]}
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-sense",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-sense/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-sense/releases",
+      "privacy_url": "https://sense.com/privacy/",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {"status": "unverified"}
+      }
+    },
+    "rewardable": false,
+    "platforms": ["linux"],
+    "image": "piphinetwork/piphi-network-sense:0.1.0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-sense",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-sense",
+    "manifest_path": "manifest.json",
+    "tags": ["sense", "energy", "solar", "appliance-monitoring", "cloud-api"],
+    "runtime_requirements": ["secrets_or_api_tokens"],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    }
   }
 ]
