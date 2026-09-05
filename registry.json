@@ -2281,8 +2281,8 @@
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
-        "publication_status": "draft",
-        "rollout_percent": 0,
+        "publication_status": "stable",
+        "rollout_percent": 100,
         "lifecycle_status": "active",
         "qualification": {"status": "unverified"}
       }
