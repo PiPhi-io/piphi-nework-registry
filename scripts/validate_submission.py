@@ -6,9 +6,9 @@ import json
 import os
 import sys
 from pathlib import Path
-VALID_ENTRY_TYPES = {"integration", "platform_service"}
+VALID_ENTRY_TYPES = {"integration", "platform_service", "widget"}
 VALID_DEPLOYMENT_MODES = {"standalone", "sidecar"}
-VALID_PLATFORMS = {"linux", "windows", "macos"}
+VALID_PLATFORMS = {"linux", "windows", "macos", "web"}
 
 from submission_utils import (
     fetch_json,

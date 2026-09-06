@@ -31,7 +31,7 @@ Settings > Actions > General > Workflow permissions.
 
 Current contract:
 - `registry.json` lives at the repository root
-- it contains a JSON array of registry entries
+- it contains a JSON array of integration, platform-service, and widget entries
 - each entry points to a plugin/integration repository and its manifest path
 - `deployment_mode` can distinguish normal installs from sidecars/helpers
 - `trust_level` shows how PiPhi classifies publisher trust
@@ -40,6 +40,7 @@ Current contract:
 - `icon_url` is the catalog icon artwork
 - `banner_url` can be used later for larger catalog artwork
 - `runtime_requirements` summarizes notable runtime requirements and privileges
+- widget entries use `artifact.release_asset` and `artifact.integrity` instead of a container image
 - `marketplace.metadata_version` is `2` for every published listing and carries
   authoritative homeowner copy, compatibility, connectivity, access, discovery,
   regional, language, publisher, support, privacy, and release metadata

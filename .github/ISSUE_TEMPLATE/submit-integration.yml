@@ -1,5 +1,5 @@
 name: Submit Integration
-description: Propose a new PiPhi integration, platform service, or sidecar for registry review.
+description: Propose a PiPhi integration, platform service, sidecar, or dashboard widget for registry review.
 title: "[Submission]: "
 labels:
   - submission
@@ -44,6 +44,7 @@ body:
       options:
         - integration
         - platform_service
+        - widget
     validations:
       required: true
 
@@ -94,6 +95,7 @@ body:
         - label: Linux
         - label: Windows
         - label: macOS
+        - label: Web
     validations:
       required: true
 

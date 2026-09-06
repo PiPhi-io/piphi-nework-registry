@@ -2,7 +2,7 @@
 
 Thanks for helping grow the PiPhi ecosystem.
 
-This repository is the curated public registry consumed by the PiPhi Registry API. Not every submitted integration is published automatically. The ecosystem is open to developers, but the public catalog is reviewed before publication.
+This repository is the curated public registry consumed by the PiPhi Registry API. It accepts runtime integrations, platform services, and sandboxed dashboard widgets. Not every submitted package is published automatically.
 
 ## Submission Flow
 
@@ -85,6 +85,11 @@ Current catalog fields include:
 - `repo_url`
 - `manifest_path`
 - `runtime_requirements`
+- `artifact` for widget-only release archives and immutable integrity
+
+Widget-only entries use `type: widget`, `platforms: [web]`, and a Widget SDK
+manifest. Draft widgets may omit artifact integrity only while rollout is zero;
+beta and stable widgets must reference an immutable release asset digest.
 
 ## Support
 

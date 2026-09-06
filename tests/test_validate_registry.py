@@ -66,6 +66,36 @@ def valid_marketplace() -> dict:
 
 
 class RegistryBrandMetadataValidationTests(unittest.TestCase):
+    def test_accepts_zero_rollout_widget_with_pending_release_integrity(self) -> None:
+        entry = valid_entry()
+        entry.update({
+            "id": "io.piphi.webrtc.camera",
+            "type": "widget",
+            "platforms": ["web"],
+            "artifact": {"release_asset": "piphi-webrtc-camera-widget-0.1.0.tgz", "integrity": None},
+        })
+        entry["marketplace"] = {
+            **valid_marketplace(),
+            "category": "camera",
+            "governance": {
+                "schema_version": 1, "publication_status": "draft", "rollout_percent": 0,
+                "lifecycle_status": "active", "qualification": {"status": "unverified"},
+            },
+            "compatibility": [{
+                "capability": "camera_stream", "host_protocol": "piphi.widget.host/1", "widget_sdk": ">=0.4.0",
+            }],
+        }
+        for field in ("device_types", "protocols", "discovery_methods", "connectivity", "offline_support"):
+            entry["marketplace"].pop(field, None)
+        self.assertEqual(VALIDATOR.validate_entry(entry, 0), [])
+
+    def test_published_widget_requires_immutable_artifact_integrity(self) -> None:
+        entry = valid_entry()
+        entry.update({"type": "widget", "platforms": ["web"], "artifact": {"release_asset": "widget.tgz", "integrity": None}})
+        entry["marketplace"]["compatibility"] = [{"capability": "camera", "host_protocol": "piphi.widget.host/1", "widget_sdk": ">=0.4.0"}]
+        errors = VALIDATOR.validate_entry(entry, 0)
+        self.assertTrue(any("artifact.integrity is required" in error for error in errors))
+
     def test_accepts_safe_packaged_brand_path(self) -> None:
         entry = valid_entry()
         entry["brand_path"] = "src/brand"

@@ -90,7 +90,7 @@ def build_entry(fields: dict[str, str], manifest: dict[str, object]) -> dict[str
         "risk_level": infer_risk_level(deployment_mode, runtime_requirements),
         "description": str(manifest.get("description") or fields.get("short_description") or "").strip(),
         "rewardable": False,
-        "platforms": split_lines(fields.get("supported_platforms", "")),
+        "platforms": [item.lower() for item in split_lines(fields.get("supported_platforms", ""))],
         "icon_url": icon_url,
         "owner": owner,
         "repo_name": repo_name,
@@ -108,6 +108,13 @@ def build_entry(fields: dict[str, str], manifest: dict[str, object]) -> dict[str
     manifest_image = str(manifest.get("image") or "").strip()
     if manifest_image:
         entry["image"] = manifest_image
+
+    if entry_type == "widget":
+        artifact = manifest.get("artifact")
+        if not isinstance(artifact, dict):
+            raise ValueError("Widget manifest must declare artifact release metadata")
+        entry["artifact"] = artifact
+        entry.pop("brand_path", None)
 
     banner_url = fields.get("banner_url", "").strip()
     if banner_url:
