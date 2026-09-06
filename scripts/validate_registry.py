@@ -13,9 +13,9 @@ if str(SCRIPT_ROOT) not in sys.path:
 
 from marketplace_metadata import validate_marketplace_v2
 
-VALID_ENTRY_TYPES = {"integration", "platform_service"}
+VALID_ENTRY_TYPES = {"integration", "platform_service", "widget"}
 VALID_DEPLOYMENT_MODES = {"standalone", "sidecar"}
-VALID_PLATFORMS = {"linux", "windows", "macos"}
+VALID_PLATFORMS = {"linux", "windows", "macos", "web"}
 REQUIRED_FIELDS = {
     "id",
     "name",
@@ -37,6 +37,7 @@ BRAND_DOMAIN = re.compile(
     r"[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$"
 )
 SHA256 = re.compile(r"^[a-f0-9]{64}$")
+ARTIFACT_DIGEST = re.compile(r"^sha256:[a-f0-9]{64}$")
 
 
 def valid_package_path(value: object) -> bool:
@@ -71,6 +72,8 @@ def validate_entry(entry: dict[str, Any], index: int) -> list[str]:
         errors.append(f"{prefix}: deployment_mode must be one of {sorted(VALID_DEPLOYMENT_MODES)}")
     if entry_type == "platform_service" and deployment_mode != "sidecar":
         errors.append(f"{prefix}: platform_service entries must set deployment_mode=sidecar")
+    if entry_type == "widget" and deployment_mode != "standalone":
+        errors.append(f"{prefix}: widget entries must use standalone deployment mode")
 
     platforms = entry.get("platforms")
     if not isinstance(platforms, list) or not platforms:
@@ -83,6 +86,21 @@ def validate_entry(entry: dict[str, Any], index: int) -> list[str]:
     image = entry.get("image")
     if image and not IMAGE_WITH_TAG.match(str(image)):
         errors.append(f"{prefix}: image must include an explicit tag, got {image!r}")
+
+    artifact = entry.get("artifact")
+    if entry_type == "widget":
+        if not isinstance(artifact, dict):
+            errors.append(f"{prefix}: widget artifact must be an object")
+        else:
+            if not valid_package_path(artifact.get("release_asset")):
+                errors.append(f"{prefix}: widget artifact.release_asset must be a safe package filename")
+            integrity = str(artifact.get("integrity") or "").strip()
+            governance = (entry.get("marketplace") or {}).get("governance") if isinstance(entry.get("marketplace"), dict) else {}
+            is_draft = isinstance(governance, dict) and governance.get("publication_status") == "draft" and governance.get("rollout_percent") == 0
+            if not integrity and not is_draft:
+                errors.append(f"{prefix}: published widget artifact.integrity is required")
+            elif integrity and not ARTIFACT_DIGEST.fullmatch(integrity):
+                errors.append(f"{prefix}: widget artifact.integrity must be sha256:<64 lowercase hex characters>")
 
     brand_path = entry.get("brand_path")
     if brand_path is not None and not valid_package_path(brand_path):

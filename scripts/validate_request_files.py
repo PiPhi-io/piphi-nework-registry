@@ -14,7 +14,7 @@ from submission_utils import fetch_manifest_from_github, load_registry_entries, 
 
 
 VALID_REQUEST_STATUSES = {"requested", "accepted", "rejected", "converted"}
-VALID_ENTRY_TYPES = {"integration", "platform_service"}
+VALID_ENTRY_TYPES = {"integration", "platform_service", "widget"}
 VALID_TRUST_LEVELS = {"official", "verified", "community", "experimental"}
 VALID_RISK_LEVELS = {"low", "moderate", "high"}
 REQUEST_REQUIRED_FIELDS = {

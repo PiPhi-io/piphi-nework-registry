@@ -9,6 +9,7 @@ VALID_CATEGORIES = {
     "air_quality",
     "appliances",
     "climate",
+    "camera",
     "energy",
     "lighting",
     "media",
@@ -42,14 +43,18 @@ def validate_marketplace_v2(
     _require_text(marketplace, "summary", errors)
     if marketplace.get("category") not in VALID_CATEGORIES:
         errors.append(f"marketplace.category must be one of {sorted(VALID_CATEGORIES)}")
-    if marketplace.get("connectivity") not in VALID_CONNECTIVITY:
-        errors.append("marketplace.connectivity must be local, cloud, or hybrid")
-    if marketplace.get("offline_support") not in VALID_OFFLINE_SUPPORT:
-        errors.append("marketplace.offline_support must be full, partial, or none")
+    if entry_type != "widget":
+        if marketplace.get("connectivity") not in VALID_CONNECTIVITY:
+            errors.append("marketplace.connectivity must be local, cloud, or hybrid")
+        if marketplace.get("offline_support") not in VALID_OFFLINE_SUPPORT:
+            errors.append("marketplace.offline_support must be full, partial, or none")
 
     _validate_governance(marketplace, errors)
 
-    for field in ("device_types", "protocols", "regions", "languages", "discovery_methods"):
+    list_fields = ("regions", "languages") if entry_type == "widget" else (
+        "device_types", "protocols", "regions", "languages", "discovery_methods"
+    )
+    for field in list_fields:
         value = marketplace.get(field)
         if not isinstance(value, list) or not value or not all(_text(item) for item in value):
             errors.append(f"marketplace.{field} must be a non-empty list of strings")
@@ -87,19 +92,24 @@ def validate_marketplace_v2(
         errors.append("marketplace.access must be a list")
 
     compatibility = marketplace.get("compatibility")
-    if entry_type == "integration" and (not isinstance(compatibility, list) or not compatibility):
-        errors.append("marketplace.compatibility must list at least one supported device")
+    if entry_type in {"integration", "widget"} and (not isinstance(compatibility, list) or not compatibility):
+        errors.append("marketplace.compatibility must list at least one supported target")
     if isinstance(compatibility, list):
         for index, item in enumerate(compatibility):
             if not isinstance(item, dict):
                 errors.append(f"marketplace.compatibility[{index}] must be an object")
                 continue
-            _require_text(item, "brand", errors, prefix=f"marketplace.compatibility[{index}]")
-            _require_text(item, "model", errors, prefix=f"marketplace.compatibility[{index}]")
+            if entry_type == "widget":
+                _require_text(item, "capability", errors, prefix=f"marketplace.compatibility[{index}]")
+                _require_text(item, "host_protocol", errors, prefix=f"marketplace.compatibility[{index}]")
+                _require_text(item, "widget_sdk", errors, prefix=f"marketplace.compatibility[{index}]")
+            else:
+                _require_text(item, "brand", errors, prefix=f"marketplace.compatibility[{index}]")
+                _require_text(item, "model", errors, prefix=f"marketplace.compatibility[{index}]")
 
     for field in ("documentation_url", "support_url", "changelog_url"):
         _require_url(marketplace, field, errors)
-    if marketplace.get("connectivity") in {"cloud", "hybrid"}:
+    if entry_type != "widget" and marketplace.get("connectivity") in {"cloud", "hybrid"}:
         _require_url(marketplace, "privacy_url", errors)
     return errors
 
