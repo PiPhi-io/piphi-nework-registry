@@ -2302,5 +2302,84 @@
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     }
+  },
+  {
+    "id": "piphi-network-pfsense",
+    "name": "PiPhi Network pfSense",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "high",
+    "description": "pfSense monitoring, transition events, and opt-in allow-listed operations for PiPhi Network.",
+    "marketplace": {
+      "brand_domain": "pfsense.org",
+      "metadata_version": 2,
+      "display_name": "pfSense Firewall",
+      "summary": "Monitor pfSense health, gateways, interfaces, VPNs, clients, certificates, and HA, with optional allow-listed operations.",
+      "category": "networking",
+      "device_types": ["firewall", "network_gateway", "vpn_gateway"],
+      "protocols": ["pfsense_rest_api_v2"],
+      "regions": ["WW"],
+      "languages": ["en"],
+      "discovery_methods": ["manual"],
+      "connectivity": "local",
+      "offline_support": "none",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-pfsense/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Connects directly to the configured pfSense firewall over its local REST API endpoint.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "pfSense API key",
+          "reason": "Stores the API key required to authenticate to the community pfSense REST API v2 package.",
+          "required": true
+        },
+        {
+          "id": "operational_control",
+          "label": "Optional firewall operations",
+          "reason": "Runs only explicitly enabled, allow-listed diagnostic, service, and Wake-on-LAN operations.",
+          "required": false
+        }
+      ],
+      "compatibility": [
+        {"brand": "pfSense", "model": "pfSense Community Edition with pfREST v2", "regions": ["WW"]},
+        {"brand": "Netgate", "model": "pfSense Plus with pfREST v2", "regions": ["WW"]}
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-pfsense",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-pfsense/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-pfsense/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {"status": "unverified"}
+      }
+    },
+    "rewardable": false,
+    "platforms": ["linux"],
+    "image": "piphinetwork/piphi-network-pfsense:0.1.0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-pfsense",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-pfsense",
+    "manifest_path": "manifest.json",
+    "tags": ["pfsense", "firewall", "networking", "vpn", "local-api"],
+    "runtime_requirements": ["host_filesystem_mounts", "secrets_or_api_tokens"],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    }
   }
 ]
