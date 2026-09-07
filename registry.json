@@ -2451,5 +2451,2855 @@
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     }
+  },
+  {
+    "id": "io.piphi.widget.calendar-agenda",
+    "name": "Calendar & agenda",
+    "version": "0.1.0",
+    "type": "widget",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Accessible multi-calendar agenda with timezone-safe timed and all-day events.",
+    "rewardable": false,
+    "platforms": [
+      "web"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-widget-calendar-agenda",
+    "repo_url": "https://github.com/PiPhi-io/piphi-widget-calendar-agenda",
+    "manifest_path": "widget.manifest.json",
+    "tags": [
+      "calendar",
+      "agenda",
+      "dashboard",
+      "widget-sdk"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Calendar & agenda",
+      "summary": "See timezone-safe timed and all-day events across selected calendars.",
+      "category": "other",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en",
+        "es",
+        "ar"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-widget-calendar-agenda/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [],
+      "compatibility": [
+        {
+          "capability": "calendar_events",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.4.0"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-widget-calendar-agenda",
+      "support_url": "https://github.com/PiPhi-io/piphi-widget-calendar-agenda/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-widget-calendar-agenda/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
+    },
+    "artifact": {
+      "release_asset": "piphi-widget-calendar-agenda-0.1.0.tgz",
+      "integrity": null
+    }
+  },
+  {
+    "id": "io.piphi.widget.vacuum-map",
+    "name": "Vacuum map",
+    "version": "0.1.0",
+    "type": "widget",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Accessible robot-vacuum map, route, room and control card.",
+    "rewardable": false,
+    "platforms": [
+      "web"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-widget-vacuum-map",
+    "repo_url": "https://github.com/PiPhi-io/piphi-widget-vacuum-map",
+    "manifest_path": "widget.manifest.json",
+    "tags": [
+      "vacuum",
+      "map",
+      "appliances",
+      "widget-sdk"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Vacuum map",
+      "summary": "View a robot vacuum map, route, rooms, battery, state, and allow-listed controls.",
+      "category": "appliances",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en",
+        "es",
+        "ar"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-widget-vacuum-map/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "vacuum_control",
+          "label": "Vacuum controls",
+          "reason": "Runs only the start, pause, return-home, locate, and selected-room commands exposed by the bound vacuum.",
+          "required": false
+        }
+      ],
+      "compatibility": [
+        {
+          "capability": "vacuum_map",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.4.0"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-widget-vacuum-map",
+      "support_url": "https://github.com/PiPhi-io/piphi-widget-vacuum-map/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-widget-vacuum-map/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
+    },
+    "artifact": {
+      "release_asset": "piphi-widget-vacuum-map-0.1.0.tgz",
+      "integrity": null
+    }
+  },
+  {
+    "id": "piphi-android-adb-sidecar",
+    "name": "Android ADB sidecar",
+    "version": "0.1.0",
+    "type": "platform_service",
+    "deployment_mode": "sidecar",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Provide managed, allow-listed ADB transport for Android integrations.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-android-adb-sidecar",
+    "repo_url": "https://github.com/PiPhi-io/piphi-android-adb-sidecar",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "adb",
+      "android",
+      "sidecar",
+      "transport"
+    ],
+    "runtime_requirements": [
+      "sidecar_runtime",
+      "usb_or_device_access",
+      "direct_hardware_access"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Android ADB sidecar",
+      "summary": "Provide managed, allow-listed ADB transport for Android integrations.",
+      "category": "networking",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-android-adb-sidecar/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        },
+        {
+          "id": "device_access",
+          "label": "USB device access",
+          "reason": "Uses the explicitly configured host device to communicate with supported hardware.",
+          "required": true
+        },
+        {
+          "id": "sidecar_runtime",
+          "label": "Managed sidecar runtime",
+          "reason": "Runs as an isolated helper service consumed by a parent PiPhi integration.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Google and Amazon",
+          "model": "ADB-compatible Android TV, Google TV, and Fire TV devices"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-android-adb-sidecar",
+      "support_url": "https://github.com/PiPhi-io/piphi-android-adb-sidecar/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-android-adb-sidecar/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "Android platform service"
+      ],
+      "protocols": [
+        "ADB",
+        "USB",
+        "TCP"
+      ],
+      "discovery_methods": [
+        "manual",
+        "ADB device discovery"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-android-adb-sidecar:0.1.0"
+  },
+  {
+    "id": "piphi-ble-gateway-sidecar",
+    "name": "BLE gateway sidecar",
+    "version": "0.1.0",
+    "type": "platform_service",
+    "deployment_mode": "sidecar",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Provide managed Bluetooth Low Energy observation transport for PiPhi integrations.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-ble-gateway-sidecar",
+    "repo_url": "https://github.com/PiPhi-io/piphi-ble-gateway-sidecar",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "ble",
+      "bluetooth",
+      "gateway",
+      "sidecar"
+    ],
+    "runtime_requirements": [
+      "sidecar_runtime",
+      "usb_or_device_access",
+      "direct_hardware_access"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "BLE gateway sidecar",
+      "summary": "Provide managed Bluetooth Low Energy observation transport for PiPhi integrations.",
+      "category": "sensors",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-ble-gateway-sidecar/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "device_access",
+          "label": "Bluetooth adapter access",
+          "reason": "Uses the explicitly configured host device to communicate with supported hardware.",
+          "required": true
+        },
+        {
+          "id": "sidecar_runtime",
+          "label": "Managed sidecar runtime",
+          "reason": "Runs as an isolated helper service consumed by a parent PiPhi integration.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Bluetooth SIG",
+          "model": "BLE advertisers supported by parent integrations"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-ble-gateway-sidecar",
+      "support_url": "https://github.com/PiPhi-io/piphi-ble-gateway-sidecar/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-ble-gateway-sidecar/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "BLE gateway service"
+      ],
+      "protocols": [
+        "Bluetooth Low Energy"
+      ],
+      "discovery_methods": [
+        "BLE advertisements"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-ble-gateway-sidecar:0.1.0"
+  },
+  {
+    "id": "piphi-modbus-rtu-sidecar",
+    "name": "Modbus RTU sidecar",
+    "version": "0.1.0",
+    "type": "platform_service",
+    "deployment_mode": "sidecar",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Coordinate bounded Modbus RTU and ASCII requests over serial buses.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-modbus-rtu-sidecar",
+    "repo_url": "https://github.com/PiPhi-io/piphi-modbus-rtu-sidecar",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "modbus",
+      "rtu",
+      "serial",
+      "sidecar"
+    ],
+    "runtime_requirements": [
+      "sidecar_runtime",
+      "usb_or_device_access",
+      "direct_hardware_access"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Modbus RTU sidecar",
+      "summary": "Coordinate bounded Modbus RTU and ASCII requests over serial buses.",
+      "category": "networking",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-modbus-rtu-sidecar/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "device_access",
+          "label": "Serial device access",
+          "reason": "Uses the explicitly configured host device to communicate with supported hardware.",
+          "required": true
+        },
+        {
+          "id": "sidecar_runtime",
+          "label": "Managed sidecar runtime",
+          "reason": "Runs as an isolated helper service consumed by a parent PiPhi integration.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Multi-vendor",
+          "model": "Modbus RTU and ASCII devices described by parent profiles"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-modbus-rtu-sidecar",
+      "support_url": "https://github.com/PiPhi-io/piphi-modbus-rtu-sidecar/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-modbus-rtu-sidecar/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "Serial protocol gateway"
+      ],
+      "protocols": [
+        "Modbus RTU",
+        "Modbus ASCII",
+        "Serial"
+      ],
+      "discovery_methods": [
+        "manual",
+        "serial port enumeration"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-modbus-rtu-sidecar:0.1.0"
+  },
+  {
+    "id": "piphi-network-android-tv",
+    "name": "Android TV",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Monitor and control Android TV, Google TV, and Fire TV devices through managed ADB.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-android-tv",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-android-tv",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "android-tv",
+      "fire-tv",
+      "media",
+      "adb"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Android TV",
+      "summary": "Monitor and control Android TV, Google TV, and Fire TV devices through managed ADB.",
+      "category": "media",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-android-tv/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Google and Amazon",
+          "model": "Android TV, Google TV, and Fire TV devices with ADB enabled"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-android-tv",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-android-tv/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-android-tv/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "television",
+        "streaming device"
+      ],
+      "protocols": [
+        "ADB"
+      ],
+      "discovery_methods": [
+        "managed ADB discovery",
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-android-tv:0.1.0"
+  },
+  {
+    "id": "piphi-network-bacnet",
+    "name": "BACnet",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Discover and monitor capability-negotiated BACnet objects and properties.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-bacnet",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-bacnet",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "bacnet",
+      "building-automation",
+      "hvac",
+      "local"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "BACnet",
+      "summary": "Discover and monitor capability-negotiated BACnet objects and properties.",
+      "category": "other",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-bacnet/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Multi-vendor",
+          "model": "BACnet/IP devices exposing supported objects and properties"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-bacnet",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-bacnet/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-bacnet/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "building automation controller",
+        "HVAC controller",
+        "sensor"
+      ],
+      "protocols": [
+        "BACnet/IP"
+      ],
+      "discovery_methods": [
+        "BACnet Who-Is/I-Am",
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-bacnet:0.1.0"
+  },
+  {
+    "id": "piphi-network-bambu-lab",
+    "name": "Bambu Lab",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Monitor Bambu Lab printers and expose model-supported print controls.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-bambu-lab",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-bambu-lab",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "bambu-lab",
+      "3d-printer",
+      "mqtt",
+      "local"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Bambu Lab",
+      "summary": "Monitor Bambu Lab printers and expose model-supported print controls.",
+      "category": "appliances",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-bambu-lab/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Bambu Lab",
+          "model": "Supported A, P, and X series printers in LAN mode"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-bambu-lab",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-bambu-lab/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-bambu-lab/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "3D printer"
+      ],
+      "protocols": [
+        "MQTT",
+        "LAN mode"
+      ],
+      "discovery_methods": [
+        "manual",
+        "local network discovery"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-bambu-lab:0.1.0"
+  },
+  {
+    "id": "piphi-network-bermuda-presence",
+    "name": "Bermuda presence",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Turn supported BLE advertisements into room-level presence observations.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-bermuda-presence",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-bermuda-presence",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "ble",
+      "presence",
+      "room-tracking",
+      "sensors"
+    ],
+    "runtime_requirements": [
+      "usb_or_device_access",
+      "direct_hardware_access"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Bermuda presence",
+      "summary": "Turn supported BLE advertisements into room-level presence observations.",
+      "category": "sensors",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-bermuda-presence/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "device_access",
+          "label": "Bluetooth observation access",
+          "reason": "Uses the explicitly configured host device to communicate with supported hardware.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Multi-vendor",
+          "model": "Supported BLE beacons and personal devices"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-bermuda-presence",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-bermuda-presence/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-bermuda-presence/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "presence sensor",
+        "BLE beacon"
+      ],
+      "protocols": [
+        "Bluetooth Low Energy"
+      ],
+      "discovery_methods": [
+        "BLE advertisements"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-bermuda-presence:0.1.0"
+  },
+  {
+    "id": "piphi-network-daikin-onecta",
+    "name": "Daikin Onecta",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Monitor and control supported Daikin HVAC equipment through Onecta.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-daikin-onecta",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-daikin-onecta",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "daikin",
+      "onecta",
+      "hvac",
+      "cloud"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Daikin Onecta",
+      "summary": "Monitor and control supported Daikin HVAC equipment through Onecta.",
+      "category": "climate",
+      "regions": [
+        "EU"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-daikin-onecta/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Daikin",
+          "model": "Onecta-compatible residential HVAC equipment"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-daikin-onecta",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-daikin-onecta/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-daikin-onecta/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "air conditioner",
+        "heat pump",
+        "climate system"
+      ],
+      "protocols": [
+        "Daikin Onecta API",
+        "HTTPS"
+      ],
+      "discovery_methods": [
+        "account discovery"
+      ],
+      "connectivity": "cloud",
+      "offline_support": "none",
+      "privacy_url": "https://github.com/PiPhi-io/piphi-network-daikin-onecta/blob/main/docs/privacy.md"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-daikin-onecta:0.1.0"
+  },
+  {
+    "id": "piphi-network-dyson",
+    "name": "Dyson",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Monitor and control capability-negotiated Dyson air treatment devices.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-dyson",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-dyson",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "dyson",
+      "air-quality",
+      "fan",
+      "climate"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Dyson",
+      "summary": "Monitor and control capability-negotiated Dyson air treatment devices.",
+      "category": "air_quality",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-dyson/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Dyson",
+          "model": "Supported connected air treatment devices"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-dyson",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-dyson/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-dyson/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "air purifier",
+        "fan",
+        "humidifier",
+        "heater"
+      ],
+      "protocols": [
+        "Dyson cloud API",
+        "MQTT",
+        "HTTPS"
+      ],
+      "discovery_methods": [
+        "account discovery",
+        "local device discovery"
+      ],
+      "connectivity": "hybrid",
+      "offline_support": "partial",
+      "privacy_url": "https://github.com/PiPhi-io/piphi-network-dyson/blob/main/docs/privacy.md"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-dyson:0.1.0"
+  },
+  {
+    "id": "piphi-network-eufy-security",
+    "name": "Eufy Security",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Monitor supported Eufy stations, cameras, doorbells, locks, and sensors.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-eufy-security",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-eufy-security",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "eufy",
+      "security",
+      "camera",
+      "sensors"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Eufy Security",
+      "summary": "Monitor supported Eufy stations, cameras, doorbells, locks, and sensors.",
+      "category": "security",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-eufy-security/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        },
+        {
+          "id": "brokered_media",
+          "label": "Brokered camera media",
+          "reason": "Processes media only after an explicit widget, automation, or analysis request through the PiPhi media broker.",
+          "required": false
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Eufy",
+          "model": "Capability-negotiated Eufy Security devices"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-eufy-security",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-eufy-security/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-eufy-security/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "security station",
+        "camera",
+        "doorbell",
+        "lock",
+        "sensor"
+      ],
+      "protocols": [
+        "Eufy cloud API",
+        "P2P",
+        "WebSocket"
+      ],
+      "discovery_methods": [
+        "account discovery"
+      ],
+      "connectivity": "hybrid",
+      "offline_support": "partial",
+      "privacy_url": "https://github.com/PiPhi-io/piphi-network-eufy-security/blob/main/docs/privacy.md"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-eufy-security:0.1.0"
+  },
+  {
+    "id": "piphi-network-huawei-solar",
+    "name": "Huawei Solar",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Monitor Huawei solar inverters and meters through negotiated Modbus registers.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-huawei-solar",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-huawei-solar",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "huawei",
+      "solar",
+      "inverter",
+      "modbus"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Huawei Solar",
+      "summary": "Monitor Huawei solar inverters and meters through negotiated Modbus registers.",
+      "category": "energy",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-huawei-solar/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Huawei",
+          "model": "SUN2000 and compatible Modbus-capable energy equipment"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-huawei-solar",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-huawei-solar/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-huawei-solar/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "solar inverter",
+        "power meter",
+        "battery system"
+      ],
+      "protocols": [
+        "Modbus TCP"
+      ],
+      "discovery_methods": [
+        "manual",
+        "local network discovery"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-huawei-solar:0.1.0"
+  },
+  {
+    "id": "piphi-network-kia-hyundai-connect",
+    "name": "Kia, Hyundai & Genesis Connect",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Monitor and control supported connected vehicles through regional owner services.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-kia-hyundai-connect",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-kia-hyundai-connect",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "kia",
+      "hyundai",
+      "genesis",
+      "vehicle"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Kia, Hyundai & Genesis Connect",
+      "summary": "Monitor and control supported connected vehicles through regional owner services.",
+      "category": "mobility",
+      "regions": [
+        "EU",
+        "NA",
+        "APAC"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-kia-hyundai-connect/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Kia, Hyundai, and Genesis",
+          "model": "Vehicles supported by configured regional connected-services accounts"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-kia-hyundai-connect",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-kia-hyundai-connect/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-kia-hyundai-connect/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "vehicle",
+        "electric vehicle",
+        "plug-in hybrid"
+      ],
+      "protocols": [
+        "Kia Connect",
+        "Hyundai Bluelink",
+        "Genesis Connected Services",
+        "HTTPS"
+      ],
+      "discovery_methods": [
+        "account and vehicle discovery"
+      ],
+      "connectivity": "cloud",
+      "offline_support": "none",
+      "privacy_url": "https://github.com/PiPhi-io/piphi-network-kia-hyundai-connect/blob/main/docs/privacy.md"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-kia-hyundai-connect:0.1.0"
+  },
+  {
+    "id": "piphi-network-knx",
+    "name": "KNX",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Expose project- and datapoint-negotiated KNX/IP building controls.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-knx",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-knx",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "knx",
+      "building-automation",
+      "lighting",
+      "climate"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "KNX",
+      "summary": "Expose project- and datapoint-negotiated KNX/IP building controls.",
+      "category": "other",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-knx/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "KNX Association",
+          "model": "KNX/IP projects and datapoints represented in the imported project"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-knx",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-knx/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-knx/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "building control",
+        "light",
+        "climate system",
+        "cover",
+        "sensor"
+      ],
+      "protocols": [
+        "KNX/IP"
+      ],
+      "discovery_methods": [
+        "project import",
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-knx:0.1.0"
+  },
+  {
+    "id": "piphi-network-llm-vision",
+    "name": "LLM vision sidecar",
+    "version": "0.1.0",
+    "type": "platform_service",
+    "deployment_mode": "sidecar",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Run bounded, opt-in vision analysis for explicitly brokered camera media.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-llm-vision",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-llm-vision",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "vision",
+      "ai",
+      "camera",
+      "sidecar"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens",
+      "sidecar_runtime"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "LLM vision sidecar",
+      "summary": "Run bounded, opt-in vision analysis for explicitly brokered camera media.",
+      "category": "camera",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-llm-vision/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        },
+        {
+          "id": "brokered_media",
+          "label": "Brokered camera media",
+          "reason": "Processes media only after an explicit widget, automation, or analysis request through the PiPhi media broker.",
+          "required": false
+        },
+        {
+          "id": "sidecar_runtime",
+          "label": "Managed sidecar runtime",
+          "reason": "Runs as an isolated helper service consumed by a parent PiPhi integration.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "PiPhi Network",
+          "model": "Brokered camera media and configured vision providers"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-llm-vision",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-llm-vision/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-llm-vision/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "vision analysis service"
+      ],
+      "protocols": [
+        "PiPhi media broker",
+        "configured vision provider API",
+        "HTTPS"
+      ],
+      "discovery_methods": [
+        "manual service configuration"
+      ],
+      "connectivity": "hybrid",
+      "offline_support": "partial",
+      "privacy_url": "https://github.com/PiPhi-io/piphi-network-llm-vision/blob/main/docs/privacy.md"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-llm-vision:0.1.0"
+  },
+  {
+    "id": "piphi-network-midea-ac-lan",
+    "name": "Midea AC LAN",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Monitor and control supported Midea air conditioners over the local network.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-midea-ac-lan",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-midea-ac-lan",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "midea",
+      "air-conditioner",
+      "hvac",
+      "local"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Midea AC LAN",
+      "summary": "Monitor and control supported Midea air conditioners over the local network.",
+      "category": "climate",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-midea-ac-lan/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Midea and compatible brands",
+          "model": "LAN-capable air conditioners using supported protocol variants"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-midea-ac-lan",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-midea-ac-lan/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-midea-ac-lan/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "air conditioner",
+        "heat pump"
+      ],
+      "protocols": [
+        "Midea LAN protocol"
+      ],
+      "discovery_methods": [
+        "local network discovery",
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-midea-ac-lan:0.1.0"
+  },
+  {
+    "id": "piphi-network-mikrotik-router",
+    "name": "MikroTik RouterOS",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Monitor RouterOS health, interfaces, clients, and explicitly enabled controls.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-mikrotik-router",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-mikrotik-router",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "mikrotik",
+      "routeros",
+      "networking",
+      "monitoring"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "MikroTik RouterOS",
+      "summary": "Monitor RouterOS health, interfaces, clients, and explicitly enabled controls.",
+      "category": "networking",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-mikrotik-router/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "MikroTik",
+          "model": "Supported RouterOS devices and API versions"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-mikrotik-router",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-mikrotik-router/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-mikrotik-router/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "router",
+        "network switch",
+        "wireless access point"
+      ],
+      "protocols": [
+        "RouterOS API",
+        "HTTPS"
+      ],
+      "discovery_methods": [
+        "manual",
+        "local network discovery"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-mikrotik-router:0.1.0"
+  },
+  {
+    "id": "piphi-network-modbus",
+    "name": "Modbus",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Monitor profile-described Modbus devices across TCP, TLS, RTU, and ASCII transports.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-modbus",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-modbus",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "modbus",
+      "industrial",
+      "energy",
+      "local"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Modbus",
+      "summary": "Monitor profile-described Modbus devices across TCP, TLS, RTU, and ASCII transports.",
+      "category": "other",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-modbus/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Multi-vendor",
+          "model": "Devices described by supported PiPhi Modbus profiles"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-modbus",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-modbus/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-modbus/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "industrial controller",
+        "energy meter",
+        "sensor",
+        "actuator"
+      ],
+      "protocols": [
+        "Modbus TCP",
+        "Modbus TLS",
+        "Modbus RTU",
+        "Modbus ASCII"
+      ],
+      "discovery_methods": [
+        "profile configuration",
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-modbus:0.1.0"
+  },
+  {
+    "id": "piphi-network-nord-pool",
+    "name": "Nord Pool",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Track day-ahead electricity prices for configured Nord Pool bidding zones.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-nord-pool",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-nord-pool",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "nord-pool",
+      "energy",
+      "electricity-price",
+      "cloud"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Nord Pool",
+      "summary": "Track day-ahead electricity prices for configured Nord Pool bidding zones.",
+      "category": "energy",
+      "regions": [
+        "EU"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-nord-pool/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [],
+      "compatibility": [
+        {
+          "brand": "Nord Pool",
+          "model": "Supported day-ahead bidding zones and currencies"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-nord-pool",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-nord-pool/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-nord-pool/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "electricity market feed"
+      ],
+      "protocols": [
+        "Nord Pool market data",
+        "HTTPS"
+      ],
+      "discovery_methods": [
+        "configured bidding zone"
+      ],
+      "connectivity": "cloud",
+      "offline_support": "none",
+      "privacy_url": "https://github.com/PiPhi-io/piphi-network-nord-pool/blob/main/docs/privacy.md"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-nord-pool:0.1.0"
+  },
+  {
+    "id": "piphi-network-octopus-energy",
+    "name": "Octopus Energy",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Monitor Octopus Energy accounts, meters, tariffs, consumption, and prices.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-octopus-energy",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-octopus-energy",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "octopus-energy",
+      "energy",
+      "tariff",
+      "cloud"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Octopus Energy",
+      "summary": "Monitor Octopus Energy accounts, meters, tariffs, consumption, and prices.",
+      "category": "energy",
+      "regions": [
+        "GB"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-octopus-energy/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Octopus Energy",
+          "model": "Supported accounts, meters, and tariffs"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-octopus-energy",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-octopus-energy/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-octopus-energy/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "electricity meter",
+        "gas meter",
+        "energy tariff",
+        "account"
+      ],
+      "protocols": [
+        "Octopus Energy API",
+        "HTTPS"
+      ],
+      "discovery_methods": [
+        "account and meter discovery"
+      ],
+      "connectivity": "cloud",
+      "offline_support": "none",
+      "privacy_url": "https://github.com/PiPhi-io/piphi-network-octopus-energy/blob/main/docs/privacy.md"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-octopus-energy:0.1.0"
+  },
+  {
+    "id": "piphi-network-openepaperlink",
+    "name": "OpenEPaperLink",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Monitor and control supported OpenEPaperLink access points and electronic-paper tags.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-openepaperlink",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-openepaperlink",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "openepaperlink",
+      "epaper",
+      "display",
+      "local"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "OpenEPaperLink",
+      "summary": "Monitor and control supported OpenEPaperLink access points and electronic-paper tags.",
+      "category": "other",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-openepaperlink/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "OpenEPaperLink",
+          "model": "Capability-negotiated access points and tags"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-openepaperlink",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-openepaperlink/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-openepaperlink/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "electronic-paper tag",
+        "access point"
+      ],
+      "protocols": [
+        "OpenEPaperLink API",
+        "HTTP"
+      ],
+      "discovery_methods": [
+        "access point discovery",
+        "tag discovery",
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-openepaperlink:0.1.0"
+  },
+  {
+    "id": "piphi-network-passive-ble-monitor",
+    "name": "Passive BLE monitor",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Decode supported passive BLE advertisements into sensor observations.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-passive-ble-monitor",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-passive-ble-monitor",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "ble",
+      "bluetooth",
+      "sensors",
+      "passive"
+    ],
+    "runtime_requirements": [
+      "usb_or_device_access",
+      "direct_hardware_access"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Passive BLE monitor",
+      "summary": "Decode supported passive BLE advertisements into sensor observations.",
+      "category": "sensors",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-passive-ble-monitor/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "device_access",
+          "label": "Bluetooth observation access",
+          "reason": "Uses the explicitly configured host device to communicate with supported hardware.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Multi-vendor",
+          "model": "Devices using supported passive BLE advertisement formats"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-passive-ble-monitor",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-passive-ble-monitor/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-passive-ble-monitor/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "environmental sensor",
+        "BLE beacon",
+        "battery sensor"
+      ],
+      "protocols": [
+        "Bluetooth Low Energy"
+      ],
+      "discovery_methods": [
+        "BLE advertisements"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-passive-ble-monitor:0.1.0"
+  },
+  {
+    "id": "piphi-network-sonoff-lan",
+    "name": "Sonoff LAN",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Monitor and control supported Sonoff and eWeLink-compatible devices locally.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-sonoff-lan",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-sonoff-lan",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "sonoff",
+      "ewelink",
+      "switch",
+      "local"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Sonoff LAN",
+      "summary": "Monitor and control supported Sonoff and eWeLink-compatible devices locally.",
+      "category": "lighting",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-sonoff-lan/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Sonoff",
+          "model": "LAN-capable Sonoff and compatible eWeLink devices"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-sonoff-lan",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-sonoff-lan/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-sonoff-lan/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "switch",
+        "light",
+        "relay",
+        "sensor"
+      ],
+      "protocols": [
+        "Sonoff LAN",
+        "mDNS",
+        "HTTP"
+      ],
+      "discovery_methods": [
+        "mDNS",
+        "local network discovery",
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-sonoff-lan:0.1.0"
+  },
+  {
+    "id": "piphi-network-tapo-cameras",
+    "name": "Tapo cameras",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Monitor supported TP-Link Tapo cameras and broker explicitly requested media.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-tapo-cameras",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-tapo-cameras",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "tapo",
+      "camera",
+      "rtsp",
+      "security"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Tapo cameras",
+      "summary": "Monitor supported TP-Link Tapo cameras and broker explicitly requested media.",
+      "category": "camera",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-tapo-cameras/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        },
+        {
+          "id": "brokered_media",
+          "label": "Brokered camera media",
+          "reason": "Processes media only after an explicit widget, automation, or analysis request through the PiPhi media broker.",
+          "required": false
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "TP-Link Tapo",
+          "model": "Supported cameras and doorbells with local access enabled"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-tapo-cameras",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-tapo-cameras/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-tapo-cameras/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "camera",
+        "video doorbell"
+      ],
+      "protocols": [
+        "Tapo local API",
+        "RTSP",
+        "ONVIF"
+      ],
+      "discovery_methods": [
+        "local network discovery",
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-tapo-cameras:0.1.0"
+  },
+  {
+    "id": "piphi-network-washdata",
+    "name": "WashData",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Monitor appliance cycles, phases, estimates, energy, and maintenance state.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-washdata",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-washdata",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "appliances",
+      "laundry",
+      "cycles",
+      "monitoring"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "WashData",
+      "summary": "Monitor appliance cycles, phases, estimates, energy, and maintenance state.",
+      "category": "appliances",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-washdata/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Multi-vendor",
+          "model": "Appliances supported by configured WashData adapters"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-washdata",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-washdata/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-washdata/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "washing machine",
+        "dryer",
+        "dishwasher"
+      ],
+      "protocols": [
+        "configured appliance data adapter"
+      ],
+      "discovery_methods": [
+        "configured appliance discovery",
+        "manual"
+      ],
+      "connectivity": "hybrid",
+      "offline_support": "partial",
+      "privacy_url": "https://github.com/PiPhi-io/piphi-network-washdata/blob/main/docs/privacy.md"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-washdata:0.1.0"
+  },
+  {
+    "id": "piphi-network-waste-collection",
+    "name": "Waste collection",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Track upcoming household waste and recycling collections from configured providers.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-waste-collection",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-waste-collection",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "waste",
+      "recycling",
+      "schedule",
+      "cloud"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Waste collection",
+      "summary": "Track upcoming household waste and recycling collections from configured providers.",
+      "category": "other",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-waste-collection/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Multi-provider",
+          "model": "Supported municipal and waste-service schedule sources"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-waste-collection",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-waste-collection/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-waste-collection/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "waste collection schedule"
+      ],
+      "protocols": [
+        "configured municipal or provider API",
+        "HTTPS"
+      ],
+      "discovery_methods": [
+        "address or provider configuration"
+      ],
+      "connectivity": "cloud",
+      "offline_support": "none",
+      "privacy_url": "https://github.com/PiPhi-io/piphi-network-waste-collection/blob/main/docs/privacy.md"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-waste-collection:0.1.0"
+  },
+  {
+    "id": "piphi-network-xiaomi-home",
+    "name": "Xiaomi Home",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Monitor and control capability-negotiated Xiaomi smart-home devices.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-xiaomi-home",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-xiaomi-home",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "xiaomi",
+      "smart-home",
+      "sensors",
+      "appliances"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Xiaomi Home",
+      "summary": "Monitor and control capability-negotiated Xiaomi smart-home devices.",
+      "category": "other",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-xiaomi-home/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Account or device credentials",
+          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Xiaomi",
+          "model": "Models and capabilities supported by the configured Xiaomi region and transport"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-xiaomi-home",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-xiaomi-home/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-xiaomi-home/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "sensor",
+        "switch",
+        "light",
+        "climate device",
+        "appliance"
+      ],
+      "protocols": [
+        "Xiaomi Home API",
+        "supported local protocols",
+        "HTTPS"
+      ],
+      "discovery_methods": [
+        "account discovery",
+        "local device discovery"
+      ],
+      "connectivity": "hybrid",
+      "offline_support": "partial",
+      "privacy_url": "https://github.com/PiPhi-io/piphi-network-xiaomi-home/blob/main/docs/privacy.md"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-xiaomi-home:0.1.0"
+  },
+  {
+    "id": "piphi-network-zwave",
+    "name": "Z-Wave",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Expose command-class-negotiated Z-Wave devices through the managed Z-Wave JS sidecar.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-zwave",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-zwave",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "zwave",
+      "smart-home",
+      "mesh",
+      "local"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Z-Wave",
+      "summary": "Expose command-class-negotiated Z-Wave devices through the managed Z-Wave JS sidecar.",
+      "category": "other",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-zwave/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Z-Wave Alliance",
+          "model": "Devices whose command classes are supported by the managed sidecar"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-zwave",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-zwave/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-zwave/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "Z-Wave controller",
+        "sensor",
+        "switch",
+        "lock",
+        "climate device"
+      ],
+      "protocols": [
+        "Z-Wave",
+        "Z-Wave JS event contract"
+      ],
+      "discovery_methods": [
+        "Z-Wave inclusion",
+        "sidecar node discovery"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-zwave:0.1.0"
+  },
+  {
+    "id": "piphi-zwave-js-sidecar",
+    "name": "Z-Wave JS sidecar",
+    "version": "0.1.0",
+    "type": "platform_service",
+    "deployment_mode": "sidecar",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Own the Z-Wave controller and deliver schema-versioned node events to PiPhi.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-zwave-js-sidecar",
+    "repo_url": "https://github.com/PiPhi-io/piphi-zwave-js-sidecar",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "zwave",
+      "zwave-js",
+      "sidecar",
+      "controller"
+    ],
+    "runtime_requirements": [
+      "sidecar_runtime",
+      "usb_or_device_access",
+      "direct_hardware_access"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Z-Wave JS sidecar",
+      "summary": "Own the Z-Wave controller and deliver schema-versioned node events to PiPhi.",
+      "category": "other",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-zwave-js-sidecar/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "required": true
+        },
+        {
+          "id": "device_access",
+          "label": "Z-Wave controller device access",
+          "reason": "Uses the explicitly configured host device to communicate with supported hardware.",
+          "required": true
+        },
+        {
+          "id": "sidecar_runtime",
+          "label": "Managed sidecar runtime",
+          "reason": "Runs as an isolated helper service consumed by a parent PiPhi integration.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Z-Wave Alliance",
+          "model": "Controllers and devices supported by Z-Wave JS"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-zwave-js-sidecar",
+      "support_url": "https://github.com/PiPhi-io/piphi-zwave-js-sidecar/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-zwave-js-sidecar/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "Z-Wave controller service"
+      ],
+      "protocols": [
+        "Z-Wave",
+        "Z-Wave JS"
+      ],
+      "discovery_methods": [
+        "controller startup",
+        "Z-Wave inclusion"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-zwave-js-sidecar:0.1.0"
   }
 ]
