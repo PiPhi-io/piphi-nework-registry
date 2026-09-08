@@ -8,7 +8,9 @@
     "risk_level": "moderate",
     "description": "Low-latency camera playback through PiPhi's brokered WebRTC host contract.",
     "rewardable": false,
-    "platforms": ["web"],
+    "platforms": [
+      "web"
+    ],
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_webRTC",
     "repo_url": "https://github.com/PiPhi-io/piphi_network_webRTC",
@@ -17,8 +19,16 @@
       "release_asset": "piphi-webrtc-camera-widget-0.1.0.tgz",
       "integrity": "sha256:94a85d84f05119590a9904397089164a732bc18c80934bba30815b41501af155"
     },
-    "tags": ["camera", "dashboard", "webrtc", "widget-sdk"],
-    "runtime_requirements": ["browser_webrtc", "camera_broker"],
+    "tags": [
+      "camera",
+      "dashboard",
+      "webrtc",
+      "widget-sdk"
+    ],
+    "runtime_requirements": [
+      "browser_webrtc",
+      "camera_broker"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -29,8 +39,14 @@
       "display_name": "WebRTC camera",
       "summary": "Watch a low-latency live camera from a PiPhi dashboard.",
       "category": "camera",
-      "regions": ["WW"],
-      "languages": ["en", "es", "ar"],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en",
+        "es",
+        "ar"
+      ],
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
@@ -51,11 +67,13 @@
           "required": false
         }
       ],
-      "compatibility": [{
-        "capability": "camera_stream",
-        "host_protocol": "piphi.widget.host/1",
-        "widget_sdk": ">=0.4.0"
-      }],
+      "compatibility": [
+        {
+          "capability": "camera_stream",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.4.0"
+        }
+      ],
       "documentation_url": "https://github.com/PiPhi-io/piphi_network_webRTC",
       "support_url": "https://github.com/PiPhi-io/piphi_network_webRTC/issues",
       "changelog_url": "https://github.com/PiPhi-io/piphi_network_webRTC/releases",
@@ -65,7 +83,9 @@
         "publication_status": "draft",
         "rollout_percent": 0,
         "lifecycle_status": "active",
-        "qualification": {"status": "unverified"}
+        "qualification": {
+          "status": "unverified"
+        }
       }
     }
   },
@@ -1379,7 +1399,7 @@
   {
     "id": "airthings-consumer-cloud-api",
     "name": "Airthings (Consumer Cloud)",
-    "version": "0.1.0",
+    "version": "0.1.3",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -1457,7 +1477,7 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/airthings-consumer-cloud:0.1.0",
+    "image": "piphinetwork/airthings-consumer-cloud",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-airthings",
@@ -1909,8 +1929,8 @@
     },
     "marketplace": {
       "metadata_version": 2,
-      "display_name": "Wired Sensors (I²C)",
-      "summary": "Read compatible environmental sensors connected through I²C or a supported USB bridge.",
+      "display_name": "Wired Sensors (I\u00b2C)",
+      "summary": "Read compatible environmental sensors connected through I\u00b2C or a supported USB bridge.",
       "category": "sensors",
       "device_types": [
         "environmental_sensor"
@@ -2246,11 +2266,27 @@
       "display_name": "SolarEdge Monitoring",
       "summary": "Track solar production, home consumption, grid flow, battery state, and energy totals.",
       "category": "energy",
-      "device_types": ["solar_energy_system", "solar_inverter", "home_battery"],
-      "protocols": ["solaredge_monitoring_api_v1"],
-      "regions": ["US", "CA", "GB", "AU", "DE"],
-      "languages": ["en"],
-      "discovery_methods": ["account"],
+      "device_types": [
+        "solar_energy_system",
+        "solar_inverter",
+        "home_battery"
+      ],
+      "protocols": [
+        "solaredge_monitoring_api_v1"
+      ],
+      "regions": [
+        "US",
+        "CA",
+        "GB",
+        "AU",
+        "DE"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "account"
+      ],
       "connectivity": "cloud",
       "offline_support": "none",
       "publisher": {
@@ -2260,13 +2296,53 @@
         "security_contact": "support@piphi.io"
       },
       "access": [
-        {"id": "external_cloud", "label": "External cloud access", "reason": "Reads site production, consumption, grid, and battery data from SolarEdge Monitoring.", "required": true},
-        {"id": "credentials", "label": "SolarEdge API credentials", "reason": "Stores the Site ID and Monitoring API key required for read-only access.", "required": true}
+        {
+          "id": "external_cloud",
+          "label": "External cloud access",
+          "reason": "Reads site production, consumption, grid, and battery data from SolarEdge Monitoring.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "SolarEdge API credentials",
+          "reason": "Stores the Site ID and Monitoring API key required for read-only access.",
+          "required": true
+        }
       ],
       "compatibility": [
-        {"brand": "SolarEdge", "model": "Monitoring-enabled solar site", "regions": ["US", "CA", "GB", "AU", "DE"]},
-        {"brand": "SolarEdge", "model": "Monitoring site with consumption meter", "regions": ["US", "CA", "GB", "AU", "DE"]},
-        {"brand": "SolarEdge", "model": "Monitoring site with storage", "regions": ["US", "CA", "GB", "AU", "DE"]}
+        {
+          "brand": "SolarEdge",
+          "model": "Monitoring-enabled solar site",
+          "regions": [
+            "US",
+            "CA",
+            "GB",
+            "AU",
+            "DE"
+          ]
+        },
+        {
+          "brand": "SolarEdge",
+          "model": "Monitoring site with consumption meter",
+          "regions": [
+            "US",
+            "CA",
+            "GB",
+            "AU",
+            "DE"
+          ]
+        },
+        {
+          "brand": "SolarEdge",
+          "model": "Monitoring site with storage",
+          "regions": [
+            "US",
+            "CA",
+            "GB",
+            "AU",
+            "DE"
+          ]
+        }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-SolarEdge",
       "support_url": "https://github.com/PiPhi-io/piphi-network-SolarEdge/issues",
@@ -2278,11 +2354,15 @@
         "publication_status": "draft",
         "rollout_percent": 0,
         "lifecycle_status": "active",
-        "qualification": {"status": "unverified"}
+        "qualification": {
+          "status": "unverified"
+        }
       }
     },
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "image": "piphinetwork/piphi-network-solaredge:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
@@ -2290,8 +2370,16 @@
     "repo_url": "https://github.com/PiPhi-io/piphi-network-SolarEdge",
     "manifest_path": "manifest.json",
     "brand_path": "brand",
-    "tags": ["solaredge", "solar", "energy", "battery", "cloud-api"],
-    "runtime_requirements": ["secrets_or_api_tokens"],
+    "tags": [
+      "solaredge",
+      "solar",
+      "energy",
+      "battery",
+      "cloud-api"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -2312,11 +2400,23 @@
       "display_name": "Sense Energy Monitor",
       "summary": "See live household, solar, and detected-appliance energy from your Sense account.",
       "category": "energy",
-      "device_types": ["energy_monitor", "energy_appliance"],
-      "protocols": ["sense_cloud_api"],
-      "regions": ["US", "CA"],
-      "languages": ["en"],
-      "discovery_methods": ["account"],
+      "device_types": [
+        "energy_monitor",
+        "energy_appliance"
+      ],
+      "protocols": [
+        "sense_cloud_api"
+      ],
+      "regions": [
+        "US",
+        "CA"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "account"
+      ],
       "connectivity": "cloud",
       "offline_support": "none",
       "publisher": {
@@ -2340,9 +2440,30 @@
         }
       ],
       "compatibility": [
-        {"brand": "Sense", "model": "Home Energy Monitor", "regions": ["US", "CA"]},
-        {"brand": "Sense", "model": "Home Energy Monitor with Solar", "regions": ["US", "CA"]},
-        {"brand": "Sense", "model": "Home Energy Monitor with Flex sensors", "regions": ["US", "CA"]}
+        {
+          "brand": "Sense",
+          "model": "Home Energy Monitor",
+          "regions": [
+            "US",
+            "CA"
+          ]
+        },
+        {
+          "brand": "Sense",
+          "model": "Home Energy Monitor with Solar",
+          "regions": [
+            "US",
+            "CA"
+          ]
+        },
+        {
+          "brand": "Sense",
+          "model": "Home Energy Monitor with Flex sensors",
+          "regions": [
+            "US",
+            "CA"
+          ]
+        }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-sense",
       "support_url": "https://github.com/PiPhi-io/piphi-network-sense/issues",
@@ -2354,19 +2475,31 @@
         "publication_status": "stable",
         "rollout_percent": 100,
         "lifecycle_status": "active",
-        "qualification": {"status": "unverified"}
+        "qualification": {
+          "status": "unverified"
+        }
       }
     },
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "image": "piphinetwork/piphi-network-sense:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-sense",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-sense",
     "manifest_path": "manifest.json",
-    "tags": ["sense", "energy", "solar", "appliance-monitoring", "cloud-api"],
-    "runtime_requirements": ["secrets_or_api_tokens"],
+    "tags": [
+      "sense",
+      "energy",
+      "solar",
+      "appliance-monitoring",
+      "cloud-api"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -2387,11 +2520,23 @@
       "display_name": "pfSense Firewall",
       "summary": "Monitor pfSense health, gateways, interfaces, VPNs, clients, certificates, and HA, with optional allow-listed operations.",
       "category": "networking",
-      "device_types": ["firewall", "network_gateway", "vpn_gateway"],
-      "protocols": ["pfsense_rest_api_v2"],
-      "regions": ["WW"],
-      "languages": ["en"],
-      "discovery_methods": ["manual"],
+      "device_types": [
+        "firewall",
+        "network_gateway",
+        "vpn_gateway"
+      ],
+      "protocols": [
+        "pfsense_rest_api_v2"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "manual"
+      ],
       "connectivity": "local",
       "offline_support": "none",
       "publisher": {
@@ -2421,8 +2566,20 @@
         }
       ],
       "compatibility": [
-        {"brand": "pfSense", "model": "pfSense Community Edition with pfREST v2", "regions": ["WW"]},
-        {"brand": "Netgate", "model": "pfSense Plus with pfREST v2", "regions": ["WW"]}
+        {
+          "brand": "pfSense",
+          "model": "pfSense Community Edition with pfREST v2",
+          "regions": [
+            "WW"
+          ]
+        },
+        {
+          "brand": "Netgate",
+          "model": "pfSense Plus with pfREST v2",
+          "regions": [
+            "WW"
+          ]
+        }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-pfsense",
       "support_url": "https://github.com/PiPhi-io/piphi-network-pfsense/issues",
@@ -2433,19 +2590,32 @@
         "publication_status": "draft",
         "rollout_percent": 0,
         "lifecycle_status": "active",
-        "qualification": {"status": "unverified"}
+        "qualification": {
+          "status": "unverified"
+        }
       }
     },
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "image": "piphinetwork/piphi-network-pfsense:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-pfsense",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-pfsense",
     "manifest_path": "manifest.json",
-    "tags": ["pfsense", "firewall", "networking", "vpn", "local-api"],
-    "runtime_requirements": ["host_filesystem_mounts", "secrets_or_api_tokens"],
+    "tags": [
+      "pfsense",
+      "firewall",
+      "networking",
+      "vpn",
+      "local-api"
+    ],
+    "runtime_requirements": [
+      "host_filesystem_mounts",
+      "secrets_or_api_tokens"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
