@@ -4712,6 +4712,106 @@
     "image": "docker.io/piphinetwork/piphi-network-sonoff-lan:0.1.0"
   },
   {
+    "id": "piphi-network-steam",
+    "name": "Steam",
+    "version": "0.1.0",
+    "type": "integration",
+    "deployment_mode": "standalone",
+    "trust_level": "experimental",
+    "risk_level": "low",
+    "description": "Track Steam presence, current game activity, and visible playtime summaries.",
+    "rewardable": false,
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "image": "docker.io/piphinetwork/piphi-network-steam:0.1.0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-steam",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-steam",
+    "manifest_path": "src/manifest.json",
+    "tags": [
+      "steam",
+      "gaming",
+      "presence",
+      "playtime",
+      "dashboard",
+      "widget-sdk"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens",
+      "internet_access"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Steam",
+      "summary": "Track Steam presence, current game activity, and visible playtime summaries.",
+      "category": "media",
+      "device_types": [
+        "gaming_account"
+      ],
+      "protocols": [
+        "https",
+        "steam_web_api"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en",
+        "es",
+        "ar"
+      ],
+      "discovery_methods": [
+        "account",
+        "manual"
+      ],
+      "connectivity": "cloud",
+      "offline_support": "none",
+      "privacy_url": "https://store.steampowered.com/privacy_agreement/",
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-steam/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "steam_web_api",
+          "label": "Steam Web API access",
+          "reason": "Reads the configured account's profile, presence, and visible game summaries.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Valve",
+          "model": "Steam account"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-steam",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-steam/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-steam/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
+    }
+  },
+  {
     "id": "piphi-network-tapo-cameras",
     "name": "Tapo cameras",
     "version": "0.1.0",
