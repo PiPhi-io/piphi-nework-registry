@@ -5301,5 +5301,251 @@
       "offline_support": "full"
     },
     "image": "docker.io/piphinetwork/piphi-zwave-js-sidecar:0.1.0"
+  },
+  {
+    "id": "io.piphi.airthings-air-quality",
+    "name": "Airthings Air Quality",
+    "version": "0.1.0",
+    "type": "widget",
+    "deployment_mode": "standalone",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "A declarative Airthings overview for temperature, humidity, radon, and carbon dioxide.",
+    "platforms": [
+      "web"
+    ],
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-airthings",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-airthings",
+    "ref": "experience-air-quality-v0.1.0",
+    "manifest_path": "experiences/air-quality/package.source.json",
+    "artifact": {
+      "release_asset": "airthings-air-quality-0.1.0.zip",
+      "manifest_asset": "airthings-air-quality-0.1.0.manifest.json",
+      "integrity": null
+    },
+    "tags": [
+      "airthings",
+      "air-quality",
+      "dashboard",
+      "widget-sdk"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Airthings Air Quality",
+      "summary": "See the most important Airthings readings together on your dashboard.",
+      "category": "air_quality",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-airthings/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "air_quality_state",
+          "label": "Airthings readings",
+          "reason": "Reads only the Airthings monitor sources selected for the dashboard card.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "capability": "air_quality",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.5,<0.6"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-airthings",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-airthings/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-airthings/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
+    }
+  },
+  {
+    "id": "io.piphi.whole-home-energy",
+    "name": "Whole Home Energy",
+    "version": "0.1.0",
+    "type": "widget",
+    "deployment_mode": "standalone",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "A declarative multi-source dashboard for household demand, solar production, and battery state.",
+    "platforms": [
+      "web"
+    ],
+    "owner": "PiPhi-io",
+    "repo_name": "piphi_network_widget_sdk",
+    "repo_url": "https://github.com/PiPhi-io/piphi_network_widget_sdk",
+    "ref": "experiences-v0.1.0",
+    "manifest_path": "pilot-packages/whole-home-energy/package.source.json",
+    "artifact": {
+      "release_asset": "whole-home-energy-0.1.0.zip",
+      "manifest_asset": "whole-home-energy-0.1.0.manifest.json",
+      "integrity": null
+    },
+    "tags": [
+      "energy",
+      "solar",
+      "sense",
+      "solaredge",
+      "dashboard",
+      "widget-sdk"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Whole Home Energy",
+      "summary": "Combine household demand, solar production, and battery state in one card.",
+      "category": "energy",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi_network_widget_sdk/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "energy_state",
+          "label": "Energy readings",
+          "reason": "Reads only the energy sources selected for the dashboard card.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "capability": "power",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.5,<0.6"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi_network_widget_sdk",
+      "support_url": "https://github.com/PiPhi-io/piphi_network_widget_sdk/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network_widget_sdk/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
+    }
+  },
+  {
+    "id": "io.piphi.home-health",
+    "name": "PiPhi Home Health",
+    "version": "0.1.0",
+    "type": "widget",
+    "deployment_mode": "standalone",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "A first-party declarative summary of device connectivity and low batteries.",
+    "platforms": [
+      "web"
+    ],
+    "owner": "PiPhi-io",
+    "repo_name": "piphi_network_widget_sdk",
+    "repo_url": "https://github.com/PiPhi-io/piphi_network_widget_sdk",
+    "ref": "experiences-v0.1.0",
+    "manifest_path": "pilot-packages/home-health/package.source.json",
+    "artifact": {
+      "release_asset": "home-health-0.1.0.zip",
+      "manifest_asset": "home-health-0.1.0.manifest.json",
+      "integrity": null
+    },
+    "tags": [
+      "health",
+      "connectivity",
+      "battery",
+      "dashboard",
+      "widget-sdk"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "PiPhi Home Health",
+      "summary": "Spot disconnected devices and low batteries from one dashboard card.",
+      "category": "other",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi_network_widget_sdk/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "device_health_state",
+          "label": "Device health",
+          "reason": "Reads only the connectivity and battery sources selected for the dashboard card.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "capability": "connected",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.5,<0.6"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi_network_widget_sdk",
+      "support_url": "https://github.com/PiPhi-io/piphi_network_widget_sdk/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi_network_widget_sdk/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
+    }
   }
 ]
