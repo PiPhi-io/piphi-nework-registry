@@ -96,6 +96,38 @@ class RegistryBrandMetadataValidationTests(unittest.TestCase):
         errors = VALIDATOR.validate_entry(entry, 0)
         self.assertTrue(any("artifact.integrity is required" in error for error in errors))
 
+    def test_accepts_separate_signed_manifest_release_asset(self) -> None:
+        entry = valid_entry()
+        entry.update({
+            "id": "io.piphi.home-health",
+            "type": "widget",
+            "platforms": ["web"],
+            "artifact": {
+                "release_asset": "home-health-0.1.0.zip",
+                "manifest_asset": "home-health-0.1.0.manifest.json",
+                "integrity": None,
+            },
+        })
+        entry["marketplace"] = {
+            **valid_marketplace(),
+            "category": "other",
+            "governance": {
+                "schema_version": 1,
+                "publication_status": "draft",
+                "rollout_percent": 0,
+                "lifecycle_status": "active",
+                "qualification": {"status": "unverified"},
+            },
+            "compatibility": [{
+                "capability": "connected",
+                "host_protocol": "piphi.widget.host/1",
+                "widget_sdk": ">=0.5,<0.6",
+            }],
+        }
+        for field in ("device_types", "protocols", "discovery_methods", "connectivity", "offline_support"):
+            entry["marketplace"].pop(field, None)
+        self.assertEqual(VALIDATOR.validate_entry(entry, 0), [])
+
     def test_accepts_safe_packaged_brand_path(self) -> None:
         entry = valid_entry()
         entry["brand_path"] = "src/brand"

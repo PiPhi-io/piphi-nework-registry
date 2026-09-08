@@ -94,6 +94,9 @@ def validate_entry(entry: dict[str, Any], index: int) -> list[str]:
         else:
             if not valid_package_path(artifact.get("release_asset")):
                 errors.append(f"{prefix}: widget artifact.release_asset must be a safe package filename")
+            manifest_asset = artifact.get("manifest_asset")
+            if manifest_asset is not None and not valid_package_path(manifest_asset):
+                errors.append(f"{prefix}: widget artifact.manifest_asset must be a safe package filename")
             integrity = str(artifact.get("integrity") or "").strip()
             governance = (entry.get("marketplace") or {}).get("governance") if isinstance(entry.get("marketplace"), dict) else {}
             is_draft = isinstance(governance, dict) and governance.get("publication_status") == "draft" and governance.get("rollout_percent") == 0
