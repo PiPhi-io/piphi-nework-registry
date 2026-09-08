@@ -5322,7 +5322,7 @@
     "artifact": {
       "release_asset": "airthings-air-quality-0.1.0.zip",
       "manifest_asset": "airthings-air-quality-0.1.0.manifest.json",
-      "integrity": null
+      "integrity": "sha256:332cab2b5c09fffdbfbbf8ba87b0b4c2ad53af3460c5f8c4cc7cece0d6e11d2f"
     },
     "tags": [
       "airthings",
@@ -5403,7 +5403,7 @@
     "artifact": {
       "release_asset": "whole-home-energy-0.1.0.zip",
       "manifest_asset": "whole-home-energy-0.1.0.manifest.json",
-      "integrity": null
+      "integrity": "sha256:790e78c3bef59989072f5b0ba68c1a978d2959c96f52cf36a7465613a95abdf5"
     },
     "tags": [
       "energy",
@@ -5486,7 +5486,7 @@
     "artifact": {
       "release_asset": "home-health-0.1.0.zip",
       "manifest_asset": "home-health-0.1.0.manifest.json",
-      "integrity": null
+      "integrity": "sha256:188dc2bb69b2cc3978e62fa43e042f67de02415e9030b66540e5719ca833fa3b"
     },
     "tags": [
       "health",
