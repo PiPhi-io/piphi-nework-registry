@@ -1379,7 +1379,7 @@
   {
     "id": "airthings-consumer-cloud-api",
     "name": "Airthings (Consumer Cloud)",
-    "version": "0.1.0",
+    "version": "0.1.3",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -1457,7 +1457,7 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/airthings-consumer-cloud:0.1.0",
+    "image": "piphinetwork/airthings-consumer-cloud:0.1.3",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-airthings",
