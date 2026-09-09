@@ -5405,7 +5405,7 @@
   {
     "id": "io.piphi.airthings-air-quality",
     "name": "Airthings Air Quality",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "type": "widget",
     "deployment_mode": "standalone",
     "trust_level": "official",
@@ -5417,12 +5417,12 @@
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-airthings",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-airthings",
-    "ref": "experience-air-quality-v0.1.1",
+    "ref": "experience-air-quality-v0.1.2",
     "manifest_path": "experiences/air-quality/package.source.json",
     "artifact": {
-      "release_asset": "airthings-air-quality-0.1.1.zip",
-      "manifest_asset": "airthings-air-quality-0.1.1.manifest.json",
-      "integrity": "sha256:12fbe5f62e559c4c4e02af27348acec2a46235a4661966064af048311db27e6a"
+      "release_asset": "airthings-air-quality-0.1.2.zip",
+      "manifest_asset": "airthings-air-quality-0.1.2.manifest.json",
+      "integrity": "sha256:6eb09faef2928e2546597e86eba72cb0053cffb7cfda641cab26fd1cd4c30038"
     },
     "tags": [
       "airthings",
@@ -5465,7 +5465,7 @@
         {
           "capability": "air_quality",
           "host_protocol": "piphi.widget.host/1",
-          "widget_sdk": ">=0.5,<0.6"
+          "widget_sdk": ">=0.5.1,<0.6"
         }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-airthings",
