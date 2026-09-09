@@ -1028,17 +1028,17 @@
   {
     "id": "piphi.service.matter-sidecar",
     "name": "Matter Sidecar",
-    "version": "0.1.0",
+    "version": "0.2.0-alpha.1",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
     "risk_level": "high",
-    "description": "Shared Matter controller sidecar for commissioning and managing supported Matter devices from PiPhi Core.",
+    "description": "Matter.js controller sidecar for commissioning and managing supported Matter devices from PiPhi Core.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/matter-sidecar:0.1.0",
+    "image": "piphinetwork/matter-sidecar:0.2.0-alpha.1",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/matter-sidecar.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-matter",
@@ -1046,6 +1046,7 @@
     "manifest_path": "src/manifest.json",
     "tags": [
       "matter",
+      "matter-js",
       "platform-service",
       "smart-home",
       "sidecar",
@@ -1054,8 +1055,8 @@
     "runtime_requirements": [
       "sidecar_runtime",
       "host_networking",
-      "direct_hardware_access",
-      "privileged_container"
+      "host_filesystem_mounts",
+      "secrets_or_api_tokens"
     ],
     "maintainer": {
       "name": "PiPhi Network",
@@ -1104,15 +1105,15 @@
           "required": true
         },
         {
-          "id": "direct_hardware",
-          "label": "Direct hardware access",
-          "reason": "Communicates with the selected adapter or sensor attached to this PiPhi.",
+          "id": "host_filesystem",
+          "label": "Local storage access",
+          "reason": "Persists the Matter fabric, commissioned-device state, and controller configuration on this PiPhi.",
           "required": true
         },
         {
-          "id": "privileged_runtime",
-          "label": "Elevated local service",
-          "reason": "Uses elevated runtime access for the required radio or hardware connection.",
+          "id": "credentials",
+          "label": "Network commissioning credentials",
+          "reason": "Stores write-only Wi-Fi credentials or Thread datasets when they are supplied for Matter commissioning.",
           "required": true
         }
       ],
@@ -1123,8 +1124,8 @@
       "quality_tier": "bronze",
       "governance": {
         "schema_version": 1,
-        "publication_status": "stable",
-        "rollout_percent": 100,
+        "publication_status": "beta",
+        "rollout_percent": 1,
         "lifecycle_status": "active",
         "qualification": {
           "status": "unverified"
