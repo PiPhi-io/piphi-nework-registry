@@ -701,7 +701,7 @@
   {
     "id": "piphi-network-433mhz",
     "name": "PiPhi Network 433MHz Devices",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "high",
@@ -710,7 +710,7 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/piphi-network-433mhz:0.1.4",
+    "image": "piphinetwork/piphi-network-433mhz:0.1.5",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-433mhz",
