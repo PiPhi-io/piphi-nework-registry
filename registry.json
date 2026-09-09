@@ -712,9 +712,9 @@
     ],
     "image": "piphinetwork/piphi-network-433mhz:0.1.4",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
-    "owner": "KelvinSan",
+    "owner": "PiPhi-io",
     "repo_name": "piphi-network-433mhz",
-    "repo_url": "https://github.com/KelvinSan/piphi-network-433mhz",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-433mhz",
     "manifest_path": "src/manifest.json",
     "tags": [
       "433mhz",
@@ -760,7 +760,7 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/KelvinSan/piphi-network-433mhz/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-433mhz/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
@@ -804,9 +804,9 @@
           ]
         }
       ],
-      "documentation_url": "https://github.com/KelvinSan/piphi-network-433mhz",
-      "support_url": "https://github.com/KelvinSan/piphi-network-433mhz/issues",
-      "changelog_url": "https://github.com/KelvinSan/piphi-network-433mhz/releases",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-433mhz",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-433mhz/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-433mhz/releases",
       "quality_tier": "bronze",
       "governance": {
         "schema_version": 1,
@@ -913,7 +913,7 @@
   {
     "id": "piphi.service.rtl433-bridge",
     "name": "rtl_433 Radio Bridge",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -923,7 +923,7 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/rtl433-bridge:0.1.2",
+    "image": "piphinetwork/rtl433-bridge:0.1.4",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-rtl433-bridge",
