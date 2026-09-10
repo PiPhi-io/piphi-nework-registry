@@ -2236,7 +2236,7 @@
   {
     "id": "piphi-network-solaredge",
     "name": "SolarEdge",
-    "version": "0.1.0",
+    "version": "0.2.1",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -2284,11 +2284,12 @@
     },
     "rewardable": false,
     "platforms": ["linux"],
-    "image": "piphinetwork/piphi-network-solaredge:0.1.0",
+    "image": "piphinetwork/piphi-network-solaredge:0.2.1",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-SolarEdge",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-SolarEdge",
+    "ref": "v0.2.1",
     "manifest_path": "manifest.json",
     "brand_path": "brand",
     "tags": ["solaredge", "solar", "energy", "battery", "cloud-api"],
@@ -2297,6 +2298,76 @@
       "name": "PiPhi Network",
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
+    }
+  },
+  {
+    "id": "io.piphi.solaredge-solar-energy",
+    "name": "SolarEdge Solar Energy",
+    "version": "0.1.0",
+    "type": "widget",
+    "deployment_mode": "standalone",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Live site power flow and production totals for SolarEdge Monitoring sites.",
+    "rewardable": false,
+    "platforms": ["web"],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-SolarEdge",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-SolarEdge",
+    "ref": "experience-solar-energy-v0.1.0",
+    "manifest_path": "experiences/solar-energy/package.source.json",
+    "artifact": {
+      "release_asset": "solaredge-solar-energy-0.1.0.zip",
+      "manifest_asset": "solaredge-solar-energy-0.1.0.manifest.json",
+      "integrity": "sha256:f2a02a090ca39ebad481b06319e5e23699c28b38bc237a5faa27cf0c50fafd75"
+    },
+    "tags": ["solaredge", "solar", "energy", "battery", "dashboard", "widget-sdk"],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "SolarEdge Solar Energy",
+      "summary": "See live SolarEdge power flow and production totals in purpose-built dashboard cards.",
+      "category": "energy",
+      "regions": ["US", "CA", "GB", "AU", "DE"],
+      "languages": ["en"],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-SolarEdge/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "solar_energy_state",
+          "label": "SolarEdge energy readings",
+          "reason": "Reads only the SolarEdge site sources selected for the dashboard cards.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "capability": "solar_energy",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.5.1,<0.6"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-SolarEdge",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-SolarEdge/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-SolarEdge/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {"status": "unverified"}
+      }
     }
   },
   {
