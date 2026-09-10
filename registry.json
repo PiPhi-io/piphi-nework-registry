@@ -2273,11 +2273,11 @@
       "support_url": "https://github.com/PiPhi-io/piphi-network-SolarEdge/issues",
       "changelog_url": "https://github.com/PiPhi-io/piphi-network-SolarEdge/releases",
       "privacy_url": "https://www.solaredge.com/privacy-policy",
-      "quality_tier": "unrated",
+      "quality_tier": "bronze",
       "governance": {
         "schema_version": 1,
-        "publication_status": "draft",
-        "rollout_percent": 0,
+        "publication_status": "stable",
+        "rollout_percent": 100,
         "lifecycle_status": "active",
         "qualification": {"status": "unverified"}
       }
@@ -2363,8 +2363,8 @@
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
-        "publication_status": "draft",
-        "rollout_percent": 0,
+        "publication_status": "stable",
+        "rollout_percent": 100,
         "lifecycle_status": "active",
         "qualification": {"status": "unverified"}
       }
