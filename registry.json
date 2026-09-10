@@ -70,6 +70,112 @@
     }
   },
   {
+    "id": "piphi.service.webrtc-sidecar",
+    "name": "PiPhi WebRTC Sidecar",
+    "version": "0.1.2",
+    "type": "platform_service",
+    "deployment_mode": "sidecar",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Local go2rtc-backed camera signaling service for low-latency PiPhi dashboard widgets.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "image": "ghcr.io/piphi-io/piphi-webrtc-sidecar:0.1.2",
+    "ref": "v0.1.2",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/webrtc-sidecar.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-webrtc-sidecar",
+    "repo_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "camera",
+      "webrtc",
+      "rtsp",
+      "go2rtc",
+      "platform-service",
+      "sidecar"
+    ],
+    "runtime_requirements": [
+      "sidecar_runtime",
+      "local_network_access",
+      "secrets_or_api_tokens",
+      "webrtc_udp_8555"
+    ],
+    "maintainer": {
+      "name": "PiPhi-io",
+      "website": "https://github.com/PiPhi-io",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "WebRTC Camera Service",
+      "summary": "Connect local RTSP cameras to low-latency PiPhi dashboards.",
+      "category": "camera",
+      "device_types": [
+        "camera",
+        "platform_service"
+      ],
+      "protocols": [
+        "rtsp",
+        "rtsps",
+        "webrtc"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {
+        "name": "PiPhi-io",
+        "website_url": "https://github.com/PiPhi-io",
+        "support_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "companion_service",
+          "label": "Background camera service",
+          "reason": "Keeps the local WebRTC camera bridge running for PiPhi dashboards.",
+          "required": true
+        },
+        {
+          "id": "local_camera_network",
+          "label": "Local camera network",
+          "reason": "Connects only to the administrator-configured RTSP camera URL.",
+          "required": true
+        },
+        {
+          "id": "camera_credentials",
+          "label": "Camera credentials",
+          "reason": "Uses credentials embedded in the configured RTSP URL without exposing them to Core or dashboards.",
+          "required": false
+        }
+      ],
+      "compatibility": [],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar",
+      "support_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
+    }
+  },
+  {
     "id": "piphi-network-plex",
     "name": "Plex Media Server",
     "version": "0.1.0",
