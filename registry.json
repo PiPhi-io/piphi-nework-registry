@@ -54,7 +54,7 @@
       "compatibility": [{
         "capability": "camera_stream",
         "host_protocol": "piphi.widget.host/1",
-        "widget_sdk": ">=0.4.0"
+        "widget_sdk": ">=0.6.1,<0.7"
       }],
       "documentation_url": "https://github.com/PiPhi-io/piphi_network_webRTC",
       "support_url": "https://github.com/PiPhi-io/piphi_network_webRTC/issues",
@@ -2354,7 +2354,7 @@
         {
           "capability": "solar_energy",
           "host_protocol": "piphi.widget.host/1",
-          "widget_sdk": ">=0.5.1,<0.6"
+          "widget_sdk": ">=0.6.1,<0.7"
         }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-SolarEdge",
@@ -2576,7 +2576,7 @@
         {
           "capability": "calendar_events",
           "host_protocol": "piphi.widget.host/1",
-          "widget_sdk": ">=0.4.0"
+          "widget_sdk": ">=0.6.1,<0.7"
         }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-widget-calendar-agenda",
@@ -2657,7 +2657,7 @@
         {
           "capability": "vacuum_map",
           "host_protocol": "piphi.widget.host/1",
-          "widget_sdk": ">=0.4.0"
+          "widget_sdk": ">=0.6.1,<0.7"
         }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-widget-vacuum-map",
@@ -5537,7 +5537,7 @@
         {
           "capability": "air_quality",
           "host_protocol": "piphi.widget.host/1",
-          "widget_sdk": ">=0.5.1,<0.6"
+          "widget_sdk": ">=0.6.1,<0.7"
         }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-airthings",
@@ -5620,7 +5620,7 @@
         {
           "capability": "power",
           "host_protocol": "piphi.widget.host/1",
-          "widget_sdk": ">=0.5,<0.6"
+          "widget_sdk": ">=0.6.1,<0.7"
         }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi_network_widget_sdk",
@@ -5702,7 +5702,7 @@
         {
           "capability": "connected",
           "host_protocol": "piphi.widget.host/1",
-          "widget_sdk": ">=0.5,<0.6"
+          "widget_sdk": ">=0.6.1,<0.7"
         }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi_network_widget_sdk",
