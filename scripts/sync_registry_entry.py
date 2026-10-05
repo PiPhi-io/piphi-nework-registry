@@ -132,6 +132,39 @@ def set_if_changed(entry: dict[str, Any], key: str, value: Any, updated_fields: 
         updated_fields.add(key)
 
 
+def serialize_updated_entry(
+    registry_text: str,
+    registry_id: str,
+    updated_entry: dict[str, Any],
+) -> str:
+    """Replace one array entry without reformatting the rest of registry.json."""
+    decoder = json.JSONDecoder()
+    position = registry_text.find("[") + 1
+    if position <= 0:
+        raise ValueError("Registry document must be a JSON array.")
+
+    while position < len(registry_text):
+        while position < len(registry_text) and registry_text[position].isspace():
+            position += 1
+        if position >= len(registry_text) or registry_text[position] == "]":
+            break
+        start = position
+        entry, end = decoder.raw_decode(registry_text, position)
+        if isinstance(entry, dict) and str(entry.get("id") or "").strip() == registry_id:
+            rendered_lines = json.dumps(updated_entry, indent=2).splitlines()
+            rendered = rendered_lines[0] + "\n" + "\n".join(
+                f"  {line}" for line in rendered_lines[1:]
+            )
+            return registry_text[:start] + rendered + registry_text[end:]
+        position = end
+        while position < len(registry_text) and registry_text[position].isspace():
+            position += 1
+        if position < len(registry_text) and registry_text[position] == ",":
+            position += 1
+
+    raise ValueError(f"Registry entry '{registry_id}' was not found while serializing.")
+
+
 def build_commit_message(registry_id: str, version: str) -> str:
     return f"registry: sync {registry_id} to v{version}"
 
@@ -143,6 +176,7 @@ def build_pr_title(registry_id: str, version: str) -> str:
 def main() -> int:
     args = parse_args()
     registry_path = Path(args.registry_path).resolve()
+    registry_text = registry_path.read_text(encoding="utf-8")
     entries = load_registry_entries(registry_path)
     registry_id = str(args.registry_id).strip()
     target_entry = next((entry for entry in entries if str(entry.get("id") or "").strip() == registry_id), None)
@@ -175,18 +209,27 @@ def main() -> int:
     if not version:
         raise ValueError("Fetched manifest is missing a version field.")
 
-    owner, repo_name = parse_repo_url(repo_url)
+    _, repo_name = parse_repo_url(repo_url)
     updated_fields: set[str] = set()
 
     set_if_changed(target_entry, "version", version, updated_fields)
-    set_if_changed(target_entry, "owner", owner, updated_fields)
     set_if_changed(target_entry, "repo_name", repo_name, updated_fields)
     set_if_changed(target_entry, "repo_url", repo_url, updated_fields)
     set_if_changed(target_entry, "manifest_path", manifest_path, updated_fields)
 
     manifest_image = infer_manifest_image_repository(manifest)
     if manifest_image:
-        set_if_changed(target_entry, "image", manifest_image, updated_fields)
+        set_if_changed(target_entry, "image", f"{manifest_image}:{version}", updated_fields)
+
+    requested_ref = str(args.ref or "").strip()
+    if requested_ref:
+        expected_ref = f"v{version}"
+        if requested_ref != expected_ref:
+            raise ValueError(
+                f"Release ref '{requested_ref}' does not match manifest version {version}; "
+                f"expected '{expected_ref}'."
+            )
+        set_if_changed(target_entry, "ref", requested_ref, updated_fields)
 
     if args.sync_mode == "full_manifest":
         manifest_name = str(manifest.get("name") or "").strip()
@@ -203,7 +246,7 @@ def main() -> int:
         if manifest_maintainer:
             set_if_changed(target_entry, "maintainer", manifest_maintainer, updated_fields)
 
-    serialized = json.dumps(entries, indent=2) + "\n"
+    serialized = serialize_updated_entry(registry_text, registry_id, target_entry)
     changed = bool(updated_fields)
 
     write_output("changed", "true" if changed else "false")
