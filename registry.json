@@ -271,11 +271,11 @@
   {
     "id": "awair-element-local-api",
     "name": "Awair Element (Local API)",
-    "version": "0.1.8",
+    "version": "0.1.11",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "low",
-    "description": "Integration for Awair Element devices over the local network.",
+    "description": "Integration for Awair Element devices over the local network",
     "marketplace": {
       "brand_domain": "getawair.com",
       "metadata_version": 2,
@@ -343,10 +343,10 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/awair-element:0.1.8",
+    "image": "piphinetwork/awair-element:0.1.11",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/awair.svg",
     "owner": "PiPhi-io",
-    "repo_name": "com_piphi_awair_element",
+    "repo_name": "piphi-network-awair-element",
     "repo_url": "https://github.com/KelvinSan/piphi-network-awair-element",
     "manifest_path": "src/manifest.json",
     "tags": [
@@ -360,7 +360,8 @@
       "name": "PiPhi Network",
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
-    }
+    },
+    "ref": "v0.1.11"
   },
   {
     "id": "official-usb-gps-integration",
