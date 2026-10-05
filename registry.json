@@ -1790,7 +1790,7 @@
   {
     "id": "piphi-network-weatherxm",
     "name": "PiPhi Network WeatherXM",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "low",
@@ -1860,12 +1860,12 @@
     "platforms": [
       "linux"
     ],
-    "image": "docker.io/piphi/piphi-network-weatherxm:0.1.0",
+    "image": "piphinetwork/weatherxm:0.1.2",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_weatherxm",
     "repo_url": "https://github.com/PiPhi-io/piphi_network_weatherxm",
-    "manifest_path": "manifest.json",
+    "manifest_path": "src/manifest.json",
     "tags": [
       "weatherxm",
       "weather",
@@ -1876,7 +1876,8 @@
     "maintainer": {
       "name": "PiPhi Integrations Team",
       "website": "https://github.com/PiPhi-io"
-    }
+    },
+    "ref": "v0.1.2"
   },
   {
     "id": "piphi-network-i2c",
