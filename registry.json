@@ -2374,7 +2374,7 @@
   {
     "id": "piphi-network-sense",
     "name": "Sense Energy",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -2385,11 +2385,23 @@
       "display_name": "Sense Energy Monitor",
       "summary": "See live household, solar, and detected-appliance energy from your Sense account.",
       "category": "energy",
-      "device_types": ["energy_monitor", "energy_appliance"],
-      "protocols": ["sense_cloud_api"],
-      "regions": ["US", "CA"],
-      "languages": ["en"],
-      "discovery_methods": ["account"],
+      "device_types": [
+        "energy_monitor",
+        "energy_appliance"
+      ],
+      "protocols": [
+        "sense_cloud_api"
+      ],
+      "regions": [
+        "US",
+        "CA"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "account"
+      ],
       "connectivity": "cloud",
       "offline_support": "none",
       "publisher": {
@@ -2413,9 +2425,30 @@
         }
       ],
       "compatibility": [
-        {"brand": "Sense", "model": "Home Energy Monitor", "regions": ["US", "CA"]},
-        {"brand": "Sense", "model": "Home Energy Monitor with Solar", "regions": ["US", "CA"]},
-        {"brand": "Sense", "model": "Home Energy Monitor with Flex sensors", "regions": ["US", "CA"]}
+        {
+          "brand": "Sense",
+          "model": "Home Energy Monitor",
+          "regions": [
+            "US",
+            "CA"
+          ]
+        },
+        {
+          "brand": "Sense",
+          "model": "Home Energy Monitor with Solar",
+          "regions": [
+            "US",
+            "CA"
+          ]
+        },
+        {
+          "brand": "Sense",
+          "model": "Home Energy Monitor with Flex sensors",
+          "regions": [
+            "US",
+            "CA"
+          ]
+        }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-sense",
       "support_url": "https://github.com/PiPhi-io/piphi-network-sense/issues",
@@ -2427,24 +2460,37 @@
         "publication_status": "stable",
         "rollout_percent": 100,
         "lifecycle_status": "active",
-        "qualification": {"status": "unverified"}
+        "qualification": {
+          "status": "unverified"
+        }
       }
     },
     "rewardable": false,
-    "platforms": ["linux"],
-    "image": "piphinetwork/piphi-network-sense:0.1.0",
+    "platforms": [
+      "linux"
+    ],
+    "image": "piphinetwork/piphi-network-sense:0.1.1",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-sense",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-sense",
     "manifest_path": "manifest.json",
-    "tags": ["sense", "energy", "solar", "appliance-monitoring", "cloud-api"],
-    "runtime_requirements": ["secrets_or_api_tokens"],
+    "tags": [
+      "sense",
+      "energy",
+      "solar",
+      "appliance-monitoring",
+      "cloud-api"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
-    }
+    },
+    "ref": "v0.1.1"
   },
   {
     "id": "piphi-network-pfsense",
