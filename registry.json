@@ -2137,7 +2137,7 @@
   {
     "id": "piphi-network-tuya",
     "name": "PiPhi Network Tuya",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -2215,7 +2215,7 @@
     "platforms": [
       "linux"
     ],
-    "image": "docker.io/piphi/piphi-network-tuya:0.1.0",
+    "image": "docker.io/piphinetwork/piphi-network-tuya:0.1.2",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/tuya.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_tuya",
@@ -2234,7 +2234,8 @@
     "maintainer": {
       "name": "PiPhi Integrations Team",
       "website": "https://github.com/PiPhi-io"
-    }
+    },
+    "ref": "v0.1.2"
   },
   {
     "id": "piphi-network-solaredge",
