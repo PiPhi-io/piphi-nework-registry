@@ -32,20 +32,25 @@ Before publishing a stable tag:
 
 | Package | Type | Remaining production work |
 | --- | --- | --- |
-| Awair Element | integration | Registry synced to `0.1.8`; confirm release image exists and run local-network smoke test. |
-| 433MHz Devices | integration | Registry synced to `0.1.4`; confirm RTL-SDR smoke test and Core install flow. |
+| Awair Element | integration | Release `0.1.13` published; run the local-network hardware smoke test. |
+| 433MHz Devices | integration | Release `0.1.7` published; confirm RTL-SDR smoke test and Core install flow. |
 | rtl_433 Bridge | sidecar | Registry synced to `0.1.2`; confirm Docker image and host radio permissions. |
-| Zigbee2MQTT Sidecar | sidecar | Registry synced to `0.1.1`; add hardware smoke results for USB and network coordinators. |
+| Zigbee2MQTT Sidecar | sidecar | Release `0.1.12` published; add hardware smoke results for USB and network coordinators. |
+| Zigbee | integration | Release `0.1.9` published; add coordinator and device-pairing smoke results. |
 | MQTT Broker | sidecar | CI added; add release workflow and broker auth/TLS production profile. |
-| Matter Sidecar | sidecar | Image tag pinned; finish adapter implementation checks and commissioning smoke test. |
-| GPS | integration | CI added; confirm package changes, Docker image tag, and USB device smoke test. |
-| ThinQ Connect | integration | CI added; resolve dirty changes and verify token/error handling. |
-| TP-Link Kasa | integration | Registry synced to `0.1.6`; verify local discovery/control smoke test. |
-| Airthings Consumer Cloud | integration | Added to registry; verify API credentials, rate limits, and stale-data health. |
-| Aqara Open API | integration | Added to registry; verify cloud auth, event/state mapping, and rate limits. |
-| Tesla EV | integration | Added to registry; add release workflow and verify Fleet API auth/wake-up flows. |
-| Kaiterra API | integration | Added to registry; image tag aligned to `0.1.1`; verify cloud API smoke test. |
-| WeatherXM | integration | Added to registry; verify whether this or WeatherXM API is the canonical package. |
+| Matter Sidecar | sidecar | Prerelease `0.2.0-alpha.2` published; finish commissioning and fabric-lifecycle smoke tests before stable promotion. |
+| GPS | integration | Release `1.1.2` published; complete the USB-device smoke test. |
+| ThinQ Connect | integration | Release `0.1.11` published; verify token expiry and appliance-control error handling. |
+| TP-Link Kasa | integration | Release `0.1.12` published; verify discovery, externally changed state, and local control. |
+| Airthings Consumer Cloud | integration | Release and experience package `0.1.7` published; verify credentials, rate limits, and stale-data health. |
+| Aqara Open API | integration | Release `0.1.3` published; verify cloud auth, event/state mapping, and rate limits. |
+| Tesla EV | integration | Release `0.2.3` published; verify Fleet API auth and wake-up flows. |
+| Kaiterra API | integration | Release `0.1.5` published with corrected image metadata; verify the cloud API smoke test. |
+| WeatherXM | integration | Release `0.1.4` published; verify whether this or WeatherXM API is the canonical package. |
+| I2C | integration | Release `0.1.3` published; complete representative sensor hardware smoke tests. |
+| SPI | integration | Release `0.1.3` published; complete representative peripheral hardware smoke tests. |
+| Tuya | integration | Release `0.1.4` published; verify cloud auth, state refresh, and command confirmation. |
+| Sense | integration | Release `0.1.2` published; verify live monitor reconnect and stale-data behavior. |
 | WeatherXM API | integration | Added to registry; verify whether this or WeatherXM is the canonical package. |
 | Atmotube Pro BLE | integration | CI added; add release workflow/package artifact and BLE smoke tests. |
 | Airthings BLE | integration | Registry entry remains, but no matching local repo is present; either restore repo or retire entry. |
