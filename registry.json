@@ -5951,5 +5951,104 @@
         }
       }
     }
+  },
+  {
+    "id": "io.piphi.awair-air-quality",
+    "name": "Awair Air Quality",
+    "version": "0.1.14",
+    "type": "widget",
+    "deployment_mode": "standalone",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Awair Element air-quality score and the readings behind it.",
+    "rewardable": false,
+    "platforms": [
+      "web"
+    ],
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-widget-awair-air-quality",
+    "repo_url": "https://github.com/PiPhi-io/piphi-widget-awair-air-quality",
+    "ref": "v0.1.14",
+    "manifest_path": "package.source.json",
+    "artifact": {
+      "release_asset": "awair-air-quality-0.1.14.zip",
+      "manifest_asset": "awair-air-quality-0.1.14.manifest.json",
+      "integrity": null
+    },
+    "tags": [
+      "awair-air-quality",
+      "dashboard",
+      "widget-sdk"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://github.com/PiPhi-io/piphi-widget-awair-air-quality",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Awair Air Quality",
+      "summary": "Awair Element air-quality score and the readings behind it.",
+      "category": "other",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi-io",
+        "website_url": "https://github.com/PiPhi-io/piphi-widget-awair-air-quality",
+        "support_url": "https://github.com/PiPhi-io/piphi-widget-awair-air-quality/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [],
+      "compatibility": [
+        {
+          "capability": "score",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.6.1,<0.7"
+        },
+        {
+          "capability": "co2",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.6.1,<0.7"
+        },
+        {
+          "capability": "pm25",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.6.1,<0.7"
+        },
+        {
+          "capability": "voc",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.6.1,<0.7"
+        },
+        {
+          "capability": "temperature",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.6.1,<0.7"
+        },
+        {
+          "capability": "humidity",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.6.1,<0.7"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-widget-awair-air-quality",
+      "support_url": "https://github.com/PiPhi-io/piphi-widget-awair-air-quality/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-widget-awair-air-quality/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
+    }
   }
 ]
