@@ -13,6 +13,11 @@ This repository is the curated public registry consumed by the PiPhi Registry AP
 5. Once approved, automation proposes a ready-to-paste registry entry.
 6. Approved submissions are added to `registry.json`.
 
+Maintainers and publishers with workflow access may use `piphi registry submit`
+instead. It invokes the repository-owned proposal workflow and opens the same
+review boundary as a draft pull request; it does not bypass validation or
+approval.
+
 Review guidance for maintainers lives in [REVIEWING.md](./REVIEWING.md).
 
 ## What Reviewers Look For

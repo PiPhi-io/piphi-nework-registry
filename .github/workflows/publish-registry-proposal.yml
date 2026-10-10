@@ -1,0 +1,92 @@
+name: Publish Registry Proposal
+
+on:
+  workflow_dispatch:
+    inputs:
+      registry_id:
+        description: Registry identity to add or update
+        required: true
+        type: string
+      entry_type:
+        description: Package type
+        required: true
+        type: choice
+        options:
+          - integration
+          - widget
+      repo_url:
+        description: Public source repository URL
+        required: true
+        type: string
+      manifest_path:
+        description: Repository-relative manifest path
+        required: true
+        type: string
+      ref:
+        description: Immutable v<version> release tag
+        required: true
+        type: string
+      artifact_integrity:
+        description: Optional widget archive SHA-256 integrity
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: registry-proposal-${{ inputs.registry_id }}
+  cancel-in-progress: false
+
+jobs:
+  propose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate draft registry change
+        id: proposal
+        env:
+          GITHUB_TOKEN: ${{ secrets.REGISTRY_SOURCE_GITHUB_TOKEN != '' && secrets.REGISTRY_SOURCE_GITHUB_TOKEN || github.token }}
+          REGISTRY_ID: ${{ inputs.registry_id }}
+          ENTRY_TYPE: ${{ inputs.entry_type }}
+          SOURCE_REPO_URL: ${{ inputs.repo_url }}
+          SOURCE_MANIFEST_PATH: ${{ inputs.manifest_path }}
+          SOURCE_REF: ${{ inputs.ref }}
+          ARTIFACT_INTEGRITY: ${{ inputs.artifact_integrity }}
+        run: |
+          python scripts/propose_registry_entry.py \
+            --registry-id "$REGISTRY_ID" \
+            --entry-type "$ENTRY_TYPE" \
+            --repo-url "$SOURCE_REPO_URL" \
+            --manifest-path "$SOURCE_MANIFEST_PATH" \
+            --ref "$SOURCE_REF" \
+            --artifact-integrity "$ARTIFACT_INTEGRITY"
+      - name: Validate complete registry
+        run: |
+          python -m json.tool registry.json >/dev/null
+          python scripts/validate_registry.py registry.json
+          python -m unittest discover -s tests -p 'test_*.py'
+      - name: Open review pull request
+        uses: peter-evans/create-pull-request@v8
+        with:
+          add-paths: registry.json
+          branch: ${{ steps.proposal.outputs.branch_name }}
+          delete-branch: true
+          commit-message: ${{ steps.proposal.outputs.commit_message }}
+          title: ${{ steps.proposal.outputs.pr_title }}
+          body: |
+            Automated `${{ steps.proposal.outputs.operation }}` proposal for `${{ steps.proposal.outputs.registry_id }}`.
+
+            - Version: `${{ steps.proposal.outputs.version }}`
+            - Source repository: `${{ inputs.repo_url }}`
+            - Manifest: `${{ inputs.manifest_path }}`
+            - Immutable ref: `${{ steps.proposal.outputs.source_ref }}`
+            - Entry type: `${{ inputs.entry_type }}`
+
+            This pull request remains subject to registry validation and maintainer review.
