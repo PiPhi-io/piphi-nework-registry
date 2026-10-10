@@ -5847,5 +5847,109 @@
         }
       }
     }
+  },
+  {
+    "id": "io.piphi.kasa-smart-home",
+    "name": "Kasa Smart Home",
+    "version": "0.1.16",
+    "type": "widget",
+    "deployment_mode": "standalone",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Responsive controls, environmental readings, and energy insights for TP-Link Kasa devices.",
+    "rewardable": false,
+    "platforms": [
+      "web"
+    ],
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-widget-kasa-smart-home",
+    "repo_url": "https://github.com/PiPhi-io/piphi-widget-kasa-smart-home",
+    "ref": "v0.1.16",
+    "manifest_path": "package.source.json",
+    "artifact": {
+      "release_asset": "kasa-smart-home-0.1.16.zip",
+      "manifest_asset": "kasa-smart-home-0.1.16.manifest.json",
+      "integrity": null
+    },
+    "tags": [
+      "kasa-smart-home",
+      "dashboard",
+      "widget-sdk"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://github.com/PiPhi-io/piphi-widget-kasa-smart-home",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Kasa Smart Home",
+      "summary": "Responsive controls, environmental readings, and energy insights for TP-Link Kasa devices.",
+      "category": "other",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi-io",
+        "website_url": "https://github.com/PiPhi-io/piphi-widget-kasa-smart-home",
+        "support_url": "https://github.com/PiPhi-io/piphi-widget-kasa-smart-home/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [],
+      "compatibility": [
+        {
+          "capability": "switch",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.6.1,<0.7"
+        },
+        {
+          "capability": "brightness",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.6.1,<0.7"
+        },
+        {
+          "capability": "energy_power",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.6.1,<0.7"
+        },
+        {
+          "capability": "energy_today",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.6.1,<0.7"
+        },
+        {
+          "capability": "energy_this_month",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.6.1,<0.7"
+        },
+        {
+          "capability": "temperature",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.6.1,<0.7"
+        },
+        {
+          "capability": "humidity",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.6.1,<0.7"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-widget-kasa-smart-home",
+      "support_url": "https://github.com/PiPhi-io/piphi-widget-kasa-smart-home/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-widget-kasa-smart-home/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
+    }
   }
 ]
