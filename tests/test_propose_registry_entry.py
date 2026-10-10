@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from propose_registry_entry import preserve_reviewed_fields, widget_entry
+from propose_registry_entry import preserve_reviewed_fields, serialize_registry_change, widget_entry
 
 
 class ProposeRegistryEntryTests(unittest.TestCase):
@@ -66,6 +66,27 @@ class ProposeRegistryEntryTests(unittest.TestCase):
         }
         with self.assertRaisesRegex(ValueError, "must match widget version"):
             widget_entry(source, "https://github.com/example/widget", "package.source.json", "main", "")
+
+    def test_serialization_preserves_unrelated_registry_formatting(self) -> None:
+        original = '[\n  {\n    "id": "existing",\n    "platforms": ["web"]\n  }\n]\n'
+        added = serialize_registry_change(
+            original,
+            "new-widget",
+            {"id": "new-widget", "platforms": ["web"]},
+            exists=False,
+        )
+        self.assertIn('"platforms": ["web"]', added)
+        self.assertEqual(added.count('"id": "existing"'), 1)
+        self.assertEqual(added.count('"id": "new-widget"'), 1)
+
+        updated = serialize_registry_change(
+            original,
+            "existing",
+            {"id": "existing", "platforms": ["linux"]},
+            exists=True,
+        )
+        self.assertIn('"platforms": [\n      "linux"\n    ]', updated)
+        self.assertNotIn('"platforms": ["web"]', updated)
 
 
 if __name__ == "__main__":

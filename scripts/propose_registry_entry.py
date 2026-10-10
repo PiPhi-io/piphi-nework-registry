@@ -12,6 +12,7 @@ from typing import Any
 
 from marketplace_metadata import validate_marketplace_v2
 from submission_utils import fetch_manifest_from_github, load_registry_entries, parse_repo_url
+from sync_registry_entry import serialize_updated_entry
 
 
 SHA256 = re.compile(r"^sha256:[a-f0-9]{64}$")
@@ -203,9 +204,28 @@ def preserve_reviewed_fields(entry: dict[str, Any], existing: dict[str, Any] | N
     return entry
 
 
+def serialize_registry_change(
+    registry_text: str,
+    registry_id: str,
+    entry: dict[str, Any],
+    *,
+    exists: bool,
+) -> str:
+    """Change one entry without reformatting unrelated catalog records."""
+    if exists:
+        return serialize_updated_entry(registry_text, registry_id, entry)
+    closing = registry_text.rfind("\n]")
+    if closing < 0:
+        raise ValueError("Registry document must end with a JSON array.")
+    rendered = "  " + json.dumps(entry, indent=2).replace("\n", "\n  ")
+    prefix = ",\n" if registry_text[:closing].rstrip().endswith("}") else "\n"
+    return registry_text[:closing] + prefix + rendered + registry_text[closing:]
+
+
 def main() -> int:
     args = parse_args()
     registry_path = Path(args.registry_path).resolve()
+    registry_text = registry_path.read_text(encoding="utf-8")
     entries = load_registry_entries(registry_path)
     source, resolved_ref = fetch_manifest_from_github(
         repo_url=args.repo_url,
@@ -225,14 +245,18 @@ def main() -> int:
     if existing and not isinstance(source.get("marketplace"), dict) and isinstance(existing.get("marketplace"), dict):
         entry["marketplace"] = existing["marketplace"]
     entry = preserve_reviewed_fields(entry, existing)
-    if existing_index is None:
-        entries.append(entry)
-    else:
-        entries[existing_index] = entry
     if args.dry_run:
         print(json.dumps(entry, indent=2))
         return 0
-    registry_path.write_text(json.dumps(entries, indent=2) + "\n", encoding="utf-8")
+    registry_path.write_text(
+        serialize_registry_change(
+            registry_text,
+            args.registry_id,
+            entry,
+            exists=existing_index is not None,
+        ),
+        encoding="utf-8",
+    )
     outputs = {
         "registry_id": args.registry_id,
         "version": entry["version"],
