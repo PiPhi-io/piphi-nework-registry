@@ -29,6 +29,23 @@ public repositories.
 The repository must also allow GitHub Actions to create pull requests under
 Settings > Actions > General > Workflow permissions.
 
+New and existing integrations or widgets can also use the `Propose Registry
+Entry` workflow. The PiPhi CLI prepares and verifies a portable proposal, then
+dispatches this workflow with an immutable `v<version>` source ref. The workflow
+normalizes integration manifests and Widget SDK package manifests, validates the
+entire registry, and opens a review pull request. It never merges the proposal
+or promotes draft governance automatically.
+
+```bash
+piphi registry prepare -C /path/to/project
+piphi registry verify /path/to/project/dist/registry-proposal.json
+piphi registry submit /path/to/project/dist/registry-proposal.json
+```
+
+Widget proposals may include a signed archive digest. A new widget without an
+artifact digest remains a zero-rollout draft until its immutable release is
+available.
+
 Current contract:
 - `registry.json` lives at the repository root
 - it contains a JSON array of integration, platform-service, and widget entries
