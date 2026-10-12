@@ -5851,7 +5851,7 @@
   {
     "id": "io.piphi.kasa-smart-home",
     "name": "Kasa Smart Home",
-    "version": "0.1.16",
+    "version": "0.1.17",
     "type": "widget",
     "deployment_mode": "standalone",
     "trust_level": "official",
@@ -5864,12 +5864,12 @@
     "owner": "PiPhi-io",
     "repo_name": "piphi-widget-kasa-smart-home",
     "repo_url": "https://github.com/PiPhi-io/piphi-widget-kasa-smart-home",
-    "ref": "v0.1.16",
+    "ref": "v0.1.17",
     "manifest_path": "package.source.json",
     "artifact": {
-      "release_asset": "kasa-smart-home-0.1.16.zip",
-      "manifest_asset": "kasa-smart-home-0.1.16.manifest.json",
-      "integrity": null
+      "release_asset": "kasa-smart-home-0.1.17.zip",
+      "manifest_asset": "kasa-smart-home-0.1.17.manifest.json",
+      "integrity": "sha256:df4dccaf0cb16251ee96b2909a458926b59df53bba703042a584df9eb055c73e"
     },
     "tags": [
       "kasa-smart-home",
@@ -5955,7 +5955,7 @@
   {
     "id": "io.piphi.awair-air-quality",
     "name": "Awair Air Quality",
-    "version": "0.1.14",
+    "version": "0.1.15",
     "type": "widget",
     "deployment_mode": "standalone",
     "trust_level": "official",
@@ -5968,12 +5968,12 @@
     "owner": "PiPhi-io",
     "repo_name": "piphi-widget-awair-air-quality",
     "repo_url": "https://github.com/PiPhi-io/piphi-widget-awair-air-quality",
-    "ref": "v0.1.14",
+    "ref": "v0.1.15",
     "manifest_path": "package.source.json",
     "artifact": {
-      "release_asset": "awair-air-quality-0.1.14.zip",
-      "manifest_asset": "awair-air-quality-0.1.14.manifest.json",
-      "integrity": null
+      "release_asset": "awair-air-quality-0.1.15.zip",
+      "manifest_asset": "awair-air-quality-0.1.15.manifest.json",
+      "integrity": "sha256:aa4dd8427d6b057ce15155aacdfb4f2255306d499085d87dfc2e1b4b655bfed6"
     },
     "tags": [
       "awair-air-quality",
