@@ -481,7 +481,7 @@
   {
     "id": "tp-link-kasa-local-api",
     "name": "TP-Link Kasa (Local API)",
-    "version": "0.1.12",
+    "version": "0.1.13",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -575,8 +575,8 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/tp-link-kasa:0.1.12",
-    "ref": "v0.1.12",
+    "image": "piphinetwork/tp-link-kasa:0.1.13",
+    "ref": "v0.1.13",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/tp-link-kasa.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_tp_link",

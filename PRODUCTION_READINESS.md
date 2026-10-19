@@ -41,7 +41,7 @@ Before publishing a stable tag:
 | Matter Sidecar | sidecar | Prerelease `0.2.0-alpha.2` published; finish commissioning and fabric-lifecycle smoke tests before stable promotion. |
 | GPS | integration | Release `1.1.2` published; complete the USB-device smoke test. |
 | ThinQ Connect | integration | Release `0.1.11` published; verify token expiry and appliance-control error handling. |
-| TP-Link Kasa | integration | Release `0.1.12` published; verify discovery, externally changed state, and local control. |
+| TP-Link Kasa | integration | Release `0.1.13` published; verify discovery, externally changed state, and local control. |
 | Airthings Consumer Cloud | integration | Release and experience package `0.1.7` published; verify credentials, rate limits, and stale-data health. |
 | Aqara Open API | integration | Release `0.1.3` published; verify cloud auth, event/state mapping, and rate limits. |
 | Tesla EV | integration | Release `0.2.3` published; verify Fleet API auth and wake-up flows. |
