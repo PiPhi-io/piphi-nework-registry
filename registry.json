@@ -4811,6 +4811,104 @@
     "image": "docker.io/piphinetwork/piphi-network-passive-ble-monitor:0.1.0"
   },
   {
+    "id": "piphi-network-reolink",
+    "name": "Reolink cameras",
+    "version": "0.1.0",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Discover and monitor local Reolink cameras and NVR channels.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-network-reolink",
+    "repo_url": "https://github.com/PiPhi-io/piphi-network-reolink",
+    "manifest_path": "manifest.json",
+    "tags": [
+      "reolink",
+      "camera",
+      "nvr",
+      "security",
+      "local"
+    ],
+    "runtime_requirements": [
+      "secrets_or_api_tokens"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Reolink cameras",
+      "summary": "Connect local Reolink cameras and NVR channels for monitoring and automations.",
+      "category": "camera",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-network-reolink/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Connects directly to the configured Reolink camera or NVR and discovers its available channels.",
+          "required": true
+        },
+        {
+          "id": "credentials",
+          "label": "Camera or NVR credentials",
+          "reason": "Authenticates to the configured Reolink device while keeping credentials out of state, telemetry, events, logs, and diagnostics.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Reolink",
+          "model": "Cameras, video doorbells, and NVRs supported by reolink_aio with local access enabled"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-reolink",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-reolink/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-reolink/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "camera",
+        "video doorbell",
+        "network video recorder"
+      ],
+      "protocols": [
+        "Reolink local API",
+        "Baichuan"
+      ],
+      "discovery_methods": [
+        "manual"
+      ],
+      "connectivity": "local",
+      "offline_support": "full"
+    },
+    "image": "docker.io/piphinetwork/piphi-network-reolink:0.1.0"
+  },
+  {
     "id": "piphi-network-sonoff-lan",
     "name": "Sonoff LAN",
     "version": "0.1.0",
