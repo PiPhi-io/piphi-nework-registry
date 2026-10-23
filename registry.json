@@ -62,8 +62,8 @@
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
-        "publication_status": "draft",
-        "rollout_percent": 0,
+        "publication_status": "beta",
+        "rollout_percent": 10,
         "lifecycle_status": "active",
         "qualification": {"status": "unverified"}
       }
@@ -6190,7 +6190,7 @@
       "support_url": "https://github.com/PiPhi-io/piphi-camera-stream/issues",
       "changelog_url": "https://github.com/PiPhi-io/piphi-camera-stream/releases",
       "quality_tier": "unrated",
-      "governance": {"schema_version": 1, "publication_status": "draft", "rollout_percent": 0, "lifecycle_status": "active", "qualification": {"status": "unverified"}}
+      "governance": {"schema_version": 1, "publication_status": "beta", "rollout_percent": 10, "lifecycle_status": "active", "qualification": {"status": "unverified"}}
     }
   },
   {
@@ -6235,7 +6235,7 @@
       "support_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/issues",
       "changelog_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/releases",
       "quality_tier": "unrated",
-      "governance": {"schema_version": 1, "publication_status": "draft", "rollout_percent": 0, "lifecycle_status": "active", "qualification": {"status": "unverified"}}
+      "governance": {"schema_version": 1, "publication_status": "beta", "rollout_percent": 10, "lifecycle_status": "active", "qualification": {"status": "unverified"}}
     }
   }
 ]
