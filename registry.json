@@ -2455,7 +2455,7 @@
   {
     "id": "piphi-network-sense",
     "name": "Sense Energy",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -6147,6 +6147,95 @@
           "status": "unverified"
         }
       }
+    }
+  },
+  {
+    "id": "piphi-camera-stream",
+    "name": "PiPhi Camera Stream",
+    "version": "0.1.0",
+    "type": "integration",
+    "deployment_mode": "standalone",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Connect an RTSP or RTSPS camera while keeping its source URL inside PiPhi's protected media boundary.",
+    "rewardable": false,
+    "platforms": ["linux"],
+    "image": "ghcr.io/piphi-io/piphi-camera-stream:0.1.0",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-camera-stream",
+    "repo_url": "https://github.com/PiPhi-io/piphi-camera-stream",
+    "manifest_path": "manifest.json",
+    "tags": ["camera", "rtsp", "rtsps", "nvr", "local"],
+    "runtime_requirements": ["local_network_access", "stored_camera_credentials"],
+    "maintainer": {"name": "PiPhi Network", "website": "https://piphi.io", "support_email": "support@piphi.io"},
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "RTSP Camera",
+      "summary": "Connect an RTSP camera or NVR stream to PiPhi dashboards.",
+      "category": "camera",
+      "device_types": ["camera", "nvr"],
+      "protocols": ["rtsp", "rtsps"],
+      "regions": ["WW"],
+      "languages": ["en"],
+      "discovery_methods": ["manual"],
+      "connectivity": "local",
+      "offline_support": "partial",
+      "publisher": {"name": "PiPhi Network", "website_url": "https://piphi.io", "support_url": "https://github.com/PiPhi-io/piphi-camera-stream/issues", "security_contact": "support@piphi.io"},
+      "access": [
+        {"id": "local_network", "label": "Local camera access", "reason": "Connects to the RTSP camera or NVR address entered during setup.", "required": true},
+        {"id": "camera_credentials", "label": "Camera sign-in", "reason": "Keeps credentials from the saved RTSP URL inside the protected integration and media boundary.", "required": false}
+      ],
+      "compatibility": [{"brand": "Generic", "model": "RTSP or RTSPS camera/NVR stream"}],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-camera-stream",
+      "support_url": "https://github.com/PiPhi-io/piphi-camera-stream/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-camera-stream/releases",
+      "quality_tier": "unrated",
+      "governance": {"schema_version": 1, "publication_status": "draft", "rollout_percent": 0, "lifecycle_status": "active", "qualification": {"status": "unverified"}}
+    }
+  },
+  {
+    "id": "piphi.service.webrtc-sidecar",
+    "name": "PiPhi WebRTC Sidecar",
+    "version": "0.2.0",
+    "type": "platform_service",
+    "deployment_mode": "sidecar",
+    "trust_level": "official",
+    "risk_level": "moderate",
+    "description": "Ephemeral go2rtc-backed media transport for brokered PiPhi camera sessions.",
+    "rewardable": false,
+    "platforms": ["linux"],
+    "image": "ghcr.io/piphi-io/piphi-webrtc-sidecar:0.2.0",
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-webrtc-sidecar",
+    "repo_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar",
+    "manifest_path": "manifest.json",
+    "tags": ["camera", "webrtc", "rtsp", "sidecar", "go2rtc"],
+    "runtime_requirements": ["sidecar_runtime", "local_network_access", "camera_source_access"],
+    "maintainer": {"name": "PiPhi Network", "website": "https://piphi.io", "support_email": "support@piphi.io"},
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "WebRTC Camera Service",
+      "summary": "Connect local RTSP cameras to low-latency PiPhi dashboards.",
+      "category": "camera",
+      "device_types": ["camera", "platform_service"],
+      "protocols": ["rtsp", "rtsps", "webrtc"],
+      "regions": ["WW"],
+      "languages": ["en"],
+      "discovery_methods": ["manual"],
+      "connectivity": "local",
+      "offline_support": "full",
+      "publisher": {"name": "PiPhi-io", "website_url": "https://github.com/PiPhi-io", "support_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/issues", "security_contact": "support@piphi.io"},
+      "access": [
+        {"id": "companion_service", "label": "Background camera service", "reason": "Keeps the local WebRTC camera bridge running for PiPhi dashboards.", "required": true},
+        {"id": "local_camera_network", "label": "Local camera network", "reason": "Connects only to the administrator-configured RTSP camera URL.", "required": true},
+        {"id": "camera_credentials", "label": "Camera credentials", "reason": "Uses the short-lived RTSP source supplied by Core without exposing it to dashboards, state, or logs.", "required": false}
+      ],
+      "compatibility": [],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar",
+      "support_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/releases",
+      "quality_tier": "unrated",
+      "governance": {"schema_version": 1, "publication_status": "draft", "rollout_percent": 0, "lifecycle_status": "active", "qualification": {"status": "unverified"}}
     }
   }
 ]
