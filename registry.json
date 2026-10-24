@@ -11,7 +11,7 @@
     "platforms": [
       "web"
     ],
-    "owner": "PiPhi-io",
+    "owner": "KelvinSan",
     "repo_name": "piphi_network_webRTC",
     "repo_url": "https://github.com/PiPhi-io/piphi_network_webRTC",
     "manifest_path": "widgets/webrtc-camera/widget.manifest.json",
@@ -275,8 +275,8 @@
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/atmotube.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-atmotube",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-atmotube",
-    "manifest_path": "manifest.json",
+    "repo_url": "https://github.com/KelvinSan/piphi-network-atmotube",
+    "manifest_path": "src/manifest.json",
     "tags": [
       "air-quality",
       "bluetooth",
