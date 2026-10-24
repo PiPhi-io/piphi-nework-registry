@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from submission_utils import fetch_manifest_from_github, load_registry_entries, parse_repo_url
+from onboarding_contract import require_manifest_onboarding
 
 
 SYNC_MODES = ("full_manifest", "version_only")
@@ -236,6 +237,10 @@ def main() -> int:
         manifest_description = str(manifest.get("description") or "").strip()
         manifest_platforms = normalize_manifest_platforms(manifest)
         manifest_maintainer = normalize_maintainer(manifest, target_entry)
+        manifest_onboarding = require_manifest_onboarding(
+            manifest,
+            entry_type=str(target_entry.get("type") or "integration"),
+        )
 
         if manifest_name:
             set_if_changed(target_entry, "name", manifest_name, updated_fields)
@@ -245,6 +250,8 @@ def main() -> int:
             set_if_changed(target_entry, "platforms", manifest_platforms, updated_fields)
         if manifest_maintainer:
             set_if_changed(target_entry, "maintainer", manifest_maintainer, updated_fields)
+        if manifest_onboarding is not None:
+            set_if_changed(target_entry, "onboarding", manifest_onboarding, updated_fields)
 
     serialized = serialize_updated_entry(registry_text, registry_id, target_entry)
     changed = bool(updated_fields)

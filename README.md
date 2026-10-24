@@ -57,6 +57,8 @@ Current contract:
 - `icon_url` is the catalog icon artwork
 - `banner_url` can be used later for larger catalog artwork
 - `runtime_requirements` summarizes notable runtime requirements and privileges
+- integration and platform-service entries project the source manifest's closed
+  `onboarding.mode` declaration (`manual`, `discovery`, `account`, `service`, or `none`)
 - widget entries use `artifact.release_asset` and `artifact.integrity` instead of a container image
 - `marketplace.metadata_version` is `2` for every published listing and carries
   authoritative homeowner copy, compatibility, connectivity, access, discovery,
@@ -64,6 +66,13 @@ Current contract:
 - `marketplace.governance` controls publication, staged rollout, lifecycle, and
   runtime-qualification evidence. Existing listings are Bronze and explicitly
   unverified until immutable automated qualification evidence is published.
+
+During the onboarding migration, verify the catalog is current with:
+
+```bash
+python3 scripts/migrate_onboarding_contract.py --check
+python3 scripts/validate_registry.py registry.json
+```
 
 ## Marketplace governance
 

@@ -4,6 +4,11 @@ This document explains how to review a submission after automated validation has
 
 The goal is to keep the PiPhi ecosystem open to builders while keeping the public registry curated and trustworthy.
 
+Integration and platform-service entries must match the source manifest's
+closed `onboarding.mode` declaration. Widgets do not declare integration
+onboarding. Reviewers should reject custom step definitions because Core owns
+the setup journey and derives its screens from the canonical mode.
+
 ## Review States
 
 Suggested issue labels:

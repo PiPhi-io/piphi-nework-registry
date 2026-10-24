@@ -20,6 +20,7 @@ from submission_utils import (
     url_exists,
 )
 from marketplace_metadata import validate_marketplace_v2
+from onboarding_contract import validate_onboarding
 
 
 def validate_submission(fields: dict[str, str], registry_path: Path, token: str | None) -> tuple[list[str], list[str]]:
@@ -106,6 +107,10 @@ def validate_submission(fields: dict[str, str], registry_path: Path, token: str 
             manifest_payload.get("marketplace"), entry_type=entry_type
         )
         errors.extend(f"Manifest {error}." for error in marketplace_errors)
+        errors.extend(
+            f"Manifest {error}."
+            for error in validate_onboarding(manifest_payload.get("onboarding"), entry_type=entry_type)
+        )
 
     if icon_url and not url_exists(icon_url):
         errors.append("Icon URL is not reachable.")

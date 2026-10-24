@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any
 
 from submission_utils import fetch_manifest_from_github, load_registry_entries, parse_repo_url
+from onboarding_contract import validate_onboarding
 
 
 VALID_REQUEST_STATUSES = {"requested", "accepted", "rejected", "converted"}
@@ -156,6 +157,11 @@ def validate_proposed_entry(
                 errors.append(f"{prefix}: fetched manifest at {resolved_ref} is missing id")
             if not manifest_version:
                 errors.append(f"{prefix}: fetched manifest at {resolved_ref} is missing version")
+            manifest_type = str(entry.get("type") or "integration")
+            errors.extend(
+                f"{prefix}: fetched manifest {error}"
+                for error in validate_onboarding(manifest.get("onboarding"), entry_type=manifest_type)
+            )
         except Exception as exc:
             errors.append(f"{prefix}: unable to fetch manifest from repository: {exc}")
     elif repo_url and manifest_path and skip_remote:

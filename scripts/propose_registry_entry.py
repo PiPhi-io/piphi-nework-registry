@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any
 
 from marketplace_metadata import validate_marketplace_v2
+from onboarding_contract import require_manifest_onboarding
 from submission_utils import fetch_manifest_from_github, load_registry_entries, parse_repo_url
 from sync_registry_entry import serialize_updated_entry
 
@@ -159,6 +160,8 @@ def integration_entry(source: dict[str, Any], repo_url: str, manifest_path: str,
         raise ValueError("Integration marketplace metadata is invalid: " + "; ".join(errors))
     owner, repo_name = parse_repo_url(repo_url)
     deployment = str(source.get("deployment_mode") or "standalone").strip()
+    entry_type = "platform_service" if deployment == "sidecar" else "integration"
+    onboarding = require_manifest_onboarding(source, entry_type=entry_type)
     requirements = source.get("runtime_requirements") if isinstance(source.get("runtime_requirements"), list) else []
     high = {"privileged_container", "host_networking", "host_filesystem_mounts"}
     risk = "high" if any(item in high for item in requirements) else "moderate" if deployment == "sidecar" or requirements else "low"
@@ -166,7 +169,7 @@ def integration_entry(source: dict[str, Any], repo_url: str, manifest_path: str,
         "id": registry_id,
         "name": str(source.get("name") or "").strip(),
         "version": version,
-        "type": "platform_service" if deployment == "sidecar" else "integration",
+        "type": entry_type,
         "trust_level": "official" if owner == "PiPhi-io" else "community",
         "risk_level": risk,
         "description": str(source.get("description") or "").strip(),
@@ -180,6 +183,7 @@ def integration_entry(source: dict[str, Any], repo_url: str, manifest_path: str,
         "runtime_requirements": requirements,
         "maintainer": source.get("maintainer") or {"name": owner, "website": repo_url},
         "marketplace": marketplace,
+        "onboarding": onboarding,
     }
     if deployment == "sidecar":
         entry["deployment_mode"] = "sidecar"
