@@ -8,7 +8,9 @@
     "risk_level": "moderate",
     "description": "Low-latency camera playback through PiPhi's brokered WebRTC host contract.",
     "rewardable": false,
-    "platforms": ["web"],
+    "platforms": [
+      "web"
+    ],
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_webRTC",
     "repo_url": "https://github.com/PiPhi-io/piphi_network_webRTC",
@@ -17,8 +19,16 @@
       "release_asset": "piphi-webrtc-camera-widget-0.1.0.tgz",
       "integrity": "sha256:94a85d84f05119590a9904397089164a732bc18c80934bba30815b41501af155"
     },
-    "tags": ["camera", "dashboard", "webrtc", "widget-sdk"],
-    "runtime_requirements": ["browser_webrtc", "camera_broker"],
+    "tags": [
+      "camera",
+      "dashboard",
+      "webrtc",
+      "widget-sdk"
+    ],
+    "runtime_requirements": [
+      "browser_webrtc",
+      "camera_broker"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
@@ -29,8 +39,14 @@
       "display_name": "WebRTC camera",
       "summary": "Watch a low-latency live camera from a PiPhi dashboard.",
       "category": "camera",
-      "regions": ["WW"],
-      "languages": ["en", "es", "ar"],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en",
+        "es",
+        "ar"
+      ],
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
@@ -51,11 +67,13 @@
           "required": false
         }
       ],
-      "compatibility": [{
-        "capability": "camera_stream",
-        "host_protocol": "piphi.widget.host/1",
-        "widget_sdk": ">=0.4.0"
-      }],
+      "compatibility": [
+        {
+          "capability": "camera_stream",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.4.0"
+        }
+      ],
       "documentation_url": "https://github.com/PiPhi-io/piphi_network_webRTC",
       "support_url": "https://github.com/PiPhi-io/piphi_network_webRTC/issues",
       "changelog_url": "https://github.com/PiPhi-io/piphi_network_webRTC/releases",
@@ -65,7 +83,9 @@
         "publication_status": "beta",
         "rollout_percent": 10,
         "lifecycle_status": "active",
-        "qualification": {"status": "unverified"}
+        "qualification": {
+          "status": "unverified"
+        }
       }
     }
   },
@@ -173,7 +193,10 @@
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-plex",
       "support_url": "https://github.com/PiPhi-io/piphi-network-plex/issues"
     },
-    "ref": "v0.1.1"
+    "ref": "v0.1.1",
+    "onboarding": {
+      "mode": "account"
+    }
   },
   {
     "id": "atmotube-pro-ble",
@@ -267,6 +290,9 @@
       "name": "PiPhi Network",
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
+    },
+    "onboarding": {
+      "mode": "discovery"
     }
   },
   {
@@ -362,7 +388,10 @@
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
-    "ref": "v0.1.13"
+    "ref": "v0.1.13",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "official-usb-gps-integration",
@@ -476,7 +505,10 @@
         }
       }
     },
-    "ref": "v1.1.2"
+    "ref": "v1.1.2",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "tp-link-kasa-local-api",
@@ -596,6 +628,9 @@
       "name": "PiPhi Network",
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
+    },
+    "onboarding": {
+      "mode": "discovery"
     }
   },
   {
@@ -699,6 +734,9 @@
       "name": "PiPhi Network",
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
+    },
+    "onboarding": {
+      "mode": "account"
     }
   },
   {
@@ -821,7 +859,10 @@
         }
       }
     },
-    "ref": "v0.1.7"
+    "ref": "v0.1.7",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi.service.mqtt-broker",
@@ -912,6 +953,9 @@
           "status": "unverified"
         }
       }
+    },
+    "onboarding": {
+      "mode": "service"
     }
   },
   {
@@ -1027,6 +1071,9 @@
           "status": "unverified"
         }
       }
+    },
+    "onboarding": {
+      "mode": "service"
     }
   },
   {
@@ -1136,7 +1183,10 @@
         }
       }
     },
-    "ref": "v0.2.0-alpha.2"
+    "ref": "v0.2.0-alpha.2",
+    "onboarding": {
+      "mode": "service"
+    }
   },
   {
     "id": "piphi.service.zigbee2mqtt-sidecar",
@@ -1269,6 +1319,9 @@
           "status": "unverified"
         }
       }
+    },
+    "onboarding": {
+      "mode": "service"
     }
   },
   {
@@ -1380,6 +1433,9 @@
           "status": "unverified"
         }
       }
+    },
+    "onboarding": {
+      "mode": "discovery"
     }
   },
   {
@@ -1483,7 +1539,10 @@
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
-    "ref": "v0.1.7"
+    "ref": "v0.1.7",
+    "onboarding": {
+      "mode": "account"
+    }
   },
   {
     "id": "aqara-open-api",
@@ -1588,7 +1647,10 @@
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
-    "ref": "v0.1.3"
+    "ref": "v0.1.3",
+    "onboarding": {
+      "mode": "account"
+    }
   },
   {
     "id": "piphi-network-tesla-ev",
@@ -1690,6 +1752,9 @@
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io"
+    },
+    "onboarding": {
+      "mode": "account"
     }
   },
   {
@@ -1790,7 +1855,10 @@
       "name": "PiPhi Integrations Team",
       "website": "https://github.com/PiPhi-io"
     },
-    "ref": "v0.1.5"
+    "ref": "v0.1.5",
+    "onboarding": {
+      "mode": "account"
+    }
   },
   {
     "id": "piphi-network-weatherxm",
@@ -1882,7 +1950,10 @@
       "name": "PiPhi Integrations Team",
       "website": "https://github.com/PiPhi-io"
     },
-    "ref": "v0.1.4"
+    "ref": "v0.1.4",
+    "onboarding": {
+      "mode": "account"
+    }
   },
   {
     "id": "piphi-network-i2c",
@@ -1919,8 +1990,8 @@
     },
     "marketplace": {
       "metadata_version": 2,
-      "display_name": "Wired Sensors (I\u00b2C)",
-      "summary": "Read compatible environmental sensors connected through I\u00b2C or a supported USB bridge.",
+      "display_name": "Wired Sensors (I²C)",
+      "summary": "Read compatible environmental sensors connected through I²C or a supported USB bridge.",
       "category": "sensors",
       "device_types": [
         "environmental_sensor"
@@ -2019,7 +2090,10 @@
       }
     },
     "image": "piphinetwork/i2c-integration:0.1.3",
-    "ref": "v0.1.3"
+    "ref": "v0.1.3",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-network-spi",
@@ -2142,7 +2216,10 @@
       }
     },
     "image": "piphinetwork/spi-integration:0.1.3",
-    "ref": "v0.1.3"
+    "ref": "v0.1.3",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-network-tuya",
@@ -2245,7 +2322,10 @@
       "name": "PiPhi Integrations Team",
       "website": "https://github.com/PiPhi-io"
     },
-    "ref": "v0.1.4"
+    "ref": "v0.1.4",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-network-solaredge",
@@ -2380,6 +2460,9 @@
       "name": "PiPhi Network",
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
+    },
+    "onboarding": {
+      "mode": "account"
     }
   },
   {
@@ -2392,7 +2475,9 @@
     "risk_level": "low",
     "description": "Live site power flow and production totals for SolarEdge Monitoring sites.",
     "rewardable": false,
-    "platforms": ["web"],
+    "platforms": [
+      "web"
+    ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-SolarEdge",
@@ -2404,7 +2489,14 @@
       "manifest_asset": "solaredge-solar-energy-0.1.0.manifest.json",
       "integrity": "sha256:f2a02a090ca39ebad481b06319e5e23699c28b38bc237a5faa27cf0c50fafd75"
     },
-    "tags": ["solaredge", "solar", "energy", "battery", "dashboard", "widget-sdk"],
+    "tags": [
+      "solaredge",
+      "solar",
+      "energy",
+      "battery",
+      "dashboard",
+      "widget-sdk"
+    ],
     "runtime_requirements": [],
     "maintainer": {
       "name": "PiPhi Network",
@@ -2416,8 +2508,16 @@
       "display_name": "SolarEdge Solar Energy",
       "summary": "See live SolarEdge power flow and production totals in purpose-built dashboard cards.",
       "category": "energy",
-      "regions": ["US", "CA", "GB", "AU", "DE"],
-      "languages": ["en"],
+      "regions": [
+        "US",
+        "CA",
+        "GB",
+        "AU",
+        "DE"
+      ],
+      "languages": [
+        "en"
+      ],
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
@@ -2448,7 +2548,9 @@
         "publication_status": "stable",
         "rollout_percent": 100,
         "lifecycle_status": "active",
-        "qualification": {"status": "unverified"}
+        "qualification": {
+          "status": "unverified"
+        }
       }
     }
   },
@@ -2571,7 +2673,10 @@
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
-    "ref": "v0.1.2"
+    "ref": "v0.1.2",
+    "onboarding": {
+      "mode": "account"
+    }
   },
   {
     "id": "piphi-network-pfsense",
@@ -2587,11 +2692,23 @@
       "display_name": "pfSense Firewall",
       "summary": "Monitor pfSense health, gateways, interfaces, VPNs, clients, certificates, and HA, with optional allow-listed operations.",
       "category": "networking",
-      "device_types": ["firewall", "network_gateway", "vpn_gateway"],
-      "protocols": ["pfsense_rest_api_v2"],
-      "regions": ["WW"],
-      "languages": ["en"],
-      "discovery_methods": ["manual"],
+      "device_types": [
+        "firewall",
+        "network_gateway",
+        "vpn_gateway"
+      ],
+      "protocols": [
+        "pfsense_rest_api_v2"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "manual"
+      ],
       "connectivity": "local",
       "offline_support": "none",
       "publisher": {
@@ -2621,8 +2738,20 @@
         }
       ],
       "compatibility": [
-        {"brand": "pfSense", "model": "pfSense Community Edition with pfREST v2", "regions": ["WW"]},
-        {"brand": "Netgate", "model": "pfSense Plus with pfREST v2", "regions": ["WW"]}
+        {
+          "brand": "pfSense",
+          "model": "pfSense Community Edition with pfREST v2",
+          "regions": [
+            "WW"
+          ]
+        },
+        {
+          "brand": "Netgate",
+          "model": "pfSense Plus with pfREST v2",
+          "regions": [
+            "WW"
+          ]
+        }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-pfsense",
       "support_url": "https://github.com/PiPhi-io/piphi-network-pfsense/issues",
@@ -2633,23 +2762,39 @@
         "publication_status": "draft",
         "rollout_percent": 0,
         "lifecycle_status": "active",
-        "qualification": {"status": "unverified"}
+        "qualification": {
+          "status": "unverified"
+        }
       }
     },
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "image": "piphinetwork/piphi-network-pfsense:0.1.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-pfsense",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-pfsense",
     "manifest_path": "manifest.json",
-    "tags": ["pfsense", "firewall", "networking", "vpn", "local-api"],
-    "runtime_requirements": ["host_filesystem_mounts", "secrets_or_api_tokens"],
+    "tags": [
+      "pfsense",
+      "firewall",
+      "networking",
+      "vpn",
+      "local-api"
+    ],
+    "runtime_requirements": [
+      "host_filesystem_mounts",
+      "secrets_or_api_tokens"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
+    },
+    "onboarding": {
+      "mode": "manual"
     }
   },
   {
@@ -2911,7 +3056,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-android-adb-sidecar:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-android-adb-sidecar:0.1.0",
+    "onboarding": {
+      "mode": "service"
+    }
   },
   {
     "id": "piphi-ble-gateway-sidecar",
@@ -3008,7 +3156,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-ble-gateway-sidecar:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-ble-gateway-sidecar:0.1.0",
+    "onboarding": {
+      "mode": "service"
+    }
   },
   {
     "id": "piphi-modbus-rtu-sidecar",
@@ -3108,7 +3259,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-modbus-rtu-sidecar:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-modbus-rtu-sidecar:0.1.0",
+    "onboarding": {
+      "mode": "service"
+    }
   },
   {
     "id": "piphi-network-android-tv",
@@ -3196,7 +3350,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-android-tv:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-android-tv:0.1.0",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-network-bacnet",
@@ -3285,7 +3442,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-bacnet:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-bacnet:0.1.0",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-network-bambu-lab",
@@ -3381,7 +3541,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-bambu-lab:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-bambu-lab:0.1.0",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-network-bermuda-presence",
@@ -3471,7 +3634,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-bermuda-presence:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-bermuda-presence:0.1.0",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-network-daikin-onecta",
@@ -3563,7 +3729,10 @@
       "offline_support": "none",
       "privacy_url": "https://github.com/PiPhi-io/piphi-network-daikin-onecta/blob/main/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-daikin-onecta:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-daikin-onecta:0.1.0",
+    "onboarding": {
+      "mode": "account"
+    }
   },
   {
     "id": "piphi-network-dyson",
@@ -3664,7 +3833,10 @@
       "offline_support": "partial",
       "privacy_url": "https://github.com/PiPhi-io/piphi-network-dyson/blob/main/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-dyson:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-dyson:0.1.0",
+    "onboarding": {
+      "mode": "account"
+    }
   },
   {
     "id": "piphi-network-eufy-security",
@@ -3771,7 +3943,10 @@
       "offline_support": "partial",
       "privacy_url": "https://github.com/PiPhi-io/piphi-network-eufy-security/blob/main/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-eufy-security:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-eufy-security:0.1.0",
+    "onboarding": {
+      "mode": "account"
+    }
   },
   {
     "id": "piphi-network-huawei-solar",
@@ -3868,7 +4043,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-huawei-solar:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-huawei-solar:0.1.0",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-network-kia-hyundai-connect",
@@ -3964,7 +4142,10 @@
       "offline_support": "none",
       "privacy_url": "https://github.com/PiPhi-io/piphi-network-kia-hyundai-connect/blob/main/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-kia-hyundai-connect:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-kia-hyundai-connect:0.1.0",
+    "onboarding": {
+      "mode": "account"
+    }
   },
   {
     "id": "piphi-network-knx",
@@ -4055,7 +4236,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-knx:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-knx:0.1.0",
+    "onboarding": {
+      "mode": "manual"
+    }
   },
   {
     "id": "piphi-network-llm-vision",
@@ -4166,7 +4350,10 @@
       "offline_support": "partial",
       "privacy_url": "https://github.com/PiPhi-io/piphi-network-llm-vision/blob/main/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-llm-vision:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-llm-vision:0.1.0",
+    "onboarding": {
+      "mode": "service"
+    }
   },
   {
     "id": "piphi-network-midea-ac-lan",
@@ -4262,7 +4449,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-midea-ac-lan:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-midea-ac-lan:0.1.0",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-network-mikrotik-router",
@@ -4360,7 +4550,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-mikrotik-router:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-mikrotik-router:0.1.0",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-network-modbus",
@@ -4453,7 +4646,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-modbus:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-modbus:0.1.0",
+    "onboarding": {
+      "mode": "manual"
+    }
   },
   {
     "id": "piphi-network-nord-pool",
@@ -4534,7 +4730,10 @@
       "offline_support": "none",
       "privacy_url": "https://github.com/PiPhi-io/piphi-network-nord-pool/blob/main/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-nord-pool:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-nord-pool:0.1.0",
+    "onboarding": {
+      "mode": "manual"
+    }
   },
   {
     "id": "piphi-network-octopus-energy",
@@ -4627,7 +4826,10 @@
       "offline_support": "none",
       "privacy_url": "https://github.com/PiPhi-io/piphi-network-octopus-energy/blob/main/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-octopus-energy:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-octopus-energy:0.1.0",
+    "onboarding": {
+      "mode": "account"
+    }
   },
   {
     "id": "piphi-network-openepaperlink",
@@ -4717,7 +4919,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-openepaperlink:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-openepaperlink:0.1.0",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-network-passive-ble-monitor",
@@ -4808,7 +5013,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-passive-ble-monitor:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-passive-ble-monitor:0.1.0",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-network-reolink",
@@ -4906,7 +5114,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "ghcr.io/piphi-io/piphi-network-reolink:0.1.0"
+    "image": "ghcr.io/piphi-io/piphi-network-reolink:0.1.0",
+    "onboarding": {
+      "mode": "manual"
+    }
   },
   {
     "id": "piphi-network-sonoff-lan",
@@ -5007,7 +5218,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-sonoff-lan:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-sonoff-lan:0.1.0",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-network-steam",
@@ -5107,6 +5321,9 @@
           "status": "unverified"
         }
       }
+    },
+    "onboarding": {
+      "mode": "account"
     }
   },
   {
@@ -5211,7 +5428,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-tapo-cameras:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-tapo-cameras:0.1.0",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-network-washdata",
@@ -5309,7 +5529,10 @@
       "offline_support": "partial",
       "privacy_url": "https://github.com/PiPhi-io/piphi-network-washdata/blob/main/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-washdata:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-washdata:0.1.0",
+    "onboarding": {
+      "mode": "manual"
+    }
   },
   {
     "id": "piphi-network-waste-collection",
@@ -5399,7 +5622,10 @@
       "offline_support": "none",
       "privacy_url": "https://github.com/PiPhi-io/piphi-network-waste-collection/blob/main/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-waste-collection:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-waste-collection:0.1.0",
+    "onboarding": {
+      "mode": "manual"
+    }
   },
   {
     "id": "piphi-network-xiaomi-home",
@@ -5501,7 +5727,10 @@
       "offline_support": "partial",
       "privacy_url": "https://github.com/PiPhi-io/piphi-network-xiaomi-home/blob/main/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-xiaomi-home:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-xiaomi-home:0.1.0",
+    "onboarding": {
+      "mode": "account"
+    }
   },
   {
     "id": "piphi-network-zwave",
@@ -5593,7 +5822,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-zwave:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-network-zwave:0.1.0",
+    "onboarding": {
+      "mode": "discovery"
+    }
   },
   {
     "id": "piphi-zwave-js-sidecar",
@@ -5698,7 +5930,10 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-zwave-js-sidecar:0.1.0"
+    "image": "docker.io/piphinetwork/piphi-zwave-js-sidecar:0.1.0",
+    "onboarding": {
+      "mode": "service"
+    }
   },
   {
     "id": "io.piphi.airthings-air-quality",
@@ -6159,38 +6394,96 @@
     "risk_level": "moderate",
     "description": "Connect an RTSP or RTSPS camera while keeping its source URL inside PiPhi's protected media boundary.",
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "image": "ghcr.io/piphi-io/piphi-camera-stream:0.1.0",
     "owner": "PiPhi-io",
     "repo_name": "piphi-camera-stream",
     "repo_url": "https://github.com/PiPhi-io/piphi-camera-stream",
     "manifest_path": "manifest.json",
-    "tags": ["camera", "rtsp", "rtsps", "nvr", "local"],
-    "runtime_requirements": ["local_network_access", "stored_camera_credentials"],
-    "maintainer": {"name": "PiPhi Network", "website": "https://piphi.io", "support_email": "support@piphi.io"},
+    "tags": [
+      "camera",
+      "rtsp",
+      "rtsps",
+      "nvr",
+      "local"
+    ],
+    "runtime_requirements": [
+      "local_network_access",
+      "stored_camera_credentials"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    },
     "marketplace": {
       "metadata_version": 2,
       "display_name": "RTSP Camera",
       "summary": "Connect an RTSP camera or NVR stream to PiPhi dashboards.",
       "category": "camera",
-      "device_types": ["camera", "nvr"],
-      "protocols": ["rtsp", "rtsps"],
-      "regions": ["WW"],
-      "languages": ["en"],
-      "discovery_methods": ["manual"],
+      "device_types": [
+        "camera",
+        "nvr"
+      ],
+      "protocols": [
+        "rtsp",
+        "rtsps"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "manual"
+      ],
       "connectivity": "local",
       "offline_support": "partial",
-      "publisher": {"name": "PiPhi Network", "website_url": "https://piphi.io", "support_url": "https://github.com/PiPhi-io/piphi-camera-stream/issues", "security_contact": "support@piphi.io"},
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-camera-stream/issues",
+        "security_contact": "support@piphi.io"
+      },
       "access": [
-        {"id": "local_network", "label": "Local camera access", "reason": "Connects to the RTSP camera or NVR address entered during setup.", "required": true},
-        {"id": "camera_credentials", "label": "Camera sign-in", "reason": "Keeps credentials from the saved RTSP URL inside the protected integration and media boundary.", "required": false}
+        {
+          "id": "local_network",
+          "label": "Local camera access",
+          "reason": "Connects to the RTSP camera or NVR address entered during setup.",
+          "required": true
+        },
+        {
+          "id": "camera_credentials",
+          "label": "Camera sign-in",
+          "reason": "Keeps credentials from the saved RTSP URL inside the protected integration and media boundary.",
+          "required": false
+        }
       ],
-      "compatibility": [{"brand": "Generic", "model": "RTSP or RTSPS camera/NVR stream"}],
+      "compatibility": [
+        {
+          "brand": "Generic",
+          "model": "RTSP or RTSPS camera/NVR stream"
+        }
+      ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-camera-stream",
       "support_url": "https://github.com/PiPhi-io/piphi-camera-stream/issues",
       "changelog_url": "https://github.com/PiPhi-io/piphi-camera-stream/releases",
       "quality_tier": "unrated",
-      "governance": {"schema_version": 1, "publication_status": "beta", "rollout_percent": 10, "lifecycle_status": "active", "qualification": {"status": "unverified"}}
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "beta",
+        "rollout_percent": 10,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
+    },
+    "onboarding": {
+      "mode": "manual"
     }
   },
   {
@@ -6203,39 +6496,99 @@
     "risk_level": "moderate",
     "description": "Ephemeral go2rtc-backed media transport for brokered PiPhi camera sessions.",
     "rewardable": false,
-    "platforms": ["linux"],
+    "platforms": [
+      "linux"
+    ],
     "image": "ghcr.io/piphi-io/piphi-webrtc-sidecar:0.2.0",
     "owner": "PiPhi-io",
     "repo_name": "piphi-webrtc-sidecar",
     "repo_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar",
     "manifest_path": "manifest.json",
-    "tags": ["camera", "webrtc", "rtsp", "sidecar", "go2rtc"],
-    "runtime_requirements": ["sidecar_runtime", "local_network_access", "camera_source_access"],
-    "maintainer": {"name": "PiPhi Network", "website": "https://piphi.io", "support_email": "support@piphi.io"},
+    "tags": [
+      "camera",
+      "webrtc",
+      "rtsp",
+      "sidecar",
+      "go2rtc"
+    ],
+    "runtime_requirements": [
+      "sidecar_runtime",
+      "local_network_access",
+      "camera_source_access"
+    ],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
+    },
     "marketplace": {
       "metadata_version": 2,
       "display_name": "WebRTC Camera Service",
       "summary": "Connect local RTSP cameras to low-latency PiPhi dashboards.",
       "category": "camera",
-      "device_types": ["camera", "platform_service"],
-      "protocols": ["rtsp", "rtsps", "webrtc"],
-      "regions": ["WW"],
-      "languages": ["en"],
-      "discovery_methods": ["manual"],
+      "device_types": [
+        "camera",
+        "platform_service"
+      ],
+      "protocols": [
+        "rtsp",
+        "rtsps",
+        "webrtc"
+      ],
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "discovery_methods": [
+        "manual"
+      ],
       "connectivity": "local",
       "offline_support": "full",
-      "publisher": {"name": "PiPhi-io", "website_url": "https://github.com/PiPhi-io", "support_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/issues", "security_contact": "support@piphi.io"},
+      "publisher": {
+        "name": "PiPhi-io",
+        "website_url": "https://github.com/PiPhi-io",
+        "support_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/issues",
+        "security_contact": "support@piphi.io"
+      },
       "access": [
-        {"id": "companion_service", "label": "Background camera service", "reason": "Keeps the local WebRTC camera bridge running for PiPhi dashboards.", "required": true},
-        {"id": "local_camera_network", "label": "Local camera network", "reason": "Connects only to the administrator-configured RTSP camera URL.", "required": true},
-        {"id": "camera_credentials", "label": "Camera credentials", "reason": "Uses the short-lived RTSP source supplied by Core without exposing it to dashboards, state, or logs.", "required": false}
+        {
+          "id": "companion_service",
+          "label": "Background camera service",
+          "reason": "Keeps the local WebRTC camera bridge running for PiPhi dashboards.",
+          "required": true
+        },
+        {
+          "id": "local_camera_network",
+          "label": "Local camera network",
+          "reason": "Connects only to the administrator-configured RTSP camera URL.",
+          "required": true
+        },
+        {
+          "id": "camera_credentials",
+          "label": "Camera credentials",
+          "reason": "Uses the short-lived RTSP source supplied by Core without exposing it to dashboards, state, or logs.",
+          "required": false
+        }
       ],
       "compatibility": [],
       "documentation_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar",
       "support_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/issues",
       "changelog_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/releases",
       "quality_tier": "unrated",
-      "governance": {"schema_version": 1, "publication_status": "beta", "rollout_percent": 10, "lifecycle_status": "active", "qualification": {"status": "unverified"}}
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "beta",
+        "rollout_percent": 10,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
+    },
+    "onboarding": {
+      "mode": "service"
     }
   }
 ]

@@ -27,6 +27,7 @@ def valid_entry() -> dict:
         "repo_url": "https://github.com/PiPhi-io/demo",
         "manifest_path": "manifest.json",
         "maintainer": {"name": "PiPhi"},
+        "onboarding": {"mode": "manual"},
         "marketplace": valid_marketplace(),
     }
 
@@ -66,6 +67,21 @@ def valid_marketplace() -> dict:
 
 
 class RegistryBrandMetadataValidationTests(unittest.TestCase):
+    def test_requires_closed_onboarding_contract_for_integrations(self) -> None:
+        entry = valid_entry()
+        del entry["onboarding"]
+        self.assertTrue(any("onboarding must be an object" in error for error in VALIDATOR.validate_entry(entry, 0)))
+        entry["onboarding"] = {"mode": "passive"}
+        self.assertTrue(any("onboarding.mode" in error for error in VALIDATOR.validate_entry(entry, 0)))
+        entry["onboarding"] = {"mode": "manual", "steps": []}
+        self.assertTrue(any("only mode" in error for error in VALIDATOR.validate_entry(entry, 0)))
+
+    def test_platform_services_use_service_onboarding(self) -> None:
+        entry = valid_entry()
+        entry.update({"type": "platform_service", "deployment_mode": "sidecar"})
+        entry["onboarding"] = {"mode": "service"}
+        self.assertEqual(VALIDATOR.validate_entry(entry, 0), [])
+
     def test_accepts_zero_rollout_widget_with_pending_release_integrity(self) -> None:
         entry = valid_entry()
         entry.update({
@@ -74,6 +90,7 @@ class RegistryBrandMetadataValidationTests(unittest.TestCase):
             "platforms": ["web"],
             "artifact": {"release_asset": "piphi-webrtc-camera-widget-0.1.0.tgz", "integrity": None},
         })
+        entry.pop("onboarding")
         entry["marketplace"] = {
             **valid_marketplace(),
             "category": "camera",
@@ -92,6 +109,7 @@ class RegistryBrandMetadataValidationTests(unittest.TestCase):
     def test_published_widget_requires_immutable_artifact_integrity(self) -> None:
         entry = valid_entry()
         entry.update({"type": "widget", "platforms": ["web"], "artifact": {"release_asset": "widget.tgz", "integrity": None}})
+        entry.pop("onboarding")
         entry["marketplace"]["compatibility"] = [{"capability": "camera", "host_protocol": "piphi.widget.host/1", "widget_sdk": ">=0.4.0"}]
         errors = VALIDATOR.validate_entry(entry, 0)
         self.assertTrue(any("artifact.integrity is required" in error for error in errors))
@@ -108,6 +126,7 @@ class RegistryBrandMetadataValidationTests(unittest.TestCase):
                 "integrity": None,
             },
         })
+        entry.pop("onboarding")
         entry["marketplace"] = {
             **valid_marketplace(),
             "category": "other",

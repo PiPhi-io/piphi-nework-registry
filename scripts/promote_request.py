@@ -12,6 +12,7 @@ from typing import Any
 
 from submission_utils import fetch_manifest_from_github, load_registry_entries, parse_repo_url
 from marketplace_metadata import validate_marketplace_v2
+from onboarding_contract import require_manifest_onboarding
 
 
 def parse_args() -> argparse.Namespace:
@@ -108,6 +109,7 @@ def build_entry(request: dict[str, Any], manifest: dict[str, Any]) -> dict[str, 
     marketplace_errors = validate_marketplace_v2(marketplace, entry_type=entry_type)
     if marketplace_errors:
         raise ValueError("Manifest marketplace metadata is invalid: " + "; ".join(marketplace_errors))
+    onboarding = require_manifest_onboarding(manifest, entry_type=entry_type)
     entry: dict[str, Any] = {
         "id": str(manifest.get("id") or proposed.get("id") or "").strip(),
         "name": str(manifest.get("name") or proposed.get("name") or request.get("brand") or "").strip(),
@@ -134,6 +136,8 @@ def build_entry(request: dict[str, Any], manifest: dict[str, Any]) -> dict[str, 
         "maintainer": maintainer,
         "marketplace": marketplace,
     }
+    if onboarding is not None:
+        entry["onboarding"] = onboarding
     if deployment_mode != "standalone":
         entry["deployment_mode"] = deployment_mode
 
