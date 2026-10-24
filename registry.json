@@ -87,6 +87,10 @@
           "status": "unverified"
         }
       }
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -956,6 +960,11 @@
     },
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
@@ -1074,6 +1083,11 @@
     },
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
@@ -1186,6 +1200,11 @@
     "ref": "v0.2.0-alpha.2",
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
@@ -1322,6 +1341,11 @@
     },
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
@@ -1990,8 +2014,8 @@
     },
     "marketplace": {
       "metadata_version": 2,
-      "display_name": "Wired Sensors (I²C)",
-      "summary": "Read compatible environmental sensors connected through I²C or a supported USB bridge.",
+      "display_name": "Wired Sensors (I\u00b2C)",
+      "summary": "Read compatible environmental sensors connected through I\u00b2C or a supported USB bridge.",
       "category": "sensors",
       "device_types": [
         "environmental_sensor"
@@ -2552,6 +2576,10 @@
           "status": "unverified"
         }
       }
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -2869,6 +2897,10 @@
     "artifact": {
       "release_asset": "piphi-widget-calendar-agenda-0.1.0.tgz",
       "integrity": null
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -2950,6 +2982,10 @@
     "artifact": {
       "release_asset": "piphi-widget-vacuum-map-0.1.0.tgz",
       "integrity": null
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -3059,6 +3095,11 @@
     "image": "docker.io/piphinetwork/piphi-android-adb-sidecar:0.1.0",
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
@@ -3159,6 +3200,11 @@
     "image": "docker.io/piphinetwork/piphi-ble-gateway-sidecar:0.1.0",
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
@@ -3262,6 +3308,11 @@
     "image": "docker.io/piphinetwork/piphi-modbus-rtu-sidecar:0.1.0",
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
@@ -4353,6 +4404,11 @@
     "image": "docker.io/piphinetwork/piphi-network-llm-vision:0.1.0",
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
@@ -5933,6 +5989,11 @@
     "image": "docker.io/piphinetwork/piphi-zwave-js-sidecar:0.1.0",
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
@@ -6014,6 +6075,10 @@
           "status": "unverified"
         }
       }
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -6097,6 +6162,10 @@
           "status": "unverified"
         }
       }
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -6179,6 +6248,10 @@
           "status": "unverified"
         }
       }
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -6283,6 +6356,10 @@
           "status": "unverified"
         }
       }
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -6382,6 +6459,10 @@
           "status": "unverified"
         }
       }
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -6589,6 +6670,11 @@
     },
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   }
 ]

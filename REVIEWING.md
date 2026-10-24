@@ -9,6 +9,11 @@ closed `onboarding.mode` declaration. Widgets do not declare integration
 onboarding. Reviewers should reject custom step definitions because Core owns
 the setup journey and derives its screens from the canonical mode.
 
+Managed platform services must declare runtime contract v1 with a Core-allocated
+primary listener supplied through `PORT`. Their primary manifest port must not
+pin a host port. Widget entries instead declare `port_binding=not_applicable`
+because they execute inside Core's widget host.
+
 ## Review States
 
 Suggested issue labels:

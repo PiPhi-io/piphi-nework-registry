@@ -12,6 +12,7 @@ from typing import Any
 
 from marketplace_metadata import validate_marketplace_v2
 from onboarding_contract import require_manifest_onboarding
+from runtime_contract import expected_runtime_contract, require_manifest_runtime_contract
 from submission_utils import fetch_manifest_from_github, load_registry_entries, parse_repo_url
 from sync_registry_entry import serialize_updated_entry
 
@@ -107,6 +108,7 @@ def widget_entry(
         "name": str(source.get("name") or package_id).strip(),
         "version": version,
         "type": "widget",
+        "runtime_contract": expected_runtime_contract("widget"),
         "deployment_mode": "standalone",
         "trust_level": "official" if owner == "PiPhi-io" else "community",
         "risk_level": "low",
@@ -162,6 +164,7 @@ def integration_entry(source: dict[str, Any], repo_url: str, manifest_path: str,
     deployment = str(source.get("deployment_mode") or "standalone").strip()
     entry_type = "platform_service" if deployment == "sidecar" else "integration"
     onboarding = require_manifest_onboarding(source, entry_type=entry_type)
+    runtime_contract = require_manifest_runtime_contract(source, entry_type=entry_type)
     requirements = source.get("runtime_requirements") if isinstance(source.get("runtime_requirements"), list) else []
     high = {"privileged_container", "host_networking", "host_filesystem_mounts"}
     risk = "high" if any(item in high for item in requirements) else "moderate" if deployment == "sidecar" or requirements else "low"
@@ -184,6 +187,7 @@ def integration_entry(source: dict[str, Any], repo_url: str, manifest_path: str,
         "maintainer": source.get("maintainer") or {"name": owner, "website": repo_url},
         "marketplace": marketplace,
         "onboarding": onboarding,
+        "runtime_contract": runtime_contract,
     }
     if deployment == "sidecar":
         entry["deployment_mode"] = "sidecar"
