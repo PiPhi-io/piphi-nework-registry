@@ -6695,7 +6695,7 @@
   {
     "id": "piphi.service.wyze-camera-bridge",
     "name": "PiPhi Wyze Camera Bridge",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "type": "platform_service",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -6707,7 +6707,7 @@
     "owner": "PiPhi-io",
     "repo_name": "piphi-wyze-camera-service",
     "repo_url": "https://github.com/PiPhi-io/piphi-wyze-camera-service",
-    "ref": "v0.1.1",
+    "ref": "v0.1.2",
     "manifest_path": "manifest.json",
     "runtime_requirements": [
       "sidecar_runtime",
@@ -6793,8 +6793,8 @@
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
-        "publication_status": "draft",
-        "rollout_percent": 0,
+        "publication_status": "beta",
+        "rollout_percent": 1,
         "lifecycle_status": "active",
         "qualification": {
           "status": "unverified"
@@ -6810,6 +6810,6 @@
       "port_env": "PORT"
     },
     "deployment_mode": "sidecar",
-    "image": "ghcr.io/piphi-io/piphi-wyze-camera-service:0.1.1"
+    "image": "ghcr.io/piphi-io/piphi-wyze-camera-service:0.1.2"
   }
 ]
