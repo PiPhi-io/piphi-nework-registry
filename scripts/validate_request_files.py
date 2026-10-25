@@ -12,6 +12,7 @@ from typing import Any
 
 from submission_utils import fetch_manifest_from_github, load_registry_entries, parse_repo_url
 from onboarding_contract import validate_onboarding
+from runtime_contract import require_manifest_runtime_contract
 
 
 VALID_REQUEST_STATUSES = {"requested", "accepted", "rejected", "converted"}
@@ -162,6 +163,10 @@ def validate_proposed_entry(
                 f"{prefix}: fetched manifest {error}"
                 for error in validate_onboarding(manifest.get("onboarding"), entry_type=manifest_type)
             )
+            try:
+                require_manifest_runtime_contract(manifest, entry_type=manifest_type)
+            except ValueError as exc:
+                errors.append(f"{prefix}: fetched {exc}")
         except Exception as exc:
             errors.append(f"{prefix}: unable to fetch manifest from repository: {exc}")
     elif repo_url and manifest_path and skip_remote:

@@ -80,6 +80,7 @@ class RegistryBrandMetadataValidationTests(unittest.TestCase):
         entry = valid_entry()
         entry.update({"type": "platform_service", "deployment_mode": "sidecar"})
         entry["onboarding"] = {"mode": "service"}
+        entry["runtime_contract"] = {"version": 1, "port_binding": "core_allocated", "port_env": "PORT"}
         self.assertEqual(VALIDATOR.validate_entry(entry, 0), [])
 
     def test_accepts_zero_rollout_widget_with_pending_release_integrity(self) -> None:
@@ -91,6 +92,7 @@ class RegistryBrandMetadataValidationTests(unittest.TestCase):
             "artifact": {"release_asset": "piphi-webrtc-camera-widget-0.1.0.tgz", "integrity": None},
         })
         entry.pop("onboarding")
+        entry["runtime_contract"] = {"version": 1, "port_binding": "not_applicable"}
         entry["marketplace"] = {
             **valid_marketplace(),
             "category": "camera",
@@ -110,6 +112,7 @@ class RegistryBrandMetadataValidationTests(unittest.TestCase):
         entry = valid_entry()
         entry.update({"type": "widget", "platforms": ["web"], "artifact": {"release_asset": "widget.tgz", "integrity": None}})
         entry.pop("onboarding")
+        entry["runtime_contract"] = {"version": 1, "port_binding": "not_applicable"}
         entry["marketplace"]["compatibility"] = [{"capability": "camera", "host_protocol": "piphi.widget.host/1", "widget_sdk": ">=0.4.0"}]
         errors = VALIDATOR.validate_entry(entry, 0)
         self.assertTrue(any("artifact.integrity is required" in error for error in errors))
@@ -127,6 +130,7 @@ class RegistryBrandMetadataValidationTests(unittest.TestCase):
             },
         })
         entry.pop("onboarding")
+        entry["runtime_contract"] = {"version": 1, "port_binding": "not_applicable"}
         entry["marketplace"] = {
             **valid_marketplace(),
             "category": "other",

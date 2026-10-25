@@ -13,6 +13,7 @@ if str(SCRIPT_ROOT) not in sys.path:
 
 from marketplace_metadata import validate_marketplace_v2
 from onboarding_contract import validate_onboarding
+from runtime_contract import validate_runtime_contract
 
 VALID_ENTRY_TYPES = {"integration", "platform_service", "widget"}
 VALID_DEPLOYMENT_MODES = {"standalone", "sidecar"}
@@ -77,6 +78,8 @@ def validate_entry(entry: dict[str, Any], index: int) -> list[str]:
         errors.append(f"{prefix}: widget entries must use standalone deployment mode")
 
     for error in validate_onboarding(entry.get("onboarding"), entry_type=str(entry_type or "")):
+        errors.append(f"{prefix}: {error}")
+    for error in validate_runtime_contract(entry.get("runtime_contract"), entry_type=str(entry_type or "")):
         errors.append(f"{prefix}: {error}")
 
     platforms = entry.get("platforms")

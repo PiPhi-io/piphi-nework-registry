@@ -87,6 +87,10 @@
           "status": "unverified"
         }
       }
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -867,7 +871,7 @@
   {
     "id": "piphi.service.mqtt-broker",
     "name": "MQTT Broker",
-    "version": "0.1.1",
+    "version": "0.1.6",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -877,7 +881,8 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/mqtt-broker:0.1.1",
+    "image": "piphinetwork/mqtt-broker:0.1.6",
+    "ref": "v0.1.6",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/mqtt-sidecar.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-mqtt-broker",
@@ -956,12 +961,17 @@
     },
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
     "id": "piphi.service.rtl433-bridge",
     "name": "rtl_433 Radio Bridge",
-    "version": "0.1.4",
+    "version": "0.1.6",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -971,7 +981,8 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/rtl433-bridge:0.1.4",
+    "image": "piphinetwork/rtl433-bridge:0.1.6",
+    "ref": "v0.1.6",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-rtl433-bridge",
@@ -1074,12 +1085,17 @@
     },
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
     "id": "piphi.service.matter-sidecar",
     "name": "Matter Sidecar",
-    "version": "0.2.0-alpha.2",
+    "version": "0.2.0-alpha.3",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -1089,7 +1105,7 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/matter-sidecar:0.2.0-alpha.2",
+    "image": "piphinetwork/matter-sidecar:0.2.0-alpha.3",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/matter-sidecar.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-matter",
@@ -1183,15 +1199,20 @@
         }
       }
     },
-    "ref": "v0.2.0-alpha.2",
+    "ref": "v0.2.0-alpha.3",
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
     "id": "piphi.service.zigbee2mqtt-sidecar",
     "name": "Zigbee2MQTT Sidecar",
-    "version": "0.1.12",
+    "version": "0.1.14",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -1203,8 +1224,8 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/zigbee2mqtt-sidecar:0.1.12",
-    "ref": "v0.1.12",
+    "image": "piphinetwork/zigbee2mqtt-sidecar:0.1.14",
+    "ref": "v0.1.14",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi_network_zigbee2mqtt",
@@ -1322,6 +1343,11 @@
     },
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
@@ -1990,8 +2016,8 @@
     },
     "marketplace": {
       "metadata_version": 2,
-      "display_name": "Wired Sensors (I²C)",
-      "summary": "Read compatible environmental sensors connected through I²C or a supported USB bridge.",
+      "display_name": "Wired Sensors (I\u00b2C)",
+      "summary": "Read compatible environmental sensors connected through I\u00b2C or a supported USB bridge.",
       "category": "sensors",
       "device_types": [
         "environmental_sensor"
@@ -2552,6 +2578,10 @@
           "status": "unverified"
         }
       }
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -2869,6 +2899,10 @@
     "artifact": {
       "release_asset": "piphi-widget-calendar-agenda-0.1.0.tgz",
       "integrity": null
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -2950,12 +2984,16 @@
     "artifact": {
       "release_asset": "piphi-widget-vacuum-map-0.1.0.tgz",
       "integrity": null
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
     "id": "piphi-android-adb-sidecar",
     "name": "Android ADB sidecar",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -3056,15 +3094,21 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-android-adb-sidecar:0.1.0",
+    "image": "docker.io/piphinetwork/piphi-android-adb-sidecar:0.1.1",
+    "ref": "v0.1.1",
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
     "id": "piphi-ble-gateway-sidecar",
     "name": "BLE gateway sidecar",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -3156,15 +3200,21 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-ble-gateway-sidecar:0.1.0",
+    "image": "docker.io/piphinetwork/piphi-ble-gateway-sidecar:0.1.1",
+    "ref": "v0.1.1",
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
     "id": "piphi-modbus-rtu-sidecar",
     "name": "Modbus RTU sidecar",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -3259,9 +3309,15 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-modbus-rtu-sidecar:0.1.0",
+    "image": "docker.io/piphinetwork/piphi-modbus-rtu-sidecar:0.1.1",
+    "ref": "v0.1.1",
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
@@ -4244,7 +4300,7 @@
   {
     "id": "piphi-network-llm-vision",
     "name": "LLM vision sidecar",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -4350,9 +4406,15 @@
       "offline_support": "partial",
       "privacy_url": "https://github.com/PiPhi-io/piphi-network-llm-vision/blob/main/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-llm-vision:0.1.0",
+    "image": "docker.io/piphinetwork/piphi-network-llm-vision:0.1.1",
+    "ref": "v0.1.1",
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
@@ -5830,7 +5892,7 @@
   {
     "id": "piphi-zwave-js-sidecar",
     "name": "Z-Wave JS sidecar",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -5930,9 +5992,15 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-zwave-js-sidecar:0.1.0",
+    "image": "docker.io/piphinetwork/piphi-zwave-js-sidecar:0.1.1",
+    "ref": "v0.1.1",
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
@@ -6014,6 +6082,10 @@
           "status": "unverified"
         }
       }
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -6097,6 +6169,10 @@
           "status": "unverified"
         }
       }
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -6179,6 +6255,10 @@
           "status": "unverified"
         }
       }
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -6283,6 +6363,10 @@
           "status": "unverified"
         }
       }
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -6382,6 +6466,10 @@
           "status": "unverified"
         }
       }
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
     }
   },
   {
@@ -6489,7 +6577,7 @@
   {
     "id": "piphi.service.webrtc-sidecar",
     "name": "PiPhi WebRTC Sidecar",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -6499,7 +6587,8 @@
     "platforms": [
       "linux"
     ],
-    "image": "ghcr.io/piphi-io/piphi-webrtc-sidecar:0.2.0",
+    "image": "ghcr.io/piphi-io/piphi-webrtc-sidecar:0.2.1",
+    "ref": "v0.2.1",
     "owner": "PiPhi-io",
     "repo_name": "piphi-webrtc-sidecar",
     "repo_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar",
@@ -6589,6 +6678,11 @@
     },
     "onboarding": {
       "mode": "service"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   }
 ]

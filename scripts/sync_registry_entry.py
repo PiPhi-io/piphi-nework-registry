@@ -11,6 +11,7 @@ from typing import Any
 
 from submission_utils import fetch_manifest_from_github, load_registry_entries, parse_repo_url
 from onboarding_contract import require_manifest_onboarding
+from runtime_contract import expected_runtime_contract, require_manifest_runtime_contract
 
 
 SYNC_MODES = ("full_manifest", "version_only")
@@ -241,6 +242,12 @@ def main() -> int:
             manifest,
             entry_type=str(target_entry.get("type") or "integration"),
         )
+        entry_type = str(target_entry.get("type") or "integration")
+        manifest_runtime_contract = (
+            expected_runtime_contract("widget")
+            if entry_type == "widget"
+            else require_manifest_runtime_contract(manifest, entry_type=entry_type)
+        )
 
         if manifest_name:
             set_if_changed(target_entry, "name", manifest_name, updated_fields)
@@ -252,6 +259,8 @@ def main() -> int:
             set_if_changed(target_entry, "maintainer", manifest_maintainer, updated_fields)
         if manifest_onboarding is not None:
             set_if_changed(target_entry, "onboarding", manifest_onboarding, updated_fields)
+        if manifest_runtime_contract is not None:
+            set_if_changed(target_entry, "runtime_contract", manifest_runtime_contract, updated_fields)
 
     serialized = serialize_updated_entry(registry_text, registry_id, target_entry)
     changed = bool(updated_fields)

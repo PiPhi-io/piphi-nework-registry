@@ -21,6 +21,7 @@ from submission_utils import (
 )
 from marketplace_metadata import validate_marketplace_v2
 from onboarding_contract import validate_onboarding
+from runtime_contract import require_manifest_runtime_contract
 
 
 def validate_submission(fields: dict[str, str], registry_path: Path, token: str | None) -> tuple[list[str], list[str]]:
@@ -111,7 +112,10 @@ def validate_submission(fields: dict[str, str], registry_path: Path, token: str 
             f"Manifest {error}."
             for error in validate_onboarding(manifest_payload.get("onboarding"), entry_type=entry_type)
         )
-
+        try:
+            require_manifest_runtime_contract(manifest_payload, entry_type=entry_type)
+        except ValueError as exc:
+            errors.append(str(exc))
     if icon_url and not url_exists(icon_url):
         errors.append("Icon URL is not reachable.")
     if not icon_url:

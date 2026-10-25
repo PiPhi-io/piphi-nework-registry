@@ -10,6 +10,7 @@ from pathlib import Path
 from submission_utils import fetch_manifest_from_github, parse_issue_form, parse_repo_url, split_lines
 from marketplace_metadata import validate_marketplace_v2
 from onboarding_contract import require_manifest_onboarding
+from runtime_contract import require_manifest_runtime_contract
 
 
 def choose_default_icon_url(deployment_mode: str) -> str:
@@ -80,6 +81,7 @@ def build_entry(fields: dict[str, str], manifest: dict[str, object]) -> dict[str
     if marketplace_errors:
         raise ValueError("Manifest marketplace metadata is invalid: " + "; ".join(marketplace_errors))
     onboarding = require_manifest_onboarding(manifest, entry_type=entry_type)
+    runtime_contract = require_manifest_runtime_contract(manifest, entry_type=entry_type)
 
     manifest_path = fields.get("manifest_path", "").strip()
     entry: dict[str, object] = {
@@ -108,6 +110,8 @@ def build_entry(fields: dict[str, str], manifest: dict[str, object]) -> dict[str
     }
     if onboarding is not None:
         entry["onboarding"] = onboarding
+    if runtime_contract is not None:
+        entry["runtime_contract"] = runtime_contract
 
     manifest_image = str(manifest.get("image") or "").strip()
     if manifest_image:
