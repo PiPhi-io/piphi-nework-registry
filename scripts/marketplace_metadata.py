@@ -52,12 +52,19 @@ def validate_marketplace_v2(
     _validate_governance(marketplace, errors)
 
     list_fields = ("regions", "languages") if entry_type == "widget" else (
-        "device_types", "protocols", "regions", "languages", "discovery_methods"
+        "device_types", "protocols", "regions", "languages"
     )
     for field in list_fields:
         value = marketplace.get(field)
         if not isinstance(value, list) or not value or not all(_text(item) for item in value):
             errors.append(f"marketplace.{field} must be a non-empty list of strings")
+
+    if entry_type != "widget":
+        discovery_methods = marketplace.get("discovery_methods")
+        if not isinstance(discovery_methods, list) or not all(_text(item) for item in discovery_methods):
+            errors.append("marketplace.discovery_methods must be a list of strings")
+        elif entry_type != "platform_service" and not discovery_methods:
+            errors.append("marketplace.discovery_methods must be a non-empty list of strings")
 
     publisher = marketplace.get("publisher")
     if not isinstance(publisher, dict):

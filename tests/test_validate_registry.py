@@ -83,6 +83,20 @@ class RegistryBrandMetadataValidationTests(unittest.TestCase):
         entry["runtime_contract"] = {"version": 1, "port_binding": "core_allocated", "port_env": "PORT"}
         self.assertEqual(VALIDATOR.validate_entry(entry, 0), [])
 
+    def test_platform_services_may_have_no_discovery_methods(self) -> None:
+        entry = valid_entry()
+        entry.update({"type": "platform_service", "deployment_mode": "sidecar"})
+        entry["onboarding"] = {"mode": "service"}
+        entry["runtime_contract"] = {"version": 1, "port_binding": "core_allocated", "port_env": "PORT"}
+        entry["marketplace"]["discovery_methods"] = []
+        self.assertEqual(VALIDATOR.validate_entry(entry, 0), [])
+
+    def test_integrations_still_require_a_discovery_method(self) -> None:
+        entry = valid_entry()
+        entry["marketplace"]["discovery_methods"] = []
+        errors = VALIDATOR.validate_entry(entry, 0)
+        self.assertTrue(any("discovery_methods must be a non-empty list" in error for error in errors))
+
     def test_accepts_zero_rollout_widget_with_pending_release_integrity(self) -> None:
         entry = valid_entry()
         entry.update({
