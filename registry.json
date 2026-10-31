@@ -6837,7 +6837,7 @@
     "artifact": {
       "release_asset": "zigbee2mqtt-network-map-0.1.0.zip",
       "manifest_asset": "zigbee2mqtt-network-map-0.1.0.manifest.json",
-      "integrity": null
+      "integrity": "sha256:ed12d3c1ac462df629f49b14017183d8e6aa337c61a91085dd390dfeed38169f"
     },
     "tags": [
       "zigbee2mqtt-network-map",
