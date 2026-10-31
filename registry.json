@@ -6811,5 +6811,92 @@
     },
     "deployment_mode": "sidecar",
     "image": "ghcr.io/piphi-io/piphi-wyze-camera-service:0.1.2"
+  },
+  {
+    "id": "io.piphi.zigbee2mqtt-network-map",
+    "name": "Zigbee network map",
+    "version": "0.1.0",
+    "type": "widget",
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "not_applicable"
+    },
+    "deployment_mode": "standalone",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Interactive topology, device-role, route and link-quality map for Zigbee2MQTT networks.",
+    "rewardable": false,
+    "platforms": [
+      "web"
+    ],
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-widget-zigbee2mqtt-network-map",
+    "repo_url": "https://github.com/PiPhi-io/piphi-widget-zigbee2mqtt-network-map",
+    "ref": "v0.1.0",
+    "manifest_path": "package.source.json",
+    "artifact": {
+      "release_asset": "zigbee2mqtt-network-map-0.1.0.zip",
+      "manifest_asset": "zigbee2mqtt-network-map-0.1.0.manifest.json",
+      "integrity": "sha256:ed12d3c1ac462df629f49b14017183d8e6aa337c61a91085dd390dfeed38169f"
+    },
+    "tags": [
+      "zigbee2mqtt-network-map",
+      "dashboard",
+      "widget-sdk"
+    ],
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://github.com/PiPhi-io/piphi-widget-zigbee2mqtt-network-map",
+      "support_email": "support@piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Zigbee network map",
+      "summary": "See Zigbee2MQTT coordinators, routers, end devices, routes, and link quality in one interactive map.",
+      "category": "networking",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en",
+        "es",
+        "ar"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-widget-zigbee2mqtt-network-map/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "network_scan",
+          "label": "Manual Zigbee network scan",
+          "reason": "Requests a raw topology scan from the bound Zigbee2MQTT bridge only after the user activates Scan network.",
+          "required": false
+        }
+      ],
+      "compatibility": [
+        {
+          "capability": "zigbee_network_topology",
+          "host_protocol": "piphi.widget.host/1",
+          "widget_sdk": ">=0.8.1,<0.9"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-widget-zigbee2mqtt-network-map",
+      "support_url": "https://github.com/PiPhi-io/piphi-widget-zigbee2mqtt-network-map/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-widget-zigbee2mqtt-network-map/releases",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      }
+    }
   }
 ]
