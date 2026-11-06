@@ -302,7 +302,7 @@
   {
     "id": "awair-element-local-api",
     "name": "Awair Element (Local API)",
-    "version": "0.1.14",
+    "version": "0.1.13",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "low",
@@ -640,7 +640,7 @@
   {
     "id": "lg-thinq-connect-api",
     "name": "LG ThinQ Connect",
-    "version": "0.1.13",
+    "version": "0.1.14",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
