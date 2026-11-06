@@ -640,7 +640,7 @@
   {
     "id": "lg-thinq-connect-api",
     "name": "LG ThinQ Connect",
-    "version": "0.1.11",
+    "version": "0.1.12",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -718,8 +718,8 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/lg-thinq-connect:0.1.11",
-    "ref": "v0.1.11",
+    "image": "piphinetwork/lg-thinq-connect:0.1.12",
+    "ref": "v0.1.12",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/lg-thinq.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-thinqconnect",
