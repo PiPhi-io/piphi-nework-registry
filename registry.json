@@ -6475,7 +6475,7 @@
   {
     "id": "piphi-camera-stream",
     "name": "Piphi Camera Stream",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "type": "integration",
     "deployment_mode": "standalone",
     "trust_level": "official",
@@ -6485,8 +6485,8 @@
     "platforms": [
       "linux"
     ],
-    "image": "ghcr.io/piphi-io/piphi-camera-stream:0.1.4",
-    "ref": "v0.1.4",
+    "image": "ghcr.io/piphi-io/piphi-camera-stream:0.1.5",
+    "ref": "v0.1.5",
     "owner": "PiPhi-io",
     "repo_name": "piphi-camera-stream",
     "repo_url": "https://github.com/PiPhi-io/piphi-camera-stream",
