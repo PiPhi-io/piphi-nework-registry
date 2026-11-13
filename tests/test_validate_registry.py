@@ -170,6 +170,19 @@ class RegistryBrandMetadataValidationTests(unittest.TestCase):
         entry["brand_path"] = "src/brand"
         self.assertEqual(VALIDATOR.validate_entry(entry, 0), [])
 
+    def test_accepts_immutable_container_image_digest(self) -> None:
+        entry = valid_entry()
+        entry["image"] = "ghcr.io/piphi-io/demo:1.0.0"
+        entry["image_digest"] = "sha256:" + "a" * 64
+        self.assertEqual(VALIDATOR.validate_entry(entry, 0), [])
+
+    def test_rejects_invalid_container_image_digest(self) -> None:
+        entry = valid_entry()
+        entry["image"] = "ghcr.io/piphi-io/demo:1.0.0"
+        entry["image_digest"] = "sha256:not-a-digest"
+        errors = VALIDATOR.validate_entry(entry, 0)
+        self.assertTrue(any("image_digest" in error for error in errors))
+
     def test_rejects_brand_path_traversal(self) -> None:
         entry = valid_entry()
         entry["brand_path"] = "../private"
