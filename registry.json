@@ -5895,7 +5895,7 @@
   {
     "id": "piphi-zwave-js-sidecar",
     "name": "Z-Wave JS sidecar",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -5907,9 +5907,9 @@
     ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-zwave-js-sidecar",
-    "repo_url": "https://github.com/PiPhi-io/piphi-zwave-js-sidecar",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/services/piphi-zwave-js-sidecar/manifest.json",
     "tags": [
       "zwave",
       "zwave-js",
@@ -5923,6 +5923,7 @@
     ],
     "maintainer": {
       "name": "PiPhi Network",
+      "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
     "marketplace": {
@@ -5939,20 +5940,14 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-zwave-js-sidecar/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
         {
-          "id": "local_network",
-          "label": "Local network access",
-          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
-          "required": true
-        },
-        {
           "id": "device_access",
           "label": "Z-Wave controller device access",
-          "reason": "Uses the explicitly configured host device to communicate with supported hardware.",
+          "reason": "Uses only the configured stable serial controller path and persistent Z-Wave JS cache.",
           "required": true
         },
         {
@@ -5968,9 +5963,9 @@
           "model": "Controllers and devices supported by Z-Wave JS"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-zwave-js-sidecar",
-      "support_url": "https://github.com/PiPhi-io/piphi-zwave-js-sidecar/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-zwave-js-sidecar/releases",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-zwave-js-sidecar/v0.2.0/apps/services/piphi-zwave-js-sidecar",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-zwave-js-sidecar/v0.2.0",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -5995,8 +5990,9 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-zwave-js-sidecar:0.1.1",
-    "ref": "v0.1.1",
+    "image": "ghcr.io/piphi-io/piphi-zwave-js-sidecar:0.2.0",
+    "image_digest": "sha256:7d4a9fea1249340e9351ac0d2a225b78f1a598b1d7c7bb026e9d1395de77b018",
+    "ref": "apps/piphi-zwave-js-sidecar/v0.2.0",
     "onboarding": {
       "mode": "service"
     },
