@@ -6584,7 +6584,7 @@
   {
     "id": "piphi.service.webrtc-sidecar",
     "name": "PiPhi Camera Media Service",
-    "version": "0.3.4",
+    "version": "0.3.5",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -6594,12 +6594,13 @@
     "platforms": [
       "linux"
     ],
-    "image": "ghcr.io/piphi-io/piphi-webrtc-sidecar:0.3.4",
-    "ref": "v0.3.4",
+    "image": "ghcr.io/piphi-io/piphi-webrtc-sidecar:0.3.5",
+    "image_digest": "sha256:af949ffd8fb6d9f2876b354b10875cfd3de767a856500ce73f6b27dfec455564",
+    "ref": "apps/piphi.service.webrtc-sidecar/v0.3.5",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-webrtc-sidecar",
-    "repo_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/services/piphi-webrtc-sidecar/manifest.json",
     "tags": [
       "camera",
       "webrtc",
@@ -6646,7 +6647,7 @@
       "publisher": {
         "name": "PiPhi-io",
         "website_url": "https://github.com/PiPhi-io",
-        "support_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
@@ -6670,9 +6671,9 @@
         }
       ],
       "compatibility": [],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar",
-      "support_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-webrtc-sidecar/releases",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.webrtc-sidecar/v0.3.5/apps/services/piphi-webrtc-sidecar",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.webrtc-sidecar/v0.3.5",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
