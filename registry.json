@@ -871,7 +871,7 @@
   {
     "id": "piphi.service.mqtt-broker",
     "name": "MQTT Broker",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -881,13 +881,13 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/mqtt-broker:0.1.6",
-    "ref": "v0.1.6",
+    "image": "ghcr.io/piphi-io/mqtt-broker:0.1.7",
+    "ref": "apps/piphi.service.mqtt-broker/v0.1.7",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/mqtt-sidecar.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-mqtt-broker",
-    "repo_url": "https://github.com/PiPhi-io/piphi-mqtt-broker",
-    "manifest_path": "src/manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/services/piphi-mqtt-broker/src/manifest.json",
     "tags": [
       "mqtt",
       "broker",
@@ -927,7 +927,7 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-mqtt-broker/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
@@ -945,9 +945,9 @@
         }
       ],
       "compatibility": [],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-mqtt-broker",
-      "support_url": "https://github.com/PiPhi-io/piphi-mqtt-broker/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-mqtt-broker/releases",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.mqtt-broker/v0.1.7/apps/services/piphi-mqtt-broker",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.mqtt-broker/v0.1.7",
       "quality_tier": "bronze",
       "governance": {
         "schema_version": 1,
@@ -966,7 +966,8 @@
       "version": 1,
       "port_binding": "core_allocated",
       "port_env": "PORT"
-    }
+    },
+    "image_digest": "sha256:bfed8097d82d1df33f7d4dfec8f9372b6ef1c7e8b9eeafb8e51eab8cef9fe6f0"
   },
   {
     "id": "piphi.service.rtl433-bridge",
