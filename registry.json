@@ -1095,7 +1095,7 @@
   {
     "id": "piphi.service.matter-sidecar",
     "name": "Matter Sidecar",
-    "version": "0.2.0-alpha.3",
+    "version": "0.2.0-alpha.4",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -1105,12 +1105,13 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/matter-sidecar:0.2.0-alpha.3",
+    "image": "ghcr.io/piphi-io/matter-sidecar:0.2.0-alpha.4",
+    "image_digest": "sha256:e5f743d1b5c1a9f55bdd2b77126cd579969fcf1726206f478c81996711e5147a",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/matter-sidecar.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-matter",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-matter",
-    "manifest_path": "src/manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/services/piphi-network-matter/src/manifest.json",
     "tags": [
       "matter",
       "matter-js",
@@ -1155,7 +1156,7 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-network-matter/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
@@ -1185,9 +1186,9 @@
         }
       ],
       "compatibility": [],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-network-matter",
-      "support_url": "https://github.com/PiPhi-io/piphi-network-matter/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-network-matter/releases",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.matter-sidecar/v0.2.0-alpha.4/apps/services/piphi-network-matter",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.matter-sidecar/v0.2.0-alpha.4",
       "quality_tier": "bronze",
       "governance": {
         "schema_version": 1,
@@ -1199,7 +1200,7 @@
         }
       }
     },
-    "ref": "v0.2.0-alpha.3",
+    "ref": "apps/piphi.service.matter-sidecar/v0.2.0-alpha.4",
     "onboarding": {
       "mode": "service"
     },

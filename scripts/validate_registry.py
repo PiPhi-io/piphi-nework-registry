@@ -93,6 +93,11 @@ def validate_entry(entry: dict[str, Any], index: int) -> list[str]:
     image = entry.get("image")
     if image and not IMAGE_WITH_TAG.match(str(image)):
         errors.append(f"{prefix}: image must include an explicit tag, got {image!r}")
+    image_digest = str(entry.get("image_digest") or "").strip()
+    if image_digest and not ARTIFACT_DIGEST.fullmatch(image_digest):
+        errors.append(
+            f"{prefix}: image_digest must be sha256:<64 lowercase hex characters>"
+        )
 
     artifact = entry.get("artifact")
     if entry_type == "widget":
