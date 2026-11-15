@@ -3111,21 +3111,22 @@
   {
     "id": "piphi-ble-gateway-sidecar",
     "name": "BLE gateway sidecar",
-    "version": "0.1.1",
+    "version": "0.3.1",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
     "risk_level": "moderate",
-    "description": "Provide managed Bluetooth Low Energy observation transport for PiPhi integrations.",
+    "description": "Provide bounded, privacy-preserving BLE observations through Bleak on Linux BlueZ and Windows WinRT.",
     "rewardable": false,
     "platforms": [
-      "linux"
+      "linux",
+      "windows"
     ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-ble-gateway-sidecar",
-    "repo_url": "https://github.com/PiPhi-io/piphi-ble-gateway-sidecar",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/services/piphi-ble-gateway-sidecar/manifest.json",
     "tags": [
       "ble",
       "bluetooth",
@@ -3139,12 +3140,13 @@
     ],
     "maintainer": {
       "name": "PiPhi Network",
+      "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
       "display_name": "BLE gateway sidecar",
-      "summary": "Provide managed Bluetooth Low Energy observation transport for PiPhi integrations.",
+      "summary": "Cross-platform Bleak gateway for bounded, private BLE observations.",
       "category": "sensors",
       "regions": [
         "WW"
@@ -3155,14 +3157,14 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-ble-gateway-sidecar/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
         {
           "id": "device_access",
           "label": "Bluetooth adapter access",
-          "reason": "Uses the explicitly configured host device to communicate with supported hardware.",
+          "reason": "Uses a local Bluetooth radio through Bleak (BlueZ on Linux or WinRT on Windows).",
           "required": true
         },
         {
@@ -3178,10 +3180,10 @@
           "model": "BLE advertisers supported by parent integrations"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-ble-gateway-sidecar",
-      "support_url": "https://github.com/PiPhi-io/piphi-ble-gateway-sidecar/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-ble-gateway-sidecar/releases",
-      "quality_tier": "unrated",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-ble-gateway-sidecar/v0.3.1/apps/services/piphi-ble-gateway-sidecar",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-ble-gateway-sidecar/v0.3.1",
+      "quality_tier": "bronze",
       "governance": {
         "schema_version": 1,
         "publication_status": "draft",
@@ -3203,8 +3205,9 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-ble-gateway-sidecar:0.1.1",
-    "ref": "v0.1.1",
+    "image": "ghcr.io/piphi-io/piphi-ble-gateway-sidecar:0.3.1",
+    "image_digest": "sha256:3f19f56d5c01193517f88361448ad8ed20e003425f636344da3b65d4b959675c",
+    "ref": "apps/piphi-ble-gateway-sidecar/v0.3.1",
     "onboarding": {
       "mode": "service"
     },
@@ -3608,7 +3611,7 @@
   {
     "id": "piphi-network-bermuda-presence",
     "name": "Bermuda presence",
-    "version": "0.1.0",
+    "version": "0.2.1",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -3619,9 +3622,9 @@
     ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-bermuda-presence",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-bermuda-presence",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-bermuda-presence/manifest.json",
     "tags": [
       "ble",
       "presence",
@@ -3629,11 +3632,12 @@
       "sensors"
     ],
     "runtime_requirements": [
-      "usb_or_device_access",
-      "direct_hardware_access"
+      "local_network_access",
+      "secrets_or_api_tokens"
     ],
     "maintainer": {
       "name": "PiPhi Network",
+      "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
     "marketplace": {
@@ -3650,14 +3654,14 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-network-bermuda-presence/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
         {
           "id": "device_access",
           "label": "Bluetooth observation access",
-          "reason": "Uses the explicitly configured host device to communicate with supported hardware.",
+          "reason": "Consumes only explicitly selected opaque handles from the authenticated shared BLE gateway.",
           "required": true
         }
       ],
@@ -3667,10 +3671,10 @@
           "model": "Supported BLE beacons and personal devices"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-network-bermuda-presence",
-      "support_url": "https://github.com/PiPhi-io/piphi-network-bermuda-presence/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-network-bermuda-presence/releases",
-      "quality_tier": "unrated",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-bermuda-presence/v0.2.1/apps/integrations/piphi-network-bermuda-presence",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-bermuda-presence/v0.2.1",
+      "quality_tier": "bronze",
       "governance": {
         "schema_version": 1,
         "publication_status": "draft",
@@ -3688,14 +3692,16 @@
         "Bluetooth Low Energy"
       ],
       "discovery_methods": [
-        "BLE advertisements"
+        "Manual gateway selection"
       ],
       "connectivity": "local",
-      "offline_support": "full"
+      "offline_support": "partial"
     },
-    "image": "docker.io/piphinetwork/piphi-network-bermuda-presence:0.1.0",
+    "image": "ghcr.io/piphi-io/piphi-network-bermuda-presence:0.2.1",
+    "image_digest": "sha256:844bb88f9019d4acbf71c11c85fc8c7fe644a727f1270ac19b4cf2a2bcf8d147",
+    "ref": "apps/piphi-network-bermuda-presence/v0.2.1",
     "onboarding": {
-      "mode": "discovery"
+      "mode": "manual"
     }
   },
   {
@@ -4992,20 +4998,20 @@
   {
     "id": "piphi-network-passive-ble-monitor",
     "name": "Passive BLE monitor",
-    "version": "0.1.0",
+    "version": "0.3.1",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
-    "description": "Decode supported passive BLE advertisements into sensor observations.",
+    "description": "Consume consented BTHome v2 observations from the managed PiPhi BLE gateway.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-passive-ble-monitor",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-passive-ble-monitor",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-passive-ble-monitor/manifest.json",
     "tags": [
       "ble",
       "bluetooth",
@@ -5013,17 +5019,18 @@
       "passive"
     ],
     "runtime_requirements": [
-      "usb_or_device_access",
-      "direct_hardware_access"
+      "local_network_access",
+      "secrets_or_api_tokens"
     ],
     "maintainer": {
       "name": "PiPhi Network",
+      "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
       "display_name": "Passive BLE monitor",
-      "summary": "Decode supported passive BLE advertisements into sensor observations.",
+      "summary": "Read consented BTHome observations through the managed BLE gateway.",
       "category": "sensors",
       "regions": [
         "WW"
@@ -5034,14 +5041,14 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-network-passive-ble-monitor/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
         {
           "id": "device_access",
           "label": "Bluetooth observation access",
-          "reason": "Uses the explicitly configured host device to communicate with supported hardware.",
+          "reason": "Registers only the explicitly approved opaque device handle and BTHome service scope with the managed gateway.",
           "required": true
         }
       ],
@@ -5051,10 +5058,10 @@
           "model": "Devices using supported passive BLE advertisement formats"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-network-passive-ble-monitor",
-      "support_url": "https://github.com/PiPhi-io/piphi-network-passive-ble-monitor/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-network-passive-ble-monitor/releases",
-      "quality_tier": "unrated",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-passive-ble-monitor/v0.3.1/apps/integrations/piphi-network-passive-ble-monitor",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-passive-ble-monitor/v0.3.1",
+      "quality_tier": "bronze",
       "governance": {
         "schema_version": 1,
         "publication_status": "draft",
@@ -5073,14 +5080,16 @@
         "Bluetooth Low Energy"
       ],
       "discovery_methods": [
-        "BLE advertisements"
+        "Manual device handle selection"
       ],
       "connectivity": "local",
-      "offline_support": "full"
+      "offline_support": "partial"
     },
-    "image": "docker.io/piphinetwork/piphi-network-passive-ble-monitor:0.1.0",
+    "image": "ghcr.io/piphi-io/piphi-network-passive-ble-monitor:0.3.1",
+    "image_digest": "sha256:3267b10eb688c7450fd2d7eea9256ab2f52c9bb0d00283a5bdef983bfc559eec",
+    "ref": "apps/piphi-network-passive-ble-monitor/v0.3.1",
     "onboarding": {
-      "mode": "discovery"
+      "mode": "manual"
     }
   },
   {
