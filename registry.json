@@ -4205,35 +4205,39 @@
   {
     "id": "piphi-network-knx",
     "name": "KNX",
-    "version": "0.1.0",
+    "version": "0.2.1",
     "type": "integration",
     "trust_level": "official",
-    "risk_level": "low",
-    "description": "Expose project- and datapoint-negotiated KNX/IP building controls.",
+    "risk_level": "high",
+    "description": "Connect a KNX/IP tunnel and expose explicitly reviewed, typed datapoints.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-knx",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-knx",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-knx/manifest.json",
     "tags": [
       "knx",
       "building-automation",
       "lighting",
       "climate"
     ],
-    "runtime_requirements": [],
+    "runtime_requirements": [
+      "host_filesystem_mounts",
+      "secrets_or_api_tokens"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
-      "support_email": "support@piphi.io"
+      "support_email": "support@piphi.io",
+      "website": "https://piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
       "display_name": "KNX",
-      "summary": "Expose project- and datapoint-negotiated KNX/IP building controls.",
+      "summary": "Connect an exclusive KNX/IP tunnel and expose reviewed datapoints with safe typed reads and writes.",
       "category": "other",
       "regions": [
         "WW"
@@ -4258,7 +4262,7 @@
       "compatibility": [
         {
           "brand": "KNX Association",
-          "model": "KNX/IP projects and datapoints represented in the imported project"
+          "model": "KNXnet/IP tunnelling interfaces using configured DPT 1.001, 5.001, or 9.001 datapoints"
         }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-knx",
@@ -4277,24 +4281,23 @@
       "device_types": [
         "building control",
         "light",
-        "climate system",
-        "cover",
         "sensor"
       ],
       "protocols": [
         "KNX/IP"
       ],
       "discovery_methods": [
-        "project import",
+        "KNX/IP search",
         "manual"
       ],
       "connectivity": "local",
-      "offline_support": "full"
+      "offline_support": "none"
     },
-    "image": "docker.io/piphinetwork/piphi-network-knx:0.1.0",
+    "image": "ghcr.io/piphi-io/piphi-network-knx:0.2.1",
     "onboarding": {
       "mode": "manual"
-    }
+    },
+    "image_digest": "sha256:f3bdd55276fd5b4cbafe8360ae2c3bbada831a71f15c8c989b8c8e6545c9e1ce"
   },
   {
     "id": "piphi-network-llm-vision",
