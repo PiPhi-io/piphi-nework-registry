@@ -871,18 +871,18 @@
   {
     "id": "piphi.service.mqtt-broker",
     "name": "MQTT Broker",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
     "risk_level": "high",
-    "description": "Single-trust-domain MQTT broker with prefix ACLs, optional TLS, bounded resources, persistent storage, and authenticated health checks.",
+    "description": "Multi-workload MQTT broker with distinct principals, prefix-confined ACLs, TLS, bounded resources, audited credential lifecycle, and restore qualification.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
-    "image": "ghcr.io/piphi-io/mqtt-broker:0.2.0",
-    "ref": "apps/piphi.service.mqtt-broker/v0.2.0",
+    "image": "ghcr.io/piphi-io/mqtt-broker:0.3.0",
+    "ref": "apps/piphi.service.mqtt-broker/v0.3.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/mqtt-sidecar.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
@@ -907,7 +907,7 @@
     "marketplace": {
       "metadata_version": 2,
       "display_name": "MQTT Device Support",
-      "summary": "Provide a bounded MQTT broker for one trusted set of PiPhi apps and devices.",
+      "summary": "Provide isolated workload identities and bounded local MQTT messaging for PiPhi apps and devices.",
       "category": "networking",
       "device_types": [
         "platform_service"
@@ -947,9 +947,9 @@
         }
       ],
       "compatibility": [],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.mqtt-broker/v0.2.0/apps/services/piphi-mqtt-broker",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.mqtt-broker/v0.3.0/apps/services/piphi-mqtt-broker",
       "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.mqtt-broker/v0.2.0",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.mqtt-broker/v0.3.0",
       "quality_tier": "bronze",
       "governance": {
         "schema_version": 1,
@@ -969,7 +969,7 @@
       "port_binding": "core_allocated",
       "port_env": "PORT"
     },
-    "image_digest": "sha256:31accadd88b7ba8e9ba35d5b3b691fdd614dabc999ce29f823115ac5dc297a88"
+    "image_digest": "sha256:d6ecb991323eca32650e49600c18233f48a828900a120a8fab726951ad9608bb"
   },
   {
     "id": "piphi.service.rtl433-bridge",
