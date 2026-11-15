@@ -746,21 +746,21 @@
   {
     "id": "piphi-network-433mhz",
     "name": "PiPhi Network 433MHz Devices",
-    "version": "0.1.7",
+    "version": "0.2.0",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "high",
-    "description": "Generic rtl_433-based integration for supported sub-GHz sensors and devices.",
+    "description": "Experimental receive-only rtl_433 integration for a bounded weather, contact, battery, and signal sensor slice.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/piphi-network-433mhz:0.1.7",
+    "image": "ghcr.io/piphi-io/piphi-network-433mhz:0.2.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-433mhz",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-433mhz",
-    "manifest_path": "src/manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-433mhz/src/manifest.json",
     "tags": [
       "433mhz",
       "sub-ghz",
@@ -769,27 +769,26 @@
       "radio"
     ],
     "runtime_requirements": [
-      "sidecar_runtime",
-      "usb_or_device_access",
-      "direct_hardware_access",
-      "host_networking",
-      "privileged_container"
+      "sidecar_runtime"
     ],
     "maintainer": {
       "name": "PiPhi Network",
-      "website": "https://piphi.io"
+      "website": "https://piphi.io",
+      "support_email": "support@piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
-      "display_name": "433 MHz Sensors",
-      "summary": "Receive readings from rtl_433-compatible sensors and devices.",
+      "display_name": "433 MHz sensors (experimental)",
+      "summary": "Receive a bounded set of weather, contact, battery, and radio-signal readings from rtl_433.",
       "category": "sensors",
       "device_types": [
-        "sensor"
+        "weather sensor",
+        "contact sensor",
+        "battery sensor"
       ],
       "protocols": [
         "rtl_433",
-        "sub_ghz"
+        "sub-GHz receive-only radio"
       ],
       "regions": [
         "WW"
@@ -798,74 +797,62 @@
         "en"
       ],
       "discovery_methods": [
-        "radio"
+        "local radio reception"
       ],
       "connectivity": "local",
-      "offline_support": "full",
+      "offline_support": "partial",
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-network-433mhz/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
         {
           "id": "companion_service",
-          "label": "Background home service",
-          "reason": "Keeps a required local companion service running for connected devices.",
+          "label": "Background radio service",
+          "reason": "Uses the separately sandboxed rtl_433 bridge to receive decoded packets.",
           "required": true
         },
         {
-          "id": "usb_device",
-          "label": "USB or device access",
-          "reason": "Uses the selected USB adapter or hardware device.",
-          "required": true
-        },
-        {
-          "id": "direct_hardware",
-          "label": "Direct hardware access",
-          "reason": "Communicates with the selected adapter or sensor attached to this PiPhi.",
-          "required": true
-        },
-        {
-          "id": "host_network",
-          "label": "Host network access",
-          "reason": "Listens for or communicates with devices on your home network.",
-          "required": true
-        },
-        {
-          "id": "privileged_runtime",
-          "label": "Elevated local service",
-          "reason": "Uses elevated runtime access for the required radio or hardware connection.",
+          "id": "household_rf_data",
+          "label": "Household radio observations",
+          "reason": "Stores recent identifiers and readings for explicitly accepted local sensors.",
           "required": true
         }
       ],
       "compatibility": [
         {
-          "brand": "rtl_433",
-          "model": "Supported sensors and devices",
+          "brand": "Multi-vendor",
+          "model": "Explicitly accepted rtl_433 weather/contact sensors with stable identifiers; decoder support does not imply PiPhi qualification",
           "regions": [
             "WW"
           ]
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-network-433mhz",
-      "support_url": "https://github.com/PiPhi-io/piphi-network-433mhz/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-network-433mhz/releases",
-      "quality_tier": "bronze",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-433mhz/v0.2.0/apps/integrations/piphi-network-433mhz",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-433mhz/v0.2.0",
+      "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
-        "publication_status": "stable",
-        "rollout_percent": 100,
+        "publication_status": "beta",
+        "rollout_percent": 10,
         "lifecycle_status": "active",
         "qualification": {
           "status": "unverified"
         }
       }
     },
-    "ref": "v0.1.7",
+    "ref": "apps/piphi-network-433mhz/v0.2.0",
     "onboarding": {
       "mode": "discovery"
+    },
+    "image_digest": "sha256:8892d01530ec55bd4315cd2e9b1319c6982e5430ff13490117ce9bba1488bddd",
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
@@ -974,7 +961,7 @@
   {
     "id": "piphi.service.rtl433-bridge",
     "name": "rtl_433 Radio Bridge",
-    "version": "0.1.6",
+    "version": "0.2.0",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -984,13 +971,13 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/rtl433-bridge:0.1.6",
-    "ref": "v0.1.6",
+    "image": "ghcr.io/piphi-io/rtl433-bridge:0.2.0",
+    "ref": "apps/piphi.service.rtl433-bridge/v0.2.0",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/rtl433.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-rtl433-bridge",
-    "repo_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge",
-    "manifest_path": "src/manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/services/piphi-rtl433-bridge/src/manifest.json",
     "tags": [
       "rtl433",
       "433mhz",
@@ -1000,10 +987,8 @@
     ],
     "runtime_requirements": [
       "sidecar_runtime",
-      "host_networking",
       "usb_or_device_access",
-      "direct_hardware_access",
-      "privileged_container"
+      "direct_hardware_access"
     ],
     "maintainer": {
       "name": "PiPhi Network",
@@ -1012,15 +997,16 @@
     },
     "marketplace": {
       "metadata_version": 2,
-      "display_name": "433 MHz Radio Support",
-      "summary": "Provide the local radio bridge used by 433 MHz sensors.",
+      "display_name": "433 MHz radio bridge (experimental)",
+      "summary": "Receive rtl_433 packets through one explicitly mapped RTL-SDR receiver.",
       "category": "networking",
       "device_types": [
-        "platform_service"
+        "platform service",
+        "RTL-SDR receiver"
       ],
       "protocols": [
         "rtl_433",
-        "sub_ghz"
+        "sub-GHz receive-only radio"
       ],
       "regions": [
         "WW"
@@ -1029,57 +1015,53 @@
         "en"
       ],
       "discovery_methods": [
-        "radio"
+        "local radio reception"
       ],
       "connectivity": "local",
-      "offline_support": "full",
+      "offline_support": "partial",
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
         {
           "id": "companion_service",
-          "label": "Background home service",
-          "reason": "Keeps a required local companion service running for connected devices.",
-          "required": true
-        },
-        {
-          "id": "host_network",
-          "label": "Host network access",
-          "reason": "Listens for or communicates with devices on your home network.",
+          "label": "Background radio service",
+          "reason": "Keeps a bounded receive-only rtl_433 decoder running for the parent integration.",
           "required": true
         },
         {
           "id": "usb_device",
-          "label": "USB or device access",
-          "reason": "Uses the selected USB adapter or hardware device.",
+          "label": "Selected receiver access",
+          "reason": "Reads RTL-SDR USB nodes without privileged-container or host-network access; select the receiver by serial when several adapters are present.",
           "required": true
         },
         {
           "id": "direct_hardware",
-          "label": "Direct hardware access",
-          "reason": "Communicates with the selected adapter or sensor attached to this PiPhi.",
-          "required": true
-        },
-        {
-          "id": "privileged_runtime",
-          "label": "Elevated local service",
-          "reason": "Uses elevated runtime access for the required radio or hardware connection.",
+          "label": "Direct radio hardware access",
+          "reason": "Receives radio samples from the selected local RTL-SDR adapter.",
           "required": true
         }
       ],
-      "compatibility": [],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge",
-      "support_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-rtl433-bridge/releases",
-      "quality_tier": "bronze",
+      "compatibility": [
+        {
+          "brand": "RTL-SDR",
+          "model": "RTL-SDR-compatible USB receivers with host udev/group permissions",
+          "regions": [
+            "WW"
+          ]
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.rtl433-bridge/v0.2.0/apps/services/piphi-rtl433-bridge",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.rtl433-bridge/v0.2.0",
+      "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
-        "publication_status": "stable",
-        "rollout_percent": 100,
+        "publication_status": "beta",
+        "rollout_percent": 10,
         "lifecycle_status": "active",
         "qualification": {
           "status": "unverified"
@@ -1093,7 +1075,8 @@
       "version": 1,
       "port_binding": "core_allocated",
       "port_env": "PORT"
-    }
+    },
+    "image_digest": "sha256:67b533f181c8de8169545bc4cb656175b4705374c8c36dda975a9c9ca7a6a6f9"
   },
   {
     "id": "piphi.service.matter-sidecar",
@@ -2022,8 +2005,8 @@
     },
     "marketplace": {
       "metadata_version": 2,
-      "display_name": "Wired Sensors (I\u00b2C)",
-      "summary": "Read compatible environmental sensors connected through I\u00b2C or a supported USB bridge.",
+      "display_name": "Wired Sensors (I²C)",
+      "summary": "Read compatible environmental sensors connected through I²C or a supported USB bridge.",
       "category": "sensors",
       "device_types": [
         "environmental_sensor"
