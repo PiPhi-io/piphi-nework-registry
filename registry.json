@@ -1199,7 +1199,7 @@
   {
     "id": "piphi.service.zigbee2mqtt-sidecar",
     "name": "Zigbee2MQTT Sidecar",
-    "version": "0.1.19",
+    "version": "0.1.20",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -1211,8 +1211,8 @@
       "windows",
       "macos"
     ],
-    "image": "ghcr.io/piphi-io/zigbee2mqtt-sidecar:0.1.19",
-    "ref": "apps/piphi.service.zigbee2mqtt-sidecar/v0.1.19",
+    "image": "ghcr.io/piphi-io/zigbee2mqtt-sidecar:0.1.20",
+    "ref": "apps/piphi.service.zigbee2mqtt-sidecar/v0.1.20",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
@@ -1314,9 +1314,9 @@
         }
       ],
       "compatibility": [],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.zigbee2mqtt-sidecar/v0.1.19/apps/services/piphi-network-zigbee2mqtt",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.zigbee2mqtt-sidecar/v0.1.20/apps/services/piphi-network-zigbee2mqtt",
       "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.zigbee2mqtt-sidecar/v0.1.19",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.zigbee2mqtt-sidecar/v0.1.20",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -1336,7 +1336,7 @@
       "port_binding": "core_allocated",
       "port_env": "PORT"
     },
-    "image_digest": "sha256:be8b27b0e8960bb23c802abdf8411745d39f9340cf57258347cc5e8f68e5281b"
+    "image_digest": "sha256:dd78ab78594f302c9374eccbae09efe66bb9c39804f11c2deb6eaddd819561df"
   },
   {
     "id": "piphi-network-zigbee",
