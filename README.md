@@ -31,7 +31,8 @@ Settings > Actions > General > Workflow permissions.
 
 New and existing integrations or widgets can also use the `Propose Registry
 Entry` workflow. The PiPhi CLI prepares and verifies a portable proposal, then
-dispatches this workflow with an immutable `v<version>` source ref. The workflow
+dispatches this workflow with an immutable `v<version>` source ref, or an
+`apps/<package-id>/v<version>` ref for monorepo packages. The workflow
 normalizes integration manifests and Widget SDK package manifests, validates the
 entire registry, and opens a review pull request. It never merges the proposal
 or promotes draft governance automatically.

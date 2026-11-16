@@ -3162,9 +3162,8 @@
   {
     "id": "piphi-modbus-rtu-sidecar",
     "name": "Modbus RTU sidecar",
-    "version": "0.1.1",
+    "version": "0.8.0",
     "type": "platform_service",
-    "deployment_mode": "sidecar",
     "trust_level": "official",
     "risk_level": "moderate",
     "description": "Coordinate bounded Modbus RTU and ASCII requests over serial buses.",
@@ -3172,17 +3171,11 @@
     "platforms": [
       "linux"
     ],
-    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-modbus-rtu-sidecar",
-    "repo_url": "https://github.com/PiPhi-io/piphi-modbus-rtu-sidecar",
-    "manifest_path": "manifest.json",
-    "tags": [
-      "modbus",
-      "rtu",
-      "serial",
-      "sidecar"
-    ],
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "ref": "apps/piphi-modbus-rtu-sidecar/v0.8.0",
+    "manifest_path": "apps/services/piphi-modbus-rtu-sidecar/manifest.json",
     "runtime_requirements": [
       "sidecar_runtime",
       "usb_or_device_access",
@@ -3190,6 +3183,7 @@
     ],
     "maintainer": {
       "name": "PiPhi Network",
+      "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
     "marketplace": {
@@ -3213,7 +3207,7 @@
         {
           "id": "device_access",
           "label": "Serial device access",
-          "reason": "Uses the explicitly configured host device to communicate with supported hardware.",
+          "reason": "Uses a configured stable path from the restricted host /dev/serial/by-id device mount.",
           "required": true
         },
         {
@@ -3257,8 +3251,6 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-modbus-rtu-sidecar:0.1.1",
-    "ref": "v0.1.1",
     "onboarding": {
       "mode": "service"
     },
@@ -3266,7 +3258,17 @@
       "version": 1,
       "port_binding": "core_allocated",
       "port_env": "PORT"
-    }
+    },
+    "deployment_mode": "sidecar",
+    "image": "ghcr.io/piphi-io/piphi-modbus-rtu-sidecar:0.8.0",
+    "image_digest": "sha256:a11b80be793fe3f6b0651491fd7eb6901949a0e3f283fd657a15493650d3336c",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "tags": [
+      "modbus",
+      "rtu",
+      "serial",
+      "sidecar"
+    ]
   },
   {
     "id": "piphi-network-android-tv",
@@ -4576,35 +4578,30 @@
   {
     "id": "piphi-network-modbus",
     "name": "Modbus",
-    "version": "0.1.0",
+    "version": "0.10.0",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "low",
-    "description": "Monitor profile-described Modbus devices across TCP, TLS, RTU, and ASCII transports.",
+    "description": "Monitor and safely control profile-declared Modbus TCP, TLS, UDP, RTU-over-TCP, RTU, and ASCII points.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
-    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-modbus",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-modbus",
-    "manifest_path": "manifest.json",
-    "tags": [
-      "modbus",
-      "industrial",
-      "energy",
-      "local"
-    ],
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "ref": "apps/piphi-network-modbus/v0.10.0",
+    "manifest_path": "apps/integrations/piphi-network-modbus/manifest.json",
     "runtime_requirements": [],
     "maintainer": {
       "name": "PiPhi Network",
+      "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
       "display_name": "Modbus",
-      "summary": "Monitor profile-described Modbus devices across TCP, TLS, RTU, and ASCII transports.",
+      "summary": "Profile-driven Modbus network and serial monitoring with constrained controls.",
       "category": "other",
       "regions": [
         "WW"
@@ -4618,6 +4615,7 @@
         "support_url": "https://github.com/PiPhi-io/piphi-network-modbus/issues",
         "security_contact": "support@piphi.io"
       },
+      "access_declared": true,
       "access": [
         {
           "id": "local_network",
@@ -4629,7 +4627,7 @@
       "compatibility": [
         {
           "brand": "Multi-vendor",
-          "model": "Devices described by supported PiPhi Modbus profiles"
+          "model": "Local Modbus TCP or RTU device with reviewed point profiles"
         }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-modbus",
@@ -4646,28 +4644,31 @@
         }
       },
       "device_types": [
-        "industrial controller",
-        "energy meter",
-        "sensor",
-        "actuator"
+        "Modbus TCP server",
+        "Modbus RTU device"
       ],
       "protocols": [
         "Modbus TCP",
-        "Modbus TLS",
-        "Modbus RTU",
-        "Modbus ASCII"
+        "Modbus RTU"
       ],
       "discovery_methods": [
-        "profile configuration",
         "manual"
       ],
       "connectivity": "local",
-      "offline_support": "full"
+      "offline_support": "none"
     },
-    "image": "docker.io/piphinetwork/piphi-network-modbus:0.1.0",
     "onboarding": {
       "mode": "manual"
-    }
+    },
+    "image": "ghcr.io/piphi-io/piphi-network-modbus:0.10.0",
+    "image_digest": "sha256:92bba86bfe250a150274c8d1e3141ccd477211072b5d01234d577522437b22e3",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "tags": [
+      "modbus",
+      "industrial",
+      "energy",
+      "local"
+    ]
   },
   {
     "id": "piphi-network-nord-pool",

@@ -25,6 +25,10 @@ on:
         description: Optional Git ref, tag, or branch to fetch from. Defaults to the repo default branch.
         required: false
         type: string
+      image_digest:
+        description: Optional immutable OCI digest for the released image
+        required: false
+        type: string
       sync_mode:
         description: How much metadata to sync from the manifest
         required: true
@@ -87,6 +91,9 @@ jobs:
           fi
           if [[ -n "${{ inputs.ref }}" ]]; then
             args+=(--ref "${{ inputs.ref }}")
+          fi
+          if [[ -n "${{ inputs.image_digest }}" ]]; then
+            args+=(--image-digest "${{ inputs.image_digest }}")
           fi
           python scripts/sync_registry_entry.py "${args[@]}"
 

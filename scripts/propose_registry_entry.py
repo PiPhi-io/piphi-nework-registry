@@ -12,6 +12,7 @@ from typing import Any
 
 from marketplace_metadata import validate_marketplace_v2
 from onboarding_contract import require_manifest_onboarding
+from release_ref import require_release_ref
 from runtime_contract import expected_runtime_contract, require_manifest_runtime_contract
 from submission_utils import fetch_manifest_from_github, load_registry_entries, parse_repo_url
 from sync_registry_entry import serialize_updated_entry
@@ -28,6 +29,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--manifest-path", required=True)
     parser.add_argument("--ref", required=True)
     parser.add_argument("--artifact-integrity", default="")
+    parser.add_argument("--image-digest", default="")
     parser.add_argument("--registry-path", default="registry.json")
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args()
@@ -95,8 +97,7 @@ def widget_entry(
     version = str(identity.get("version") or "").strip()
     registry_id = f"{publisher_id}.{package_id}"
     owner, repo_name = parse_repo_url(repo_url)
-    if ref != f"v{version}":
-        raise ValueError(f"Release ref '{ref}' must match widget version v{version}.")
+    require_release_ref(ref, registry_id=registry_id, version=version)
     if integrity and not SHA256.fullmatch(integrity):
         raise ValueError("Widget artifact integrity must be sha256:<64 lowercase hex characters>.")
     marketplace = widget_marketplace(source, repo_url)
@@ -151,21 +152,58 @@ def integration_image(source: dict[str, Any]) -> str:
     return ""
 
 
-def integration_entry(source: dict[str, Any], repo_url: str, manifest_path: str, ref: str) -> dict[str, Any]:
+def integration_runtime_requirements(
+    source: dict[str, Any], *, deployment: str
+) -> list[str]:
+    explicit = source.get("runtime_requirements")
+    if isinstance(explicit, list):
+        return [str(item).strip() for item in explicit if str(item).strip()]
+
+    requirements: list[str] = []
+    if deployment == "sidecar":
+        requirements.append("sidecar_runtime")
+    marketplace = (
+        source.get("marketplace")
+        if isinstance(source.get("marketplace"), dict)
+        else {}
+    )
+    access = marketplace.get("access") if isinstance(marketplace.get("access"), list) else []
+    if any(
+        isinstance(item, dict) and item.get("id") == "device_access"
+        for item in access
+    ):
+        requirements.extend(("usb_or_device_access", "direct_hardware_access"))
+    return requirements
+
+
+def integration_entry(
+    source: dict[str, Any],
+    repo_url: str,
+    manifest_path: str,
+    ref: str,
+    image_digest: str = "",
+) -> dict[str, Any]:
     registry_id = str(source.get("id") or "").strip()
     version = str(source.get("version") or "").strip()
-    if ref != f"v{version}":
-        raise ValueError(f"Release ref '{ref}' must match integration version v{version}.")
+    require_release_ref(ref, registry_id=registry_id, version=version)
+    if image_digest and not SHA256.fullmatch(image_digest):
+        raise ValueError("Image digest must be sha256:<64 lowercase hex characters>.")
     marketplace = source.get("marketplace")
     errors = validate_marketplace_v2(marketplace, entry_type="integration")
     if errors:
         raise ValueError("Integration marketplace metadata is invalid: " + "; ".join(errors))
     owner, repo_name = parse_repo_url(repo_url)
-    deployment = str(source.get("deployment_mode") or "standalone").strip()
+    onboarding_source = (
+        source.get("onboarding") if isinstance(source.get("onboarding"), dict) else {}
+    )
+    inferred_deployment = (
+        "sidecar" if onboarding_source.get("mode") == "service" else "standalone"
+    )
+    deployment = str(source.get("deployment_mode") or inferred_deployment).strip()
     entry_type = "platform_service" if deployment == "sidecar" else "integration"
     onboarding = require_manifest_onboarding(source, entry_type=entry_type)
     runtime_contract = require_manifest_runtime_contract(source, entry_type=entry_type)
-    requirements = source.get("runtime_requirements") if isinstance(source.get("runtime_requirements"), list) else []
+    requirements = integration_runtime_requirements(source, deployment=deployment)
     high = {"privileged_container", "host_networking", "host_filesystem_mounts"}
     risk = "high" if any(item in high for item in requirements) else "moderate" if deployment == "sidecar" or requirements else "low"
     entry: dict[str, Any] = {
@@ -187,22 +225,31 @@ def integration_entry(source: dict[str, Any], repo_url: str, manifest_path: str,
         "maintainer": source.get("maintainer") or {"name": owner, "website": repo_url},
         "marketplace": marketplace,
         "onboarding": onboarding,
-        "runtime_contract": runtime_contract,
     }
+    if runtime_contract is not None:
+        entry["runtime_contract"] = runtime_contract
     if deployment == "sidecar":
         entry["deployment_mode"] = "sidecar"
     image = integration_image(source)
     if image:
         entry["image"] = image
+    if image_digest:
+        entry["image_digest"] = image_digest
     return entry
 
 
 def preserve_reviewed_fields(entry: dict[str, Any], existing: dict[str, Any] | None) -> dict[str, Any]:
     if not existing:
         return entry
-    for field in ("trust_level", "rewardable", "icon_url", "banner_url"):
+    for field in ("trust_level", "rewardable", "icon_url", "banner_url", "tags"):
         if field in existing:
             entry[field] = existing[field]
+    old_maintainer = existing.get("maintainer")
+    new_maintainer = entry.get("maintainer")
+    if isinstance(old_maintainer, dict) and isinstance(new_maintainer, dict):
+        for field in ("support_email",):
+            if field in old_maintainer and field not in new_maintainer:
+                new_maintainer[field] = old_maintainer[field]
     old_marketplace = existing.get("marketplace")
     new_marketplace = entry.get("marketplace")
     if isinstance(old_marketplace, dict) and isinstance(new_marketplace, dict):
@@ -244,7 +291,13 @@ def main() -> int:
     entry = (
         widget_entry(source, args.repo_url, args.manifest_path, args.ref, args.artifact_integrity)
         if args.entry_type == "widget"
-        else integration_entry(source, args.repo_url, args.manifest_path, args.ref)
+        else integration_entry(
+            source,
+            args.repo_url,
+            args.manifest_path,
+            args.ref,
+            args.image_digest,
+        )
     )
     if entry["id"] != args.registry_id:
         raise ValueError(f"Resolved manifest id '{entry['id']}' does not match requested id '{args.registry_id}'.")

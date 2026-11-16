@@ -5,16 +5,19 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 from pathlib import Path
 from typing import Any
 
 from submission_utils import fetch_manifest_from_github, load_registry_entries, parse_repo_url
 from onboarding_contract import require_manifest_onboarding
+from release_ref import require_release_ref
 from runtime_contract import expected_runtime_contract, require_manifest_runtime_contract
 
 
 SYNC_MODES = ("full_manifest", "version_only")
+SHA256 = re.compile(r"^sha256:[a-f0-9]{64}$")
 
 
 def parse_args() -> argparse.Namespace:
@@ -44,6 +47,11 @@ def parse_args() -> argparse.Namespace:
         choices=SYNC_MODES,
         default="full_manifest",
         help="Whether to sync only the version or also safe manifest-backed metadata.",
+    )
+    parser.add_argument(
+        "--image-digest",
+        default=None,
+        help="Optional immutable OCI digest for the released image.",
     )
     parser.add_argument(
         "--registry-path",
@@ -225,13 +233,14 @@ def main() -> int:
 
     requested_ref = str(args.ref or "").strip()
     if requested_ref:
-        expected_ref = f"v{version}"
-        if requested_ref != expected_ref:
-            raise ValueError(
-                f"Release ref '{requested_ref}' does not match manifest version {version}; "
-                f"expected '{expected_ref}'."
-            )
+        require_release_ref(requested_ref, registry_id=registry_id, version=version)
         set_if_changed(target_entry, "ref", requested_ref, updated_fields)
+
+    image_digest = str(args.image_digest or "").strip()
+    if image_digest:
+        if not SHA256.fullmatch(image_digest):
+            raise ValueError("Image digest must be sha256:<64 lowercase hex characters>.")
+        set_if_changed(target_entry, "image_digest", image_digest, updated_fields)
 
     if args.sync_mode == "full_manifest":
         manifest_name = str(manifest.get("name") or "").strip()
