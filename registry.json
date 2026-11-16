@@ -2953,12 +2953,12 @@
   {
     "id": "piphi-android-adb-sidecar",
     "name": "Android ADB sidecar",
-    "version": "0.2.0-rc.1",
+    "version": "0.3.0-rc.1",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
     "risk_level": "moderate",
-    "description": "Draft ADB sidecar scaffold; no device transport is implemented.",
+    "description": "Provide bounded, authenticated network ADB transport for parent integrations.",
     "rewardable": false,
     "platforms": [
       "linux"
@@ -2972,10 +2972,11 @@
       "adb",
       "android",
       "sidecar",
-      "scaffold"
+      "network"
     ],
     "runtime_requirements": [
-      "sidecar_runtime"
+      "sidecar_runtime",
+      "local_network_access"
     ],
     "maintainer": {
       "name": "PiPhi Network",
@@ -2985,7 +2986,7 @@
     "marketplace": {
       "metadata_version": 2,
       "display_name": "Android ADB sidecar",
-      "summary": "Draft scaffold for a future managed ADB transport; no device I/O is implemented.",
+      "summary": "Bounded network ADB transport for explicitly configured and authorized Android targets.",
       "category": "networking",
       "regions": [
         "WW"
@@ -2996,10 +2997,16 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-android-adb-sidecar/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
+        {
+          "id": "local_network",
+          "label": "Local network access",
+          "reason": "Connects only to the explicitly configured Android ADB endpoint on the local network.",
+          "required": true
+        },
         {
           "id": "sidecar_runtime",
           "label": "Managed sidecar runtime",
@@ -3009,13 +3016,13 @@
       ],
       "compatibility": [
         {
-          "brand": "Android (planned)",
-          "model": "No devices supported by this draft scaffold"
+          "brand": "Android",
+          "model": "Manually configured devices with authorized ADB-over-network access"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-android-adb-sidecar/v0.2.0-rc.1/apps/services/piphi-android-adb-sidecar",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-android-adb-sidecar/v0.3.0-rc.1/apps/services/piphi-android-adb-sidecar",
       "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-android-adb-sidecar/v0.2.0-rc.1",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-android-adb-sidecar/v0.3.0-rc.1",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -3030,17 +3037,17 @@
         "Android platform service"
       ],
       "protocols": [
-        "ADB (planned)"
+        "Android Debug Bridge over TCP"
       ],
       "discovery_methods": [
         "manual configuration only"
       ],
       "connectivity": "local",
-      "offline_support": "none"
+      "offline_support": "partial"
     },
-    "image": "ghcr.io/piphi-io/piphi-android-adb-sidecar:0.2.0-rc.1",
-    "image_digest": "sha256:9c1edfe72c235746c3a08e79a4e65d02ede06c177845a18f797bdbcadf3de3fc",
-    "ref": "apps/piphi-android-adb-sidecar/v0.2.0-rc.1",
+    "image": "ghcr.io/piphi-io/piphi-android-adb-sidecar:0.3.0-rc.1",
+    "image_digest": "sha256:b6893bce091e73c28d71c7c6e49b85f2d311446b94e29503cba637d840ef7594",
+    "ref": "apps/piphi-android-adb-sidecar/v0.3.0-rc.1",
     "onboarding": {
       "mode": "service"
     },
