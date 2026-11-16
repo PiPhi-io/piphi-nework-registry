@@ -23,8 +23,12 @@ on:
         required: true
         type: string
       ref:
-        description: Immutable v<version> release tag
+        description: Immutable v<version> or apps/<id>/v<version> release tag
         required: true
+        type: string
+      image_digest:
+        description: Immutable OCI image digest for an integration
+        required: false
         type: string
       artifact_integrity:
         description: Optional widget archive SHA-256 integrity
@@ -58,6 +62,7 @@ jobs:
           SOURCE_REPO_URL: ${{ inputs.repo_url }}
           SOURCE_MANIFEST_PATH: ${{ inputs.manifest_path }}
           SOURCE_REF: ${{ inputs.ref }}
+          IMAGE_DIGEST: ${{ inputs.image_digest }}
           ARTIFACT_INTEGRITY: ${{ inputs.artifact_integrity }}
         run: |
           python scripts/propose_registry_entry.py \
@@ -66,6 +71,7 @@ jobs:
             --repo-url "$SOURCE_REPO_URL" \
             --manifest-path "$SOURCE_MANIFEST_PATH" \
             --ref "$SOURCE_REF" \
+            --image-digest "$IMAGE_DIGEST" \
             --artifact-integrity "$ARTIFACT_INTEGRITY"
       - name: Validate complete registry
         run: |
