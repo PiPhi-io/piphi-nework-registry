@@ -5051,16 +5051,16 @@
   {
     "id": "piphi-network-reolink",
     "name": "Reolink cameras",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
-    "description": "Discover and monitor local Reolink cameras and NVR channels.",
+    "description": "Securely verify and monitor local powered Reolink cameras and NVR channels.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
-    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/piphi-network-reolink.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-network-reolink",
     "repo_url": "https://github.com/PiPhi-io/piphi-network-reolink",
@@ -5077,12 +5077,13 @@
     ],
     "maintainer": {
       "name": "PiPhi Network",
-      "support_email": "support@piphi.io"
+      "support_email": "support@piphi.io",
+      "website": "https://piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
       "display_name": "Reolink cameras",
-      "summary": "Connect local Reolink cameras and NVR channels for monitoring and automations.",
+      "summary": "Verify and monitor local powered Reolink cameras and NVR channels.",
       "category": "camera",
       "regions": [
         "WW"
@@ -5113,7 +5114,7 @@
       "compatibility": [
         {
           "brand": "Reolink",
-          "model": "Cameras, video doorbells, and NVRs supported by reolink_aio with local access enabled"
+          "model": "Powered cameras, video doorbells, and NVRs with local API access and stable hardware identity"
         }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-reolink",
@@ -5144,10 +5145,12 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "ghcr.io/piphi-io/piphi-network-reolink:0.1.0",
+    "image": "ghcr.io/piphi-io/piphi-network-reolink:0.2.0",
     "onboarding": {
       "mode": "manual"
-    }
+    },
+    "image_digest": "sha256:ff5e2dcdfe1742f4590e97a984c8a83dfd99b969fb5a469acbcb8add34e66240",
+    "ref": "v0.2.0"
   },
   {
     "id": "piphi-network-sonoff-lan",
