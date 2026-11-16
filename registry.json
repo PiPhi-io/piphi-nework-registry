@@ -205,7 +205,7 @@
   {
     "id": "atmotube-pro-ble",
     "name": "Atmotube Pro (BLE)",
-    "version": "0.1.5",
+    "version": "0.1.6-beta.1",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -6488,12 +6488,13 @@
     "platforms": [
       "linux"
     ],
-    "image": "ghcr.io/piphi-io/piphi-camera-stream:0.1.5",
-    "ref": "v0.1.5",
+    "image": "ghcr.io/piphi-io/piphi-camera-stream:0.1.6-beta.1",
+    "image_digest": "sha256:1fede16ef027454960ae037d932bd1df29cfa5e5b0474830fe69113fe7074a34",
+    "ref": "6399a327d0ca54ad78ec131823b81db6bf6d6a64",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-camera-stream",
-    "repo_url": "https://github.com/PiPhi-io/piphi-camera-stream",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-camera-stream/manifest.json",
     "tags": [
       "camera",
       "rtsp",
@@ -6537,7 +6538,7 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-camera-stream/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
@@ -6560,9 +6561,9 @@
           "model": "RTSP or RTSPS camera/NVR stream"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-camera-stream",
-      "support_url": "https://github.com/PiPhi-io/piphi-camera-stream/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-camera-stream/releases",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/6399a327d0ca54ad78ec131823b81db6bf6d6a64/apps/integrations/piphi-camera-stream",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/commits/6399a327d0ca54ad78ec131823b81db6bf6d6a64/apps/integrations/piphi-camera-stream",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -6586,7 +6587,7 @@
   {
     "id": "piphi.service.webrtc-sidecar",
     "name": "PiPhi Camera Media Service",
-    "version": "0.3.5",
+    "version": "0.3.6-beta.1",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -6596,9 +6597,9 @@
     "platforms": [
       "linux"
     ],
-    "image": "ghcr.io/piphi-io/piphi-webrtc-sidecar:0.3.5",
-    "image_digest": "sha256:af949ffd8fb6d9f2876b354b10875cfd3de767a856500ce73f6b27dfec455564",
-    "ref": "apps/piphi.service.webrtc-sidecar/v0.3.5",
+    "image": "ghcr.io/piphi-io/piphi-webrtc-sidecar:0.3.6-beta.1",
+    "image_digest": "sha256:3c4dfdd4a83175e124cf8d40669f46bd4f305edc68268ad2d2123a0c7655ae9e",
+    "ref": "6399a327d0ca54ad78ec131823b81db6bf6d6a64",
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
@@ -6673,9 +6674,9 @@
         }
       ],
       "compatibility": [],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.webrtc-sidecar/v0.3.5/apps/services/piphi-webrtc-sidecar",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/6399a327d0ca54ad78ec131823b81db6bf6d6a64/apps/services/piphi-webrtc-sidecar",
       "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.webrtc-sidecar/v0.3.5",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/commits/6399a327d0ca54ad78ec131823b81db6bf6d6a64/apps/services/piphi-webrtc-sidecar",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -6699,7 +6700,7 @@
   {
     "id": "piphi.service.wyze-camera-bridge",
     "name": "PiPhi Wyze Camera Bridge",
-    "version": "0.1.3",
+    "version": "0.1.4-beta.1",
     "type": "platform_service",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -6711,7 +6712,7 @@
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
-    "ref": "apps/piphi.service.wyze-camera-bridge/v0.1.3",
+    "ref": "6399a327d0ca54ad78ec131823b81db6bf6d6a64",
     "manifest_path": "apps/services/piphi-wyze-camera-service/manifest.json",
     "runtime_requirements": [
       "sidecar_runtime",
@@ -6790,10 +6791,10 @@
           "model": "Cameras supported by docker-wyze-bridge v2.10.3"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.wyze-camera-bridge/v0.1.3/apps/services/piphi-wyze-camera-service",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/6399a327d0ca54ad78ec131823b81db6bf6d6a64/apps/services/piphi-wyze-camera-service",
       "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.wyze-camera-bridge/v0.1.3",
-      "privacy_url": "https://github.com/PiPhi-io/piphi-apps/blob/apps/piphi.service.wyze-camera-bridge/v0.1.3/apps/services/piphi-wyze-camera-service/PRIVACY.md",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/commits/6399a327d0ca54ad78ec131823b81db6bf6d6a64/apps/services/piphi-wyze-camera-service",
+      "privacy_url": "https://github.com/PiPhi-io/piphi-apps/blob/6399a327d0ca54ad78ec131823b81db6bf6d6a64/apps/services/piphi-wyze-camera-service/PRIVACY.md",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -6814,8 +6815,8 @@
       "port_env": "PORT"
     },
     "deployment_mode": "sidecar",
-    "image": "ghcr.io/piphi-io/piphi-wyze-camera-service:0.1.3",
-    "image_digest": "sha256:0c8fe7212f5ef8381bd624d46e855b232db5f4bafd7bfef5b426e814ce8ebe6c"
+    "image": "ghcr.io/piphi-io/piphi-wyze-camera-service:0.1.4-beta.1",
+    "image_digest": "sha256:6531b148aee3b8d68580ded0dc8f80484ea88b75dc6c96e0a8bf1d47c6881dd2"
   },
   {
     "id": "io.piphi.zigbee2mqtt-network-map",
