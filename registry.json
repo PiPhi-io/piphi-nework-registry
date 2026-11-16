@@ -3384,32 +3384,30 @@
     "version": "0.1.0",
     "type": "integration",
     "trust_level": "official",
-    "risk_level": "low",
-    "description": "Discover and monitor capability-negotiated BACnet objects and properties.",
+    "risk_level": "high",
+    "description": "Read-only BACnet/IP monitoring for an explicitly configured Kaiterra SenseEdge Mini.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
-    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-bacnet",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-bacnet",
-    "manifest_path": "manifest.json",
-    "tags": [
-      "bacnet",
-      "building-automation",
-      "hvac",
-      "local"
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "ref": "apps/piphi-network-bacnet/v0.1.0",
+    "manifest_path": "apps/integrations/piphi-network-bacnet/manifest.json",
+    "runtime_requirements": [
+      "host_networking",
+      "host_filesystem_mounts"
     ],
-    "runtime_requirements": [],
     "maintainer": {
       "name": "PiPhi Network",
+      "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
       "display_name": "BACnet",
-      "summary": "Discover and monitor capability-negotiated BACnet objects and properties.",
+      "summary": "Read-only indoor-air-quality telemetry from a Kaiterra SenseEdge Mini over BACnet/IP.",
       "category": "other",
       "regions": [
         "WW"
@@ -3427,14 +3425,14 @@
         {
           "id": "local_network",
           "label": "Local network access",
-          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "reason": "Communicates with one explicitly configured SenseEdge Mini on the local network.",
           "required": true
         }
       ],
       "compatibility": [
         {
-          "brand": "Multi-vendor",
-          "model": "BACnet/IP devices exposing supported objects and properties"
+          "brand": "Kaiterra",
+          "model": "SenseEdge Mini SE-200 and SE-200P with BACnet firmware 2.1.1 or later"
         }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-bacnet",
@@ -3451,24 +3449,29 @@
         }
       },
       "device_types": [
-        "building automation controller",
-        "HVAC controller",
-        "sensor"
+        "air quality sensor"
       ],
       "protocols": [
         "BACnet/IP"
       ],
       "discovery_methods": [
-        "BACnet Who-Is/I-Am",
-        "manual"
+        "manual explicit target"
       ],
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-bacnet:0.1.0",
     "onboarding": {
-      "mode": "discovery"
-    }
+      "mode": "manual"
+    },
+    "image": "ghcr.io/piphi-io/piphi-network-bacnet:0.1.0",
+    "image_digest": "sha256:5eb31340901bbacda2ec15f3b6d8e4b9bca9a750bccb1972af08bc498db8b33e",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "tags": [
+      "bacnet",
+      "air-quality",
+      "kaiterra",
+      "local"
+    ]
   },
   {
     "id": "piphi-network-bambu-lab",
