@@ -4765,37 +4765,30 @@
   {
     "id": "piphi-network-octopus-energy",
     "name": "Octopus Energy",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "integration",
     "trust_level": "official",
-    "risk_level": "moderate",
-    "description": "Monitor Octopus Energy accounts, meters, tariffs, consumption, and prices.",
+    "risk_level": "low",
+    "description": "Monitor current and upcoming Octopus Energy electricity tariff rates.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
-    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-octopus-energy",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-octopus-energy",
-    "manifest_path": "manifest.json",
-    "tags": [
-      "octopus-energy",
-      "energy",
-      "tariff",
-      "cloud"
-    ],
-    "runtime_requirements": [
-      "secrets_or_api_tokens"
-    ],
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "ref": "apps/piphi-network-octopus-energy/v0.1.1",
+    "manifest_path": "apps/integrations/piphi-network-octopus-energy/manifest.json",
+    "runtime_requirements": [],
     "maintainer": {
       "name": "PiPhi Network",
+      "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
       "display_name": "Octopus Energy",
-      "summary": "Monitor Octopus Energy accounts, meters, tariffs, consumption, and prices.",
+      "summary": "Monitor current and upcoming Octopus Energy electricity tariff rates.",
       "category": "energy",
       "regions": [
         "GB"
@@ -4809,18 +4802,12 @@
         "support_url": "https://github.com/PiPhi-io/piphi-network-octopus-energy/issues",
         "security_contact": "support@piphi.io"
       },
-      "access": [
-        {
-          "id": "credentials",
-          "label": "Account or device credentials",
-          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
-          "required": true
-        }
-      ],
+      "access_declared": true,
+      "access": [],
       "compatibility": [
         {
           "brand": "Octopus Energy",
-          "model": "Supported accounts, meters, and tariffs"
+          "model": "Public electricity tariffs"
         }
       ],
       "documentation_url": "https://github.com/PiPhi-io/piphi-network-octopus-energy",
@@ -4837,26 +4824,31 @@
         }
       },
       "device_types": [
-        "electricity meter",
-        "gas meter",
-        "energy tariff",
-        "account"
+        "electricity tariff"
       ],
       "protocols": [
         "Octopus Energy API",
         "HTTPS"
       ],
       "discovery_methods": [
-        "account and meter discovery"
+        "product and tariff code configuration"
       ],
       "connectivity": "cloud",
       "offline_support": "none",
       "privacy_url": "https://github.com/PiPhi-io/piphi-network-octopus-energy/blob/main/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-octopus-energy:0.1.0",
     "onboarding": {
       "mode": "account"
-    }
+    },
+    "image": "ghcr.io/piphi-io/piphi-network-octopus-energy:0.1.1",
+    "image_digest": "sha256:812caef02da313de9a5126e6a44e96eaedbaf247c1a3f35bde6da237832f043d",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "tags": [
+      "octopus-energy",
+      "energy",
+      "tariff",
+      "cloud"
+    ]
   },
   {
     "id": "piphi-network-openepaperlink",
