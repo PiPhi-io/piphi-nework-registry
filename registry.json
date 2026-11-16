@@ -3280,25 +3280,20 @@
   {
     "id": "piphi-network-android-tv",
     "name": "Android TV",
-    "version": "0.2.0-rc.1",
+    "version": "0.3.0-rc.1",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "low",
-    "description": "Control paired Android TV and Google TV devices with Remote Protocol v2.",
+    "description": "Control Android TV devices using explicit Remote Protocol v2 or bounded managed ADB transport.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
-    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "ref": "apps/piphi-network-android-tv/v0.3.0-rc.1",
     "manifest_path": "apps/integrations/piphi-network-android-tv/manifest.json",
-    "tags": [
-      "android-tv",
-      "media",
-      "remote-v2"
-    ],
     "runtime_requirements": [],
     "maintainer": {
       "name": "PiPhi Network",
@@ -3308,7 +3303,7 @@
     "marketplace": {
       "metadata_version": 2,
       "display_name": "Android TV",
-      "summary": "Pair and control Android TV and Google TV using Remote Protocol v2.",
+      "summary": "Control Android TV using explicit Remote v2 or a bounded managed ADB sidecar.",
       "category": "media",
       "regions": [
         "WW"
@@ -3336,9 +3331,9 @@
           "model": "Android TV and Google TV devices with Android TV Remote Service"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-android-tv/v0.2.0-rc.1/apps/integrations/piphi-network-android-tv",
-      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-android-tv/v0.2.0-rc.1",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-network-android-tv",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-android-tv/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-network-android-tv/releases",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -3354,7 +3349,8 @@
         "streaming device"
       ],
       "protocols": [
-        "Android TV Remote Protocol v2"
+        "Android TV Remote Protocol v2",
+        "Android Debug Bridge (managed bounded transport)"
       ],
       "discovery_methods": [
         "Remote v2 mDNS candidates",
@@ -3363,12 +3359,17 @@
       "connectivity": "local",
       "offline_support": "none"
     },
-    "image": "ghcr.io/piphi-io/piphi-network-android-tv:0.2.0-rc.1",
-    "image_digest": "sha256:4484f598178c53aa722a18d7e3864c6bea373bc32dd2744c065b219f2d2655ad",
-    "ref": "apps/piphi-network-android-tv/v0.2.0-rc.1",
     "onboarding": {
       "mode": "discovery"
-    }
+    },
+    "image": "ghcr.io/piphi-io/piphi-network-android-tv:0.3.0-rc.1",
+    "image_digest": "sha256:9990fbed0e3d407e7e597b4aba1d0172edbb82a7abbd9d65efe437b2ec793f5b",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "tags": [
+      "android-tv",
+      "media",
+      "remote-v2"
+    ]
   },
   {
     "id": "piphi-network-bacnet",
