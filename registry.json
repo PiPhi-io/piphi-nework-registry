@@ -1199,7 +1199,7 @@
   {
     "id": "piphi.service.zigbee2mqtt-sidecar",
     "name": "Zigbee2MQTT Sidecar",
-    "version": "0.1.25",
+    "version": "0.1.26",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -1211,8 +1211,8 @@
       "windows",
       "macos"
     ],
-    "image": "ghcr.io/piphi-io/zigbee2mqtt-sidecar:0.1.25",
-    "ref": "apps/piphi.service.zigbee2mqtt-sidecar/v0.1.25",
+    "image": "ghcr.io/piphi-io/zigbee2mqtt-sidecar:0.1.26",
+    "ref": "apps/piphi.service.zigbee2mqtt-sidecar/v0.1.26",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
@@ -1237,7 +1237,7 @@
     "marketplace": {
       "metadata_version": 2,
       "display_name": "Zigbee Device Support",
-      "summary": "Connect a compatible coordinator and manage Zigbee devices through PiPhi.",
+      "summary": "Run the managed Zigbee2MQTT bridge and recovery service used by PiPhi Zigbee.",
       "category": "networking",
       "device_types": [
         "platform_service"
@@ -1285,14 +1285,14 @@
         }
       ],
       "compatibility": [],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.zigbee2mqtt-sidecar/v0.1.25/apps/services/piphi-network-zigbee2mqtt",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.zigbee2mqtt-sidecar/v0.1.26/apps/services/piphi-network-zigbee2mqtt",
       "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.zigbee2mqtt-sidecar/v0.1.25",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.zigbee2mqtt-sidecar/v0.1.26",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
-        "publication_status": "stable",
-        "rollout_percent": 100,
+        "publication_status": "draft",
+        "rollout_percent": 0,
         "lifecycle_status": "active",
         "qualification": {
           "status": "unverified"
@@ -1307,12 +1307,12 @@
       "port_binding": "core_allocated",
       "port_env": "PORT"
     },
-    "image_digest": "sha256:dc6a17f86f2027abb8ee7f5c32a1d2062ffa916ba7e6d4d9446ac1122ef2496e"
+    "image_digest": "sha256:e039274ec10f9f1e807eb743c309bd8d35fe6e3e76450145bcbcf9b9c920009b"
   },
   {
     "id": "piphi-network-zigbee",
     "name": "PiPhi Network Zigbee",
-    "version": "0.1.11",
+    "version": "0.1.12",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -1323,8 +1323,8 @@
       "windows",
       "macos"
     ],
-    "image": "ghcr.io/piphi-io/zigbee-integration:0.1.11",
-    "ref": "apps/piphi-network-zigbee/v0.1.11",
+    "image": "ghcr.io/piphi-io/zigbee-integration:0.1.12",
+    "ref": "apps/piphi-network-zigbee/v0.1.12",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
@@ -1350,7 +1350,7 @@
     "marketplace": {
       "metadata_version": 2,
       "display_name": "Zigbee Devices",
-      "summary": "Bring devices from the shared Zigbee connection into rooms and automations.",
+      "summary": "Expose a constrained set of Zigbee2MQTT device state and controls through PiPhi.",
       "category": "networking",
       "device_types": [
         "zigbee_device"
@@ -1399,20 +1399,20 @@
       "compatibility": [
         {
           "brand": "Zigbee2MQTT",
-          "model": "Supported devices",
+          "model": "2.14.3 constrained expose adapter",
           "regions": [
             "WW"
           ]
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-zigbee/v0.1.11/apps/integrations/piphi-network-zigbee",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-zigbee/v0.1.12/apps/integrations/piphi-network-zigbee",
       "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-zigbee/v0.1.11",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-zigbee/v0.1.12",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
-        "publication_status": "stable",
-        "rollout_percent": 100,
+        "publication_status": "draft",
+        "rollout_percent": 0,
         "lifecycle_status": "active",
         "qualification": {
           "status": "unverified"
@@ -1422,7 +1422,7 @@
     "onboarding": {
       "mode": "discovery"
     },
-    "image_digest": "sha256:7de520e012a3eeef8d8a84d1368b2d1203e83f625d76b9e9dd83954f15dc98ae"
+    "image_digest": "sha256:f10e70cb7dea64dc1583513a3e2f8aa79fcf5b7fe37c7384b4015e9f95823b05"
   },
   {
     "id": "airthings-consumer-cloud-api",
