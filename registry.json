@@ -1427,97 +1427,25 @@
   {
     "id": "airthings-consumer-cloud-api",
     "name": "Airthings (Consumer Cloud)",
-    "version": "0.1.7",
+    "version": "0.1.9",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
     "description": "Cloud integration for Airthings consumer accounts using the official Airthings Consumer API.",
-    "marketplace": {
-      "brand_domain": "airthings.com",
-      "metadata_version": 2,
-      "display_name": "Airthings Air Quality",
-      "summary": "Connect supported Airthings monitors through your Airthings account.",
-      "category": "air_quality",
-      "device_types": [
-        "air_quality_monitor"
-      ],
-      "protocols": [
-        "airthings_consumer_api"
-      ],
-      "regions": [
-        "WW"
-      ],
-      "languages": [
-        "en"
-      ],
-      "discovery_methods": [
-        "account"
-      ],
-      "connectivity": "cloud",
-      "offline_support": "none",
-      "publisher": {
-        "name": "PiPhi Network",
-        "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-network-airthings/issues",
-        "security_contact": "support@piphi.io"
-      },
-      "access": [
-        {
-          "id": "external_cloud",
-          "label": "External cloud access",
-          "reason": "Connects to the device maker's service to read or control the selected account and devices.",
-          "required": true
-        },
-        {
-          "id": "credentials",
-          "label": "Account or device credentials",
-          "reason": "Stores the credentials needed to connect the selected account or device.",
-          "required": true
-        }
-      ],
-      "compatibility": [
-        {
-          "brand": "Airthings",
-          "model": "Consumer devices",
-          "regions": [
-            "WW"
-          ]
-        }
-      ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-network-airthings",
-      "support_url": "https://github.com/PiPhi-io/piphi-network-airthings/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-network-airthings/releases",
-      "privacy_url": "https://www.airthings.com/privacy-notice",
-      "quality_tier": "bronze",
-      "governance": {
-        "schema_version": 1,
-        "publication_status": "stable",
-        "rollout_percent": 100,
-        "lifecycle_status": "active",
-        "qualification": {
-          "status": "unverified"
-        }
-      }
-    },
     "rewardable": false,
     "platforms": [
       "linux",
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/airthings-consumer-cloud:0.1.7",
-    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-airthings",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-airthings",
-    "manifest_path": "src/manifest.json",
-    "tags": [
-      "airthings",
-      "air-quality",
-      "cloud-api",
-      "environment"
-    ],
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "ref": "apps/airthings-consumer-cloud-api/v0.1.9",
+    "manifest_path": "apps/integrations/piphi-network-airthings/src/manifest.json",
     "runtime_requirements": [
+      "cloud_account",
+      "internet_access",
       "secrets_or_api_tokens"
     ],
     "maintainer": {
@@ -1525,10 +1453,90 @@
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
-    "ref": "v0.1.7",
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Airthings Consumer Cloud",
+      "summary": "Monitor indoor air quality from supported Airthings devices through the official Consumer API.",
+      "category": "air_quality",
+      "regions": [
+        "Global"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "credentials",
+          "label": "Airthings Consumer API credentials",
+          "reason": "Authenticates only to the explicitly configured Airthings consumer account; credentials remain outside state, telemetry, events, diagnostics, discovery output, logs, and errors.",
+          "required": true
+        },
+        {
+          "id": "cloud_account",
+          "label": "Airthings account and device readings",
+          "reason": "Lists devices in the selected account and reads their latest air-quality measurements through the official Consumer API.",
+          "required": true
+        },
+        {
+          "id": "internet_access",
+          "label": "Outbound HTTPS access",
+          "reason": "Connects to Airthings OAuth and Consumer API endpoints for authentication, device discovery, and quota-conscious polling.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Airthings",
+          "model": "Wave Plus, Wave Radon, Wave Mini, Wave Enhance, View Plus, View Radon, and Corentium Home 2 devices available through the Consumer API"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/main/apps/integrations/piphi-network-airthings",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases?q=airthings-consumer-cloud-api",
+      "quality_tier": "bronze",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "indoor air quality monitor",
+        "radon monitor"
+      ],
+      "protocols": [
+        "Airthings Consumer API",
+        "OAuth 2.0",
+        "HTTPS"
+      ],
+      "discovery_methods": [
+        "authenticated account device discovery"
+      ],
+      "connectivity": "cloud",
+      "offline_support": "none",
+      "privacy_url": "https://github.com/PiPhi-io/piphi-apps/blob/main/apps/integrations/piphi-network-airthings/docs/privacy.md"
+    },
     "onboarding": {
       "mode": "account"
-    }
+    },
+    "image": "ghcr.io/piphi-io/airthings-consumer-cloud:0.1.9",
+    "image_digest": "sha256:0ef8aa37b350c561759a12c5eeac42be4833c9c449f9709d5e929d43e9bd4230",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "tags": [
+      "airthings",
+      "air-quality",
+      "cloud-api",
+      "environment"
+    ]
   },
   {
     "id": "aqara-open-api",
