@@ -2688,7 +2688,7 @@
   {
     "id": "piphi-network-pfsense",
     "name": "PiPhi Network pfSense",
-    "version": "0.1.0",
+    "version": "0.1.10",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "high",
@@ -2760,9 +2760,9 @@
           ]
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-network-pfsense",
-      "support_url": "https://github.com/PiPhi-io/piphi-network-pfsense/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-network-pfsense/releases",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-pfsense/v0.1.10/apps/integrations/piphi-network-pfsense",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-pfsense/v0.1.10",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -2778,12 +2778,12 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/piphi-network-pfsense:0.1.0",
+    "image": "ghcr.io/piphi-io/piphi-network-pfsense:0.1.10",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-pfsense",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-pfsense",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-pfsense/manifest.json",
     "tags": [
       "pfsense",
       "firewall",
@@ -2802,7 +2802,9 @@
     },
     "onboarding": {
       "mode": "manual"
-    }
+    },
+    "ref": "apps/piphi-network-pfsense/v0.1.10",
+    "image_digest": "sha256:163b71b4b17d9fe299e54f4b61477ecb8cfc78eb1f226429d71bfc8f5826ade9"
   },
   {
     "id": "io.piphi.widget.calendar-agenda",
