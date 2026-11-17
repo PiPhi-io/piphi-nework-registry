@@ -4289,11 +4289,11 @@
   {
     "id": "piphi-network-llm-vision",
     "name": "LLM vision sidecar",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
-    "risk_level": "moderate",
+    "risk_level": "high",
     "description": "Run bounded, opt-in vision analysis for explicitly brokered camera media.",
     "rewardable": false,
     "platforms": [
@@ -4312,11 +4312,13 @@
     ],
     "runtime_requirements": [
       "secrets_or_api_tokens",
-      "sidecar_runtime"
+      "sidecar_runtime",
+      "host_filesystem_mounts"
     ],
     "maintainer": {
       "name": "PiPhi Network",
-      "support_email": "support@piphi.io"
+      "support_email": "support@piphi.io",
+      "website": "https://piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
@@ -4395,8 +4397,8 @@
       "offline_support": "partial",
       "privacy_url": "https://github.com/PiPhi-io/piphi-network-llm-vision/blob/main/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-llm-vision:0.1.1",
-    "ref": "v0.1.1",
+    "image": "docker.io/piphinetwork/piphi-network-llm-vision:0.1.2",
+    "ref": "v0.1.2",
     "onboarding": {
       "mode": "service"
     },
@@ -4404,7 +4406,8 @@
       "version": 1,
       "port_binding": "core_allocated",
       "port_env": "PORT"
-    }
+    },
+    "image_digest": "sha256:eb2843d2c25180497bd6e3a017022875934b3cbfc9c93bc30ea7f4d07da4fdde"
   },
   {
     "id": "piphi-network-midea-ac-lan",
