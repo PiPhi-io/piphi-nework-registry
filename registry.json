@@ -6691,7 +6691,7 @@
   {
     "id": "piphi.service.wyze-camera-bridge",
     "name": "PiPhi Wyze Camera Bridge",
-    "version": "0.1.4-beta.1",
+    "version": "0.1.5",
     "type": "platform_service",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -6703,7 +6703,7 @@
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
-    "ref": "6399a327d0ca54ad78ec131823b81db6bf6d6a64",
+    "ref": "apps/piphi.service.wyze-camera-bridge/v0.1.5",
     "manifest_path": "apps/services/piphi-wyze-camera-service/manifest.json",
     "runtime_requirements": [
       "sidecar_runtime",
@@ -6782,15 +6782,15 @@
           "model": "Cameras supported by docker-wyze-bridge v2.10.3"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/6399a327d0ca54ad78ec131823b81db6bf6d6a64/apps/services/piphi-wyze-camera-service",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.wyze-camera-bridge/v0.1.5/apps/services/piphi-wyze-camera-service",
       "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/commits/6399a327d0ca54ad78ec131823b81db6bf6d6a64/apps/services/piphi-wyze-camera-service",
-      "privacy_url": "https://github.com/PiPhi-io/piphi-apps/blob/6399a327d0ca54ad78ec131823b81db6bf6d6a64/apps/services/piphi-wyze-camera-service/PRIVACY.md",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.wyze-camera-bridge/v0.1.5",
+      "privacy_url": "https://github.com/PiPhi-io/piphi-apps/blob/apps/piphi.service.wyze-camera-bridge/v0.1.5/apps/services/piphi-wyze-camera-service/PRIVACY.md",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
-        "publication_status": "beta",
-        "rollout_percent": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
         "lifecycle_status": "active",
         "qualification": {
           "status": "unverified"
@@ -6806,8 +6806,8 @@
       "port_env": "PORT"
     },
     "deployment_mode": "sidecar",
-    "image": "ghcr.io/piphi-io/piphi-wyze-camera-service:0.1.4-beta.1",
-    "image_digest": "sha256:6531b148aee3b8d68580ded0dc8f80484ea88b75dc6c96e0a8bf1d47c6881dd2"
+    "image": "ghcr.io/piphi-io/piphi-wyze-camera-service:0.1.5",
+    "image_digest": "sha256:d736c542727a19896bac229e1cd4d3c66cf7c57d6ad48bcbf798b4075cf99b32"
   },
   {
     "id": "io.piphi.zigbee2mqtt-network-map",
