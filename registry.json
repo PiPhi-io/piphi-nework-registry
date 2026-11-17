@@ -6878,5 +6878,96 @@
         }
       }
     }
+  },
+  {
+    "id": "piphi-network-matter-integration",
+    "name": "Matter",
+    "version": "0.1.2",
+    "type": "integration",
+    "trust_level": "official",
+    "risk_level": "low",
+    "description": "Projects commissioned Matter endpoints from the authenticated managed sidecar into PiPhi Core.",
+    "rewardable": false,
+    "platforms": [
+      "linux"
+    ],
+    "owner": "PiPhi-io",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "ref": "apps/piphi-network-matter-integration/v0.1.2",
+    "manifest_path": "apps/integrations/piphi-network-matter/manifest.json",
+    "runtime_requirements": [],
+    "maintainer": {
+      "name": "PiPhi Network",
+      "website": "https://piphi.io"
+    },
+    "marketplace": {
+      "metadata_version": 2,
+      "display_name": "Matter",
+      "summary": "Core projection for the managed Matter sidecar.",
+      "category": "other",
+      "regions": [
+        "WW"
+      ],
+      "languages": [
+        "en"
+      ],
+      "publisher": {
+        "name": "PiPhi Network",
+        "website_url": "https://piphi.io",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+        "security_contact": "support@piphi.io"
+      },
+      "access": [
+        {
+          "id": "sidecar_runtime",
+          "label": "Managed Matter sidecar",
+          "reason": "Reads endpoint snapshots and invokes negotiated commands.",
+          "required": true
+        }
+      ],
+      "compatibility": [
+        {
+          "brand": "Connectivity Standards Alliance",
+          "model": "Matter On/Off endpoints"
+        }
+      ],
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/main/apps/integrations/piphi-network-matter",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-matter-integration/v0.1.2",
+      "quality_tier": "unrated",
+      "governance": {
+        "schema_version": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
+        "lifecycle_status": "active",
+        "qualification": {
+          "status": "unverified"
+        }
+      },
+      "device_types": [
+        "switch",
+        "light",
+        "plug"
+      ],
+      "protocols": [
+        "Matter sidecar HTTP contract"
+      ],
+      "discovery_methods": [
+        "sidecar snapshot"
+      ],
+      "connectivity": "local",
+      "offline_support": "partial"
+    },
+    "onboarding": {
+      "mode": "discovery"
+    },
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
+    },
+    "image": "ghcr.io/piphi-io/piphi-network-matter-integration:0.1.2",
+    "image_digest": "sha256:6ed9ddff1745293807b017950df2becd6e7f2d9609f9e874da68a1f5edc59645"
   }
 ]
