@@ -858,18 +858,18 @@
   {
     "id": "piphi.service.mqtt-broker",
     "name": "MQTT Broker",
-    "version": "0.3.0",
+    "version": "0.3.2",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
     "risk_level": "high",
-    "description": "Multi-workload MQTT broker with distinct principals, prefix-confined ACLs, TLS, bounded resources, audited credential lifecycle, and restore qualification.",
+    "description": "Shared MQTT broker for PiPhi integrations and helpers.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
-    "image": "ghcr.io/piphi-io/mqtt-broker:0.3.0",
-    "ref": "apps/piphi.service.mqtt-broker/v0.3.0",
+    "image": "ghcr.io/piphi-io/mqtt-broker:0.3.2",
+    "ref": "apps/piphi.service.mqtt-broker/v0.3.2",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/mqtt-sidecar.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
@@ -934,14 +934,14 @@
         }
       ],
       "compatibility": [],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.mqtt-broker/v0.3.0/apps/services/piphi-mqtt-broker",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.mqtt-broker/v0.3.2/apps/services/piphi-mqtt-broker",
       "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.mqtt-broker/v0.3.0",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.mqtt-broker/v0.3.2",
       "quality_tier": "bronze",
       "governance": {
         "schema_version": 1,
-        "publication_status": "stable",
-        "rollout_percent": 100,
+        "publication_status": "draft",
+        "rollout_percent": 0,
         "lifecycle_status": "active",
         "qualification": {
           "status": "unverified"
@@ -956,7 +956,7 @@
       "port_binding": "core_allocated",
       "port_env": "PORT"
     },
-    "image_digest": "sha256:d6ecb991323eca32650e49600c18233f48a828900a120a8fab726951ad9608bb"
+    "image_digest": "sha256:d01aeb0853a4a3156f973769d4182737b296b80d5db550e647658ecfd557cccf"
   },
   {
     "id": "piphi.service.rtl433-bridge",
