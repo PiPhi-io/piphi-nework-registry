@@ -4507,20 +4507,20 @@
   {
     "id": "piphi-network-mikrotik-router",
     "name": "MikroTik RouterOS",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
-    "description": "Monitor RouterOS health, interfaces, clients, and explicitly enabled controls.",
+    "description": "Read-only CPU and memory health monitoring for RouterOS 7 over authenticated HTTPS REST.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-mikrotik-router",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-mikrotik-router",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-mikrotik-router/manifest.json",
     "tags": [
       "mikrotik",
       "routeros",
@@ -4532,7 +4532,8 @@
     ],
     "maintainer": {
       "name": "PiPhi Network",
-      "support_email": "support@piphi.io"
+      "support_email": "support@piphi.io",
+      "website": "https://piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
@@ -4571,9 +4572,9 @@
           "model": "Supported RouterOS devices and API versions"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-network-mikrotik-router",
-      "support_url": "https://github.com/PiPhi-io/piphi-network-mikrotik-router/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-network-mikrotik-router/releases",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-mikrotik-router/v0.1.2/apps/integrations/piphi-network-mikrotik-router",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-mikrotik-router/v0.1.2",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -4600,10 +4601,12 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-mikrotik-router:0.1.0",
+    "image": "ghcr.io/piphi-io/piphi-network-mikrotik-router:0.1.2",
     "onboarding": {
-      "mode": "discovery"
-    }
+      "mode": "manual"
+    },
+    "ref": "apps/piphi-network-mikrotik-router/v0.1.2",
+    "image_digest": "sha256:113e8d96e81777125a6ba95a43f3995d71b3c05d131ca16accb1568900381113"
   },
   {
     "id": "piphi-network-modbus",
