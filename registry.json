@@ -4191,7 +4191,7 @@
   {
     "id": "piphi-network-knx",
     "name": "KNX",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "high",
@@ -4279,12 +4279,12 @@
       "connectivity": "local",
       "offline_support": "none"
     },
-    "image": "ghcr.io/piphi-io/piphi-network-knx:0.2.3",
+    "image": "ghcr.io/piphi-io/piphi-network-knx:0.2.4",
     "onboarding": {
       "mode": "manual"
     },
-    "image_digest": "sha256:f0a6ed082a4a9cbf1f2625df3ef3008a0c8c9e415ce75ff98ca390af51be29a3",
-    "ref": "apps/piphi-network-knx/v0.2.3"
+    "image_digest": "sha256:efd3b42fb6e87ffb2136e63ed6473a2e58f8a71ee0becb4aa7e9f82b03ba1a06",
+    "ref": "apps/piphi-network-knx/v0.2.4"
   },
   {
     "id": "piphi-network-llm-vision",
