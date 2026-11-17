@@ -1991,8 +1991,8 @@
     },
     "marketplace": {
       "metadata_version": 2,
-      "display_name": "Wired Sensors (I²C)",
-      "summary": "Read compatible environmental sensors connected through I²C or a supported USB bridge.",
+      "display_name": "Wired Sensors (I\u00b2C)",
+      "summary": "Read compatible environmental sensors connected through I\u00b2C or a supported USB bridge.",
       "category": "sensors",
       "device_types": [
         "environmental_sensor"
@@ -6469,7 +6469,7 @@
   {
     "id": "piphi-camera-stream",
     "name": "Piphi Camera Stream",
-    "version": "0.1.5",
+    "version": "0.1.7",
     "type": "integration",
     "deployment_mode": "standalone",
     "trust_level": "official",
@@ -6479,9 +6479,9 @@
     "platforms": [
       "linux"
     ],
-    "image": "ghcr.io/piphi-io/piphi-camera-stream:0.1.6-beta.1",
-    "image_digest": "sha256:1fede16ef027454960ae037d932bd1df29cfa5e5b0474830fe69113fe7074a34",
-    "ref": "6399a327d0ca54ad78ec131823b81db6bf6d6a64",
+    "image": "ghcr.io/piphi-io/piphi-camera-stream:0.1.7",
+    "image_digest": "sha256:500a8f0e0819f585505de4942a551b8834ae675799c48175697d7ccedc049d9f",
+    "ref": "apps/piphi-camera-stream/v0.1.7",
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
@@ -6529,7 +6529,7 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-camera-stream/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
@@ -6552,14 +6552,14 @@
           "model": "RTSP or RTSPS camera/NVR stream"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/6399a327d0ca54ad78ec131823b81db6bf6d6a64/apps/integrations/piphi-camera-stream",
-      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/commits/6399a327d0ca54ad78ec131823b81db6bf6d6a64/apps/integrations/piphi-camera-stream",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-camera-stream",
+      "support_url": "https://github.com/PiPhi-io/piphi-camera-stream/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-camera-stream/releases",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
-        "publication_status": "beta",
-        "rollout_percent": 1,
+        "publication_status": "draft",
+        "rollout_percent": 0,
         "lifecycle_status": "active",
         "qualification": {
           "status": "unverified"
