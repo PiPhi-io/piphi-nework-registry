@@ -6669,9 +6669,9 @@
         }
       ],
       "compatibility": [],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.webrtc-sidecar/v0.3.8/apps/services/piphi-webrtc-sidecar",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.webrtc-sidecar/v0.3.9/apps/services/piphi-webrtc-sidecar",
       "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.webrtc-sidecar/v0.3.8",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.webrtc-sidecar/v0.3.9",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
