@@ -6582,7 +6582,7 @@
   {
     "id": "piphi.service.webrtc-sidecar",
     "name": "PiPhi Camera Media Service",
-    "version": "0.3.7",
+    "version": "0.3.8",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -6592,9 +6592,9 @@
     "platforms": [
       "linux"
     ],
-    "image": "ghcr.io/piphi-io/piphi-webrtc-sidecar:0.3.7",
-    "image_digest": "sha256:fdb0c4093ba9402f6bf390411b21fed1658d12e38b1d94e38404f7b304a510ff",
-    "ref": "apps/piphi.service.webrtc-sidecar/v0.3.7",
+    "image": "ghcr.io/piphi-io/piphi-webrtc-sidecar:0.3.8",
+    "image_digest": "sha256:441e15effc4e70e5e82daeef334c1da34f4f5d54f918c6366177fa9c8422b1a4",
+    "ref": "apps/piphi.service.webrtc-sidecar/v0.3.8",
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
