@@ -2100,7 +2100,7 @@
   {
     "id": "piphi-network-spi",
     "name": "PiPhi Network SPI Sensors",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -2203,9 +2203,9 @@
           ]
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-spi/v0.1.5/apps/integrations/piphi-network-spi",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-spi/v0.1.6/apps/integrations/piphi-network-spi",
       "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-spi/v0.1.5",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-spi/v0.1.6",
       "quality_tier": "bronze",
       "governance": {
         "schema_version": 1,
@@ -2217,12 +2217,12 @@
         }
       }
     },
-    "image": "ghcr.io/piphi-io/spi-integration:0.1.5",
-    "ref": "apps/piphi-network-spi/v0.1.5",
+    "image": "ghcr.io/piphi-io/spi-integration:0.1.6",
+    "ref": "apps/piphi-network-spi/v0.1.6",
     "onboarding": {
       "mode": "discovery"
     },
-    "image_digest": "sha256:5b9a9e3c0f332ffc02ea996098917569b51ee6adf9969837050d335ce6702fc9"
+    "image_digest": "sha256:60ae206f14310a4130800103f9d2b887f1b6d8680d0f4cad3fed54920a07895e"
   },
   {
     "id": "piphi-network-tuya",
