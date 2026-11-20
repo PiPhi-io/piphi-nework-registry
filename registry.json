@@ -3393,7 +3393,7 @@
   {
     "id": "piphi-network-bacnet",
     "name": "BACnet",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "high",
@@ -3405,7 +3405,7 @@
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
-    "ref": "apps/piphi-network-bacnet/v0.1.0",
+    "ref": "apps/piphi-network-bacnet/v0.1.2",
     "manifest_path": "apps/integrations/piphi-network-bacnet/manifest.json",
     "runtime_requirements": [
       "host_networking",
@@ -3447,9 +3447,9 @@
           "model": "SenseEdge Mini SE-200 and SE-200P with BACnet firmware 2.1.1 or later"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-network-bacnet",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-bacnet/v0.1.2/apps/integrations/piphi-network-bacnet",
       "support_url": "https://github.com/PiPhi-io/piphi-network-bacnet/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-network-bacnet/releases",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-bacnet/v0.1.2",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -3475,8 +3475,8 @@
     "onboarding": {
       "mode": "manual"
     },
-    "image": "ghcr.io/piphi-io/piphi-network-bacnet:0.1.0",
-    "image_digest": "sha256:5eb31340901bbacda2ec15f3b6d8e4b9bca9a750bccb1972af08bc498db8b33e",
+    "image": "ghcr.io/piphi-io/piphi-network-bacnet:0.1.2",
+    "image_digest": "sha256:d7aa256e947a43c9d95566a2bc8346775cd080cdcdcd7f37292c6a1529934d02",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "tags": [
       "bacnet",
