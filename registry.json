@@ -3683,20 +3683,20 @@
   {
     "id": "piphi-network-daikin-onecta",
     "name": "Daikin Onecta",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
-    "description": "Monitor and control supported Daikin HVAC equipment through Onecta.",
+    "description": "Quota-aware Daikin Onecta climate observation with opt-in bounded target-temperature control.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-daikin-onecta",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-daikin-onecta",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-daikin-onecta/manifest.json",
     "tags": [
       "daikin",
       "onecta",
@@ -3708,12 +3708,13 @@
     ],
     "maintainer": {
       "name": "PiPhi Network",
-      "support_email": "support@piphi.io"
+      "support_email": "support@piphi.io",
+      "website": "https://piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
       "display_name": "Daikin Onecta",
-      "summary": "Monitor and control supported Daikin HVAC equipment through Onecta.",
+      "summary": "Observe Onecta climate state account-wide and optionally set validated target temperatures.",
       "category": "climate",
       "regions": [
         "EU"
@@ -3724,14 +3725,14 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-network-daikin-onecta/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
         {
           "id": "credentials",
-          "label": "Account or device credentials",
-          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "label": "Core-managed Daikin OAuth access",
+          "reason": "PiPhi Core delivers the OAuth account subject and access token to the runtime; secrets are excluded from state, telemetry, events, diagnostics, and logs.",
           "required": true
         }
       ],
@@ -3741,9 +3742,9 @@
           "model": "Onecta-compatible residential HVAC equipment"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-network-daikin-onecta",
-      "support_url": "https://github.com/PiPhi-io/piphi-network-daikin-onecta/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-network-daikin-onecta/releases",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-daikin-onecta/v0.2.0/apps/integrations/piphi-network-daikin-onecta",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-daikin-onecta/v0.2.0",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -3767,13 +3768,15 @@
         "account discovery"
       ],
       "connectivity": "cloud",
-      "offline_support": "none",
-      "privacy_url": "https://github.com/PiPhi-io/piphi-network-daikin-onecta/blob/main/docs/privacy.md"
+      "offline_support": "partial",
+      "privacy_url": "https://github.com/PiPhi-io/piphi-apps/blob/apps/piphi-network-daikin-onecta/v0.2.0/apps/integrations/piphi-network-daikin-onecta/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-daikin-onecta:0.1.0",
+    "image": "ghcr.io/piphi-io/piphi-network-daikin-onecta:0.2.0",
     "onboarding": {
       "mode": "account"
-    }
+    },
+    "ref": "apps/piphi-network-daikin-onecta/v0.2.0",
+    "image_digest": "sha256:8e16988151e934f98c9c2101387c4ceb77b7fe29341beaaceb3c3c18f84cbf8c"
   },
   {
     "id": "piphi-network-dyson",
