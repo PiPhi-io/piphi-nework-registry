@@ -5488,7 +5488,7 @@
   {
     "id": "piphi-network-washdata",
     "name": "WashData",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -5499,9 +5499,9 @@
     ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-washdata",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-washdata",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-washdata/manifest.json",
     "tags": [
       "appliances",
       "laundry",
@@ -5581,10 +5581,12 @@
       "offline_support": "partial",
       "privacy_url": "https://github.com/PiPhi-io/piphi-network-washdata/blob/main/docs/privacy.md"
     },
-    "image": "docker.io/piphinetwork/piphi-network-washdata:0.1.0",
+    "image": "ghcr.io/piphi-io/piphi-network-washdata:0.2.0",
     "onboarding": {
       "mode": "manual"
-    }
+    },
+    "ref": "apps/piphi-network-washdata/v0.2.0",
+    "image_digest": "sha256:90775ff1d4578997d451fa7445ee2acd826e532131d6d43b8d07eb0b2e8c71de"
   },
   {
     "id": "piphi-network-waste-collection",
