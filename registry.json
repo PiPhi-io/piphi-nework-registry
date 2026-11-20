@@ -5383,37 +5383,39 @@
   {
     "id": "piphi-network-tapo-cameras",
     "name": "Tapo cameras",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
-    "description": "Monitor supported TP-Link Tapo cameras and broker explicitly requested media.",
+    "description": "Monitor powered Tapo cameras and doorbells through an authenticated, read-only local connection.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-tapo-cameras",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-tapo-cameras",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-tapo-cameras/manifest.json",
     "tags": [
       "tapo",
       "camera",
-      "rtsp",
-      "security"
+      "doorbell",
+      "local",
+      "read-only"
     ],
     "runtime_requirements": [
       "secrets_or_api_tokens"
     ],
     "maintainer": {
       "name": "PiPhi Network",
-      "support_email": "support@piphi.io"
+      "support_email": "support@piphi.io",
+      "website": "https://piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
       "display_name": "Tapo cameras",
-      "summary": "Monitor supported TP-Link Tapo cameras and broker explicitly requested media.",
+      "summary": "Read-only local availability and privacy monitoring for powered Tapo cameras.",
       "category": "camera",
       "regions": [
         "WW"
@@ -5424,38 +5426,32 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-network-tapo-cameras/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
         {
           "id": "local_network",
           "label": "Local network access",
-          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "reason": "Connects directly to the configured camera address.",
           "required": true
         },
         {
           "id": "credentials",
-          "label": "Account or device credentials",
-          "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+          "label": "Camera credentials",
+          "reason": "Authenticates locally; credentials are excluded from state, events, diagnostics, and logs.",
           "required": true
-        },
-        {
-          "id": "brokered_media",
-          "label": "Brokered camera media",
-          "reason": "Processes media only after an explicit widget, automation, or analysis request through the PiPhi media broker.",
-          "required": false
         }
       ],
       "compatibility": [
         {
           "brand": "TP-Link Tapo",
-          "model": "Supported cameras and doorbells with local access enabled"
+          "model": "Powered cameras and doorbells supported by python-kasa 0.10.x"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-network-tapo-cameras",
-      "support_url": "https://github.com/PiPhi-io/piphi-network-tapo-cameras/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-network-tapo-cameras/releases",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-tapo-cameras/v0.2.0/apps/integrations/piphi-network-tapo-cameras",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-tapo-cameras/v0.2.0",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -5471,21 +5467,20 @@
         "video doorbell"
       ],
       "protocols": [
-        "Tapo local API",
-        "RTSP",
-        "ONVIF"
+        "Tapo local API"
       ],
       "discovery_methods": [
-        "local network discovery",
-        "manual"
+        "authenticated targeted address"
       ],
       "connectivity": "local",
-      "offline_support": "full"
+      "offline_support": "partial"
     },
-    "image": "docker.io/piphinetwork/piphi-network-tapo-cameras:0.1.0",
+    "image": "ghcr.io/piphi-io/piphi-network-tapo-cameras:0.2.0",
     "onboarding": {
-      "mode": "discovery"
-    }
+      "mode": "manual"
+    },
+    "ref": "apps/piphi-network-tapo-cameras/v0.2.0",
+    "image_digest": "sha256:86b98e0fba8f74e8ea32968f211cffe27bc998f979267819d290d454fe48dbe6"
   },
   {
     "id": "piphi-network-washdata",
