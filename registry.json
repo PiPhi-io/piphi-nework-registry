@@ -1959,7 +1959,7 @@
   {
     "id": "piphi-network-i2c",
     "name": "PiPhi Network I2C Sensors",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -2076,9 +2076,9 @@
           ]
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-i2c/v0.1.5/apps/integrations/piphi-network-i2c",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-i2c/v0.1.6/apps/integrations/piphi-network-i2c",
       "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-i2c/v0.1.5",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-i2c/v0.1.6",
       "quality_tier": "bronze",
       "governance": {
         "schema_version": 1,
@@ -2090,12 +2090,12 @@
         }
       }
     },
-    "image": "ghcr.io/piphi-io/i2c-integration:0.1.5",
-    "ref": "apps/piphi-network-i2c/v0.1.5",
+    "image": "ghcr.io/piphi-io/i2c-integration:0.1.6",
+    "ref": "apps/piphi-network-i2c/v0.1.6",
     "onboarding": {
       "mode": "discovery"
     },
-    "image_digest": "sha256:32ecd84d95af0d56d4f98cd39740099741332d97aef7fbe190cdedb3079b9d68"
+    "image_digest": "sha256:8dd2098ebcffc1d567bf206d4465cf33c0306ab0dc888bf8575d0e0b105bbf8f"
   },
   {
     "id": "piphi-network-spi",
