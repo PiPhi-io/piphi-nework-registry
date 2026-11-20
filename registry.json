@@ -4511,7 +4511,7 @@
   {
     "id": "piphi-network-mikrotik-router",
     "name": "MikroTik RouterOS",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -4576,9 +4576,9 @@
           "model": "Supported RouterOS devices and API versions"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-mikrotik-router/v0.1.2/apps/integrations/piphi-network-mikrotik-router",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-network-mikrotik-router/v0.1.3/apps/integrations/piphi-network-mikrotik-router",
       "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-mikrotik-router/v0.1.2",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-network-mikrotik-router/v0.1.3",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -4605,12 +4605,12 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "ghcr.io/piphi-io/piphi-network-mikrotik-router:0.1.2",
+    "image": "ghcr.io/piphi-io/piphi-network-mikrotik-router:0.1.3",
     "onboarding": {
       "mode": "manual"
     },
-    "ref": "apps/piphi-network-mikrotik-router/v0.1.2",
-    "image_digest": "sha256:113e8d96e81777125a6ba95a43f3995d71b3c05d131ca16accb1568900381113"
+    "ref": "apps/piphi-network-mikrotik-router/v0.1.3",
+    "image_digest": "sha256:cc7ca736eb6dd5cf27e30a89163c2966e3a28482214b4d7b31cb4c08c659bd60"
   },
   {
     "id": "piphi-network-modbus",
