@@ -5287,7 +5287,7 @@
   {
     "id": "piphi-network-steam",
     "name": "Steam",
-    "version": "0.1.0",
+    "version": "0.2.1",
     "type": "integration",
     "deployment_mode": "standalone",
     "trust_level": "experimental",
@@ -5299,12 +5299,12 @@
       "windows",
       "macos"
     ],
-    "image": "docker.io/piphinetwork/piphi-network-steam:0.1.0",
+    "image": "ghcr.io/piphi-io/piphi-network-steam:0.2.1",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-steam",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-steam",
-    "manifest_path": "src/manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-steam/src/manifest.json",
     "tags": [
       "steam",
       "gaming",
@@ -5385,7 +5385,9 @@
     },
     "onboarding": {
       "mode": "account"
-    }
+    },
+    "ref": "apps/piphi-network-steam/v0.2.1",
+    "image_digest": "sha256:6660b89be3843452b754184d6a4ecf6cfcfc184163e78461e6fd044558d7225c"
   },
   {
     "id": "piphi-network-tapo-cameras",
