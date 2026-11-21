@@ -5181,7 +5181,7 @@
   {
     "id": "piphi-network-sonoff-lan",
     "name": "Sonoff LAN",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -5192,9 +5192,9 @@
     ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-sonoff-lan",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-sonoff-lan",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-sonoff-lan/manifest.json",
     "tags": [
       "sonoff",
       "ewelink",
@@ -5277,10 +5277,12 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-sonoff-lan:0.1.0",
+    "image": "ghcr.io/piphi-io/piphi-network-sonoff-lan:0.2.0",
     "onboarding": {
       "mode": "discovery"
-    }
+    },
+    "ref": "apps/piphi-network-sonoff-lan/v0.2.0",
+    "image_digest": "sha256:a26a75c096fa0b7180c5fbac813bb25f2abda94f8473fd375c3a28fcafeeea36"
   },
   {
     "id": "piphi-network-steam",
