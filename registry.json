@@ -3995,7 +3995,7 @@
   {
     "id": "piphi-network-huawei-solar",
     "name": "Huawei Solar",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -4006,9 +4006,9 @@
     ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-huawei-solar",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-huawei-solar",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-huawei-solar/manifest.json",
     "tags": [
       "huawei",
       "solar",
@@ -4087,10 +4087,12 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-huawei-solar:0.1.0",
+    "image": "ghcr.io/piphi-io/piphi-network-huawei-solar:0.2.0",
     "onboarding": {
       "mode": "discovery"
-    }
+    },
+    "ref": "apps/piphi-network-huawei-solar/v0.2.0",
+    "image_digest": "sha256:29cddda2ec24d94c47e14a32f32b150ece46a5113bdbccc6d6b4ef99c08a19e7"
   },
   {
     "id": "piphi-network-kia-hyundai-connect",
