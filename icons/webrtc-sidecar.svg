@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">PiPhi WebRTC Sidecar Icon</title>
+  <desc id="desc">Catalog icon for the PiPhi WebRTC camera sidecar service.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#172554"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="url(#bg)"/>
+  <g fill="none" stroke="#f0f9ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="14">
+    <rect x="54" y="79" width="108" height="98" rx="24"/>
+    <path d="m162 108 40-22v84l-40-22z"/>
+    <circle cx="108" cy="128" r="24"/>
+  </g>
+  <g fill="none" stroke="#7dd3fc" stroke-linecap="round" stroke-width="10">
+    <path d="M76 54a74 74 0 0 1 104 0"/>
+    <path d="M92 69a51 51 0 0 1 72 0"/>
+  </g>
+</svg>
