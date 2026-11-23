@@ -4419,7 +4419,7 @@
   {
     "id": "piphi-network-midea-ac-lan",
     "name": "Midea AC LAN",
-    "version": "0.1.0",
+    "version": "0.3.1",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -4430,9 +4430,9 @@
     ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-midea-ac-lan",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-midea-ac-lan",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-midea-ac-lan/manifest.json",
     "tags": [
       "midea",
       "air-conditioner",
@@ -4444,7 +4444,8 @@
     ],
     "maintainer": {
       "name": "PiPhi Network",
-      "support_email": "support@piphi.io"
+      "support_email": "support@piphi.io",
+      "website": "https://piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
@@ -4510,10 +4511,12 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-midea-ac-lan:0.1.0",
+    "image": "ghcr.io/piphi-io/piphi-network-midea-ac-lan:0.3.1",
     "onboarding": {
       "mode": "discovery"
-    }
+    },
+    "ref": "apps/piphi-network-midea-ac-lan/v0.3.1",
+    "image_digest": "sha256:ed2d01c1bf5977081283d05c58128ac0164bc0cd98ce8b975e725749ea958687"
   },
   {
     "id": "piphi-network-mikrotik-router",
