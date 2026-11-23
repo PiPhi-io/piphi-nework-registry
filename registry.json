@@ -3490,20 +3490,20 @@
   {
     "id": "piphi-network-bambu-lab",
     "name": "Bambu Lab",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
-    "description": "Monitor Bambu Lab printers and expose model-supported print controls.",
+    "description": "Read-only monitoring of Bambu printers through explicitly enabled LAN Developer Mode.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-bambu-lab",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-bambu-lab",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-bambu-lab/manifest.json",
     "tags": [
       "bambu-lab",
       "3d-printer",
@@ -3515,7 +3515,8 @@
     ],
     "maintainer": {
       "name": "PiPhi Network",
-      "support_email": "support@piphi.io"
+      "support_email": "support@piphi.io",
+      "website": "https://piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
@@ -3581,9 +3582,16 @@
       "connectivity": "local",
       "offline_support": "full"
     },
-    "image": "docker.io/piphinetwork/piphi-network-bambu-lab:0.1.0",
+    "image": "ghcr.io/piphi-io/piphi-network-bambu-lab:0.1.1",
     "onboarding": {
       "mode": "discovery"
+    },
+    "ref": "apps/piphi-network-bambu-lab/v0.1.1",
+    "image_digest": "sha256:b0ca20350e54b8acf2f29d21f8b3e5a11a048c20b08cf4aecb9127283e189721",
+    "runtime_contract": {
+      "version": 1,
+      "port_binding": "core_allocated",
+      "port_env": "PORT"
     }
   },
   {
