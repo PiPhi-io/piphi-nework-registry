@@ -287,7 +287,9 @@
       "ble"
     ],
     "runtime_requirements": [
-      "direct_hardware_access"
+      "direct_hardware_access",
+      "host_dbus_socket",
+      "persistent_state"
     ],
     "maintainer": {
       "name": "PiPhi Network",
