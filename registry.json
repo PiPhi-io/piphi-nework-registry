@@ -1769,7 +1769,7 @@
   {
     "id": "piphi-network-kaiterra-api",
     "name": "PiPhi Network Kaiterra API",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -1845,12 +1845,12 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/kaiterra-api:0.1.5",
+    "image": "ghcr.io/piphi-io/kaiterra-api:0.1.6",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi_network_kaiterra_api",
-    "repo_url": "https://github.com/PiPhi-io/piphi_network_kaiterra_api",
-    "manifest_path": "src/manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-kaiterra-api/src/manifest.json",
     "tags": [
       "kaiterra",
       "air-quality",
@@ -1864,10 +1864,11 @@
       "name": "PiPhi Integrations Team",
       "website": "https://github.com/PiPhi-io"
     },
-    "ref": "v0.1.5",
+    "ref": "apps/piphi-network-kaiterra-api/v0.1.6",
     "onboarding": {
       "mode": "account"
-    }
+    },
+    "image_digest": "sha256:670e7e84fcabbb25da2c4cc3d2444a36b0346f5684021f0eb7aa654d71513d44"
   },
   {
     "id": "piphi-network-weatherxm",
