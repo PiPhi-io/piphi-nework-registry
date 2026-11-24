@@ -206,7 +206,7 @@
   {
     "id": "atmotube-pro-ble",
     "name": "Atmotube Pro (BLE)",
-    "version": "0.1.6-beta.1",
+    "version": "0.1.7",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -273,15 +273,13 @@
     },
     "rewardable": false,
     "platforms": [
-      "linux",
-      "windows",
-      "macos"
+      "linux"
     ],
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/atmotube.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-atmotube",
-    "repo_url": "https://github.com/KelvinSan/piphi-network-atmotube",
-    "manifest_path": "src/manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-atmotube/src/manifest.json",
     "tags": [
       "air-quality",
       "bluetooth",
@@ -289,7 +287,9 @@
       "ble"
     ],
     "runtime_requirements": [
-      "direct_hardware_access"
+      "direct_hardware_access",
+      "host_dbus_socket",
+      "persistent_state"
     ],
     "maintainer": {
       "name": "PiPhi Network",
@@ -298,7 +298,10 @@
     },
     "onboarding": {
       "mode": "discovery"
-    }
+    },
+    "image": "ghcr.io/piphi-io/piphi-network-atmotube:0.1.7",
+    "ref": "apps/atmotube-pro-ble/v0.1.7",
+    "image_digest": "sha256:9db6e2c14d84a03153580492f0a5d5c3b613e08a737e0a84f3020a04f676cac1"
   },
   {
     "id": "awair-element-local-api",
