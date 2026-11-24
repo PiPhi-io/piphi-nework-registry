@@ -524,7 +524,7 @@
   {
     "id": "tp-link-kasa-local-api",
     "name": "TP-Link Kasa (Local API)",
-    "version": "0.1.14",
+    "version": "0.1.15",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -618,13 +618,13 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/tp-link-kasa:0.1.14",
-    "ref": "v0.1.14",
+    "image": "ghcr.io/piphi-io/tp-link-kasa:0.1.15",
+    "ref": "apps/tp-link-kasa-local-api/v0.1.15",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/tp-link-kasa.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi_network_tp_link",
-    "repo_url": "https://github.com/KelvinSan/piphi_network_tp_link",
-    "manifest_path": "src/manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-tp-link/src/manifest.json",
     "tags": [
       "tp-link",
       "kasa",
@@ -642,7 +642,8 @@
     },
     "onboarding": {
       "mode": "discovery"
-    }
+    },
+    "image_digest": "sha256:7d3c8fb6167d7f0ca99069f9f63bfd8f592ae9a416983c573dcddaf77bf7d76b"
   },
   {
     "id": "lg-thinq-connect-api",
