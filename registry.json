@@ -524,7 +524,7 @@
   {
     "id": "tp-link-kasa-local-api",
     "name": "TP-Link Kasa (Local API)",
-    "version": "0.1.14",
+    "version": "0.1.15",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -533,7 +533,7 @@
       "brand_domain": "tp-link.com",
       "metadata_version": 2,
       "display_name": "TP-Link Kasa Devices",
-      "summary": "Control compatible Kasa lights, plugs, and switches over your home network.",
+      "summary": "Monitor compatible Kasa devices and available energy telemetry over your home network.",
       "category": "lighting",
       "device_types": [
         "light",
@@ -550,7 +550,7 @@
         "en"
       ],
       "discovery_methods": [
-        "mdns",
+        "local network discovery",
         "manual"
       ],
       "connectivity": "local",
@@ -558,7 +558,7 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/KelvinSan/piphi_network_tp_link/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
@@ -572,7 +572,7 @@
           "id": "credentials",
           "label": "Account or device credentials",
           "reason": "Stores the credentials needed to connect the selected account or device.",
-          "required": true
+          "required": false
         }
       ],
       "compatibility": [
@@ -598,9 +598,9 @@
           ]
         }
       ],
-      "documentation_url": "https://github.com/KelvinSan/piphi_network_tp_link",
-      "support_url": "https://github.com/KelvinSan/piphi_network_tp_link/issues",
-      "changelog_url": "https://github.com/KelvinSan/piphi_network_tp_link/releases",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/main/apps/integrations/piphi-network-tp-link",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/tp-link-kasa-local-api/v0.1.15",
       "quality_tier": "bronze",
       "governance": {
         "schema_version": 1,
@@ -618,13 +618,13 @@
       "windows",
       "macos"
     ],
-    "image": "piphinetwork/tp-link-kasa:0.1.14",
-    "ref": "v0.1.14",
+    "image": "ghcr.io/piphi-io/tp-link-kasa:0.1.15",
+    "ref": "apps/tp-link-kasa-local-api/v0.1.15",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/tp-link-kasa.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi_network_tp_link",
-    "repo_url": "https://github.com/KelvinSan/piphi_network_tp_link",
-    "manifest_path": "src/manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-tp-link/src/manifest.json",
     "tags": [
       "tp-link",
       "kasa",
@@ -642,7 +642,8 @@
     },
     "onboarding": {
       "mode": "discovery"
-    }
+    },
+    "image_digest": "sha256:7d3c8fb6167d7f0ca99069f9f63bfd8f592ae9a416983c573dcddaf77bf7d76b"
   },
   {
     "id": "lg-thinq-connect-api",
