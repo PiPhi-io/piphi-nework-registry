@@ -32,7 +32,7 @@ Before publishing a stable tag:
 
 | Package | Type | Remaining production work |
 | --- | --- | --- |
-| Awair Element | integration | Release `0.1.13` published; run the local-network hardware smoke test. |
+| Awair Element | integration | Release `0.1.15` published; functional hardware smoke passed, but firmware identity and DHCP address-change coverage remain unverified before promotion from draft. |
 | 433MHz Devices | integration | Release `0.1.7` published; confirm RTL-SDR smoke test and Core install flow. |
 | rtl_433 Bridge | sidecar | Registry synced to `0.1.2`; confirm Docker image and host radio permissions. |
 | Zigbee2MQTT Sidecar | sidecar | Release `0.1.12` published; add hardware smoke results for USB and network coordinators. |

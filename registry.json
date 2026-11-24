@@ -303,10 +303,10 @@
   {
     "id": "awair-element-local-api",
     "name": "Awair Element (Local API)",
-    "version": "0.1.13",
+    "version": "0.1.15",
     "type": "integration",
     "trust_level": "official",
-    "risk_level": "low",
+    "risk_level": "high",
     "description": "Integration for Awair Element devices over the local network",
     "marketplace": {
       "brand_domain": "getawair.com",
@@ -335,7 +335,7 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/KelvinSan/piphi-network-awair-element/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
@@ -355,14 +355,14 @@
           ]
         }
       ],
-      "documentation_url": "https://github.com/KelvinSan/piphi-network-awair-element",
-      "support_url": "https://github.com/KelvinSan/piphi-network-awair-element/issues",
-      "changelog_url": "https://github.com/KelvinSan/piphi-network-awair-element/releases",
-      "quality_tier": "bronze",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/awair-element-local-api/v0.1.15/apps/integrations/piphi-network-awair-element",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/awair-element-local-api/v0.1.15",
+      "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
-        "publication_status": "stable",
-        "rollout_percent": 100,
+        "publication_status": "draft",
+        "rollout_percent": 0,
         "lifecycle_status": "active",
         "qualification": {
           "status": "unverified"
@@ -371,32 +371,34 @@
     },
     "rewardable": true,
     "platforms": [
-      "linux",
-      "windows",
-      "macos"
+      "linux"
     ],
-    "image": "piphinetwork/awair-element:0.1.13",
+    "image": "ghcr.io/piphi-io/awair-element:0.1.15",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/awair.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-awair-element",
-    "repo_url": "https://github.com/KelvinSan/piphi-network-awair-element",
-    "manifest_path": "src/manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-awair-element/src/manifest.json",
     "tags": [
       "air-quality",
       "sensor",
       "local-api",
       "environment"
     ],
-    "runtime_requirements": [],
+    "runtime_requirements": [
+      "host_networking",
+      "host_filesystem_mounts"
+    ],
     "maintainer": {
       "name": "PiPhi Network",
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
-    "ref": "v0.1.13",
+    "ref": "apps/awair-element-local-api/v0.1.15",
     "onboarding": {
       "mode": "discovery"
-    }
+    },
+    "image_digest": "sha256:eb535f8ef739343f4bcff01bfeeda8f32c8bebbdb3e586e2c214c988dd76db42"
   },
   {
     "id": "official-usb-gps-integration",
