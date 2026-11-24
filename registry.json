@@ -4905,35 +4905,32 @@
   {
     "id": "piphi-network-openepaperlink",
     "name": "OpenEPaperLink",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "type": "integration",
     "trust_level": "official",
-    "risk_level": "low",
-    "description": "Monitor and control supported OpenEPaperLink access points and electronic-paper tags.",
+    "risk_level": "moderate",
+    "description": "Monitor tag and pending-transfer counts on a local OpenEPaperLink access point.",
     "rewardable": false,
     "platforms": [
       "linux"
     ],
-    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-openepaperlink",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-openepaperlink",
-    "manifest_path": "manifest.json",
-    "tags": [
-      "openepaperlink",
-      "epaper",
-      "display",
-      "local"
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "ref": "apps/piphi-network-openepaperlink/v0.1.2",
+    "manifest_path": "apps/integrations/piphi-network-openepaperlink/manifest.json",
+    "runtime_requirements": [
+      "persistent_state"
     ],
-    "runtime_requirements": [],
     "maintainer": {
       "name": "PiPhi Network",
+      "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
     "marketplace": {
       "metadata_version": 2,
       "display_name": "OpenEPaperLink",
-      "summary": "Monitor and control supported OpenEPaperLink access points and electronic-paper tags.",
+      "summary": "Monitor tag and pending-transfer counts on a local OpenEPaperLink access point.",
       "category": "other",
       "regions": [
         "WW"
@@ -4944,26 +4941,33 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-network-openepaperlink/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
         "security_contact": "support@piphi.io"
       },
+      "access_declared": true,
       "access": [
         {
           "id": "local_network",
           "label": "Local network access",
-          "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+          "reason": "Connects to the manually configured OpenEPaperLink access point on the homeowner's local network.",
+          "required": true
+        },
+        {
+          "id": "persistent_storage",
+          "label": "Private runtime state storage",
+          "reason": "Stores only hashed tag identities and aggregate last-good AP counts for restart recovery.",
           "required": true
         }
       ],
       "compatibility": [
         {
           "brand": "OpenEPaperLink",
-          "model": "Capability-negotiated access points and tags"
+          "model": "Local access points exposing the tag database API"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-network-openepaperlink",
-      "support_url": "https://github.com/PiPhi-io/piphi-network-openepaperlink/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-network-openepaperlink/releases",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/main/apps/integrations/piphi-network-openepaperlink",
+      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -4975,25 +4979,31 @@
         }
       },
       "device_types": [
-        "electronic-paper tag",
-        "access point"
+        "access point",
+        "electronic-paper tag"
       ],
       "protocols": [
         "OpenEPaperLink API",
         "HTTP"
       ],
       "discovery_methods": [
-        "access point discovery",
-        "tag discovery",
         "manual"
       ],
       "connectivity": "local",
-      "offline_support": "full"
+      "offline_support": "partial"
     },
-    "image": "docker.io/piphinetwork/piphi-network-openepaperlink:0.1.0",
     "onboarding": {
-      "mode": "discovery"
-    }
+      "mode": "manual"
+    },
+    "image": "ghcr.io/piphi-io/piphi-network-openepaperlink:0.1.2",
+    "image_digest": "sha256:fbae261da5b77b5962b102db42dc695909cedd65dab48cd80efdcb492e97dbb0",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "tags": [
+      "openepaperlink",
+      "epaper",
+      "display",
+      "local"
+    ]
   },
   {
     "id": "piphi-network-passive-ble-monitor",
