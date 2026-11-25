@@ -1089,7 +1089,7 @@
   {
     "id": "piphi.service.matter-sidecar",
     "name": "Matter Sidecar",
-    "version": "0.2.0-alpha.7",
+    "version": "0.2.0-alpha.8",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -1099,8 +1099,8 @@
     "platforms": [
       "linux"
     ],
-    "image": "ghcr.io/piphi-io/matter-sidecar:0.2.0-alpha.7",
-    "image_digest": "sha256:164e1fb2c5ef7c10503e92eac7bed1198f7ee5da2648f498ef5543662264d91c",
+    "image": "ghcr.io/piphi-io/matter-sidecar:0.2.0-alpha.8",
+    "image_digest": "sha256:2d265f493351534e00a7e6e486c12b446dd07175e55f2db1f4a4c0db7ae10bc2",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/matter-sidecar.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
@@ -1194,7 +1194,7 @@
         }
       }
     },
-    "ref": "apps/piphi.service.matter-sidecar/v0.2.0-alpha.7",
+    "ref": "apps/piphi.service.matter-sidecar/v0.2.0-alpha.8",
     "onboarding": {
       "mode": "service"
     },
