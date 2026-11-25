@@ -6939,7 +6939,7 @@
   {
     "id": "piphi-network-matter-integration",
     "name": "Matter",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "low",
@@ -6951,7 +6951,7 @@
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
-    "ref": "apps/piphi-network-matter-integration/v0.1.2",
+    "ref": "apps/piphi-network-matter-integration/v0.1.3",
     "manifest_path": "apps/integrations/piphi-network-matter/manifest.json",
     "runtime_requirements": [],
     "maintainer": {
@@ -7024,7 +7024,7 @@
       "port_binding": "core_allocated",
       "port_env": "PORT"
     },
-    "image": "ghcr.io/piphi-io/piphi-network-matter-integration:0.1.2",
-    "image_digest": "sha256:6ed9ddff1745293807b017950df2becd6e7f2d9609f9e874da68a1f5edc59645"
+    "image": "ghcr.io/piphi-io/piphi-network-matter-integration:0.1.3",
+    "image_digest": "sha256:451a5cb71811200ed562559ff45b3d744206df590ddfd50507f9d9e3c0b1703e"
   }
 ]
