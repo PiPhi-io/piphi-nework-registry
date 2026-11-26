@@ -1435,7 +1435,7 @@
   {
     "id": "airthings-consumer-cloud-api",
     "name": "Airthings (Consumer Cloud)",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -1449,7 +1449,7 @@
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
-    "ref": "apps/airthings-consumer-cloud-api/v0.1.9",
+    "ref": "apps/airthings-consumer-cloud-api/v0.1.10",
     "manifest_path": "apps/integrations/piphi-network-airthings/src/manifest.json",
     "runtime_requirements": [
       "cloud_account",
@@ -1536,8 +1536,8 @@
     "onboarding": {
       "mode": "account"
     },
-    "image": "ghcr.io/piphi-io/airthings-consumer-cloud:0.1.9",
-    "image_digest": "sha256:0ef8aa37b350c561759a12c5eeac42be4833c9c449f9709d5e929d43e9bd4230",
+    "image": "ghcr.io/piphi-io/airthings-consumer-cloud:0.1.10",
+    "image_digest": "sha256:2d9c709b1673bca0c3c262e9254a692cabd7477c618e287327de0819b1c6a114",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "tags": [
       "airthings",
