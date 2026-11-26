@@ -866,7 +866,7 @@
   {
     "id": "piphi.service.mqtt-broker",
     "name": "MQTT Broker",
-    "version": "0.3.2",
+    "version": "0.4.2",
     "type": "platform_service",
     "deployment_mode": "sidecar",
     "trust_level": "official",
@@ -876,8 +876,8 @@
     "platforms": [
       "linux"
     ],
-    "image": "ghcr.io/piphi-io/mqtt-broker:0.3.2",
-    "ref": "apps/piphi.service.mqtt-broker/v0.3.2",
+    "image": "ghcr.io/piphi-io/mqtt-broker:0.4.2",
+    "ref": "apps/piphi.service.mqtt-broker/v0.4.2",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/mqtt-sidecar.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
@@ -942,9 +942,9 @@
         }
       ],
       "compatibility": [],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.mqtt-broker/v0.3.2/apps/services/piphi-mqtt-broker",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi.service.mqtt-broker/v0.4.2/apps/services/piphi-mqtt-broker",
       "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.mqtt-broker/v0.3.2",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi.service.mqtt-broker/v0.4.2",
       "quality_tier": "bronze",
       "governance": {
         "schema_version": 1,
@@ -964,7 +964,7 @@
       "port_binding": "core_allocated",
       "port_env": "PORT"
     },
-    "image_digest": "sha256:d01aeb0853a4a3156f973769d4182737b296b80d5db550e647658ecfd557cccf"
+    "image_digest": "sha256:d3b82ae0ed7042b30c6d5a542d929d4e47b37d2ff9b044e8668090a75b98c61e"
   },
   {
     "id": "piphi.service.rtl433-bridge",
