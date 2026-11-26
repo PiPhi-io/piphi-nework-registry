@@ -2573,7 +2573,7 @@
   {
     "id": "piphi-network-sense",
     "name": "Sense Energy",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -2668,12 +2668,12 @@
     "platforms": [
       "linux"
     ],
-    "image": "piphinetwork/piphi-network-sense:0.1.2",
+    "image": "ghcr.io/piphi-io/piphi-network-sense:0.2.1",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
-    "repo_name": "piphi-network-sense",
-    "repo_url": "https://github.com/PiPhi-io/piphi-network-sense",
-    "manifest_path": "manifest.json",
+    "repo_name": "piphi-apps",
+    "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "manifest_path": "apps/integrations/piphi-network-sense/manifest.json",
     "tags": [
       "sense",
       "energy",
@@ -2689,10 +2689,11 @@
       "website": "https://piphi.io",
       "support_email": "support@piphi.io"
     },
-    "ref": "v0.1.2",
+    "ref": "apps/piphi-network-sense/v0.2.1",
     "onboarding": {
       "mode": "account"
-    }
+    },
+    "image_digest": "sha256:dfe24fab5596c9157ea99e547102d12518d9061c40e9242405fc0045a671164b"
   },
   {
     "id": "piphi-network-pfsense",
