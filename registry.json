@@ -2981,9 +2981,8 @@
   {
     "id": "piphi-android-adb-sidecar",
     "name": "Android ADB sidecar",
-    "version": "0.3.0-rc.1",
+    "version": "0.3.0-rc.2",
     "type": "platform_service",
-    "deployment_mode": "sidecar",
     "trust_level": "official",
     "risk_level": "moderate",
     "description": "Provide bounded, authenticated network ADB transport for parent integrations.",
@@ -2991,20 +2990,13 @@
     "platforms": [
       "linux"
     ],
-    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
+    "ref": "apps/piphi-android-adb-sidecar/v0.3.0-rc.2",
     "manifest_path": "apps/services/piphi-android-adb-sidecar/manifest.json",
-    "tags": [
-      "adb",
-      "android",
-      "sidecar",
-      "network"
-    ],
     "runtime_requirements": [
-      "sidecar_runtime",
-      "local_network_access"
+      "sidecar_runtime"
     ],
     "maintainer": {
       "name": "PiPhi Network",
@@ -3025,7 +3017,7 @@
       "publisher": {
         "name": "PiPhi Network",
         "website_url": "https://piphi.io",
-        "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
+        "support_url": "https://github.com/PiPhi-io/piphi-android-adb-sidecar/issues",
         "security_contact": "support@piphi.io"
       },
       "access": [
@@ -3048,9 +3040,9 @@
           "model": "Manually configured devices with authorized ADB-over-network access"
         }
       ],
-      "documentation_url": "https://github.com/PiPhi-io/piphi-apps/tree/apps/piphi-android-adb-sidecar/v0.3.0-rc.1/apps/services/piphi-android-adb-sidecar",
-      "support_url": "https://github.com/PiPhi-io/piphi-apps/issues",
-      "changelog_url": "https://github.com/PiPhi-io/piphi-apps/releases/tag/apps/piphi-android-adb-sidecar/v0.3.0-rc.1",
+      "documentation_url": "https://github.com/PiPhi-io/piphi-android-adb-sidecar",
+      "support_url": "https://github.com/PiPhi-io/piphi-android-adb-sidecar/issues",
+      "changelog_url": "https://github.com/PiPhi-io/piphi-android-adb-sidecar/releases",
       "quality_tier": "unrated",
       "governance": {
         "schema_version": 1,
@@ -3073,9 +3065,6 @@
       "connectivity": "local",
       "offline_support": "partial"
     },
-    "image": "ghcr.io/piphi-io/piphi-android-adb-sidecar:0.3.0-rc.1",
-    "image_digest": "sha256:b6893bce091e73c28d71c7c6e49b85f2d311446b94e29503cba637d840ef7594",
-    "ref": "apps/piphi-android-adb-sidecar/v0.3.0-rc.1",
     "onboarding": {
       "mode": "service"
     },
@@ -3083,7 +3072,17 @@
       "version": 1,
       "port_binding": "core_allocated",
       "port_env": "PORT"
-    }
+    },
+    "deployment_mode": "sidecar",
+    "image": "ghcr.io/piphi-io/piphi-android-adb-sidecar:0.3.0-rc.2",
+    "image_digest": "sha256:a32f79b9d5f1c90292be6f195a97d2a9463e6e64a055725536e9830aec33fee2",
+    "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
+    "tags": [
+      "adb",
+      "android",
+      "sidecar",
+      "network"
+    ]
   },
   {
     "id": "piphi-ble-gateway-sidecar",
