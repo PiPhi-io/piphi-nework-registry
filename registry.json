@@ -3308,7 +3308,7 @@
   {
     "id": "piphi-network-android-tv",
     "name": "Android TV",
-    "version": "0.3.0-rc.1",
+    "version": "0.3.0-rc.2",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "low",
@@ -3320,7 +3320,7 @@
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
-    "ref": "apps/piphi-network-android-tv/v0.3.0-rc.1",
+    "ref": "apps/piphi-network-android-tv/v0.3.0-rc.2",
     "manifest_path": "apps/integrations/piphi-network-android-tv/manifest.json",
     "runtime_requirements": [],
     "maintainer": {
@@ -3390,8 +3390,8 @@
     "onboarding": {
       "mode": "discovery"
     },
-    "image": "ghcr.io/piphi-io/piphi-network-android-tv:0.3.0-rc.1",
-    "image_digest": "sha256:9990fbed0e3d407e7e597b4aba1d0172edbb82a7abbd9d65efe437b2ec793f5b",
+    "image": "ghcr.io/piphi-io/piphi-network-android-tv:0.3.0-rc.2",
+    "image_digest": "sha256:024f97bafe32bcde0417a60c74927c6ef61da221de8eb67cfe6bce961e6455ec",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "tags": [
       "android-tv",
