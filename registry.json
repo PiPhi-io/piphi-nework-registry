@@ -2996,7 +2996,8 @@
     "ref": "apps/piphi-android-adb-sidecar/v0.3.0-rc.2",
     "manifest_path": "apps/services/piphi-android-adb-sidecar/manifest.json",
     "runtime_requirements": [
-      "sidecar_runtime"
+      "sidecar_runtime",
+      "local_network_access"
     ],
     "maintainer": {
       "name": "PiPhi Network",
