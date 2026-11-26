@@ -5827,7 +5827,7 @@
   {
     "id": "piphi-network-zwave",
     "name": "Z-Wave",
-    "version": "0.3.1",
+    "version": "0.4.0",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -5839,7 +5839,7 @@
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
-    "ref": "apps/piphi-network-zwave/v0.3.1",
+    "ref": "apps/piphi-network-zwave/v0.4.0",
     "manifest_path": "apps/integrations/piphi-network-zwave/manifest.json",
     "runtime_requirements": [
       "sidecar_runtime"
@@ -5919,8 +5919,8 @@
       "port_binding": "core_allocated",
       "port_env": "PORT"
     },
-    "image": "ghcr.io/piphi-io/piphi-network-zwave:0.3.1",
-    "image_digest": "sha256:a9bfa3b21f47bdc7c954f17d5993c18ab8a761133e6784215fe974668f006f80",
+    "image": "ghcr.io/piphi-io/piphi-network-zwave:0.4.0",
+    "image_digest": "sha256:fc790472cbce3da8dac362f6438be5130bed5f756a17367406770b4578a2e13a",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "tags": [
       "zwave",
@@ -5932,7 +5932,7 @@
   {
     "id": "piphi-zwave-js-sidecar",
     "name": "Z-Wave JS sidecar",
-    "version": "0.3.1",
+    "version": "0.4.0",
     "type": "platform_service",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -5944,7 +5944,7 @@
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
-    "ref": "apps/piphi-zwave-js-sidecar/v0.3.1",
+    "ref": "apps/piphi-zwave-js-sidecar/v0.4.0",
     "manifest_path": "apps/services/piphi-zwave-js-sidecar/manifest.json",
     "runtime_requirements": [
       "sidecar_runtime",
@@ -6029,8 +6029,8 @@
       "port_env": "PORT"
     },
     "deployment_mode": "sidecar",
-    "image": "ghcr.io/piphi-io/piphi-zwave-js-sidecar:0.3.1",
-    "image_digest": "sha256:f2bee5309c7327b30addfe5a734b80fc8e8b7ffa446575b475635d7451a84f53",
+    "image": "ghcr.io/piphi-io/piphi-zwave-js-sidecar:0.4.0",
+    "image_digest": "sha256:d3f309c684827ca1997b1e4f2f87579a6e23f36d09612636c033d92307e055f3",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "tags": [
       "zwave",
