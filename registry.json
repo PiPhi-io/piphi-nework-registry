@@ -3198,7 +3198,7 @@
   {
     "id": "piphi-modbus-rtu-sidecar",
     "name": "Modbus RTU sidecar",
-    "version": "0.8.0",
+    "version": "0.8.1",
     "type": "platform_service",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -3210,7 +3210,7 @@
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
-    "ref": "apps/piphi-modbus-rtu-sidecar/v0.8.0",
+    "ref": "apps/piphi-modbus-rtu-sidecar/v0.8.1",
     "manifest_path": "apps/services/piphi-modbus-rtu-sidecar/manifest.json",
     "runtime_requirements": [
       "sidecar_runtime",
@@ -3296,8 +3296,8 @@
       "port_env": "PORT"
     },
     "deployment_mode": "sidecar",
-    "image": "ghcr.io/piphi-io/piphi-modbus-rtu-sidecar:0.8.0",
-    "image_digest": "sha256:a11b80be793fe3f6b0651491fd7eb6901949a0e3f283fd657a15493650d3336c",
+    "image": "ghcr.io/piphi-io/piphi-modbus-rtu-sidecar:0.8.1",
+    "image_digest": "sha256:1dc39c2b04e18d6fe6b5be7b6e9ec53b26fb523ae4cced57bc96115472bd9077",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "tags": [
       "modbus",
@@ -4641,7 +4641,7 @@
   {
     "id": "piphi-network-modbus",
     "name": "Modbus",
-    "version": "0.10.0",
+    "version": "0.10.1",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "low",
@@ -4653,7 +4653,7 @@
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
     "repo_url": "https://github.com/PiPhi-io/piphi-apps",
-    "ref": "apps/piphi-network-modbus/v0.10.0",
+    "ref": "apps/piphi-network-modbus/v0.10.1",
     "manifest_path": "apps/integrations/piphi-network-modbus/manifest.json",
     "runtime_requirements": [],
     "maintainer": {
@@ -4723,8 +4723,8 @@
     "onboarding": {
       "mode": "manual"
     },
-    "image": "ghcr.io/piphi-io/piphi-network-modbus:0.10.0",
-    "image_digest": "sha256:92bba86bfe250a150274c8d1e3141ccd477211072b5d01234d577522437b22e3",
+    "image": "ghcr.io/piphi-io/piphi-network-modbus:0.10.1",
+    "image_digest": "sha256:1ceddf4707fc99f7ed3f087d14c474f6c954b3ee3a8342ec22ebe31da8e923c8",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/placeholder.svg",
     "tags": [
       "modbus",
