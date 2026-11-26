@@ -1320,7 +1320,7 @@
   {
     "id": "piphi-network-zigbee",
     "name": "PiPhi Network Zigbee",
-    "version": "0.1.12",
+    "version": "0.1.13",
     "type": "integration",
     "trust_level": "official",
     "risk_level": "moderate",
@@ -1331,8 +1331,8 @@
       "windows",
       "macos"
     ],
-    "image": "ghcr.io/piphi-io/zigbee-integration:0.1.12",
-    "ref": "apps/piphi-network-zigbee/v0.1.12",
+    "image": "ghcr.io/piphi-io/zigbee-integration:0.1.13",
+    "ref": "apps/piphi-network-zigbee/v0.1.13",
     "icon_url": "https://raw.githubusercontent.com/PiPhi-io/piphi-nework-registry/main/icons/zigbee2mqtt.svg",
     "owner": "PiPhi-io",
     "repo_name": "piphi-apps",
@@ -1430,7 +1430,7 @@
     "onboarding": {
       "mode": "discovery"
     },
-    "image_digest": "sha256:f10e70cb7dea64dc1583513a3e2f8aa79fcf5b7fe37c7384b4015e9f95823b05"
+    "image_digest": "sha256:f52cfeccd901e374ee4815236ab94295153ad0873f91a8884558274633df6624"
   },
   {
     "id": "airthings-consumer-cloud-api",
